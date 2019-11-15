@@ -10,6 +10,7 @@ var x;
 
 var y;
 
+
 //Lecture des variables a, b, c et x
 a = Number(prompt("Donnez la valeur de A"));
 b = Number(prompt("Donnez la valeur de B"));
@@ -21,4 +22,4 @@ y = a * Math.pow( x,2) + b * x + c;
 
 //Imprimer la valeur de y
 console.log("La valeur de Y = " + y);
-document.write["La valeur de Y = " + y];//À vérifier
+document.write("La valeur de Y = " + y);//À vérifier

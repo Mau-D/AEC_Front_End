@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="044a4f1b-f456-466d-96f3-19b04299aec2" name="Default Changelist" comment="" />
+    <list default="true" id="4e8c7a13-82a3-4b33-895c-7a0a3ad30bd8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,14 +13,23 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1TJT0o7AEnfh0UOBUN2jJG0TQrb" />
+  <component name="ProjectId" id="1Td4fxtxNmK9jUXJokNPewGlh8C" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Chapitre 2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -39,18 +48,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="044a4f1b-f456-466d-96f3-19b04299aec2" name="Default Changelist" comment="" />
-      <created>1573176977252</created>
+      <changelist id="4e8c7a13-82a3-4b33-895c-7a0a3ad30bd8" name="Default Changelist" comment="" />
+      <created>1573776745157</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573176977252</updated>
-      <workItem from="1573176978383" duration="611000" />
-      <workItem from="1573178804235" duration="1058000" />
-      <workItem from="1573251109677" duration="272000" />
-      <workItem from="1573777031049" duration="69000" />
-      <workItem from="1573777183393" duration="1027000" />
-      <workItem from="1573778814036" duration="614000" />
-      <workItem from="1573786884781" duration="15000" />
+      <updated>1573776745157</updated>
+      <workItem from="1573776746342" duration="282000" />
+      <workItem from="1573777101391" duration="9044000" />
     </task>
     <servers />
   </component>
