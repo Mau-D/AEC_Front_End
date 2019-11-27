@@ -12,9 +12,7 @@ nom = prompt("Entrez votre nom d'utilisateur.");
 password = prompt("Entrez votre mot de passe");
 
 if (nom === "admin" && password === "12345" ){
-
         document.write("Bonjour " + nom );
-
 }
 else{
     document.write("Votre nom d'utilisateur ou votre mot de passe est invalide.");

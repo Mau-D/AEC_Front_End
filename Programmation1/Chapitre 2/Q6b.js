@@ -28,5 +28,4 @@ else if (note >= 80 && note < 90 ){
 }
 else{
     document.write("Votre note correspond à un A.");
-
 }

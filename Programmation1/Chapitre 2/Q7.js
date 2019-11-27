@@ -5,7 +5,7 @@ var nb; //Nombre demandé
 
 //Lecture du nombre
 
-nb = Number(prompt("Quelle est le nombre?"))
+nb = Number(prompt("Quelle est le nombre?"));
 //Afficher la catégorie du nombre
 
 //Positif
@@ -14,7 +14,7 @@ document.write("POSITIF");
 }
 //Négatif
 else if(nb < 0){
-    document.write("NÉGATIF")
+    document.write("NÉGATIF");
 }
 //Zéro
 else {

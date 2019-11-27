@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e8c7a13-82a3-4b33-895c-7a0a3ad30bd8" name="Default Changelist" comment="" />
+    <list default="true" id="cbf5e28f-3de5-4a39-9fd0-7fffbf4b22df" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,22 +16,25 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1Td4fxtxNmK9jUXJokNPewGlh8C" />
+  <component name="ProjectId" id="1TzJBNyjR1426J7p25Qca9xKCyT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Programmation1\Chapitre 2" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -50,17 +53,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4e8c7a13-82a3-4b33-895c-7a0a3ad30bd8" name="Default Changelist" comment="" />
-      <created>1573776745157</created>
+      <changelist id="cbf5e28f-3de5-4a39-9fd0-7fffbf4b22df" name="Default Changelist" comment="" />
+      <created>1574456853890</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573776745157</updated>
-      <workItem from="1573776746342" duration="282000" />
-      <workItem from="1573777101391" duration="9044000" />
-      <workItem from="1573786901160" duration="271000" />
-      <workItem from="1574174170727" duration="66000" />
-      <workItem from="1574724237940" duration="13838000" />
-      <workItem from="1574890832589" duration="82000" />
+      <updated>1574456853890</updated>
+      <workItem from="1574456855014" duration="28098000" />
+      <workItem from="1574521961521" duration="73000" />
     </task>
     <servers />
   </component>

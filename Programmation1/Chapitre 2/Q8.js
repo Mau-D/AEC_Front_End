@@ -19,4 +19,4 @@ if(heure <= 40){
 else{
     salaire = (40 * taux) + ((heure - 40) * 2 * taux);
 }
-document.write("Votre salaire cette semaine est de " + salaire + "$");
+document.write("Votre salaire cette semaine est de " + salaire + "$.");

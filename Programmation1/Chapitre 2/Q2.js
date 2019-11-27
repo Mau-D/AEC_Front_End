@@ -6,7 +6,7 @@
 var total; //Montant total des achats
 var rabais; //Montant de la réduction
 
-//Demande du montant total des achats
+//Lecture du montant total des achats
 total = Number(prompt("Quel est le montant total des achats?"));
 
 //fonction pour arrondir à deux décimales
@@ -19,9 +19,9 @@ function financial(x)
 if (total > 200){
     rabais = 0.15 * total;
     console.log("Rabais: " + rabais);
-    document.write("La réduction est de " + financial(rabais)+ "$");
+    document.write("La réduction est de " + financial(rabais)+ "$.");
 }
-    else{
+else {
         document.write("Pour un montant total de  200$ et moins, la réduction n'est pas accordée.");
 }
 

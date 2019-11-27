@@ -14,7 +14,7 @@ nb2 = Number(prompt("Quel est le nombre 2?"));
 
 //Si le nombre 2 n'est pas égale à 0, faire la division et afficher le résultat
 if(nb2 != 0){
-    division = nb1/nb2;
+    division = nb1 / nb2;
     document.write(nb1 + " /  " + nb2 + " = " + division);
 }
 //Si nb2=0 afficher un message d'erreur

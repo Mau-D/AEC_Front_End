@@ -1,0 +1,48 @@
+/* style.css */
+/* Programmée par Maud Harvey */
+/* Le 23 novembre 2019 */
+
+/* Changement de couleur du texte Q12a pour l'exercice */
+.M{
+    color: green;
+}
+.F{
+    color: magenta;
+}
+/*Pour l'exercice 22'*/
+.BN{
+    background-color: blue;
+    color: black;
+}
+.BB{
+    background-color: blue;
+    color: white;
+}
+.BT{
+    background-color: blue;
+    color: aqua;
+}
+.RN{
+    background-color: red;
+    color: black;
+}
+.RB{
+    background-color: red;
+    color: white;
+}
+.RT{
+    background-color: red;
+    color: aqua;
+}
+.VN{
+    background-color: green;
+    color: black;
+}
+.VB{
+    background-color: green;
+    color: white;
+}
+.VT{
+    background-color: green;
+    color: aqua;
+}

@@ -4,7 +4,7 @@
 var mois;//Nombre correspondant au mois de l'année
 
 //Lecture du nombre
-mois = Number(prompt("Entrez le nombre correspondant au mois"));
+mois = Number(prompt("Entrez le nombre correspondant au mois choisi."));
 
 if( mois === 1){
     document.write("Le mois est janvier");
