@@ -17,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -27,6 +28,7 @@
   <component name="ProjectId" id="1TzJBNyjR1426J7p25Qca9xKCyT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -60,6 +62,7 @@
       <updated>1574456853890</updated>
       <workItem from="1574456855014" duration="28098000" />
       <workItem from="1574521961521" duration="73000" />
+      <workItem from="1574983932990" duration="9019000" />
     </task>
     <servers />
   </component>
