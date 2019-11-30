@@ -1,0 +1,74 @@
+/* style.css */
+/* Programmée par Maud Harvey */
+/* Le 21 novembre 2019 */
+body{ /* Largeur de 900px, image de chien en bas à droite la couleur de fond a été copié de l'image*/
+    width: 900px;
+    margin: auto;
+    background: #CFCFCD url("../img/back.jpg") no-repeat right bottom fixed;
+    background-size: 50% 100%;
+    text-align: center;
+}
+
+h1, h2{ /*Titre h1 et h2 rouge  et centré*/
+    color: red;
+    text-align: center;
+}
+h1{
+    font-size: 36px;
+}
+
+h2{
+    font-size: 24px;
+}
+p{      /*Le texte est à gauche*/
+    font-size: 14px;
+    text-align: justify;
+}
+ul{ /*Pour enlever les puces*/
+    list-style-type: none;
+}
+a{/*Pour enlever le soulignement des liens par défaut*/
+    text-decoration: none;
+}
+a:link{
+    color: #78E3F5;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:visited{
+    color: #082CE5;
+}
+li{
+    text-align: justify;
+    color: coral;
+    font-size: large;
+}
+img{
+    width: 200px;
+    margin: auto;
+    border-radius: 25px;
+}
+td img{ /*Les images du tableau sont plus petites 100px*/
+    width: 100px;
+}
+img:hover{
+    box-shadow: 5px 10px #888888;
+}
+
+table{
+    border-collapse: collapse;
+}
+th, td{
+    border: 1px solid magenta;
+}
+th{
+    color: aquamarine;
+    font-size: 2em;
+    font-weight: bold;
+}
+td{
+    color: darkolivegreen;
+    font-size: 1.5em;
+}
+

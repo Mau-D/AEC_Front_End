@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fbe4d8c-37b8-44a0-b241-baccf2f5bf01" name="Default Changelist" comment="" />
+    <list default="true" id="b0e48825-5e9e-4e9e-bd32-d260d5f92a8e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,18 +17,26 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1TO4HVNMo7gasIsCsFTJElJM6hA" />
+  <component name="ProjectId" id="1TwmJ0hPo1dxT1bjMWEj6AmRyox" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Programmation1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\Exercice1\Media" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\Exercice1" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -47,16 +55,15 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3fbe4d8c-37b8-44a0-b241-baccf2f5bf01" name="Default Changelist" comment="" />
-      <created>1573317720792</created>
+      <changelist id="b0e48825-5e9e-4e9e-bd32-d260d5f92a8e" name="Default Changelist" comment="" />
+      <created>1574379456781</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573317720792</updated>
-      <workItem from="1573317721947" duration="1374000" />
-      <workItem from="1573320196817" duration="437000" />
-      <workItem from="1573776666030" duration="79000" />
-      <workItem from="1574893495204" duration="7835000" />
-      <workItem from="1574983910970" duration="20000" />
+      <updated>1574379456781</updated>
+      <workItem from="1574379459874" duration="16708000" />
+      <workItem from="1574456815624" duration="199000" />
+      <workItem from="1574509273557" duration="1215000" />
+      <workItem from="1575065043451" duration="2990000" />
     </task>
     <servers />
   </component>

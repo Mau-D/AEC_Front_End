@@ -21,14 +21,14 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="ProjectId" id="1TO4HVNMo7gasIsCsFTJElJM6hA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Programmation1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JeMePresenteVersion2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -53,10 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1573317720792</updated>
       <workItem from="1573317721947" duration="1374000" />
-      <workItem from="1573320196817" duration="437000" />
-      <workItem from="1573776666030" duration="79000" />
-      <workItem from="1574893495204" duration="7835000" />
-      <workItem from="1574983910970" duration="20000" />
+      <workItem from="1573319742535" duration="453000" />
     </task>
     <servers />
   </component>
