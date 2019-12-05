@@ -6,25 +6,22 @@
 // on avise aussi les industries de la liste C. Pour toutes les autres valeurs, écrire « Valeur impossible ».
 // Faire le programme qui lit la valeur de l’indice de pollution atmosphérique et indique quelle liste devrait être affichée.
 
-var pollution; // indice de pollution atmosphérique
-var liste; //liste des entreprises à contacter
+var indicePollution; //indice de pollution variant entre 0 et 1
 
-//Lecture de l'indice de pollution
+//lecture de l'indice de pollution
+indicePollution = Number(prompt("Entrez L'indice de pollution"));
 
-pollution = Number(prompt("Donnez l'indice de pollution atmosphérique"));
-
-if(pollution >= 0.04){
-    liste = "A";
-        if(pollution > 0.31 ){
-            liste += " et B";
-            if (pollution > 0.50){
-                liste += " et C";
-            }
-        }
-    document.write("L'indice est de " + pollution + " et les listes suivantes des entreprises doivent être avisées: " + liste);
-}
-else if (pollution < 0.04){
+if(indicePollution >= 0.04 && indicePollution <= 0.31){
     document.write("Valeur normale");
+}
+else if(indicePollution > 0.31 && indicePollution <= 0.40){
+    document.write("Avertir les entreprises de la liste A");
+}
+else if(indicePollution > 0.30 && indicePollution <= 0.50){
+    document.write("Avertir les entreprises de la liste A et B");
+}
+else if(indicePollution > 0.50){
+    document.write("Avertir les entreprises de la liste A, B et C");
 }
 else{
     document.write("Valeur impossible");

@@ -2,6 +2,9 @@
 // Offrez trois choix de couleurs de fond et de texte à l'utilisateur
 // Affichez une ligne de texte de la couleur de fond et de texte choisis par l'utilisateur
 
+
+//!!!!Erreur le texte doit être affiché dans la console
+
 var fond; //couleur du fond
 var text; //couleur du texte
 var string = "Voici du texte"; //texte à afficher

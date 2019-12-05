@@ -11,10 +11,9 @@ temp = Number(prompt("Quelle est la température?"));
 if(temp >= -40 && temp <= -10){
     document.write("HAAAAAAA! Il fait froid.");
 }
-else if(temp<=-40){
+else if(temp<=-40){//Température <-40
     document.write("Ce n'est pas humain!");
 }
 else{
     document.write("Enfin une belle journée!");
-
 }

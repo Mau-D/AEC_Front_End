@@ -16,5 +16,4 @@ if(nb1 > 9 && nb2 > 9){
 //Sinon
 else{
     document.write("BONSOIR");
-
 }

@@ -4,18 +4,22 @@
 // « Enfant » si l’âge est < 12 ans.
 
 var age;
+var statut;
 
 //Lire l'âge
 age = Number(prompt("Entrez votre âge"));
 
 if (age >= 18){
-    document.write("Adulte");
+    statut = "Adulte";
 }
 else if(age >= 12 && age < 18){
-    document.write("Adolescent");
+    statut = "Adolescent";
 
 }
-else {
-    document.write("Enfant");
-
+else if(age > 0 && age < 12){
+    statut = "Enfant";
 }
+else{
+    alert("Erreur! entrez un nombre.")
+}
+document.write("Selon votre âge vous êtes un " + statut);

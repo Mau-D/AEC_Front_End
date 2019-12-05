@@ -10,13 +10,16 @@ nb = Number(prompt("Quelle est le nombre?"));
 
 //Positif
 if (nb > 0){
-document.write("POSITIF");
+    document.write("POSITIF");
 }
 //Négatif
 else if(nb < 0){
     document.write("NÉGATIF");
 }
 //Zéro
-else {
+else if ( nb === 0){
     document.write("ZÉRO");
+}
+else{
+    alert("Erreur! Veuillez entrer un nombre.")
 }

@@ -9,23 +9,28 @@
 // (en sens inverse).
 
 var note; //Note inscrite en %
+var lettre; //lettre correspondante à ala note en %
 
 //Lecture de la note
 note = Number(prompt("Quelle est la note en %?"));
 
 //Affiche la correspondance en lettre selon la note
-if(note < 60){
-    document.write("Votre note correspond à un E.");
+if(note < 60 && note >= 0){
+    lettre = "E";
 }
 else if (note >= 60 && note < 70 ){
-    document.write("Votre note correspond à un D.");
+    lettre = "D";
 }
 else if (note >= 70 && note < 80 ){
-    document.write("Votre note correspond à un C.");
+    lettre = "C";
 }
 else if (note >= 80 && note < 90 ){
-    document.write("Votre note correspond à un B.");
+    lettre = "B";
+}
+else if (note >=90 && note <=100){
+    lettre = "A";
 }
 else{
-    document.write("Votre note correspond à un A.");
+    alert("Erreur! Entrez une note entre 0 et 100.");
 }
+document.write("Votre note correspond à un " + lettre + ".");

@@ -85,8 +85,8 @@ if(moteur >= 2 && moteur <= 24) {
             } else if (led.toUpperCase() === "NON") {
                 description = " Robot avec Contrôleur RasBerry Pi Zéro, sans camera, sans matrice LEDS et "
 
-
-            } else {
+            }
+            else {
                 document.write("Erreur! Entrez OUI ou NON pour la matrice LEDS");
             }
         }
