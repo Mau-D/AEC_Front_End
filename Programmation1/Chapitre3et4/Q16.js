@@ -7,8 +7,8 @@ var nombreUtilisateur;
 var pointage = 0;
 
 for (var i = 0; i < 10; i++) {
-    nombreAleatoire = Math.random();
-    nombreUtilisateur = Number(prompt("Entrer un nombre entre 0 et 1"));
+    nombreAleatoire = Math.round(Math.random());
+    nombreUtilisateur = Number(prompt("Entrer un nombre entre 0 ou 1"));
     if (nombreUtilisateur === nombreAleatoire) {
         pointage++;
     }
@@ -17,4 +17,3 @@ for (var i = 0; i < 10; i++) {
 
 document.write("Votre pointage est de " + pointage + " points.");
 
-//Voir pour arrondir à un décimal????

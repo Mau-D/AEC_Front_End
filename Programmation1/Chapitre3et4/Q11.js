@@ -4,7 +4,7 @@ var carre;
 var cube;
 document.write("Nombre-->carré-->cube<br>");
 for(var i=1; i<=10; i++){
-    carre = i * i;
-    cube = i * i * i;
+    carre = Math.pow(i, 2);
+    cube = Math.pow(i,3);
     document.write(i + " --> " + carre +" --> " + cube + "<br>" );
 }

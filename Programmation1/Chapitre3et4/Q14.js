@@ -1,7 +1,7 @@
 //Lire une série de nombres fournis par l’usager (l’usager transmet le nombre 0 pour terminer).
 // Afficher la somme des nombres positifs ainsi que la somme des nombres négatifs.
 
-var nb;
+var nb = 1;
 var negatif = 0;
 var positif = 0;
 
