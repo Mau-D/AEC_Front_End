@@ -4,7 +4,7 @@
 body{ /* Largeur de 900px, image de chien en bas à droite la couleur de fond a été copié de l'image*/
     width: 900px;
     margin: auto;
-    background: #CFCFCD url("../img/back.jpg") no-repeat right bottom fixed;
+    background: #CFCFCD url("../img/back.jpg")  no-repeat right bottom fixed;
     background-size: 50% 100%;
     text-align: center;
 }

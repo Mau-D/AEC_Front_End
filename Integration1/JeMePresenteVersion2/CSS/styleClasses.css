@@ -1,0 +1,42 @@
+/* styleClasses.css */
+/* Programmée par Maud Harvey */
+/* Le 21 décembre 2019 */
+/*Appliquez une couleur de fond différente à toutes les sections de votre site en
+utilisant le ID de la section*/
+@font-face {
+    font-family: fontH1;
+    src: url("Mella Nissa.ttf");
+}
+#accueil{
+    background-color: #78E3F5;
+}
+#etudes{
+    background-color: #082CE5;
+}
+#loisirs{
+    background-color: #888888;
+}
+#sports{
+     background-color: darkolivegreen;
+}
+#reve{
+      background-color: magenta;
+}
+/*Créez une classe nommée .belleImage*/
+.belleImage{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.belleImage:hover{
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.titrePrincipal{
+    font-family: fontH1;
+    color: yellow;
+    font-size: xx-large;
+}
+.titreSecondaire{
+    color: ghostwhite;
+    font-size: x-large;
+    font-family: 'Ma Shan Zheng', cursive;
+}
