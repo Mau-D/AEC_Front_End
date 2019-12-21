@@ -1,0 +1,54 @@
+/* Han Solo/ CSS /style.css */
+/* Programmée par Maud Harvey */
+/* Le 21 décembre 2019 */
+/*Examen formatif*/
+
+
+@font-face {
+    font-family: "jedi";
+    src: url("../font/Starjedi.ttf");
+}
+body{
+    width: 1000px;
+    background-image: url("../img/etoileMort.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: black;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    font-size: 140px;
+    color: yellow;
+    font-family: "jedi", cursive;
+    margin: 0 0 0 0;
+}
+h2, h3, h4{
+    color: white;
+    text-align: center;
+}
+h2{
+    font-size: 72px;
+}
+h3{
+    font-size: 60px;
+}
+h4{
+    font-size: 44px;
+}
+p{
+    text-align: justify;
+    color: white;
+    font-size: 16px;
+}
+img{
+    display: block;
+    margin: auto;
+}
+.films{
+    color: yellow;
+}
+a h4{
+    color: white;
+    text-decoration: underline;
+}
