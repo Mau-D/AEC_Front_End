@@ -5,28 +5,33 @@
 
 
 //!!!!!!!!À REVOIR
-var c = 0;
-var d = 0;
-var u = 0;
+var cubeC = 0;
+var cubeD = 0;
+var cubeU = 0;
 
 var sommeCube = 0; //somme des cubes des chiffres
 var nb = 0; //Nombre à vérifier
-var doublenb = 0;
 
 
-for (var i=0; i<10; i++){ //centaine
-    c = i;
-    for (var j=0; j<10; j++){ //dizaine
-        d = j;
-        for (var k=0; k<10; k++){ //unité
-            u = k;
-            sommeCube = (Math.pow(c,3 )) + (Math.pow(d,3 )) + (Math.pow(u,3 ));
-            nb = (c * 100) + (d * 10) + u;
-            doublenb = 2 * nb;
-            console.log(nb + doublenb);
-            if(sommeCube === doublenb ){
-                document.write(nb);
+
+for (var c=0; c<10; c++){ //centaine
+    cubeC = Math.pow(c,3);
+    nb = (c * 100);
+    for (var d=0; d<10; d++){ //dizaine
+        cubeD = Math.pow(d,3);
+        nb += (d * 10);
+        for (var u=0; u<10; u++){ //unité
+            cubeU = Math.pow(u,3);
+            nb += u;
+            sommeCube = cubeC + cubeD + cubeU;
+            console.log(nb +"-->" + sommeCube);
+
+            if(sommeCube === nb ){
+                document.write(nb + "<br>");
             }
+            nb -= u;
         }
+        nb -= (d*10);
     }
+    nb -= (c*100);
 }
