@@ -2,3 +2,13 @@
 //             Indice :  mot[0] donne 'P'
 //             Indice : mot.length donne 6
 
+var mot;
+var longueurMot;
+var enversMot;
+
+mot = prompt("Écrire un mot");
+longueurMot = mot.length;
+for(var i=1; i<=longueurMot; i++){
+    document.write(mot[longueurMot-i]);
+}
+
