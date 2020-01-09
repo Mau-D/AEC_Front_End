@@ -29,9 +29,9 @@ for (var c=0; c<10; c++){ //centaine
             if(sommeCube === nb ){
                 document.write(nb + "<br>");
             }
-            nb -= u;
+            nb -= u;        //Réinitialiser les unités
         }
-        nb -= (d*10);
+        nb -= (d*10);       //Réinitialiser les dizaines
     }
-    nb -= (c*100);
+    nb -= (c*100);          //Réinitialiser les centaines
 }

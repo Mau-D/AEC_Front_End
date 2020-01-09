@@ -19,7 +19,7 @@ for(var i=0; i<=1000; i++){ //Nombre de 0 à 999
     for(var j=0; j < longstring; j++){
         chiffre = str[j];           //Convertir le chiffre (string) en nombre
         nb = parseInt(chiffre); //convertir en nombre
-        cube = nb * nb * nb;//cube de chacun des chiffres
+        cube = Math.pow(nb, 3);//cube de chacun des chiffres
         armstrong = armstrong + cube; //Faire la somme des cubes
     }
     if(i === armstrong){

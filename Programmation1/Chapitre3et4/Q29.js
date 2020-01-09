@@ -12,5 +12,5 @@ entierN = Number(prompt("Entrez un mombre entier"));
 
 for(var i=0; i <entierN; i++){
     document.write("*");
-    console.log(i);
 }
+console.log(i);

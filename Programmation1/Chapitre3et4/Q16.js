@@ -2,7 +2,7 @@
 // un nombre aléatoire entre 0 et 1 et vous demande aussi de choisir un nombre entre 0 et 1.
 // Si le nombre est identique, vous gagnez, perdez sinon. Vous affichez le pointage à la fin des 10 itérations.
 
-var nombreAleatoire = 0;
+var nombreAleatoire;
 var nombreUtilisateur;
 var pointage = 0;
 

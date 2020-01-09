@@ -20,16 +20,13 @@ while(partieTerminee === false){
     //Générer les deux cartes du croupier
     carte1 = Math.floor(Math.random()*13) + 1;
     carte2 = Math.floor(Math.random()*13) + 1;
-    console.log(carte1);
-    console.log(carte2);
-   //Trouver la plus petite carte
+   //Trouver la plus petite carte, placer la plus petite dans carte 1 et la plus grande dans carte 2
     if (carte1 > carte2){
         placementCarte = carte1;
         carte1 = carte2;
         carte2 = placementCarte;
     }
-    console.log(carte1);
-    console.log(carte2);
+
     //Afficher les cartes
     alert("Carte 1 = "+ carte1 + "     Carte 2 = " + carte2);
     //Faire le pari
@@ -57,7 +54,7 @@ while(partieTerminee === false){
             partieTerminee = true;
         }
     }
-
+console.log("Carte 1 =" + carte1 + " Carte 2 = " + carte2 + " (" + pari + ") " + " Carte 3 = " + carte3);
 }
 document.write("Vous avez perdu! Fin de la partie.<br>");
 document.write("Vous avez remportés " + partieGagnee + " parties.");

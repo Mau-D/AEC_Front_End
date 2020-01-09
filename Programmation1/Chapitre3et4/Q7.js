@@ -9,4 +9,4 @@ while(motUsager != "patate"){
     compteur++;
     console.log(motUsager + compteur);
 }
-document.write("Nombre de mots avant patate = " + compteur);
+document.write("Il y a eu " + compteur + " mots avant le mot 'patate'.");

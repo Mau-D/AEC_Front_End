@@ -13,5 +13,5 @@ for(var i = 0; i < 100; i++){
         unNb++;
     }
 }
-console.log("Nombre de 0 = " + zeroNb);
-console.log("<br>Nombre de 1 = " + unNb);
+document.write("Nombre de 0 = " + zeroNb);
+document.write("<br>Nombre de 1 = " + unNb);

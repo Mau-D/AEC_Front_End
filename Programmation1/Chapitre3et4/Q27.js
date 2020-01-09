@@ -4,7 +4,7 @@
 
 var mot;
 var longueurMot;
-var enversMot;
+
 
 mot = prompt("Écrire un mot");
 longueurMot = mot.length;

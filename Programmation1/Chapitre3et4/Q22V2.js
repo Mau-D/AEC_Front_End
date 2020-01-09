@@ -7,7 +7,7 @@ var array = [0,0];
 for(var j = 0; j<4; j++) {
     for (var i = 0; i <= 5; i++) {
         array = [j,i];
-        console.log(array);
+        document.write("[" + array + "] ");
     }
     document.write("<br>");
 }

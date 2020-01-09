@@ -8,6 +8,7 @@ var nombreF = 0;
 
 while(sexe.toUpperCase() === "M" || sexe.toUpperCase() === "F"){
     sexe = prompt("Entrer votre sexe M pour masculin et F pour féminin");
+
     if(sexe.toUpperCase() === "F"){
         document.write("Féminin<br>");
         nombreF++;

@@ -6,13 +6,14 @@ var negatif = 0;
 var positif = 0;
 
 while ( nb !== 0){
-    nb = Number(prompt("Écrire un nombre"));
+    nb = Number(prompt("Écrire un nombre et 0 pour terminer"));
     if (nb > 0){
-        positif = positif + nb;
+        positif += nb;
     }
     else if( nb < 0){
-        negatif = negatif + nb;
+        negatif += nb;
     }
+    console.log(nb);
 }
 document.write("La somme des nombres positifs = " + positif);
 document.write("<br>La somme des nombres négatifs = " + negatif);

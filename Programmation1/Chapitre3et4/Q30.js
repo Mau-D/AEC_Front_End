@@ -12,7 +12,7 @@ for(var i=1; i<=1000; i++){
     if (modulo3 === 0){
         document.write("Fizz");
     }
-    if (modulo5 ===0){
+    if (modulo5 === 0){
         document.write("Buzz");
     }
     document.write("<br>");

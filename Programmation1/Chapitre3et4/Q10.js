@@ -5,5 +5,5 @@ var avectaxe; //9%
 
 for (var i =5; i <=100; i +=5){
     avectaxe = i * 1.09; //Calcul de la taxe
-    document.write("Le montant est de " + i + "$ et avec les taxes =" + avectaxe.toFixed(2) + "$<br>");
+    document.write("Le montant est de " + i + "$ et avec la taxe (9%) =" + avectaxe.toFixed(2) + "$<br>");
 }

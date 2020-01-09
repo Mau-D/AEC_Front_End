@@ -19,7 +19,7 @@ for(var j=1; compteur !== parfait; j++){
     //Trouver les diviseurs
     for(var i=1; i<nb; i++){ //<nb, car un nombre se divise toujours par lui-même
         division = nb / i;
-        entier = Number.isInteger(division);    //Vérifer que le résultat de la division est un entier
+        entier = Number.isInteger(division);    //Vérifier que le résultat de la division est un entier
         if(entier === true){
             somme += i; //Faire la somme des diviseurs
         }
