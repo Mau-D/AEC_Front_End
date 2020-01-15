@@ -1,0 +1,59 @@
+/* Le Mandalorien/ CSS /style.css */
+/* Programmée par Maud Harvey */
+/* Le 11 janvier 2020 */
+/*Examen 1 Intégration*/
+
+@font-face {
+    font-family: "jagwi";
+    src: url("../font/jagwi.ttf");
+}
+body{
+    width: 1000px;
+    background-image: url("../img/fondecran.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+    margin: auto;
+    background-position: bottom; /*Placer le fond d'écran en bas*/
+}
+h1{
+    font-size: 140px;
+    text-align: center;
+    color: yellow;
+    margin: 0px;
+}
+h2, h3, h4{
+    color: white;
+    text-align: center;
+}
+h2{
+    font-size: 70px;
+}
+h3{
+    font-size: 58px;
+}
+h4{
+    font-size: 40px;
+}
+p{
+    text-align: justify;
+    color: white;
+    font-size: 30px;
+    font-family: jagwi;
+}
+img{
+    display: block;
+    margin: auto;
+}
+.episode{
+    color: yellow;
+}
+a h4{
+    color: white;
+    text-decoration: underline yellow;
+}
+.petiteImage{ /* Image de bébé yoda maximum = 50%*/
+    max-width: 50%;
+}
+li p{
+    font-size: 22px;
+}
