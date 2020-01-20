@@ -6,8 +6,8 @@ var usager;
 
 //Remplir le tableau
 for(var i =0; i<10; i++){
-    usager= prompt("Pile(P)  ou Face(F) ?");
-    if (usager.toUpperCase() === "P"){
+    usager= prompt("Pile(P)  ou Face(F) ?").toUpperCase();
+    if (usager === "P"){
         tabPileFace.push("Pile");
     }
     else if(usager.toUpperCase() === "F"){

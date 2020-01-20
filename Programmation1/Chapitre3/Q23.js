@@ -4,9 +4,9 @@
 // nb[0] vaut la lettre S
 // nb[2] vaut la lettre a
 
-var nb;
+var nb = prompt("Écrire un nombre");    //Mettre le prompt dans la déclaration de la variable si c'est possible
 
-nb = prompt("Écrire un nombre");
+
 //nb.length renvoie un nombre équivalent au nombre de caractère dans le string
 for(var i = 0; i < nb.length; i++){
     document.write(nb[i] + "<br>");

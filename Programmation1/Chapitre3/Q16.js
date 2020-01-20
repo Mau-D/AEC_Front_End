@@ -4,16 +4,22 @@
 
 var nombreAleatoire;
 var nombreUtilisateur;
-var pointage = 0;
+var pointageGagnant = 0;
+var pointagePerdant = 0;
+
 
 for (var i = 0; i < 10; i++) {
     nombreAleatoire = Math.round(Math.random());
     nombreUtilisateur = Number(prompt("Entrer un nombre entre 0 ou 1"));
     if (nombreUtilisateur === nombreAleatoire) {
-        pointage++;
+        pointageGagnant++;
+    }
+    else{
+        pointagePerdant++;
     }
     console.log(nombreAleatoire + "--->" + nombreUtilisateur);
 }
 
-document.write("Votre pointage est de " + pointage + " points.");
+document.write("Vous avez gagné " + pointageGagnant + " parties.<br>");
+document.write("Vous avez perdu " + pointagePerdant + " parties.");
 

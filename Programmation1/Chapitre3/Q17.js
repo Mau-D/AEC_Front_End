@@ -6,14 +6,14 @@ var sexe = "M";
 var nombreM = 0;
 var nombreF = 0;
 
-while(sexe.toUpperCase() === "M" || sexe.toUpperCase() === "F"){
-    sexe = prompt("Entrer votre sexe M pour masculin et F pour féminin");
+while(sexe === "M" || sexe === "F"){        //Mettre le .toUpperCase() dans le prompt pour ne pas le répéter dans le code
+    sexe = prompt("Entrer votre sexe M pour masculin et F pour féminin").toUpperCase();
 
-    if(sexe.toUpperCase() === "F"){
+    if(sexe === "F"){
         document.write("Féminin<br>");
         nombreF++;
     }
-    else if(sexe.toUpperCase() === "M"){
+    else if(sexe === "M"){
         document.write("Masculin<br>");
         nombreM++;
     }

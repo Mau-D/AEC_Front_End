@@ -1,6 +1,7 @@
 //Créez un tableau qui contient les 12 mois de l’année et affichez-le sans utiliser une boucle.
 
-var mois = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+var mois = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre",
+    "Décembre"];
 
 console.table(mois);
 
@@ -16,3 +17,6 @@ document.write(mois[8] + "<br>");
 document.write(mois[9] + "<br>");
 document.write(mois[10] + "<br>");
 document.write(mois[11] + "<br>");
+
+//En Javascript, c'est un des seuls langages où l'on peut faire :
+document.write(tabMois + "<br>");

@@ -1,5 +1,5 @@
 //Faire afficher 10 8 6 4 2 0 sur 12 lignes
-for(var j = 0; j<12; j++) {
+for(var j = 0; j<12; j++) {         //j = ligne, nous pourrions appeler la variable ligne
     for (var i = 10; i >= 0; i-=2) {
         document.write(i + " ");
     }

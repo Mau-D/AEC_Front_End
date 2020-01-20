@@ -8,9 +8,8 @@
 // Votre algorithme doit donc générer et afficher deux nombres aléatoires de 1 à 13. Il doit ensuite demander
 // à l’utilisateur de faire ses paris. Lorsque l’utilisateur perd, le nombre de prédictions remportées est affiché.
 
-var carte1;
-var carte2;
-var carte3;
+var carte1, carte2, carte3; //On peut rassembler les variables semblables
+
 var placementCarte;//Pour placer la carte la plus petite dans carte 1
 var pari = ""; //oui ou non
 var partieTerminee = false;
@@ -37,7 +36,7 @@ while(partieTerminee === false){
 
     //Vérifier si le pari est gagné ou perdu
     if (pari.toUpperCase() === "OUI"){
-        if (carte3 > carte1 && carte3 < carte2){
+        if (carte3 > carte1 && carte3 < carte2 ){
             partieGagnee++;
             alert("Vous avez gagné!, Continuons à jouer.");
         }
