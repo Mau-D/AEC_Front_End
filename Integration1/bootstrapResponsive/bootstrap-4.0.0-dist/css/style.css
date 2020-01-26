@@ -1,0 +1,23 @@
+.imageHead{
+    background-image: url("../../img/schrecksee-2534484_1920.jpg");
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+}
+
+.row{
+    height: 300px;
+}
+hr{
+    margin-bottom:30px;
+    margin-top:30px;
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #f05f40;
+}
+.hauteurbg{
+    height: 700px;
+}
+
