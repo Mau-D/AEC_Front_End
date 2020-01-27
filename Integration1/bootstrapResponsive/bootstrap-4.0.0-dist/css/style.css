@@ -1,5 +1,5 @@
 .imageHead{
-    background-image: url("../../img/schrecksee-2534484_1920.jpg");
+    background-image: url("../../img/bg-445228_1280.jpg");
     background-color: grey;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7,17 +7,67 @@
     width: 100%;
 }
 
-.row{
-    height: 300px;
-}
 hr{
     margin-bottom:30px;
     margin-top:30px;
     max-width: 50px;
     border-width: 3px;
-    border-color: #f05f40;
+    border-color: #F57E9F;
 }
 .hauteurbg{
     height: 700px;
 }
+h1{
+    font-family: 'Lobster', cursive;
+    color: #F57E9F;
+    font-size: 5rem;
+}
+h3{
+    color: #EBD120;
+    font-family: 'Lobster', cursive;
 
+}
+h2{
+    color: black;
+    font-family: 'Lobster', cursive;
+
+}
+i {
+    color: #F57E9F;
+}
+.blanc{
+    color: white;
+    font-family: 'Zhi Mang Xing', cursive;
+    font-size: 1.5rem;
+
+
+}
+.noir{
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Zhi Mang Xing', cursive;
+
+}
+.jaune{
+    color: #EBD120;
+    font-size: 1.5rem;
+    font-family: 'Zhi Mang Xing', cursive;
+
+}
+.button1{
+    background-color: #F57E9F;
+    border: none;
+    color: white;
+    font-family: 'Lobster', cursive;
+
+}
+.button2{
+    background-color: white;
+    border: none;
+    color: black;
+    font-family: 'Lobster', cursive;
+
+}
+.couleur{
+    background-color: #F57E9F;
+}
