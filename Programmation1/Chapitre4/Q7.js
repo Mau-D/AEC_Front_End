@@ -34,7 +34,6 @@ for(var i=0; i<1000; i++){
                 plusLongVrai = consVrai + 1;
                 positionVrai = i-plusLongVrai;
                 consVrai = 0;
-
             }
             else{
                 consVrai =0;

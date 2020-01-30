@@ -2,6 +2,7 @@
 // Si tel est le cas, affichez ces deux nombres.
 
 var tabNombre = [];
+var trouver = false;
 
 //Lecture des 12 nombres
 for(var i=0; i<12; i++){
@@ -14,6 +15,10 @@ for( var j = 0; j<12; j++){
     for( var k = 0; k<j; k++){
         if(tabNombre[j] + tabNombre[k] === 15) {
             document.write(tabNombre[j] + " et " + tabNombre[k] + " font 15<br>");
+            trouver = true;
         }
     }
+}
+if(!trouver){
+    document.write("Aucune solution!");
 }

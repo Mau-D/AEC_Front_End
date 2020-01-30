@@ -12,9 +12,8 @@ for(var i=0; i<tableau.length; i++){
     r = Math.floor(Math.random()*10);
     console.log(r);
     sauve = tableau[i];
-    tableau.splice(i, 1, tableau[r]);
-    tableau.splice(r, 1, sauve);
-    console.table(tableau);
+    tableau[i] = tableau[r];
+    tableau[r] = sauve;
 }
 
-
+console.table(tableau);
