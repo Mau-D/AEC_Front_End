@@ -3,7 +3,7 @@
     background-color: grey;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 700px;
+    height: 800px;
     width: 100%;
 }
 
@@ -15,7 +15,7 @@ hr{
     border-color: #F57E9F;
 }
 .hauteurbg{
-    height: 700px;
+    height: 800px;
 }
 h1{
     font-family: 'Lobster', cursive;
@@ -34,13 +34,12 @@ h2{
 }
 i {
     color: #F57E9F;
+    font-size: 4rem;
 }
 .blanc{
     color: white;
     font-family: 'Zhi Mang Xing', cursive;
     font-size: 1.5rem;
-
-
 }
 .noir{
     color: black;
