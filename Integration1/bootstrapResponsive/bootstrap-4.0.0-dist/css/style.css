@@ -3,7 +3,7 @@
     background-color: grey;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 800px;
+    height: 800px;/*Changer le height pas en px*/
     width: 100%;
 }
 
@@ -15,7 +15,7 @@ hr{
     border-color: #F57E9F;
 }
 .hauteurbg{
-    height: 800px;
+    height: 800px;/*Changer le height pas en px*/
 }
 h1{
     font-family: 'Lobster', cursive;
@@ -25,12 +25,10 @@ h1{
 h3{
     color: #EBD120;
     font-family: 'Lobster', cursive;
-
 }
 h2{
     color: black;
     font-family: 'Lobster', cursive;
-
 }
 i {
     color: #F57E9F;
@@ -58,8 +56,9 @@ i {
     border: none;
     color: white;
     font-family: 'Lobster', cursive;
-
+    border-radius: 7em;
 }
+
 .button2{
     background-color: white;
     border: none;

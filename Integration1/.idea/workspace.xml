@@ -29,21 +29,23 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/FacebookBootstrap" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive\bootstrap-4.0.0-dist\css" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive\css" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\Bootstrap\bootstrap-4.0.0-dist\css" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\Bootstrap" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\FacebookBootstrap" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive\img" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\JeMePresenteVersion2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\Bootstrap" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive\bootstrap-4.0.0-dist\css" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive\css" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -93,7 +95,8 @@
       <workItem from="1580140385751" duration="27000" />
       <workItem from="1580140605158" duration="602000" />
       <workItem from="1580162153727" duration="107000" />
-      <workItem from="1580562486799" duration="283000" />
+      <workItem from="1580562486799" duration="10365000" />
+      <workItem from="1580689008897" duration="10447000" />
     </task>
     <servers />
   </component>
