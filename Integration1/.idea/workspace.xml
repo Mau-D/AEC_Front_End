@@ -29,24 +29,24 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bootstrapModalJumbotron" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\FacebookBootstrap" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive\img" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\JeMePresenteVersion2" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\Bootstrap" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive\bootstrap-4.0.0-dist\css" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive\css" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapModalJumbotron" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\BootstrapNav" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\BootstrapNav\bootstrap-4.0.0-dist" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\FacebookBootstrap" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -106,7 +106,17 @@
       <workItem from="1581121961053" duration="864000" />
       <workItem from="1581271315319" duration="32000" />
       <workItem from="1581637235396" duration="1464000" />
-      <workItem from="1581641610551" duration="5015000" />
+      <workItem from="1581641610551" duration="6613000" />
+      <workItem from="1581719872198" duration="26000" />
+      <workItem from="1581902897328" duration="15323000" />
+      <workItem from="1582029705005" duration="28000" />
+      <workItem from="1582029744976" duration="22000" />
+      <workItem from="1582250775504" duration="175000" />
+      <workItem from="1582250962639" duration="30000" />
+      <workItem from="1582251809009" duration="206000" />
+      <workItem from="1582252146310" duration="46000" />
+      <workItem from="1582252223209" duration="351000" />
+      <workItem from="1582378224357" duration="6670000" />
     </task>
     <servers />
   </component>
@@ -125,5 +135,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
 </project>
