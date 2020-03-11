@@ -1,0 +1,82 @@
+/*style.css*/
+/*Exercice Parallaxe*/
+/*Maud Harvey*/
+/*25 février 2020*/
+/*Pour le background parallaxe*/
+html,body { margin:0; padding: 0; height:100%; overflow-x: hidden;}
+@media only screen and (max-width: 480px){
+    .bg1 {
+        background-image: url("../../img/bgPortrait.jpg");
+        height: 100vh; /*hauteur du parallaxe*/
+    }
+    .zone2{
+        display: none;
+    }
+    .bg2 {
+        background-image: url("../../img/minecraft3.jpg");
+        height: 100vh; /*hauteur du parallaxe*/
+    }
+    .bg3 {
+        background-image: url("../../img/minecraft2.jpg");
+        min-height: 100vh; /*hauteur du parallaxe*/
+    }
+    .parallaxe {
+        background-attachment: fixed; /*Pour l'effet*/
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .bgOpaqueJaune {
+        background-color: rgba(255, 255, 0, .5);
+    }
+
+    .bgOpaqueBlanc {
+        background-color: rgba(255, 255, 255, .5);
+        height: 18%;
+    }
+    .couleur {
+        background-color: #EAEAEA;
+    }
+    .zone5Col2{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 481px) {
+
+
+    .bg1 {
+        background-image: url("../../img/q4t2ku3vxou11.jpg");
+        height: 100vh; /*hauteur du parallaxe*/
+    }
+
+    .bg2 {
+        background-image: url("../../img/minecraft3.jpg");
+        min-height: 400px; /*hauteur du parallaxe*/
+    }
+
+    .bg3 {
+        background-image: url("../../img/minecraft2.jpg");
+        min-height: 600px; /*hauteur du parallaxe*/
+    }
+
+    .parallaxe {
+        background-attachment: fixed; /*Pour l'effet*/
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bgOpaqueJaune {
+        background-color: rgba(255, 255, 0, .5);
+    }
+
+    .bgOpaqueBlanc {
+        background-color: rgba(255, 255, 255, .5);
+        height: 18%;
+    }
+
+    .couleur {
+        background-color: #EAEAEA;
+    }
+}
