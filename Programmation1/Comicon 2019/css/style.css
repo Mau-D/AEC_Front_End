@@ -1,0 +1,11 @@
+/*style.css Comicon 2019*/
+/*Maud Harvey*/
+/*14 mars 2020*/
+html,body { margin:0; padding: 0; height:100%; overflow-x: hidden;}
+.imageHead{
+    background-image: url("../img/logo-shawicon.png");
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 79vh;
+}

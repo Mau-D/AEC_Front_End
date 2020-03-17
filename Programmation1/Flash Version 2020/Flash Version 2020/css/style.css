@@ -5,6 +5,8 @@ html,body { margin:0; height:100%;}
 }
 .explosion{
     background-image: url("../img/hero_nuclear_blast.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .textFlash{

@@ -17,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -30,11 +30,15 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../WEB/AEC DEV WEB/TechniquesProgrammationWeb1/Correction FLASH" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_DEV_WEB\AEC_Front_End\Programmation1\Comicon 2019\js" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_DEV_WEB\AEC_Front_End\Programmation1\Comicon 2019" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Programmation1\Chapitre 2" />
     </key>
@@ -50,6 +54,16 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="flash.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Flash Version 2020/Flash Version 2020/js/flash.js" working-dir="$PROJECT_DIR$/Flash Version 2020/Flash Version 2020/js">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.flash.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -109,6 +123,10 @@
       <workItem from="1581902865257" duration="31000" />
       <workItem from="1582157437200" duration="9252000" />
       <workItem from="1582244281573" duration="2743000" />
+      <workItem from="1584133817862" duration="8850000" />
+      <workItem from="1584294430381" duration="21000" />
+      <workItem from="1584402336121" duration="3502000" />
+      <workItem from="1584455987242" duration="1981000" />
     </task>
     <servers />
   </component>

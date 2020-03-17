@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--index.html-->
+<!--Exercice Comicon 2019-->
+<!--Par Maud Harvey-->
+<!--Le 14 mars 2020-->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no"> <!--À ajouter pour utiliser Bootstrap-->
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Comicon 2019</title>
+</head>
+<body>
+<div class="container-fluid px-0">
+    <header>
+        <div class="container-fluid">
+            <div class="row imageHead px-0 "><!--image d'en-tête-->
+            </div>
+        </div>
+    </header>
+    <section><!--formulaire-->
+        <form>
+            <div class="container-fluid">
+                <div class="form-row"><!--Nom d'usager-->
+                    <div class="offset-2 col-8 py-3">
+                        <input type="text" class="form-control" id="nom" placeholder="Nom d'usager">
+                    </div>
+                </div>
+                <div class="form-row"><!--Mot de passe-->
+                    <div class="offset-2 col-8 py-3">
+                        <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+                    </div>
+                </div>
+                <div class="form-row"><!--Confirmation du mot de passe-->
+                    <div class="offset-2 col-8 py-3">
+                        <input type="password" class="form-control" id="passwordConfirm" placeholder="Confirmation du mot de passe">
+                    </div>
+                </div>
+                <div class="form-row"><!--Courriel-->
+                    <div class="offset-2 col-8 py-3">
+                        <input type="email" class="form-control" id="courriel" placeholder="Courriel">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="offset-2 col-8 py-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="starwars" value="Starwars">
+                            <label class="form-check-label" for="starwars">Starwars</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="marvel" value="Marvel">
+                            <label class="form-check-label" for="marvel">Marvel</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dc" value="DC">
+                            <label class="form-check-label" for="dc">DC</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid py-5"> <!--section starwars-->
+                <div class="row">
+                    <div class="col-6 "><!--image-->
+                        <img class="img-fluid" src="img/yoda.png"/>
+                    </div>
+                    <div class="col-6 "><!--Menu déroulant, choix du personnage-->
+
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Envoyer"/>
+        </form>
+    </section>
+</div>
+
+
+
+<script src="js/jquery-3.4.1.js"></script><!--JQuery en premier-->
+<script src="Bootstrap/js/bootstrap.js"></script><!--Bootstrap en no.2-->
+<script src="js/comicon.js"></script><!--Fichier javascript en no.3-->
+</body>
+</html>
