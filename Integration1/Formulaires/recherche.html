@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--recherche.html-->
+<!--Exercice Formulaires-->
+<!--Par Maud Harvey-->
+<!--Le 12 mars 2020-->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no"> <!--À ajouter pour utiliser Bootstrap-->
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/style.css">
+    <title>Recherche</title>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row couleurLogo"><!--identification de l'entreprise-->
+        <div class="col-md-8 px-0">
+            <img id="logo" class="img-fluid " src="img/bon-voyage-1456621_1920.jpg"/>
+        </div>
+        <div class="col-md-4 text-center">
+            <h1>Agence Bon voyage</h1>
+            <h3>456 route de l'évasion</h3>
+            <h4>Au bout du monde, Québec</h4>
+            <h4>1-999-999-9999</h4>
+        </div>
+    </div>
+    <div class="row py-5">
+        <div class="offset-md-1 col-md-10 text-center">
+            <h1>Recherche d'un forfait voyage</h1>
+        </div>
+    </div>
+    <h3 class="pl-2">Vos coordonnées</h3>
+    <form class="pl-2"><!--Formulaire, coordonnée du client-->
+        <div class="form-row py-4"><!--ligne 1: nom, prénom, adresse-->
+            <div class="col-2">
+                <input type="text" class="form-control" placeholder="Nom">
+            </div>
+            <div class=" offset-1 col-2">
+                <input type="text" class="form-control" placeholder="Prénom">
+            </div>
+            <div class="offset-1 col-4">
+                <input type="text" class="form-control" placeholder="Adresse">
+            </div>
+        </div>
+        <div class="form-row"><!--ligne 2: ville, code postale et téléphone-->
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Ville">
+            </div>
+            <div class="col-2">
+                <input type="text" class="form-control" placeholder="Code Postale">
+            </div>
+            <div class="offset-1 col-2">
+                <input type="tel" class="form-control" placeholder="Téléphone">
+            </div>
+        </div>
+    </form>
+    <form class="pt-5"><!--Informations sur le forfait voyage recherché-->
+        <div class="container-fluid">
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="Destination">Choisir votre destination</label>
+                    <select id="Destination" class="form-control">
+                        <option selected>Mexique</option>
+                        <option>France</option>
+                        <option>Colombie</option>
+                        <option>Cuba</option>
+                        <option>Espagne</option>
+                        <option>Grèce</option>
+                        <option>Italie</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="dateDepart">Choisir une date de départ</label>
+                    <input type="date" class="form-control" id="dateDepart" placeholder=""><!--Automatiquement aaaa-mm-jj est inscrit-->
+                </div>
+                <div class="form-group col-2 pl-5">
+                    <label for="nombreAdulte">Nombre d'adultes</label>
+                    <input type="number" class="form-control" id="nombreAdulte" placeholder="">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="dateRetour">Choisir une date de retour</label>
+                    <input type="date" class="form-control" id="dateRetour" placeholder=""><!--Automatiquement aaaa-mm-jj est inscrit-->
+                </div>
+                <div class="form-group col-2 pl-5">
+                    <label for="nombreEnfant">Nombre d'enfants</label>
+                    <input type="number" class="form-control" id="nombreEnfant" placeholder="">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="radio-inline">
+                        <input type="radio" name="avion" checked>Avion</label>
+                    <label class="radio-inline pl-4">
+                        <input type="radio" name="train">Train</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="radio-inline">
+                        <input type="radio" name="premiere" checked>Première classe</label>
+                    <label class="radio-inline pl-4">
+                        <input type="radio" name="econo">Classe économique</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-check">
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">Tout compris</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">Sur la plage</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">Option 3</label>
+                    </div>
+                    <div class="checkbox disabled">
+                        <label><input type="checkbox" value="" disabled>5 étoiles, cette option n'est pas applicable</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="offset-3 col-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7604397.654264418!2d-84.064261777722!3d21.465189366752586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88cd49070f7a4cb5%3A0x798cf7529110a41a!2sCuba!5e0!3m2!1sfr!2sca!4v1584314331338!5m2!1sfr!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col ml-5 my-5">
+            <input type="submit" value="Voir les forfaits disponibles"/>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+</body>
+</html>
