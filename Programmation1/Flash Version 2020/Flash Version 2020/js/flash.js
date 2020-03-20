@@ -131,19 +131,19 @@ $( "#boutonTeleport" ).click(function() {
 //Vitesse suprême
 let monTimer;
 let vitesseSupreme = false;
-$( "#boutonVitesseSupreme" ).click(function() {
+$("#boutonVitesseSupreme").click(function() {
     if(!vitesseSupreme){
      monTimer = setInterval(function () {
-         $("#flashID").toggle()}, 500);
+         $("#flashID").toggle()}, 500);//toggle bascule entre hide et show avec l'intervalle donné
      vitesseSupreme = true;
-}
+    }
 });
 
 //Arrêter la vitesse suprême
-$( "#boutonFinVitesseSupreme" ).click(function() {
+$("#boutonFinVitesseSupreme").click(function() {
     clearInterval(monTimer);
     vitesseSupreme = false;
-    $("#flashID").show();
+    $("#flashID").show();//Pour afficher Flash si l'arrêt a été fait lorsqu'il n'est pas visible
 });
 
 //Nuke
