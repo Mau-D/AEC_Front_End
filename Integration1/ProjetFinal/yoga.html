@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!--yoga.html-->
+<!--Projet final, Intégration web-->
+<!--Par Maud Harvey-->
+<!--Le 20 mars 2020-->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Pleine conscience</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no"> <!--À ajouter pour utiliser Bootstrap-->
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/styleyoga.css">
+    <link rel="icon" type="image/png" href="img/icons8-deer.png" />
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid px-0 mx-0"><!--Contient l'intégralité du site-->
+    <header><!--barre de navigation-->
+        <div class="container-fluid">
+            <nav class="navbar fixed-top navbar-collapse navbar-expand-md">
+                <a class="navbar-brand py-0 my-0">
+                    <img class="img-fluid icone d-inline-block align-top" src="img/icons8-deer.png" alt="icône">
+                </a>
+                <!--hamburger-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-door-open couleurLogo"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item  mx-3"><a class="nav-link font-weight-bold font-italic" id="accueilNav" href="index.html">Accueil</a></li>
+                        <li class="nav-item active mx-3"><a class="nav-link font-weight-bold font-italic" href="yoga.html" id="yogaNav"><span class="sr-only">(current)</span>Yoga</a></li>
+                        <li class="nav-item mx-3"><a class="nav-link font-weight-bold font-italic" href="meditation.html">Méditation</a></li>
+                    </ul>
+                    <span class="navbar-text d-none d-md-inline">
+                    <i class="fab fa-facebook-f fa-2x px-2"></i>
+                    <i class="fab fa-twitter fa-2x px-2"></i>
+                    <i class="fab fa-instagram fa-2x px-2"></i>
+                </span>
+                </div>
+            </nav>
+        </div>
+        <div class="container-fluid bgBanniereYoga parallaxe">
+            <div class="row rownav">
+                <!--Pour décaler le contenu du nav-->
+            </div>
+            <div class="row mx-2 hauteur80">
+                <div class="col-12 col-lg-6 col-xl-12 my-auto text-center">
+                    <h1 class="d-none d-sm-inline couleurTitre">Yoga</h1>
+                    <h2 class="couleurTitre">Retrouvez harmonie et énergie!</h2>
+                </div>
+                <div class="col-12 col-lg-5 col-xl-12 px-2 bgTransparent parallaxe">
+                    <h2 class="p-2">Le yoga,<br> union du corps et de l'esprit</h2>
+                    <p class="p-2">
+                        Concrètement, le yoga va permettre par une approche corporelle de pacifier le mental. Outre un impact
+                        sur les émotions par le travail du souffle, le yoga conduit vers une meilleure connaissance de soi
+                        et une meilleure intégration de son schéma corporel.
+                        Le yoga permet de dénouer le corps, de développer une plus grande mobilité articulaire, de soulager
+                        les articulations, de diminuer les tensions. Ses effets sont dus à la cohérence du souffle et le
+                        déplacement de l'attention qui permet à l'énergie de circuler harmonieusement dans le corps et sur les différents
+                        plans, ce qui va créer un équilibre corps esprit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section><!--jumbtron-->
+        <div class="jumbotron jumbotron-fluid px-0 py-0 my-0 bgJumbo parallaxe">
+            <div class="container-fluid px-0 bgTransparent h-100 text-center">
+                <h1 class="lead">Bientôt disponible</h1>
+                <hr class="my-1 my-md-4">
+                <h3 class=""><i class="d-none d-sm-inline fas fa-unlock px-2"></i>Nouvelle section sur le "Vivre et Lâcher prise".<i class="d-none d-sm-inline fas fa-unlock px-2"></i></h3>
+                <h2 class="display-lg-4">
+                    <a data-toggle="modal" data-target="#modalLachezPrise">
+                      <i class="fas fa-chevron-down"></i>
+                    </a>
+                </h2>
+                <!-- Modal data-->
+                <div class="modal fade" id="modalLachezPrise" tabindex="-1" role="dialog" aria-labelledby="modalLachezPriseTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content bgJumbo parallaxe">
+                            <div class="modal-header">
+                                <h3 class="modal-title align-self-center text-white" id="modalLachezPriseLongTitle">Inscription à l'infolettre</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="jumbotron jumbotron-fluid bgTransparent w-100">
+                                    <div class="container">
+                                        <div class="row text-center">
+                                            <div class="col-12">
+                                                <h1><i class="fas fa-unlock px-2"></i></h1>
+                                                <h3 class="display-4">Vivre et lâcher prise</h3>
+                                                <h3>Ouvrons-nous à notre mystère</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <img class="img-fluid h-50 d-inline-block align-top" src="img/icons8-deer.png" alt="icône">
+                                            </div>
+                                            <div class="col-8">
+                                                <p class="lead text-justify">Voici une vérité très simple, qui mérite pourtant une attention particulière:
+                                                    une vie sans mystère n'est pas une vie véritable. En effet, nous songeons
+                                                    rarement que ce qui enrichit notre vie et la rend digne d'être vécue, c'est
+                                                    justement le mystère. Il suffit de regarder en arrière, vers notre jeunesse.</p>
+                                                <hr class="my-4">
+                                                <p class="text-justify">Les mystères de la vie ne nous
+                                                    effrayaient pas ; au contraire, ils nous emplissaient d'espoir... au point que
+                                                    certains soirs nous avions du mal à nous endormir ; parfois nous passions la
+                                                    nuit à rêvasser à toutes les possibilités que la vie semblait nous offrir.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer bgTransparent align-self-center">
+                                <div class="container-fluid">
+                                    <form class="form-row mb-4">
+                                        <p>Inscrivez-vous à l'infolettre pour suivre les nouveautés!</p>
+                                        <label for="courriel">Entrez votre courriel</label>
+                                        <input type="text" class="form-control" id="courriel" placeholder="Courriel">
+                                    </form>
+                                    <div class="row mx-auto">
+                                        <input id="envoyer" class="btn couleurLogo" data-dismiss="modal" value="Envoyer"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="semaineYoga"><!--Semaine de yoga-->
+        <div class="container-fluid">
+            <div class="row text-center"><!--Titre et information-->
+                <div class="col-12">
+                    <h1>Votre semaine de yoga</h1>
+                    <h3>Inscrivez-vous pour des cours près de chez vous</h3>
+                    <a href="#inscription">Je veux m'inscrire!</a>
+                </div>
+            </div>
+            <div class="row my-3"><!--Jour 1 à 3-->
+                <div class="col-12 col-sm-6 col-lg-4 mt-3"><!--jour 1-->
+                    <div class="card">
+                        <div class="card-header couleurLogo">
+                            <h2>Jour 1</h2>
+                        </div>
+                        <div class="card-body bg1">
+                            <p>Asana</p><!--palmier-->
+                            <p>Utthanasana</p><!--pince-->
+                            <p>Matsyasana</p><!--poisson-->
+                        </div>
+                        <div class="card-footer">
+                            <p>Voir les postures<a data-toggle="modal" data-target="#modalJour1">
+                                <i class="fas fa-chevron-down"></i>
+                            </a></p>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalJour1" tabindex="-1" role="dialog" aria-labelledby="modalJour1Title" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title align-self-center couleurLogo" id="modalJour1LongTitle">Postures jour 1</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+                                            <!-- Sert pour afficher les bulles sous l’images -->
+                                            <ul class="carousel-indicators">
+                                                <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                                                <li data-target="#myCarousel1" data-slide-to="1"></li>
+                                                <li data-target="#myCarousel1" data-slide-to="2"></li>
+                                            </ul>
+                                            <!-- Le contenant pour les slides -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="img-fluid" src="img/yoga-palmier.jpg" alt="posture du palmier">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture du palmier</h3>
+                                                        <p>Asana</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item photo-gris">
+                                                    <img class="img-fluid" src="img/yoga-pince.jpg" alt="posture de la pince">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture de la pince</h3>
+                                                        <p>Utthanasana</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item photo-gris">
+                                                    <img class="img-fluid" src="img/yoga-poisson.jpg" alt="posture du poisson">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture du poisson</h3>
+                                                        <p>Matsyasana</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#myCarousel1" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#myCarousel1" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--Fin col1-->
+                <div class="col-12 col-sm-6 col-lg-4 mt-3"><!--Jour 2-->
+                    <div class="card">
+                        <div class="card-header couleurLogo">
+                            <h2>Jour 2</h2>
+                        </div>
+                        <div class="card-body bg2">
+                            <p>Viparita Karani</p><!--demi-chandelle-->
+                            <p>Navasana</p><!--barque-->
+                            <p>Mandukasana</p><!--grenouille-->
+                        </div>
+                        <div class="card-footer">
+                            <p>Voir les postures<a data-toggle="modal" data-target="#modalJour2">
+                                <i class="fas fa-chevron-down"></i></a>
+                            </p>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalJour2" tabindex="-1" role="dialog" aria-labelledby="modalJour2Title" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title align-self-center couleurLogo" id="modalJour2LongTitle">Postures jour 2</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                                            <!-- Sert pour afficher les bulles sous l’images -->
+                                            <ul class="carousel-indicators">
+                                                <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                                                <li data-target="#myCarousel2" data-slide-to="1"></li>
+                                                <li data-target="#myCarousel2" data-slide-to="2"></li>
+                                            </ul>
+                                            <!-- Le contenant pour les slides -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="img-fluid" src="img/yoga-palmier.jpg" alt="posture de la chandelle">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture de la chandelle</h3>
+                                                        <p>Viparita Karani</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item photo-gris">
+                                                    <img class="img-fluid" src="img/yoga-pince.jpg" alt="Posture de la barque">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture de la barque</h3>
+                                                        <p>Navasana</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item photo-gris">
+                                                    <img class="img-fluid" src="img/yoga-poisson.jpg" alt="posture de la grenouille">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture de la grenouille</h3>
+                                                        <p>Mandukasana</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#myCarousel2" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#myCarousel2" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mt-3"><!--Jour 3-->
+                    <div class="card">
+                        <div class="card-header couleurLogo">
+                            <h2>Jour 3</h2>
+                        </div>
+                        <div class="card-body bg3">
+                            <p>Setuasana</p><!--pont-->
+                            <p>Halasana</p><!--charrue-->
+                            <p>Marjariasana</p><!--chat qui s'étire-->
+                        </div>
+                        <div class="card-footer">
+                            <p>Voir les postures<a data-toggle="modal" data-target="#modalJour3">
+                                <i class="fas fa-chevron-down"></i></a>
+                            </p>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalJour3" tabindex="-1" role="dialog" aria-labelledby="modalJour3Title" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title align-self-center couleurLogo" id="modalJour3LongTitle">Postures jour 3</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="myCarousel3" class="carousel slide" data-ride="carousel">
+                                            <!-- Sert pour afficher les bulles sous l’images -->
+                                            <ul class="carousel-indicators">
+                                                <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+                                                <li data-target="#myCarousel3" data-slide-to="1"></li>
+                                                <li data-target="#myCarousel3" data-slide-to="2"></li>
+                                            </ul>
+                                            <!-- Le contenant pour les slides -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="img-fluid" src="img/yoga-palmier.jpg" alt="posture du pont">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture du pont</h3>
+                                                        <p>Setuasana</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item photo-gris">
+                                                    <img class="img-fluid" src="img/yoga-pince.jpg" alt="Posture de la charrue">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture de la charrue</h3>
+                                                        <p>Halasana</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item photo-gris">
+                                                    <img class="img-fluid" src="img/yoga-poisson.jpg" alt="posture du chat qui s'étire">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture du chat qui s'étire</h3>
+                                                        <p>Marjariasana</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#myCarousel3" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#myCarousel3" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--Jour 4 et 5-->
+                <div class="col-12 col-sm-6 offset-lg-2 col-lg-4 mt-3"><!--Jour 4-->
+                    <div class="card">
+                        <div class="card-header couleurLogo">
+                            <h2>Jour 4</h2>
+                        </div>
+                        <div class="card-body bg4">
+                            <p>Gomukhasana</p><!--museau de vache-->
+                            <p>Utthanasana</p><!--pince-->
+                            <p>Salamba</p><!--sphinx-->
+                        </div>
+                        <div class="card-footer">
+                            <p>Voir les postures<a data-toggle="modal" data-target="#modalJour4">
+                                <i class="fas fa-chevron-down"></i></a>
+                            </p>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalJour4" tabindex="-1" role="dialog" aria-labelledby="modalJour4Title" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title align-self-center couleurLogo" id="modalJour4LongTitle">Postures jour 4</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="myCarousel4" class="carousel slide" data-ride="carousel">
+                                            <!-- Sert pour afficher les bulles sous l’images -->
+                                            <ul class="carousel-indicators">
+                                                <li data-target="#myCarousel4" data-slide-to="0" class="active"></li>
+                                                <li data-target="#myCarousel4" data-slide-to="1"></li>
+                                                <li data-target="#myCarousel4" data-slide-to="2"></li>
+                                            </ul>
+                                            <!-- Le contenant pour les slides -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="img-fluid" src="img/yoga-palmier.jpg" alt="Posture du museau de vache">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture du museau de vache</h3>
+                                                        <p>Gomukhasana</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item photo-gris">
+                                                    <img class="img-fluid" src="img/yoga-pince.jpg" alt="Posture de la pince">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture de la pince</h3>
+                                                        <p>Utthanasana</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item photo-gris">
+                                                    <img class="img-fluid" src="img/yoga-poisson.jpg" alt="Posture du sphinx">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture du sphinx</h3>
+                                                        <p>Salamba</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#myCarousel4" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#myCarousel4" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 offset-sm-3 col-sm-6 offset-lg-0 col-lg-4 mt-3"><!--Jour 5-->
+                    <div class="card">
+                        <div class="card-header couleurLogo">
+                            <h2>Jour 5</h2>
+                        </div>
+                        <div class="card-body bg5">
+                            <p>Bharmanasana</p><!--table-->
+                            <p>Dhanurasana</p><!--arc-->
+                            <p>Vrksasana</p><!--arbre-->
+                        </div>
+                        <div class="card-footer">
+                            <p>Voir les postures<a data-toggle="modal" data-target="#modalJour5">
+                                <i class="fas fa-chevron-down"></i></a>
+                            </p>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalJour5" tabindex="-1" role="dialog" aria-labelledby="modalJour5Title" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title align-self-center couleurLogo" id="modalJour5LongTitle">Postures jour 5</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="myCarousel5" class="carousel slide" data-ride="carousel">
+                                            <!-- Sert pour afficher les bulles sous l’images -->
+                                            <ul class="carousel-indicators">
+                                                <li data-target="#myCarousel5" data-slide-to="0" class="active"></li>
+                                                <li data-target="#myCarousel5" data-slide-to="1"></li>
+                                                <li data-target="#myCarousel5" data-slide-to="2"></li>
+                                            </ul>
+                                            <!-- Le contenant pour les slides -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="img-fluid" src="img/yoga-palmier.jpg" alt="Posture de la tablee">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture de la table</h3>
+                                                        <p>Bharmanasana</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item photo-gris">
+                                                    <img class="img-fluid" src="img/yoga-pince.jpg" alt="Posture de l'arc">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture de l'arc</h3>
+                                                        <p>Dhanurasana</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item photo-gris">
+                                                    <img class="img-fluid" src="img/yoga-poisson.jpg" alt="Posture de l'arbre">
+                                                    <div class="carousel-caption">
+                                                        <h3>Posture de l'arbre</h3>
+                                                        <p>Vrksasana</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#myCarousel5" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#myCarousel5" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section><!--formulaire-->
+        <form class="mx-3" id="inscription">
+            <div class="container-fluid">
+                <h1 class="couleurLogo">Inscription au cours de yoga</h1>
+                <div class="form-row"><!--Nom d'usager-->
+                    <div class="col-10 mx-auto py-3">
+                        <label for="nom">Nom</label>
+                        <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom complet">
+                    </div>
+                </div>
+                <div class="form-row"><!--Mot de passe-->
+                    <div class="col-10 mx-auto py-3">
+                        <label for="ville">Ville</label>
+                        <input type="text" class="form-control" id="ville" placeholder="Entrez le nom de la ville">
+                    </div>
+                </div>
+                <div class="form-row"><!--boutons radios, choix de degré-->
+                    <div class="col-12 col-sm-10 py-3 mx-sm-auto">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="debutant" value="debutant" >
+                            <label class="form-check-label" for="debutant">Débutant</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inter" value="inter">
+                            <label class="form-check-label" for="inter">Intermediaire</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pro" value="pro">
+                            <label class="form-check-label" for="pro">Avancé</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row"><!--Courriel-->
+                    <div class="col-10 mx-auto py-3">
+                        <label for="mail">Courriel</label>
+                        <input type="email" class="form-control" id="mail" placeholder="Entrez votre courriel">
+                    </div>
+                </div>
+                <div class="form-row"><!--Confirmation du courriel-->
+                    <div class="col-10 mx-auto py-3">
+                        <label for="mailConfirm">Confimation du courriel</label>
+                        <input type="email" class="form-control" id="mailConfirm" placeholder="Entrez de nouveau votre courriel">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-10 py-3 mx-auto">
+                        <input id="inscrire" class="btn bouton8" type="submit" value="M'inscrire!"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <footer class="bgfooter">
+        <div class="container-fluid">
+            <div class="row align-items-start">
+                <div class="col-2 order-0"><!--logo-->
+                    <img class="img-fluid" src="img/icons8-deer.png" alt="icône">
+                </div>
+                <div class="col-6 col-lg-2 text-left text-dark text-lg-center order-4 order-lg-1 "><!--médias sociaux-->
+                    <p class="mt-lg-5">Suivez-nous!</p>
+                    <i class="fab fa-facebook-f fa-2x px-2 text-white"></i>
+                    <i class="fab fa-twitter fa-2x px-2 text-white"></i>
+                    <i class="fab fa-instagram fa-2x px-2 text-white"></i>
+                </div>
+                <div class="col-3 col-lg-2 text-center order-1 order-lg-2"><!--Liens 4 accords-->
+                    <p>Les 4 accords</p>
+                    <hr>
+                    <div class="text-center">
+                        <a href="index.html#accord1" class="d-block">Accord #1</a>
+                        <a href="index.html#accord2" class="d-block">Accord #2</a>
+                        <a href="index.html#accord3" class="d-block">Accord #3</a>
+                        <a href="index.html#accord4" class="d-block">Accord #4</a>
+                    </div>
+                </div>
+                <div class="col-3 col-lg-2 text-center order-2 order-lg-3"><!--Liens yoga-->
+                    <p>Le Yoga</p>
+                    <hr>
+                    <div class="text-center">
+                        <a href="#semaineYoga" class="d-block">Votre semaine de yoga</a>
+                        <a href="#inscription" class="d-block">Inscription au cours</a>
+                    </div>
+                </div>
+                <div class="col-3 col-lg-2 text-center order-3 order-lg-4"><!--Liens méditation-->
+                    <p>La méditation</p>
+                    <hr>
+                    <div class="text-center">
+                        <a href="meditation.html#montagne" class="d-block">Montagne</a>
+                        <a href="meditation.html#lac" class="d-block">Lac</a>
+                        <a href="meditation.html#paysage" class="d-block">Paysage mental</a>
+                        <a href="meditation.html#ecoute" class="d-block">Écoutez</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2 order-5 pt-2"><!--Recherche-->
+                    <form class="form-inline justify-content-center  mt-0">
+                        <i class="fas fa-search text-white" aria-hidden="true"></i>
+                        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+                               aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script> <!--Provient su site des icônes-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+</body>
+</html>

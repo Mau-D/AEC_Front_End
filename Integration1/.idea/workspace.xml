@@ -16,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -29,17 +29,17 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../WEB/AEC DEV WEB/TechniquesIntégrationWeb/bootstrapModalJumbotron" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\ProjetFinal\video" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\ProjetFinal" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_DEV_WEB\AEC_Front_End\Integration1\Formulaires" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapModalJumbotron" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\BootstrapNav" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\BootstrapNav\bootstrap-4.0.0-dist" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\FacebookBootstrap" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1" />
@@ -124,6 +124,13 @@
       <workItem from="1584294453102" duration="4181000" />
       <workItem from="1584401787615" duration="1817000" />
       <workItem from="1584455646085" duration="937000" />
+      <workItem from="1584725970163" duration="22925000" />
+      <workItem from="1584960710000" duration="62597000" />
+      <workItem from="1585266902327" duration="624000" />
+      <workItem from="1585312582839" duration="19322000" />
+      <workItem from="1585392127469" duration="13000" />
+      <workItem from="1585439199813" duration="30616000" />
+      <workItem from="1585866268052" duration="2868000" />
     </task>
     <servers />
   </component>

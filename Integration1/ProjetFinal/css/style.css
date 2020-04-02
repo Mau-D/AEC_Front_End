@@ -1,0 +1,328 @@
+/*style.css, projet final cours intégration web*/
+/*Maud Harvey*/
+/*20 mars 2020*/
+html,body { margin:0; padding: 0; height:100%;}
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color : #676449;
+}
+.bgBanniere{
+    height: 100vh;
+}
+.titre{
+    z-index: 2;
+}
+.content {
+    position: absolute;
+    text-align: justify;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    margin-left: 0;
+    z-index: 2;
+}
+.bgJumbo{
+    background-image: url("../img/stone-tower-yoga.jpg");
+}
+.bgTransparent{
+    background-color: rgba(255, 255, 255, .7);
+    width: 100%;
+    height: 50%;
+}
+.bg1 {
+    background-image: url("../img/balance.jpg");
+    height: 60vh; /*hauteur du parallaxe*/
+}
+.bgfond{
+    background-image: url("../img/thestones.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bgfooter{
+    background-color: black;
+    background-image: linear-gradient(white, black);
+}
+.parallaxe {
+    background-attachment: fixed; /*Pour l'effet*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.z1g{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.z2g{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    height: 45%;
+    width: 75%;
+}
+.z1d{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+
+}
+.z2d{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    height: 45%;
+    width: 75%;
+}
+.hauteur100{
+    height: 100vh;
+}
+.w45{
+    max-width: 45%;
+    margin-left: 3%;
+}
+hr{
+    margin-bottom:15px;
+    margin-top:15px;
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #343A40;
+}
+.ombre{
+    border: 1px solid;
+    box-shadow: 5px 10px 8px #888888;
+}
+.ombre:hover{
+    cursor: pointer;
+    border: 1px solid;
+    box-shadow: 10px 20px 8px #4788C7;
+}
+.icone{
+    height: 10vh;
+}
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4rem;
+}
+h2{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+}
+h3{
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+}
+p{
+    font-size: 1.3rem;
+}
+
+#accueilNav{
+    color: #4788C7;
+}
+.nav-link:link{
+    color: black;
+    text-shadow: 1px 1px 2px white;
+    font-size: 1.5rem;
+}
+.fab{
+    color: black;
+}
+.nav-link:hover{
+    font-size: xx-large;
+}
+.nav-link:visited{
+    color: #4788C7;
+}
+.modal-xl{
+    min-width: 80%;
+}
+.couleurLogo{
+    color: #4788C7;
+}
+i .far{
+   font-size: 4rem;
+}
+#myBtn{
+    border:none;
+    padding:6px 0 6px 0;
+    border-radius:2px;
+    box-shadow:3px 3px 12px #999;
+    background:#fff;
+    font:bold 13px Arial;
+    color:#555;
+    cursor: pointer;
+}
+.bouton4 {
+    padding:6px 0 6px 0;
+    font:bold 13px Arial;
+    background:#f5f5f5;
+    color:#555;
+    border-radius:2px;
+    width:100px;
+    border:1px solid #ccc;
+    box-shadow:1px 1px 3px #999;
+}
+@media only screen and (max-width: 576px){
+    #myVideo {
+        display: none;
+    }
+    .bgBanniere{
+        background-size: cover;
+        height: 100vh;
+    }
+    .bgBanniere::after {
+        content: "";
+        background-image: url("../img/starry-sky.jpg");
+        opacity: 0.8;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    h1{
+
+        font-size: 3rem;
+    }
+    h2{
+
+        font-size: 2rem;
+    }
+    h3{
+
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    .content{
+        text-align: center;
+    }
+    .z2g{
+        height: 40%;
+        width: 70%;
+    }
+    .z2d{
+        height: 40%;
+        width: 70%;
+    }
+    .bg1 {
+        height: 40vh; /*hauteur du parallaxe*/
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    #myVideo {
+        display: none;
+    }
+    .bgBanniere{
+        background-size: cover;
+        height: 100vh;
+    }
+    .bgBanniere::after {
+        content: "";
+        background-image: url("../img/starry-sky.jpg");
+        opacity: 0.8;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+    .bg1 {
+        height: 60vh; /*hauteur du parallaxe*/
+    }
+    .z2g{
+        height: 60%;
+        width: 60%;
+    }
+    .z2d{
+        height: 60%;
+        width: 60%;
+
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+
+        font-size: 2rem;
+    }
+    h3{
+
+        font-size: 1.3rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width: 767px) and (max-width: 992px){
+    #myVideo {
+        display: none;
+    }
+    .bgBanniere{
+        background-image: url("../img/starry-sky.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+    .z2g{
+        height: 35%;
+        width: 75%;
+    }
+    .z2d{
+        height: 35%;
+        width: 75%;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+
+        font-size: 3rem;
+    }
+    h3{
+
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .z2g{
+        height: 45%;
+        width: 75%;
+    }
+    .z2d{
+        height: 45%;
+        width: 75%;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+
+        font-size: 3rem;
+    }
+    h3{
+
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
