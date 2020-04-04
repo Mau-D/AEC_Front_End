@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--index.html-->
+<!--Projet Final Photociti, Programmation web-->
+<!--Par Maud Harvey-->
+<!--Le 26 mars 2020-->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no"> <!--À ajouter pour utiliser Bootstrap-->
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Photociti</title>
+</head>
+<body>
+<div class="container-fluid"> <!--tout le site-->
+    <header>
+        <h2 class="font-weight-light d-print-none">Créez votre mot Photociti en 4 étapes rapides</h2>
+    <!--Les quatres étapes-->
+        <section id="etape1"><!--étape 1, Le mot-->
+            <div class="container-fluid d-print-none">
+                <div class="row my-3">
+                    <div class="offset-3 col-6">
+                        <h4>Étape 1</h4>
+                        <h4><i class="fas fa-keyboard"></i>  Entrez votre mot</h4>
+                        <input class="form-control text-center" id="mot" type="text" placeholder="Un mot entre 3 et 12 caractères">
+                        <label class="font-weight-bold" for="mot">Utilisez * pour les caractères spéciaux</label>
+                    </div>
+                    <div class="col-1 my-auto pt-2">
+                        <input class="bg-dark text-white mt-4 rounded" type="submit" id="go" name="Go" value="Go">
+                    </div>
+                    <div class="col-2 my-auto al">
+                        <i class="fas fa-arrow-right float-right fa-4x"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="etape2"><!--étape 2, Les lettres-->
+            <div class="container-fluid d-print-none">
+                <div class="row my-2">
+                    <div class="col-2 my-auto">
+                        <i class="fas fa-arrow-left float-left fa-4x"></i>
+                    </div>
+                    <div class="offset-1 col-6">
+                        <h4>Étape 2</h4>
+                        <h4><i class="fab fa-autoprefixer fa-3x"></i>  Changez vos lettres</h4>
+                        <p class="font-weight-bold">Cliquez sur une lettre pour changer la photo</p>
+                    </div>
+                    <div class="col-3 my-auto">
+                        <i class="fas fa-arrow-right float-right fa-4x"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="etape3"><!--étape 3, Le fond-->
+            <div class="container-fluid d-print-none">
+                <div class="row my-2">
+                    <div class="col-2 my-auto">
+                        <i class="fas fa-arrow-left float-left fa-4x"></i>
+                    </div>
+                    <div class="offset-1 col-6">
+                        <h4>Étape 3</h4>
+                        <h4><i class="far fa-image fa-3x"></i>  Changez le fond</h4>
+                        <p class="font-weight-bold">Cliquez sur les couleurs pour changer le fond:</p>
+                        <div id="fondCouleur"><!--rectangle pour cliquer-->
+                            <div id="fondBlanc"></div>
+                            <div id="fondBleu"></div>
+                            <div id="fondBleuFonce"></div>
+                            <div id="fondGris"></div>
+                            <div id="fondNoir"></div>
+                            <div id="fondRose"></div>
+                            <div id="fondRouge"></div>
+                        </div>
+                    </div>
+                    <div class="col-3 my-auto">
+                        <i class="fas fa-arrow-right float-right fa-4x"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="etape4"><!--étape 4, L'impression-->
+            <div class="container-fluid d-print-none">
+                <div class="row my-2">
+                    <div class="col-2 my-auto">
+                        <i class="fas fa-arrow-left float-left fa-4x"></i>
+                    </div>
+                    <div class="offset-1 col-6">
+                        <h4>Étape 4</h4>
+                        <i class="fas fa-print fa-3x"></i>  Imprimez</h4>
+                        <p class="font-weight-bold">Imprimez avec l'option de votre navigateur</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section><!--affichage du cadre-photo-->
+        <div class="container-fluid" id="cadre">
+            <div class="row bgCadre justify-content-around py-1 text-center d-flex">
+                <div class="col-1" id="colonne1">
+                  <img id="image1" class="img-fluid bordure" src="img/Letters/CS/CS3.jpg" alt="Lettre 1">
+                </div>
+                <div class="col-1" id="colonne2">
+                    <img id="image2" class="img-fluid bordure" src="img/Letters/M/M1.jpg" alt="Lettre 2">
+                </div>
+                <div class="col-1" id="colonne3">
+                    <img id="image3" class="img-fluid bordure" src="img/Letters/A/A1.jpg" alt="Lettre 3">
+                </div>
+                <div class="col-1" id="colonne4">
+                    <img id="image4" class="img-fluid bordure" src="img/Letters/U/U1.jpg" alt="Lettre 4">
+                </div>
+                <div class="col-1" id="colonne5">
+                    <img id="image5" class="img-fluid bordure" src="img/Letters/D/D1.jpg" alt="Lettre 5">
+                </div>
+                <div class="col-1" id="colonne6">
+                    <img id="image6" class="img-fluid bordure" src="img/Letters/H/H1.jpg" alt="Lettre 6">
+                </div>
+                <div class="col-1" id="colonne7">
+                    <img id="image7" class="img-fluid bordure" src="img/Letters/A/A1.jpg" alt="Lettre 7">
+                </div>
+                <div class="col-1" id="colonne8">
+                    <img id="image8" class="img-fluid bordure" src="img/Letters/R/R1.jpg" alt="Lettre 8">
+                </div>
+                <div class="col-1" id="colonne9">
+                    <img id="image9" class="img-fluid bordure" src="img/Letters/V/V1.jpg" alt="Lettre 9">
+                </div>
+                <div class="col-1" id="colonne10">
+                    <img id="image10" class="img-fluid bordure" src="img/Letters/E/E1.jpg" alt="Lettre 10">
+                </div>
+                <div class="col-1" id="colonne11">
+                    <img id="image11" class="img-fluid bordure" src="img/Letters/Y/Y1.jpg" alt="Lettre 11">
+                </div>
+                <div class="col-1" id="colonne12">
+                    <img id="image12" class="img-fluid bordure" src="img/Letters/CS/CS3.jpg" alt="Lettre 12">
+                </div>
+            </div>
+        </div>
+        <div class="container"> <!--Modal pour photos-->
+            <div class="modal fade" id="imagesModal" tabindex="-1" role="dialog" aria-labelledby="imagesModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title font-weight-light" id="imagesModalLabel">Sélectionnez votre photo</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body px-0"><!--Caroussel-->
+                            <div id="carouselImagesControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner px-0 mx-auto">
+                                    <div class="carousel-item active text-center">
+                                        <img id="item1" src="img/Letters/A/A1.jpg" alt="image1">
+                                    </div>
+                                    <div class="carousel-item text-center">
+                                        <img id="item2" src="img/Letters/A/A2.jpg" alt="image2">
+                                    </div>
+                                    <div class="carousel-item text-center">
+                                        <img id="item3"  src="img/Letters/A/A3.jpg" alt="image3">
+                                    </div>
+                                    <div class="carousel-item text-center">
+                                        <img id="item4" src="img/Letters/A/A4.jpg" alt="image4">
+                                    </div>
+                                    <div class="carousel-item text-center">
+                                        <img id="item5" src="img/Letters/A/A5.jpg" alt="image5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="btn btn-dark" href="#carouselImagesControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="btn btn-dark float-right" href="#carouselImagesControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="save" type="button" class="btn btn-dark" data-dismiss="modal">Sauvegarder</button>
+                            <button id="annuler" type="button" class="btn btn-dark" data-dismiss="modal">Annuler</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script> <!--Provient du site des icônes-->
+<script src="js/jquery-3.4.1.js"></script><!--JQuery en premier-->
+<script src="Bootstrap/js/bootstrap.js"></script><!--Bootstrap en no.2-->
+<script src="js/photociti.js"></script><!--Fichier javascript en no.3-->
+</body>
+</html>

@@ -16,9 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -30,12 +30,15 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../WEB/AEC DEV WEB/TechniquesProgrammationWeb1/Correction FLASH" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Integration1" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Programmation1\ProjetFinal Photociti\js" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Programmation1\ProjetFinal Photociti" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Programmation1\Casse-Tete\JS" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_DEV_WEB\AEC_Front_End\Programmation1\Comicon 2019\js" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_DEV_WEB\AEC_Front_End\Programmation1\Comicon 2019" />
     </key>
@@ -127,6 +130,19 @@
       <workItem from="1584294430381" duration="21000" />
       <workItem from="1584402336121" duration="3502000" />
       <workItem from="1584455987242" duration="1981000" />
+      <workItem from="1584725987062" duration="1180000" />
+      <workItem from="1584885836452" duration="10051000" />
+      <workItem from="1584960680646" duration="28000" />
+      <workItem from="1585147169052" duration="3053000" />
+      <workItem from="1585261952255" duration="34000" />
+      <workItem from="1585261988493" duration="7837000" />
+      <workItem from="1585312551379" duration="30000" />
+      <workItem from="1585392142128" duration="4866000" />
+      <workItem from="1585412528551" duration="7434000" />
+      <workItem from="1585439187204" duration="610000" />
+      <workItem from="1585594838892" duration="41519000" />
+      <workItem from="1585866254411" duration="2546000" />
+      <workItem from="1585874376532" duration="19177000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,10 @@
 //18 mars 2020
 //Sous les boutons radio, vous devez créer 3 divisions cachées, pour chacun des éléments.
 // Les divisions deviendront visibles lorsque l’usager effectue son choix.(Starwars, Marvel ou DC)
-
+//Correction: Utiliser le hide() et le show() pour les sections des personnages
+//$(".starwars").hide();
+//$(".marvel").hide();
+//$(".dc").hide();
 
 let $radios = $('input[name="inlineRadioOptions"]');
 let imageChoisi = "";
@@ -13,21 +16,21 @@ $radios.change(function() {
     let radioValue = $("input[name='inlineRadioOptions']:checked").val();
 
     if(radioValue === "Starwars"){
-        $(".starwars").removeClass("d-none");
-        $(".marvel").addClass("d-none");
-        $(".dc").addClass("d-none");
+        $(".starwars").removeClass("d-none");//.show()
+        $(".marvel").addClass("d-none");//.hide()
+        $(".dc").addClass("d-none");//.hide()
         imageChoisi = "img/yoda.png";
         personnageChoisi = "Yoda";
     }
     else if(radioValue === "Marvel"){
-        $(".marvel").removeClass("d-none");
+        $(".marvel").removeClass("d-none");//idem
         $(".starwars").addClass("d-none");
         $(".dc").addClass("d-none");
         imageChoisi = "img/spiderman.png";
         personnageChoisi = "Spiderman";
     }
     else if(radioValue === "DC"){
-        $(".dc").removeClass("d-none");
+        $(".dc").removeClass("d-none");//idem
         $(".starwars").addClass("d-none");
         $(".marvel").addClass("d-none");
         imageChoisi = "img/batman.jpg";
@@ -161,7 +164,7 @@ $("#envoyer").click(function () {
     console.log(personnageChoisi);
     console.log(imageChoisi);
     $(".siteEntier").hide("slow");
-    $("#fin").removeClass("d-none");
+    $("#fin").removeClass("d-none"); //On peut utiliser le hide et le show, ajouter une commande hide au début du fichier
     $('#imageFin').attr("src", imageChoisi);
     $('.nomUsager').html($('#nom').val());
     $('.addcourriel').html($('#courriel').val());
