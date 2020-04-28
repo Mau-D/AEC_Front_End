@@ -12,7 +12,17 @@ let nbrAleatoire = Math.floor(Math.random() * Math.floor(5));
 let joueurs = ['Steve Kerr', 'Michael Jordan', 'Bill Wennington', 'Scottie Pipen', 'Dennis Rodman'];
 //Créer un tableau avec les images des joueurs correspondants
 let photosJoueurs=[photoSteveKerr, photoMichaelJordan, photoBillWennington, photoScottiePipen, photoDennisRodman];
-const longueur = "200px";
+//Dimensions des images
+const longueur = "500px";
+const hauteur = "200px";
+//Logo
+let imageLogo = (
+  <img
+  src= {netflixlogo}
+  alt= 'logo'
+  height={hauteur}
+  width='400px'/>
+);
 //Variable de l'image du joueur choisi par le nombre aléatoire
 let imageJoueurAffiche = (
   <img
@@ -27,9 +37,8 @@ let nomJoueurAffiche = joueurs[nbrAleatoire];
 //création de la liste 1, avec tous les joueurs
 let listJoueurs = joueurs.map((nom, i)=><li key={'joueurs'+i}>{nom}</li>);
 //Création de la liste 2, sans le joueur affiché par le nombre aléatoire
-//Pour la liste 2, pas besoin{} pour les conditions, car je ne suis pas dans un objet JSX
 let listJoueurs2 =(
-  <div>
+  <div id="listeACacher">
     {nbrAleatoire === 0 && <ul><li>Michael Jordan</li><li>Bill Wennington</li><li>Scottie Pipen</li><li>Dennis Rodman</li></ul>}
     {nbrAleatoire === 1 && <ul><li>Steve Kerr</li><li>Bill Wennington</li><li>Scottie Pipen</li><li>Dennis Rodman</li></ul>}
     {nbrAleatoire === 2 && <ul><li>Steve Kerr</li><li>Michael Jordan</li><li>Scottie Pipen</li><li>Dennis Rodman</li></ul>}
@@ -78,14 +87,14 @@ function App() {
     <div>
       <h1>THE LAST DANCE</h1>
       <p>Une production de</p>
-      <img src={netflixlogo} alt='Netflix'/>
+      {imageLogo}
       <p>Mettant en vedette</p>
       <h2 id='nomAffiche'>{nomJoueurAffiche}</h2>
       {imageJoueurAffiche}
       <h3>Les 5 partants affichés avec MAP()</h3>
       <ul>{listJoueurs}</ul>
       <h3 id="titreACacher">Les 4 partants affichés avec &&</h3>
-      <ul id="listeACacher">{listJoueurs2}</ul>
+      {listJoueurs2}
       <button type="button" onClick={ChangerJoueur}>Changer de joueur</button> 
     </div>
   );
