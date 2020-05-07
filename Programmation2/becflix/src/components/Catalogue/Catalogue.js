@@ -4,14 +4,14 @@ import { Categorie } from '../Categorie/Categorie';
 export class Catalogue extends React.Component {
     render() {
         return (
-            <div>
+            <>
+                <Categorie categorie="Suspense"/>
+                <Categorie categorie="Humour"/>
+                <Categorie categorie="Séries américaines"/>
                 <Categorie />
                 <Categorie />
                 <Categorie />
-                <Categorie />
-                <Categorie />
-                <Categorie />
-            </div>
+            </>
         )
     }
 };

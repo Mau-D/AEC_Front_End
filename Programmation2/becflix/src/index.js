@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from '../src/components/App/App';
-import "bootstrap/dist/css/bootstrap.min.css";
+import App from '../src/components/App/App';//Changer l'emplacement du fichier App.js
+import "bootstrap/dist/css/bootstrap.min.css";//Ajouter le bootstrap
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
