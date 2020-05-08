@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e30f61d877135d2294567424316f15a",
+    "revision": "e7c6ab9252f6e8145f1fc08fa5926723",
     "url": "./index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "631b2800b1af62ce93e5",
+    "revision": "d3517a57048b98bb2dc0",
     "url": "./static/css/main.d1b05096.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/js/2.d756f448.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "631b2800b1af62ce93e5",
-    "url": "./static/js/main.5c5d407e.chunk.js"
+    "revision": "d3517a57048b98bb2dc0",
+    "url": "./static/js/main.dd47fbe4.chunk.js"
   },
   {
     "revision": "ef8e272eb776f0edacee",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/19-2.bab70690.jpg"
   },
   {
-    "revision": "9757f68c6ddc52b3792c249c186b40f8",
-    "url": "./static/media/betterCallSaul.9757f68c.jpg"
+    "revision": "aa89870ca3afd9351a8713ef4d4d316a",
+    "url": "./static/media/betterCallSaul.aa89870c.jpg"
   },
   {
     "revision": "89c0fe3c02ec24da63027078fb1c7b4c",
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/district31.8e4c6ea1.jpg"
   },
   {
-    "revision": "91d87a25d9e5e2da39ebe68b60df5527",
-    "url": "./static/media/fugueuse.91d87a25.jpg"
+    "revision": "6efff7374bf3da4ab850cfdf2dc605bf",
+    "url": "./static/media/fugueuse.6efff737.jpg"
   },
   {
     "revision": "bd35d73bfde94d513835fd836e75f823",
@@ -64,8 +64,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/lapetitevie.ac41b93d.jpg"
   },
   {
-    "revision": "c89bc22add5e0d0609161e4480e96afb",
-    "url": "./static/media/lesbeauxmalaises.c89bc22a.jpg"
+    "revision": "faa68d2b9a196ec0c975db162a0218c1",
+    "url": "./static/media/lesbeauxmalaises.faa68d2b.jpg"
   },
   {
     "revision": "7e617f657824585fa9d6c524a3025118",
