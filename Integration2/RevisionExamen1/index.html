@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--  index.html  -->
+<!--  Par Maud Harvey  -->
+<!--  Le 16 mai 2020  -->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css"><!--Provient du dossier Bootstrap-->
+    <link rel="stylesheet" href="css/style.css"><!--Fichier ajouté pour ajouter du css-->
+    <title>Révision examen 1</title>
+</head>
+<body>
+<header>
+    <h1>Révision examen 1</h1>
+</header>
+<main>
+    <section><!--Canvas-->
+        <h2 class="text-center">Reproduisez l'image suivante en canevas/javascript</h2>
+        <canvas id="myCanvas" width="300" height="300" class="d-block mx-auto">
+        </canvas>
+    </section>
+    <section><!--SVG-->
+        <h2 class="text-center">Reproduisez les images suivantes en html/svg</h2>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 text-center"><!--cercle-->
+                    <svg height="100" width="100">
+                        <!-- Position du centre, largeur du cercle-->
+                        <!-- Bordure, couleur et largeur-->
+                        <!-- Couleur du fond-->
+                        <circle cx="50" cy="50" r="40" stroke="#910060" stroke-width="3" fill="red" />
+                    </svg>
+                </div>
+                <div class="col-3 text-center"><!--rectangle-carré-->
+                    <svg id="carre" width="100" height="100">
+                        <!-- Position, largeur et hauteur du rectangle-->
+                        <rect x="10" y="10" width="80" height="80"
+                    </svg>
+                </div>
+                <div class="col-3 text-center"><!--polygone-triangle-->
+                    <svg id="triangle" height="100" width="100">
+                        <polygon points="10,90 90,90 50,10"/>
+                    </svg>
+                </div>
+                <div class="col-3 text-center"><!--polyline-->
+                    <svg id="polyline" height="100" width="100">
+                        <polyline points="10,10 90,10 10,90 90,90 50,50"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section ><!--Formulaire avec validation-->
+            <form id="formRevision" class="p-5 mx-auto">
+                <div class="container-fluid"></div>
+                    <h1>Feedback Form</h1>
+                    <p>We would love to hear your thoughts, concerns or problems with anything so we can improve!</p>
+                    <h4 class="mt-5">Feedback Type</h4>
+                    <div class="form-row mx-5"><!--test téléphone-->
+                        <div class="d-inline-block">
+                            <input type="tel" size="10" id="codeR" name="Code régional"><br>
+                            <label for="codeR">Code régional</label>
+                        </div>
+                        <div class="d-inline-block m-1">
+                            <p>-</p>
+                        </div>
+                        <div class="d-inline-block">
+                            <input type="tel" size="20" id="noTel" name="Téléphone"><br>
+                            <label for="noTel">Numéro de téléphone</label>
+                        </div>
+                    </div>
+                     <div class="form-row mx-5"><!--bouton radio-->
+                      <div class="col-12 form-group d-flex justify-content-between">
+                          <label class="radio-inline">
+                              <input type="radio" name="optradio" checked>    Comments
+                          </label>
+                          <label class="radio-inline">
+                              <input type="radio" name="optradio">    Bug Reports
+                          </label>
+                          <label class="radio-inline">
+                              <input type="radio" name="optradio">    Questions
+                          </label>
+                      </div>
+                    </div>
+                    <div class="form-row mx-5 mt-5"><!--text-->
+                        <div class="col-10">
+                            <label for="texte">Describe Feedback: <span>*</span></label><br>
+                            <textarea id="texte" type="text" name="describe" rows="5" cols="50" ></textarea>
+                        </div>
+                    </div>
+                <h4 class="mt-5">Name<span>*</span></h4>
+                <div class="form-row"><!--Nom et prénom-->
+                        <div class="col-3">
+                            <!--Ajouter ce pattern, pour ne pas accepter de nombre dans le nom-->
+                            <input autofocus required type="text" pattern="^[^0-9]+$" size="23" maxlength="30" id="name" name="Nom">
+                            <label for="name">First Name</label>
+                        </div>
+                        <div class="col-3">
+                           <!--Ajouter ce pattern, pour ne pas accepter de nombre dans le nom-->
+                            <input autofocus required type="text" pattern="^[^0-9]+$" size="23" maxlength="30" id="prenom" name="prenom">
+                            <label for="prenom">Last Name</label>
+                        </div>
+                    </div>
+                <h4 class="mt-5">E-mail<span>*</span></h4>
+                <div class="form-row "><!--E-mail-->
+                    <div class="col-3">
+                        <!--Ajouter ce pattern, pour ne pas accepter de nombre dans le nom-->
+                        <input type="text" id="email" name="email" size="30" maxlength="30" placeholder="ex: myname@example.com">
+                        <small class="form-text">example@example.com</small>
+                    </div>
+                </div>
+                <div class="form-row mt-5"><!--submit-->
+                    <div class="offset-4 col-4 ">
+                        <button type="submit" class="btn btn-secondary btn-lg">SUBMIT FEEDBACK</button>
+                    </div>
+            </form>
+
+
+
+    </section>
+</main>
+<footer>
+
+</footer>
+<!-- Insérer le fichier JS correspondant-->
+<script src="js/revision.js"></script>
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script> <!--Provient su site des icônes-->
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script><!--Provient du dossier Bootstrap-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Lien en ligne-->
+<!--https://developers.google.com/speed/libraries/#jquery-->
+</body>
+</html>

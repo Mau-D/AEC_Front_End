@@ -1,0 +1,52 @@
+/*style.css*/
+/*Révision examen 1*/
+/*Fait par Maud Harvey*/
+/*16 mai 2020*/
+
+/*Bordure noire du canevas*/
+canvas{
+    border: 1px solid black;
+    margin-left: auto;
+}
+
+/*Style du carré*/
+
+#carre{
+    fill: #00FF01;
+    stroke-width: 3;
+    stroke: #008E56;
+}
+/*Style du triangle*/
+#triangle{
+    fill:#00FFFF;
+    stroke:#231EC9;
+    stroke-width:3;
+}
+/*Style du polyline*/
+#polyline{
+    fill:none;
+    stroke:#247071;
+    stroke-width:3;
+}
+/*style de la section formulaire*/
+#formRevision{
+    width: 50vw;
+    margin-left: 25vh;
+    margin-right: 25vh;
+    background-color: #D5EEF2;
+    border-color: #69D2E1;
+    border-width: 10px;
+    border-style: solid;
+}
+p, label{
+    color: #8B9D82;
+}
+h1, h4{
+    color: #374C2A;
+}
+span{
+    color: red;
+}
+small{
+    color: #8B9D82;
+}
