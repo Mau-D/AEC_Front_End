@@ -8,7 +8,7 @@ export class Catalogue extends React.Component {
                 <Categorie categorie="Suspense"/>
                 <Categorie categorie="Humour"/>
                 <Categorie categorie="Séries américaines"/>
-                <Categorie />
+                <Categorie></Categorie>
                 <Categorie />
                 <Categorie />
             </>
