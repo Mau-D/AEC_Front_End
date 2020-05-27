@@ -1,26 +1,23 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
+//import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-
-
-
+//Component qui gère la recherche
 export class Recherche extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
     }
+    //Méthode, lors du click un props pour activer la recherche et un props pour le string entré
     handleClick() {
-        const rechercher = true;
         const stringSearch = document.getElementById("formSearch").value;
         this.props.onClick(stringSearch);
-        this.props.recherche(rechercher);
+        this.props.recherche(true);
     }
+    //Retourne le formulaire de recherche et un bouton pour lancer la recherche avec un événement onClick
     render() {
         return (
-            <Row>
                 <Col xs={6}>
                     <Form>
                         <Form.Group controlId="formSearch" >
@@ -34,7 +31,6 @@ export class Recherche extends React.Component {
                 </Button>
                     </Form>
                 </Col>
-            </Row>
         )
 
     }

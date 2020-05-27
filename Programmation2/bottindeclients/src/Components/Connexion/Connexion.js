@@ -4,13 +4,13 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+//Component pour la connexion à l'aide d'un mot de passe
 export class Connexion extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
     }
-    //Fonction ajoute un props au composant pour le bouton connexion
+    //Fonction ajoute un props au composant pour le bouton connexion selon le mot de passe entré
     handleClick() {
         let connecter = false;
         const password = document.getElementById("password").value;
@@ -21,7 +21,7 @@ export class Connexion extends React.Component {
 
         this.props.onClick(connecter);
     }
-
+//Retourne un formulaire pour l'entré du mot de passe
     render() {
         return (
             <Container fluid className="mx-0">

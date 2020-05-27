@@ -5,9 +5,9 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
 
 
-
+//Component Client qui sert à afficher les clients
 export class Client extends React.Component {
-
+//Affiche la card du client dans un col, chacuns des champs est défini par un props
     render() {
         return (
             <Col xs={12} sm={6} md={4} lg={4} xl={2} className="mt-4" >
