@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--  index.html  -->
+<!--  Fiche de film avec librairie javascript -->
+<!--  Par Maud Harvey  -->
+<!--  Le 30 mai 2020  -->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css"><!--Provient du dossier Bootstrap-->
+    <link rel="stylesheet" href="css/style.css"><!--Fichier ajouté pour ajouter du css-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- AOS, librairie -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="anime-master/lib/anime.min.js"></script>
+
+
+
+
+    <title>Fiche de film</title>
+
+
+<body>
+
+<header>
+   <div class="container-fluid" id="entete"> <!-- En-tête avec bg -->
+       <div class="row text-center">
+           <div class="col-12">
+
+               <h1>DU SOLEIL<span> PLEIN LA TÊTE</span></h1>
+               <h2>Ethernal sunshine of the spotless mind</h2>
+               <h1 class="text-dark mt-5">CINEMA L'ACCORDEON</h1>
+               <div class="stagger-visualizer mx-auto">
+
+               </div>
+
+           </div>
+       </div>
+   </div>
+</header>
+<main>
+    <div class="container-fluid"> <!-- Page centrale -->
+        <div class="row py-5">
+            <div class=" offset-1 col-4 text-center"><!-- Image du film -->
+                <img class="img-fluid poster d-inline-block" src="img/film.jpg" alt="Poster"/>
+            </div>
+            <div  class="offset-1 col-6 my-auto"><!-- Acteurs -->
+                <div class="container ">
+                    <div class="row text-center">
+                        <div class="col-4 ">
+                            <img src="img/jimCarrey.jpg" class="img-fluid rounded-circle acteur" alt="Jim Carrey"/>
+                            <h3 class="text-white">Jim Carrey</h3>
+                        </div>
+                        <div class="col-4 ">
+                            <img src="img\KateWinslet.jpg" class="img-fluid rounded-circle acteur" alt="Kate Winslet"/>
+                            <h3 class="text-white">Kate Winslet</h3>
+                        </div>
+                        <div class="col-4 ">
+                            <img src="img/KristenDust.jpg" class="img-fluid rounded-circle acteur" alt="Kristen Dust"/>
+                            <h3 class="text-white">Kristen Dust</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row py-5 ">
+            <div class="col-6 px-5 text-justify text-white"><!-- Description -->
+                <p class="p-5">
+                    Joel et Clementine ont vécu une belle histoire d'amour même s'ils étaient très différents.
+                    Joel, réservé avec une vie très monotone, et Clementine fantasque, spontanée et pleine de vie,
+                    ont eu un passé commun merveilleux. Pourtant, un jour, Joel ne comprend plus rien.
+                    Alors qu'il rejoint Clementine sur son lieu de travail pour lui offrir un cadeau pour la
+                    Saint-Valentin, celle-ci semble ne plus le reconnaître et, pire, elle a un autre homme dans
+                    sa vie. Anéanti, Joel veut absolument comprendre ce qui se passe. Il découvre l'existence
+                    de la clinique Lacuna, spécialisée dans l'effacement des souvenirs. Clementine l'a fait
+                    rayer intégralement de sa mémoire car elle était malheureuse avec lui. Joel contacte alors
+                    l'inventeur du procédé, le Dr Mierzwiak, afin qu'il efface également de sa mémoire tout ce
+                    qui le rattachait à Clementine. Le processus est lancé et les souvenirs commencent à défiler
+                    dans la tête de Joel, des plus récents aux plus anciens.
+                </p>
+            </div>
+            <div class="col-6 "><!-- Scènes -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 ">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 mt-2" data-aos="zoom-out-left">
+                                <img src="img/scene1.jpg" class="img-fluid scene " alt="scène 1"/>
+                        </div>
+                        <div class="col-4 mt-2" data-aos="flip-left"
+                             data-aos-easing="ease-out-cubic"
+                             data-aos-duration="2000">
+                            <img src="img/scene2.jpg" class="img-fluid scene " alt="scène 2"/>
+                        </div>
+                        <div class="col-4 mt-2" data-aos="zoom-out-right">
+                            <img src="img/scene3.jpg" class="img-fluid scene " alt="scène 3"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<script>
+    AOS.init();
+</script>
+<!-- Insérer le fichier JS correspondant-->
+
+<script src="js/jquery-3.4.1.js"></script>
+
+<script src="js/film.js"></script>
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script> <!--Provient su site des icônes-->
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script><!--Provient du dossier Bootstrap-->
+
+</body>
+</html>

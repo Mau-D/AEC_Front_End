@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--  index.html  -->
+<!--  Formulaire adoption d'un bébé chat  -->
+<!--  Par Maud Harvey  -->
+<!--  Le 18 avril 2020  -->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css"><!--Provient du dossier Bootstrap-->
+    <link rel="stylesheet" href="css/style.css"><!--Fichier ajouté pour ajouter du css-->
+    <script src="js/chaton.js"></script>
+    <title>Refuge awwww</title>
+</head>
+<body>
+<header>
+    <div class="container-fluid">
+        <div class="row text-center banniere parallaxe vh-75">
+            <div class="col-12 my-auto text-white">
+                <h1>Adoption d'un bébé chat</h1>
+                <h2>Refuge awwww</h2>
+            </div>
+        </div>
+        <div class="row couleurFond"><!--accordéon-->
+            <div class="col-12 px-0">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header text-center" id="headingOne">
+                            <h5 class="mb-0">
+                                <button id="accordeon1" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Suis-je un bon humain pour adopter un chaton?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header text-center" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Comment bien m'occuper de votre nouvel animal, il a besoin de vous.
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header text-center" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Le langage du chat, pour apprendre à se connaître, il faut se comprendre.
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="couleurFond">
+   <!--Formulaire-->
+    <!--Les champs obligatoires: Nom, âge, lieu de naissance, courriel et no. de téléphone-->
+    <section>
+        <form>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="offset-3 col-3 ">
+                        <div class="form-group">
+                            <label for="name">Nom</label><br><!--Ajouter ce pattern, pour ne pas accepter de nombre dans le nom-->
+                            <!-- <input autofocus required type="text" pattern="^[^0-9]+$" size="10" maxlength="20" id="name" name="Nom" placeholder='"Garfield"'><br>-->
+                            <!-- Pour changer le message d'erreur automatique de HTML -->
+                            <input type="text" id="name" pattern="^[^0-9]+$" size="10" maxlength="20" required placeholder="Enter Name"    oninvalid="this.setCustomValidity('Entrer seulement des lettres')"    oninput="this.setCustomValidity('')"  />-->
+                            <label for="age">Âge en années</label><br>
+                            <input type="number" size="2" maxlength="2" min="0" max="49" id="age" name="age"><br>
+                            <label for="naissance">Date de naissance</label><br>
+                            <input required type="date" min="1970-04-18" max="2020-04-18" id="naissance" name="naissance"><br>
+                            <label for="poids">Poids en livre</label><br>
+                            <input type="number" min="0" max="200" id="poids" name="poids"><br>
+                            <input type="checkbox" id="vaccin" name="vacciné"><!-- si oui ou non un seul checkbox est nécessaire-->
+                            <label for="vaccin">Vacciné</label><br>
+                            <small class="form-text text-muted">Coché si l'animal est vacciné</small><br>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        <div class="form-group">
+                            <label for="couleur">Couleur</label><br>
+                            <input type="text" list="couleur" name="couleur"><br>
+                            <datalist id="couleur">
+                                <option value="Noir" readonly="Noir"></option><!--readonly est ajouté pour ne pas soumettre des caractères que l'utilisateur aurait ajouté dans l'input-->
+                                <option value="Blanc" readonly="Blanc"></option>
+                                <option value="Brun" readonly="Brun"></option>
+                                <option value="Mixte" readonly="Mixte"></option>
+                            </datalist>
+                            <input type="radio" id="domestique" name="espece" value="domestique"><!--Les boutons radio doivent avoir le même nom pour pouvoir en sélectionner un seul-->
+                            <label for="domestique">Domestique</label><br>
+                            <input type="radio" id="race" name="espece" value="race">
+                            <label for="race">Racé</label><br>
+                            <label for="ville">Lieu de naissance</label><br><!--Ajouter ce pattern, pour ne pas accepter de nombres-->
+                            <input required id="ville" type="text" name="ville" pattern="^[^0-9]+$" size="20" maxlength="50" placeholder='ex: "Jonquière"'><br>
+                            <small class="form-text text-muted">Écrire le nom de la ville</small><br>
+                            <label for="photos">Inclure 2 photos ou plus de l'animal</label><br><!--Max de 5-->
+                            <input id="photos" type="file" name="photos" accept="image/*" multiple><br><!--Le pattern utilisé accepte seulement les formats d'image-->
+                            <label for="courriel">Courriel</label><br><!--pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">-->
+                            <input required type="email" size="30" id="courriel" name="courriel" placeholder='"abc@gmail.com"'><br>
+                            <label for="telNumber">Téléphone</label><br><!--Ajouter ce pattern, pour ne pas accepter de nombre dans le nom-->
+                            <input required type="tel" pattern="[0-9]{4}-[0-9]{3}--[0-9]{1}\/[A-Z]{1}" id="telNumber" name="Téléphone" placeholder='9999-555--1/G'><br><br>
+                            <button type="submit">Envoyer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+</main>
+<footer>
+
+</footer>
+<script src="js/jquery-3.4.1.js"></script>
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script> <!--Provient su site des icônes-->
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script><!--Provient du dossier Bootstrap-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Lien en ligne-->
+<!--https://developers.google.com/speed/libraries/#jquery-->
+</body>
+</html>

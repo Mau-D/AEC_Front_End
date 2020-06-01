@@ -1,0 +1,14 @@
+#paypal-button{
+    width: 50%;
+}
+p{
+    font-size: 0.7rem;
+}
+.navbar-brand img{
+    height: 5vh;
+}
+#JotForm img{
+    height: 10vh;
+    border: black solid 2px;
+    box-shadow: 5px 10px #888888;
+}

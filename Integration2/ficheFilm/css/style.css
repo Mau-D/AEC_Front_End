@@ -1,0 +1,69 @@
+/*style.css*/
+/*Maud Harvey*/
+/* 30 mai 2020*/
+
+main{
+
+    background-image: url("../img/filmstrip-1850277_1920.jpg");
+    background-size: cover;
+}
+
+
+#entete{
+    height: 90vh;
+    background-image: url("../img/sunset-298850_1920.jpg");
+    background-size: cover;
+}
+.acteur, .scene{
+    height: 40vh;
+}
+.poster{
+    height: 80vh;
+}
+
+hr{
+    background: white;
+    height: 1px;
+    border-style: none;
+    margin: 2% 0;
+}
+h1 span{
+    color: yellow;
+    font-size: 3rem;
+}
+h1{
+    font-size: 5rem;
+    color: white;
+    font-family: Bookman, URW Bookman L, serif;
+}
+span h1{
+    color: yellow;
+}
+h2{
+    font-size: 2rem;
+    color: white;
+    font-style: italic;
+    font-family: Bookman, URW Bookman L, serif;
+}
+p{
+    font-size: 1.2rem;
+}
+
+/*librairie js*/
+.stagger-visualizer {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+}
+
+.stagger-visualizer div {
+    /*position: absolute;*/
+    width: 64px;
+    height: 128px;
+    border: 1px solid #373535;
+    background-color: black;
+}
+

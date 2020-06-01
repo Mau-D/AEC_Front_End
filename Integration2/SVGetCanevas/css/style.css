@@ -1,0 +1,25 @@
+
+line{
+    stroke: black;
+    stroke-width: 4;
+}
+rect{
+    fill: red;
+    stroke: grey;
+    stroke-width: 4;
+}
+text{
+    font-size: xx-large;
+    font-weight: bold;
+}
+polygon{
+    fill: white;
+}
+polyline{
+    fill: none;
+    stroke: black;
+    stroke-width: 4;
+}
+canvas{
+    border: 1px solid black;
+}

@@ -1,0 +1,19 @@
+.banniere{
+    height: 70vh;
+    background-image: url("../img/cat-984097_1280.jpg");
+}
+.parallaxe {
+    background-attachment: fixed; /*Pour l'effet*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.couleurFond{
+    background-color: #A29777;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 3rem;
+}

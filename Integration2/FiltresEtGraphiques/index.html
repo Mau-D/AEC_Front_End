@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--  index.html  -->
+<!--  Par Maud Harvey  -->
+<!--  Le 23 mai 2020  -->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css"><!--Provient du dossier Bootstrap-->
+    <link rel="stylesheet" href="css/style.css"><!--Fichier ajouté pour ajouter du css-->
+    <title>Filtres et Graphiques</title>
+</head>
+<body>
+<header>
+    <nav>
+
+    </nav>
+
+</header>
+<main>
+    <!-- Exercice 1 -->
+    <section><!-- Boutons, tri des films -->
+        <button onclick="trierOrdreAlpha()">Trier en ordre alphabétique</button><!-- En ordre alphabétique -->
+        <button onclick="trierOrdreParution()">Trier en ordre de parution</button><!-- En ordre de date de sortie -->
+    </section>
+    <section><!--Tableau-->
+        <table id="monTableauFilm">
+            <tr>
+                <th>Titre du film</th>
+                <th>Année de sortie</th>
+            </tr>
+            <tr>
+                <td>Once Upon a Time... in Hollywood</td>
+                <td>2019</td>
+            </tr>
+            <tr>
+                <td>Pulp fiction</td>
+                <td>1994</td>
+            </tr>
+            <tr>
+                <td>Kill Bill</td>
+                <td>2003</td>
+            </tr>
+            <tr>
+                <td>Django</td>
+                <td>2012 </td>
+            </tr>
+            <tr>
+                <td>Inglourious Basterds</td>
+                <td>2009</td>
+            </tr>
+        </table>
+    </section>
+    <section><!-- Dropdown -->
+
+        <div class="dropdown">
+            <button onclick="afficherDropdown()" class="dropbtn" >Liste des graphiques</button>
+            <div class="dropdown-content" id="contenuDropdown" >
+                <input type="text" placeholder="Recherche" id="recherche" onkeyup="rechercheDropdown()">
+                <a href="exercice3.html">Graphique en pointe de tarte</a>
+                <a href="#">Graphique linéaire courbe</a>
+                <a href="#">Diagramme de gantt</a>
+                <a href="#">Graphique de venn</a>
+                <a href="#">Nuage de points</a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+
+</footer>
+<!-- Insérer le fichier JS correspondant-->
+<script src="js/filtreEtGraphique.js"></script>
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script> <!--Provient su site des icônes-->
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script><!--Provient du dossier Bootstrap-->
+<!--https://developers.google.com/speed/libraries/#jquery-->
+</body>
+</html>

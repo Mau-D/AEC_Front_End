@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--  index.html  -->
+<!-- SVG et canevas -->
+<!--  Par Maud Harvey  -->
+<!--  Le 18 avril 2020  -->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css"><!--Provient du dossier Bootstrap-->
+    <link rel="stylesheet" href="css/style.css"><!--Fichier ajouté pour ajouter du css-->
+    <title>Images SVG et canevas</title>
+</head>
+<body>
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Images SVG</h1>
+                <h2>Zoomer pour voir la qualité de l'image</h2>
+            </div>
+        </div>
+    </div>
+
+</header>
+<main>
+    <section><!-- Image en SVG -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <svg width="500" height="500">
+                        <circle cx="250" cy="250" r="150" stroke="black"
+                                stroke-width="4" fill="grey" /><!--tête-->
+                        <circle cx="200" cy="200" r="40" stroke="black"
+                                stroke-width="4" fill="white"/><!--yeux-->
+                        <circle cx="300" cy="200" r="40" stroke="black"
+                                stroke-width="4"/>
+                        <circle cx="300" cy="218" r="20" stroke="brown"
+                                stroke-width="8" fill="black" /><!--int des yeux-->
+                        <circle cx="200" cy="218" r="20" stroke="brown"
+                                stroke-width="8" fill="black" />
+                        <defs>
+                            <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                                <stop offset="80%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0.5" />
+                            </radialGradient>
+                        </defs>
+                        <ellipse cx="250" cy="280" rx="100" ry="50" fill="url(#grad1)"/><!--nez-->
+                        <polygon points="225,275 275,275 250, 300"/>
+                        <line x1="175" y1="378" x2="175" y2="500" /><!--cou-->
+                        <line x1="325" y1="378" x2="325" y2="500" />
+                        <rect x="150" y="415" width="200" height="75"/><!--collier-->
+                        <text x="215" y="460" fill="black">JACK</text><!--Nom-->
+                        <polyline points="200,112 150,40 80,150 115,125 140,150"/><!--oreilles, les polyline ne peuvent être rempli-->
+                        <polyline points="300,112 350,40 420,150 385,125 360,150"/>
+                        <path d="M200 350 Q 250 400, 300 350" stroke="black"  stroke-width="3" fill="red"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="text-center my-5">
+        <h1> Canevas</h1>
+        <canvas id="myCanvas" width="1000" height="1000">
+            <img id="poisson" src="img/fish.png" alt="poisson">
+        </canvas>
+    </section>
+
+</main>
+<footer>
+
+</footer>
+<script src="js/canevas.js"></script>
+<script src="js/jquery-3.4.1.js"></script><!--JQuery en premier-->
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script> <!--Provient su site des icônes-->
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script><!--Provient du dossier Bootstrap-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Lien en ligne-->
+<!--https://developers.google.com/speed/libraries/#jquery-->
+</body>
+</html>
