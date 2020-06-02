@@ -1,3 +1,17 @@
+.bg {
+  background-image: url("../../img/office-2009693_1920.jpg");
+  background-size: cover;
+}
+.hauteur100 {
+  min-height: 100vh;
+}
+
+.bgOpaqueBlanc {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.silverButton {
+  background-image: url("../../img/silver.jpg");
+}
 .App {
   text-align: center;
 }

@@ -18,7 +18,7 @@ export class Recherche extends React.Component {
     //Retourne le formulaire de recherche et un bouton pour lancer la recherche avec un événement onClick
     render() {
         return (
-                <Col xs={6}>
+                <Col md={12} lg={6} className="mt-5">
                     <Form>
                         <Form.Group controlId="formSearch" >
                             <Form.Control type="search" placeholder="Rechercher un client" />
@@ -26,7 +26,7 @@ export class Recherche extends React.Component {
                                 Appuyer sur le bouton pour afficher les clients
                      </Form.Text>
                         </Form.Group>
-                        <Button variant="primary" type="submit" onClick={this.handleClick}>
+                        <Button className="silverButton  border-dark"  type="submit" onClick={this.handleClick}>
                             Recherche
                 </Button>
                     </Form>
