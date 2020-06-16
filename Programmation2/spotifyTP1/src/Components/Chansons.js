@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
@@ -837,7 +836,7 @@ export class Chansons extends React.Component {
       );
     } else {
       return (
-        <Container className="px-0 mx-0">
+        <>
           <RetourCatalogue onClick={this.retourCatalogue} />
           <Row className="bgNoir">
             <Col xs={12} md={6} className="my-auto px-0">
@@ -868,7 +867,7 @@ export class Chansons extends React.Component {
               <tbody>{this.fabricationTableau()}</tbody>
             </Table>
           </Row>
-        </Container>
+        </>
       );
     }
   }
