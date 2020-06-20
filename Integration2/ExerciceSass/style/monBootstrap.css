@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*monBootstrap.sass*/
+/*Maud Harvey*/
+/*20 juin 2020*/
+/*Convertir le code bootstrap en sass*/
+/*Créer une classe monContainer pour remplacer les container fluid*/
+.monContainer {
+  width: 100%;
+}
+
+.monContainerPasFluide {
+  width: 80%;
+}
+
+.col12 {
+  width: 100%;
+}
+
+.col6 {
+  width: 50%;
+}
+
+.col4 {
+  width: 33.3333333333%;
+}
+
+.col3 {
+  width: 25%;
+}
+
+.imgResponsive {
+  width: 100%;
+}
+
+/*# sourceMappingURL=monBootstrap.css.map */
