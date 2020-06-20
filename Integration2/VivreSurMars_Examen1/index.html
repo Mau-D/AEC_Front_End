@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--  index.html  -->
+<!--  Par Maud Harvey  -->
+<!--  23 mai 2020  -->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <!--Paypal-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no"><!--Pour utiliser Bootstrap-->
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css"><!--Provient du dossier Bootstrap-->
+    <link rel="stylesheet" href="css/style.css"><!--Fichier ajouté pour ajouter du css-->
+    <title>Vivre sur mars</title>
+
+</head>
+<body>
+<main>
+    <div class="container-fluid p-3"> <!--toute la page-->
+        <div class="row">
+            <div class="col-8"><!--Gauche, formulaire-->
+                <section class="pl-5 pb-5 pt-5"><!--Formulaire-->
+                    <form id="FormMars" class="p-5 h-100">
+                        <div class="container-fluid">
+                            <div class="form-row">
+                                <div class="col-12"><!--Titre, texte et hr-->
+                                    <h2>Participez à l'avenir de la race humaine</h2>
+                                    <p>Inscrivez-vous à la prochaine mission de colonisation sur Mars !</p>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="form-row mt-5"><!--Identification-->
+                                <div class="col-3">
+                                    <h5>Identification<span class="pl-2">*</span></h5>
+                                </div>
+                                <div class="col-9 d-inline-flex">
+                                    <div class="d-inline mr-2">
+                                        <input autofocus required type="text" pattern="^[^0-9]+$" size="20" maxlength="30" id="name" name="Nom"><br>
+                                        <label for="name">Nom</label>
+                                    </div>
+                                    <div class="d-inline">
+                                        <input required type="text" pattern="^[^0-9]+$" size="20" maxlength="30" id="prenom" name="Prénom"><br>
+                                        <label for="prenom">Prénom</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row mt-5"><!--Date de naissance-->
+                                <div class="col-3">
+                                    <h5>Date de naissance<span class="pl-2">*</span></h5>
+                                </div>
+                                <div class="col-9">
+                                    <input required type="date" min="1900-01-01" max="2020-05-23"  id="birthdate" name="Naissance"><br>
+                                </div>
+                            </div>
+                            <div class="form-row mt-5"><!--Numéro de téléphone-->
+                                <div class="col-3">
+                                    <h5>Numéro de téléphone<span class="pl-2">*</span></h5>
+                                </div>
+                                <div class="col-9 d-inline-flex">
+                                    <div class="d-inline">
+                                        <input required type="text" size="6" maxlength="3" id="codeR" name="Code régional"><br>
+                                        <label for="codeR">Code régional</label>
+                                    </div>
+                                    <div class="d-inline m-1">
+                                        <p>-</p>
+                                    </div>
+                                    <div class="d-inline">
+                                        <input required pattern="[0-9]{3}-[0-9]{4}" type="tel" size="13" maxlength="8" id="noTel" name="Téléphone"><br>
+                                        <label for="noTel">Numéro de téléphone</label>
+                                    </div>
+                                    <p id="codeValidation" class="text-danger d-none">Les codes régionaux acceptés sont: 819, 418 ou 514</p>
+                                </div>
+                            </div>
+                            <div class="form-row mt-5"><!--email-->
+                                <div class="col-3">
+                                    <h5>E-mail<span class="pl-2">*</span></h5>
+                                </div>
+                                <div class="col-9">
+                                    <input required type="email" id="email" name="email" size="35" maxlength="50"><br>
+                                    <label for="email">exemple@exemple.com</label>
+                                </div>
+                            </div>
+                            <div class="form-row mt-5"><!--Adresse-->
+                                <div class="col-3">
+                                    <h5>Adresse<span class="pl-2">*</span></h5>
+                                </div>
+                                <div class="col-9">
+                                    <div class="row"><!--no porte-->
+                                        <div class="col-12">
+                                            <input required type="text" id="noPorte" name="noPorte" pattern="[0-9]{1,}" size="45" maxlength="20"><br>
+                                            <label for="noPorte">Numéro de porte</label>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-1"><!--no appartement, pas requis-->
+                                        <div class="col">
+                                            <input  type="text" id="noApp" name="noApp" pattern="[0-9]{0,}" size="45" maxlength="20"><br>
+                                            <label for="noApp">Numéro d'appartement</label>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-1"><!--ville et province-->
+                                        <div class="col-10 d-inline-flex">
+                                            <div class="d-inline mr-2">
+                                                <input required type="text" id="ville" pattern="[A-Za-z]{1,}" name="ville" size="20" maxlength="50"><br>
+                                                <label for="ville">Ville</label>
+                                            </div>
+                                            <div class="d-inline">
+                                                <input required type="text" id="etat" pattern="[A-Za-z]{1,}" name="etat" size="18" maxlength="30"><br>
+                                                <label for="etat">État/province</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-1"><!--code postal, sans espace-->
+                                        <div class="col-12">
+                                            <input required type="text" id="cp" name="codePostal" pattern="[A-Z]{1}[0-9]{1}[A-Z]{1}[ ]{1}[0-9]{1}[A-Z]{1}[0-9]{1}" size="20" maxlength="7"><br>
+                                            <label for="cp">Code postal</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row mt-5"><!--sexe-->
+                                <div class="col-3">
+                                    <h5>Sexe<span class="pl-2">*</span></h5>
+                                </div>
+                                <div class="col-9">
+                                    <input required type="text" list="sexes" name="sexe" id="sexeInput"><br>
+                                    <datalist id="sexes">
+                                        <option value="Femme" readonly="Femme"></option><!--readonly est ajouté pour ne pas soumettre des caractères que l'utilisateur aurait ajouté dans l'input-->
+                                        <option value="Homme" readonly="Homme"></option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="form-row mt-5"><!--Métier-->
+                                <div class="col-3">
+                                    <h5>Métier<span class="pl-2">*</span></h5>
+                                </div>
+                                <div class="col-9">
+                                    <input required type="text" id="metier" name="metier" size="25" maxlength="100" pattern="[A-Za-z]{1,}"><br>
+                                </div>
+                            </div>
+                            <div class="form-row mt-5"><!--Présentation-->
+                                <div class="col-3">
+                                    <h5>Présentation</h5>
+                                </div>
+                                <div class="col-9">
+                                    <textarea id="presentation" type="text" name="presentation" rows="5" cols="60" maxlength="500"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row mt-5"><!--Bouton-->
+                                <div class=" offset-3 col-9">
+                                    <button id="submit" type="submit" class="btn btn-light btn-lg text-dark">Soumettre ma candidature</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <div class="col-4 text-center mx-auto"><!--droite, logo et paypal-->
+                <div class="row h-25"><!--vide-->
+                    <div class="col-12"></div>
+                </div>
+                <div class="row h-25"><!--logo-->
+                    <div class="col-12">
+                        <section><!--Canvas-->
+                            <canvas id="myCanvas" width="300" height="300"></canvas>
+
+                        </section>
+                    </div>
+                </div>
+                <div class="row h-25"><!--flèche-->
+                    <div class="col-12">
+                        <section><!--SVG-->
+                            <svg height="500" width="300">
+                                <polygon points="150,0 250,200 200,200 200,400 100,400 100,200 50,200"
+                                         style="fill:white;" />
+                                <text x="30" y="450" style="fill: white; font: 40px Lucida Console, Monaco, monospace">Destination</text>
+                            </svg>
+                        </section>
+                    </div>
+                </div>
+                <div class="row h-25 align-content-center mt-5"><!--Paypal-->
+                    <div class="col-12">
+                        <section><!--Paypal-->
+                            <div id="paypal-button" class="bg-light p-2 mx-5"></div>
+                            <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+                            <script>
+                                paypal.Button.render({
+                                    // Configure environment
+                                    env: 'sandbox',
+                                    client: {
+                                        sandbox: 'demo_sandbox_client_id',
+                                        production: 'demo_production_client_id'
+                                    },
+                                    // Customize button (optional)
+                                    locale: 'en_US',
+                                    style: {
+                                        size: 'responsive',
+                                        color: 'gold',
+                                        shape: 'rect',
+                                        label: 'paypal',
+                                        layout: 'vertical',
+                                    },
+
+
+                                    // Enable Pay Now checkout flow (optional)
+                                    commit: true,
+
+                                    // Set up a payment
+                                    payment: function(data, actions) {
+                                        return actions.payment.create({
+                                            transactions: [{
+                                                amount: {
+                                                    total: '0.01',
+                                                    currency: 'USD'
+                                                }
+                                            }]
+                                        });
+                                    },
+                                    // Execute the payment
+                                    onAuthorize: function(data, actions) {
+                                        return actions.payment.execute().then(function() {
+                                            // Show a confirmation message to the buyer
+                                            window.alert('Thank you for your purchase!');
+                                        });
+                                    }
+                                }, '#paypal-button');
+                            </script>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Insérer le fichier JS correspondant-->
+<script src="js/jquery-3.4.1.js"></script><!--JQuery en premier-->
+<script src="js/mars.js"></script>
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script><!--Provient du dossier Bootstrap-->
+<!--https://developers.google.com/speed/libraries/#jquery-->
+</body>
+</html>

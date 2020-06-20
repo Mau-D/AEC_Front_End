@@ -14,6 +14,10 @@ main{
     background-image: url("../img/sunset-298850_1920.jpg");
     background-size: cover;
 }
+#entete .row{
+    height: 90vh;
+
+}
 .acteur, .scene{
     height: 40vh;
 }
@@ -55,14 +59,14 @@ p{
     /*flex-wrap: wrap;*/
     justify-content: center;
     align-items: center;
-    width: 450px;
-    height: 450px;
+    width: 200px;
+    height: 200px;
 }
 
 .stagger-visualizer div {
     /*position: absolute;*/
-    width: 64px;
-    height: 128px;
+    width: 100px;
+    height: 100px;
     border: 1px solid #373535;
     background-color: black;
 }

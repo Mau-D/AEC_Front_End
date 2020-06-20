@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/*fichier à importer dans le fichier style.sass*/
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+/*# sourceMappingURL=fichierImporte.css.map */

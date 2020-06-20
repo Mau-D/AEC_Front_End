@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--  BootstrapTest.html  -->
+<!--  Par Maud Harvey  -->
+<!--  Le 23 janvier 2020  -->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap-Test</title>
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css"><!--Provient du dossier Bootstrap-->
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/style.css"><!--Fichier ajouté pour ajouter du css-->
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet"><!--font-->
+    <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+</head>
+<div class="container-fluid"> <!-- Contient l'intégralité du site web, fluid permet de prendre toute la largeur possible du périphérique-->
+    <div class="container-fluid imageHead"> <!--Contient l'en-tête avec image de fond-->
+        <div class="row no-gutters align-items-center hauteurbg">
+            <div class="col-xl-12 text-center">
+                <!--titre h1-->
+                <h1>La nature est grandiose<br>Évadez-vous!</h1>
+                <!--hr-->
+                <hr>
+                <!--texte ici-->
+
+                <p class="w-50 mx-auto jaune">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                <!--bouton-->
+                <button type="button" class="btn p-4 btn-primary btn-lg button1">Évadez-vous!</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid no-gutters"></div><!-- Contient texte et bouton-->
+        <div class="row align-items-center no-gutters couleur"><!--bg--coloré-->
+            <div class="col-xl-6 offset-xl-3 text-center mt-5 mb-5">
+                <!--titre h2-->
+                <h2>Pour plus d'information</h2>
+                <!--hr-->
+                <!--texte ici-->
+                <p class="mx-auto w-75 blanc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <!--bouton-->
+                <button type="button" class="btn p-4 btn-primary btn-lg button2 rounded-pill">Allez-y!</button>
+            <!--à tester <a class="btn rounded-pill text-uppercase" href="#">texte</a>-->
+            </div>
+        </div>
+    </div>
+    <div class="container"> <!--contient texte et icône-->
+        <div class="row align-items-top justify-content-center no-gutters mb-5">
+            <div class="col-12 text-center mt-5 mb-5 order-3  order-md-1">
+                <h2>Nos services</h2>
+                <hr>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12 text-center mt-3 order-4 order-md-2">
+                <i class="fas fa-air-freshener"></i>
+                <h3>Service 1</h3>
+                <p class="w-75 mx-auto noir">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12 text-center mt-3 order-5 order-md-3">
+                <i class="fab fa-angellist"></i>
+                <h3>Service 2</h3>
+                <p class="w-75 mx-auto noir">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12 text-center mt-3 order-1  order-md-4">
+                <i class="fas fa-campground"></i>
+                <h3>Service 3</h3>
+                <p class="w-75 mx-auto noir">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-xl-3 col-md-6 col-12 text-center mt-3 order-2  order-md-5">
+                <i class="fas fa-carrot"></i>
+                <h3>Service 4</h3>
+                <p class="w-75 mx-auto noir">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid"><!--contient les images-->
+        <div class="row no-gutters">
+            <div class="col-xl-4 col-md-6 col-12">
+                <img class="img-fluid" src="img/bird-1045954_1920.jpg" alt="oiseau"/>
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+                <img class="img-fluid" src="img/butterfly-1127666_1920.jpg" alt="papillon"/>
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+                <img class="img-fluid" src="img/dandelion-445228_1920.jpg" alt="lotus"/>
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+                <img class="img-fluid" src="img/flower-3140492_1920.jpg" alt="fleur"/>
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+                <img class="img-fluid" src="img/pretty-woman-1509956_1920.jpg" alt="femme"/>
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+                <img class="img-fluid" src="img/spring-bird-2295431_1920.jpg" alt="oiseau"/>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script> <!--Provient su site des icônes-->
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script><!--Provient du dossier Bootstrap-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Lien en ligne-->
+    <!--https://developers.google.com/speed/libraries/#jquery-->
+</body>
+</html>

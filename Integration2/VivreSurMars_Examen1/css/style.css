@@ -1,0 +1,34 @@
+/*style.css*/
+/*Vivre sur mars examen 1*/
+/*Fait par Maud Harvey*/
+/*23 mai 2020*/
+
+/*Fond noir*/
+body{
+    background-color: black;
+}
+/*ligne du formulaire*/
+hr{
+    background: white;
+    height: 1px;
+    border-style: none;
+    margin: 2% 0;
+}
+/*Style du formulaire*/
+#FormMars{
+    background-color: #1D1D1F;
+    color: white;
+}
+span{
+    color: red;
+}
+label{
+    font-size: 0.8rem;
+}
+/*Pour afficher la flèche du datalist sexe*/
+#sexeInput::-webkit-calendar-picker-indicator {
+    opacity: 100;
+}
+#birthdate{
+    width: 95%;
+}
