@@ -23,7 +23,7 @@ export class FormEditMoto extends React.Component {
   }
   //On récupère le Pokemon pour ensuite remplir le formulaire.
   async componentDidMount() {
-    //On récupère le dernier caractère de l'url
+    //On récupère le dernier caractère de l'url substring(4,fin du string)
     try {
       await this.setState({
         motoID: this.props.location.search.substring(
@@ -98,7 +98,7 @@ export class FormEditMoto extends React.Component {
     /*Fonction pour entrer les infos dans la bd */
     this.editMoto(picture, model, manufacturer, comments, price);
   }
-  //Méthode pour supprimer la moto de la bd
+  //Méthode pour supprimer la moto de la bd, method delete
   async removeMoto() {
     try {
       const response = await fetch(

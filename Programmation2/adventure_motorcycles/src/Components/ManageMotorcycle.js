@@ -28,22 +28,6 @@ export class ManageMotorcycle extends React.Component {
     }
   }
 
-  async specscomponentDidMount() {
-    try {
-      const response = await fetch(
-        "http://localhost:3001/adventuremotorcycles"
-      );
-      const reponseDeApi = await response.json();
-      this.setState({ donneesRecues: reponseDeApi });
-      if (!response.ok) {
-        //Permet d'attraper l'erreur 500 et l'erreur 400
-        throw Error(response.statusText);
-      }
-    } catch (error) {
-      //On gère l'erreur
-      console.log(error);
-    }
-  }
   render() {
     console.log(this.state.donneesRecues);
     return (
@@ -58,7 +42,7 @@ export class ManageMotorcycle extends React.Component {
               key={key.modele + key.id}
               description={key.specifications[0].description}
               prix={key.specifications[1].prix}
-              id={i + 1}
+              id={key.id}
             ></Motorcycle>
           ))}
         </Row>
