@@ -34,19 +34,19 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\ProjetFinal\video" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\ProjetFinal" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_DEV_WEB\AEC_Front_End\Integration1\Formulaires" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapModalJumbotron" />
-      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\BootstrapNav" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\Bootstrap" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive\bootstrap-4.0.0-dist\css" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive\css" />
       <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapResponsive" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\ProjetFinal\video" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\ProjetFinal" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_DEV_WEB\AEC_Front_End\Integration1\Formulaires" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\bootstrapModalJumbotron" />
+      <recent name="C:\Users\harve\Documents\GitHubProjects\AEC_Front_End\Integration1\BootstrapNav" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -132,6 +132,23 @@
       <workItem from="1585439199813" duration="30616000" />
       <workItem from="1585866268052" duration="3514000" />
       <workItem from="1585870151492" duration="2100000" />
+      <workItem from="1585872502080" duration="631000" />
+      <workItem from="1587218762023" duration="1132000" />
+      <workItem from="1587564211883" duration="599000" />
+      <workItem from="1587583672140" duration="801000" />
+      <workItem from="1587750588334" duration="1875000" />
+      <workItem from="1588002994531" duration="599000" />
+      <workItem from="1588172889260" duration="623000" />
+      <workItem from="1588426247128" duration="1253000" />
+      <workItem from="1588688955700" duration="1212000" />
+      <workItem from="1589638398625" duration="1293000" />
+      <workItem from="1591108920314" duration="1534000" />
+      <workItem from="1591642764619" duration="2620000" />
+      <workItem from="1591754642849" duration="1819000" />
+      <workItem from="1591884550747" duration="1228000" />
+      <workItem from="1592057234187" duration="1199000" />
+      <workItem from="1592335496626" duration="35000" />
+      <workItem from="1592512535341" duration="428000" />
     </task>
     <servers />
   </component>
