@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--index.html-->
+<!--Projet final, Intégration web-->
+<!--Par Maud Harvey-->
+<!--Le 20 mars 2020-->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Pleine conscience</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no"> <!--À ajouter pour utiliser Bootstrap-->
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/icons8-deer.png" />
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Permanent+Marker&display=swap" rel="stylesheet">
+    <!-- Pour le PWA: Lien pour le fichier manifest.json -->
+    <link rel="manifest" href="/manifest.json">
+    <!--Pour le PWA: Requis Ligthouse, description et couleur de barre d'adresse  -->
+    <meta name="description" content="Une app qui fait du bien">
+    <meta name="theme-color" content="#94C9FA">
+</head>
+<body>
+<div class="container-fluid px-0 mx-0"><!--Contient l'intégralité du site-->
+    <header><!--barre de navigation, vidéo background, message-->
+        <div class="container-fluid">
+            <nav class="navbar fixed-top navbar-collapse navbar-expand-md">
+                <a class="navbar-brand py-0 my-0">
+                    <img class="img-fluid icone d-inline-block align-top" src="img/icons8-deer.png" alt="icône">
+                </a>
+                <!--hamburger-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-door-open couleurLogo"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active mx-3"><a class="nav-link font-weight-bold font-italic" id="accueilNav" href="index.html"><span class="sr-only">(current)</span>Accueil</a></li>
+                        <li class="nav-item mx-3"><a class="nav-link font-weight-bold font-italic" href="yoga.html">Yoga</a></li>
+                        <li class="nav-item mx-3"><a class="nav-link font-weight-bold font-italic" href="meditation.html">Méditation</a></li>
+                    </ul>
+                    <span class="navbar-text d-none d-md-inline">
+                    <i class="fab fa-facebook-f fa-2x px-2"></i>
+                    <i class="fab fa-twitter fa-2x px-2"></i>
+                    <i class="fab fa-instagram fa-2x px-2"></i>
+                </span>
+                </div>
+            </nav>
+        </div>
+        <div class="container-fluid">
+            <div class="row bgBanniere">
+                <div class="mx-auto my-auto text-center text-white titre">
+                    <h1>Votre style de vie</h1>
+                    <h2>Le bien-être</h2>
+                </div>
+                <div class="col-12">
+                    <video autoplay muted loop id="myVideo">
+                        <source src="video/cielVideo.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+                <div class="content">
+                    <h2>Bientôt disponible</h2>
+                    <p><i class="fas fa-unlock px-2"></i>Nouvelle section sur le "Vivre et lâcher prise".<i class="fas fa-unlock px-2"></i></p>
+                    <button data-toggle="modal" data-target="#modalContent" id="myBtn">En savoir plus...</button>
+                </div>
+                <!-- Modal data-->
+                <div class="modal fade" id="modalContent" tabindex="-1" role="dialog" aria-labelledby="modalLachezPriseTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content bgJumbo parallaxe">
+                            <div class="modal-header">
+                                <h3 class="modal-title align-self-center text-white" id="modalLachezPriseTitle">Inscription à l'infolettre</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="jumbotron jumbotron-fluid bgTransparent w-100">
+                                    <div class="container">
+                                        <div class="row text-center">
+                                            <div class="col-12">
+                                                <i class="fas fa-unlock fa-3x px-2"></i>
+                                                <h3 class="display-4">Vivre et lâcher prise</h3>
+                                                <h3>Ouvrons-nous à notre mystère</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <img class="img-fluid h-50 d-inline-block align-top" src="img/icons8-deer.png" alt="icône">
+                                            </div>
+                                            <div class="col-8">
+                                                <p class="lead text-justify">Voici une vérité très simple, qui mérite pourtant une attention particulière:
+                                                    une vie sans mystère n'est pas une vie véritable. En effet, nous songeons
+                                                    rarement que ce qui enrichit notre vie et la rend digne d'être vécue, c'est
+                                                    justement le mystère. Il suffit de regarder en arrière, vers notre jeunesse.</p>
+                                                <hr class="my-4">
+                                                <p class="text-justify">Les mystères de la vie ne nous
+                                                    effrayaient pas ; au contraire, ils nous emplissaient d'espoir... au point que
+                                                    certains soirs nous avions du mal à nous endormir ; parfois nous passions la
+                                                    nuit à rêvasser à toutes les possibilités que la vie semblait nous offrir.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer bgTransparent align-self-center">
+                                <div class="container-fluid">
+                                    <form class="form-row mb-4">
+                                        <p>Inscrivez-vous à l'infolettre pour suivre les nouveautés!</p>
+                                        <label for="courriel">Entrez votre courriel</label>
+                                        <input type="text" class="form-control" id="courriel" placeholder="Courriel">
+                                    </form>
+                                    <div class="row mx-auto">
+                                        <input id="envoyer" class="btn bouton4 couleurLogo" data-dismiss="modal" value="Envoyer"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section><!--Explication des 4 accords avec un parallaxe en background, transparence du texte-->
+            <div class="container-fluid bg1 parallaxe">
+                <div class="row text-center py-2">
+                    <div class="col-12 offset-md-2 col-md-7"><!--titre-->
+                        <h2 class="pb-2">Les 4 accords toltèques</h2>
+                        <p>Lea 4 accords toltèques nous aide à de nouveau aimer inconditionnellement, à commencer par nous-mêmes,
+                        puis tous nos frères et soeurs. Si vous savez respecter votre parole, si vous ne vous sentez jamais visé,
+                        si vous ne faites pas de suppositions et si vous faites toujours de votre mieux, vous allez transformer votre
+                        univers personnel et commencer à vous aimer de manière inconditionnelle.</p>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <p class="text-left text-md-right pr-2">"Il est facile de vivre les yeux fermés, en interprétant de travers tout ce que l'on voit..."</p>
+                        <p class="text-left text-md-right pr-2">John Lennon</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section><!--image et texte de chacun des 4 accords-->
+            <div class="container-fluid bgfond parallaxe py-2">
+                <div class="row hauteur100" id="accord1"><!--Accord 1-->
+                    <div class="col-11 col-lg-8 px-5">
+                        <a data-toggle="modal" data-target="#ModalAccord1">
+                            <img class="img-fluid ombre z1g mx-1 mx-sm-5 my-5 h-75 w-75" src="img/silence.jpg"
+                                 title="Cliquez" alt="chut">
+                        </a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="ModalAccord1" tabindex="-1" role="dialog" aria-labelledby="ModalLongTitleAccord1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title align-self-center" id="ModalLongTitleAccord1">Premier accord toltèque</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="jumbotron jumbotron-fluid">
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-12">
+                                                        <h1>Que votre parole soit impeccable</h1>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <img class="img-fluid" src="img/silence.jpg" alt="chut">
+                                                    </div>
+                                                    <div class="col-6 bgfond px-2 py-2 w45">
+                                                        <p class="lead">La parole n'est pas seulement un son ou un symbole écrit. C'est une
+                                                        force; elle représente votre capacité à vous exprimer et à communiquer, à penser et donc
+                                                        à créer les événements de votre vie</p>
+                                                        <hr class="my-4">
+                                                        <p>Chaque être humain est un magicien. Par notre parole, nous pouvons soit jeter un sort
+                                                        à quelqu'un, soit l'en libérer.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-dark z2g text-center pt-2 px-2">
+                            <i class="far fa-hand-point-left couleurLogo"></i>
+                            <h3 class="text-white">Que votre parole soit impeccable</h3>
+                            <p class="text-white mx-3 mt-2">
+                                Le premier accord toltèque est le plus important et aussi le plus difficile à honorer. Il
+                                est si important qu'à lui seul il vous permettra de transcender votre vie actuelle pour
+                                parvenir à ce niveau que j'appellele paradis sur terre.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1 col-lg-4">
+
+                    </div>
+                </div>
+                <div class="row hauteur100" id="accord2"><!--Accord 2-->
+                    <div class="col-1 col-lg-4 ">
+
+                    </div>
+                    <div class="col-11 col-lg-8 px-5">
+                        <a data-toggle="modal" data-target="#ModalAccord2">
+                            <img class="img-fluid ombre z1d mx-1 mx-sm-5 my-5 h-75 w-75" src="img/suit.jpg" title="Cliquez" alt="Homme d'affaire">
+                        </a>
+                            <!-- Modal -->
+                        <div class="modal fade" id="ModalAccord2" tabindex="-1" role="dialog" aria-labelledby="ModalLongTitleAccord2" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title align-self-center" id="ModalLongTitleAccord2">Deuxième accord toltèque</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="jumbotron jumbotron-fluid">
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-12">
+                                                        <h1>Quoi qu'il arrive, n'en faites pas une affaire personnelle</h1>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <img class="img-fluid" src="img/suit.jpg" alt="homme d'affaire">
+                                                    </div>
+                                                    <div class="col-6 bgfond px-2 py-2 w45">
+                                                        <p class="lead">
+                                                            Vous faites une affaire personnelle de ce qui vous est dit parce
+                                                            que vous y donnez votre accord. Dès lors, le poison s'infiltre en vous et vous êtes
+                                                            piégé dans l'enfer.
+                                                        </p>
+                                                        <hr class="my-4">
+                                                        <p>Vous n'êtes aucunement responsable de ce que les autres font. Leurs actions
+                                                        dépendent d'eux-mêmes. Chacun vit dans son propre rêve, dans sa propre tête; chacun
+                                                        est dans un monde totalement différent de celui dans lequel vous vivez.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-dark z2d text-center pt-2 px-2">
+                            <i class="far fa-hand-point-right couleurLogo"></i>
+                            <h3 class="text-white">Quoi qu'il arrive, n'en faites pas une affaire personnelle.</h3>
+                            <p class="text-white mt-sm-2 mx-sm-3">
+                                Si vous respectez cet accord, vous pouvez voyager dans le monde entier, le coeur totalement ouvert,
+                                et personne ne peut vous blesser. Vous pouvez dire: je t'aime sans crainte du ridicule ou du rejet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row hauteur100" id="accord3"><!--Accord 3-->
+                    <div class="col-11 col-lg-8 px-5">
+                        <a data-toggle="modal" data-target="#ModalAccord3">
+                            <img class="img-fluid ombre z1g mx-1 mx-sm-5 my-5 h-75 w-75" src="img/supposition.jpg" title="Cliquez" alt="visage femme">
+                        </a>
+                        <div class="modal fade" id="ModalAccord3" tabindex="-1" role="dialog" aria-labelledby="ModalLongTitleAccord3" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title align-self-center" id="ModalLongTitleAccord3">Troisième accord toltèque</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="jumbotron jumbotron-fluid">
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-12">
+                                                        <h1>Ne faites pas de suppositions</h1>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <img class="img-fluid" src="img/supposition.jpg" alt="visage femme">
+                                                    </div>
+                                                    <div class="col-6 bgfond px-2 py-2 w45">
+                                                        <p class="lead">
+                                                           Nous supposons que tout le monde voit la vie comme nous la voyons.
+                                                            Nous supposonsque les autres pensent comme nous pensons, qu'ils ressentent
+                                                            les choses comme nous le ressentons, qu'ils jugent comme nous jugeons. Voilà
+                                                            la supposition la plus importante que font les humains.
+                                                        </p>
+                                                        <hr class="my-4">
+                                                        <p>
+                                                            La plupart du temps ces suppositions sont effectuées très vite et inconsciemment,
+                                                            parce que nos accords nous incitent à communiquer de cette manière. L'un deux stipule qu'il est
+                                                            dangereux de poser des questions; un autre dit que si les autres nous aiment, ils doivent savoir
+                                                            ce que nous voulons et comment nous nous sentons. Et, du moment qu'on croit quelque chose,
+                                                            on part du principe qu'on a raison, au point qu'on est prêt à détruire une relation pour
+                                                            défendre sa position.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-dark z2g text-center pt-2 px-2">
+                            <i class="far fa-hand-point-left couleurLogo"></i>
+                            <h3 class="text-white">Ne faites pas de suppositions.</h3>
+                            <p class="text-white mt-sm-2 mx-sm-3">
+                               Nous avons tendance à faire des suppositions à propos de tout. Le problème est que nous croyons
+                                ensuite qu'elles sont la vérité. Nous serions prêts à jurer qu'elles sont vraies. Voilà
+                                pourquoi chaque fois qu'on fait des suppositions, qu'on prête des intentions à autrui, on crée
+                                des problèmes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1 col-lg-4">
+
+                    </div>
+                </div>
+                <div class="row hauteur100" id="accord4"><!--Accord 4-->
+                    <div class="col-1 col-lg-4">
+
+                    </div>
+                    <div class="col-11 col-lg-8 px-5">
+                        <a data-toggle="modal" data-target="#ModalAccord4">
+                            <img class="img-fluid ombre z1d mx-1 mx-sm-5 my-5 h-75 w-75" src="img/top.jpg" title="Cliquez" alt="Pouce en l'air">
+                        </a>
+                            <div class="modal fade" id="ModalAccord4" tabindex="-1" role="dialog" aria-labelledby="ModalLongTitleAccord4" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title align-self-center" id="ModalLongTitleAccord4">Quatrième accord toltèque</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="jumbotron jumbotron-fluid">
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-12">
+                                                        <h1>Faites toujours de votre mieux</h1>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <img class="img-fluid" src="img/top.jpg" alt="pouce en l'air">
+                                                    </div>
+                                                    <div class="col-6 bgfond px-2 py-2 w45">
+                                                        <p class="lead">Faites donc simplement de votre mieux, qu'elles que soit les circonstances de votre vie.
+                                                            Peu importe que vous soyez fatigué ou malade, si vous faites toujours de votre mieux,
+                                                            il vous est impossible de vous juger. Et si vous ne vous jugez pas, il n'est pas possible de subir
+                                                            la culpabilité, la honte et l'autopunition.
+                                                        </p>
+                                                        <hr class="my-4">
+                                                        <p> Si vous faites de votre mieux, vous vivrez votre existence intensément.
+                                                            Vous serez productif, vous serez bon envers vous-mêmes, parce que vous vous donnerez à votre famille
+                                                            , à votre communauté, à toute chose. C'est dans l'action que vous serez intensément heureux.
+                                                            Faire de votre mieux signifie agir parce que vous en avez envie, et non parce que vous en attendez
+                                                            une récompense.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-dark z2d text-center pt-2 px-2">
+                            <i class="far fa-hand-point-right couleurLogo"></i>
+                            <h3 class="text-white">Faites toujours de votre mieux.</h3>
+                            <p class="text-white mt-sm-2 mx-sm-3">
+                                Il ne reste plus qu'un seul accord, mais c'est celui qui transforme progressivement les trois autres
+                                en habitudes solidement ancréesen nous. Le quatrième accord concerne l'application des trois
+                                premiers: faites toujours de votre mieux.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bgfooter">
+        <div class="container-fluid">
+            <div class="row align-items-start">
+                <div class="col-2 order-0"><!--logo-->
+                    <img class="img-fluid" src="img/icons8-deer.png" alt="icône">
+                </div>
+                <div class="col-6 col-lg-2 text-left text-white text-lg-center order-4 order-lg-1 "><!--médias sociaux-->
+                    <p class="mt-lg-5">Suivez-nous!</p>
+                    <i class="fab fa-facebook-f fa-2x px-2 text-white"></i>
+                    <i class="fab fa-twitter fa-2x px-2 text-white"></i>
+                    <i class="fab fa-instagram fa-2x px-2 text-white"></i>
+                </div>
+                <div class="col-3 col-lg-2 text-center order-1 order-lg-2"><!--Liens 4 accords-->
+                    <p>Les 4 accords</p>
+                    <hr>
+                    <div class="text-center text-white">
+                        <a href="#accord1" class="d-block">Accord #1</a>
+                        <a href="#accord2" class="d-block">Accord #2</a>
+                        <a href="#accord3" class="d-block">Accord #3</a>
+                        <a href="#accord4" class="d-block">Accord #4</a>
+                    </div>
+                </div>
+                <div class="col-3 col-lg-2 text-center order-2 order-lg-3"><!--Liens yoga-->
+                    <p>Le Yoga</p>
+                    <hr>
+                    <div class="text-center text-white">
+                        <a href="yoga.html#semaineYoga" class="d-block">Votre semaine de yoga</a>
+                        <a href="yoga.html#inscription" class="d-block">Inscription au cours</a>
+
+                    </div>
+                </div>
+                <div class="col-3 col-lg-2 text-center order-3 order-lg-4"><!--Liens méditation-->
+                    <p>La méditation</p>
+                    <hr>
+                    <div class="text-center text-white">
+                        <a href="meditation.html#montagne" class="d-block">Montagne</a>
+                        <a href="meditation.html#lac" class="d-block">Lac</a>
+                        <a href="meditation.html#paysage" class="d-block">Paysage mental</a>
+                        <a href="meditation.html#ecoute" class="d-block">Écoutez</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2 order-5 pt-2"><!--Recherche-->
+                    <form class="form-inline justify-content-center mt-0">
+                        <i class="fas fa-search text-white" aria-hidden="true"></i>
+                        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+                               aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script> <!--Provient su site des icônes-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+</body>
+</html>

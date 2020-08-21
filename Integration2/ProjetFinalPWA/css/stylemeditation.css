@@ -1,0 +1,203 @@
+/*stylemeditation.css, projet final cours intégration web*/
+/*Maud Harvey*/
+/*20 mars 2020*/
+html,body { margin:0; padding: 0; height:100%;}
+.hauteur100{
+    height: 100vh;
+}
+.article{
+    height: 25vh;
+    position: fixed;
+    right: 0;
+    top: 75%;
+    margin-top: -2.5em;
+}
+.fa-newspaper:hover{
+    cursor: pointer;
+}
+.hauteurMain{
+    height: 50vh;
+}
+.hauteur50{
+    height: 50vh;
+}
+.bgNoir{
+    background-color: black;
+}
+.bgfooter{
+    background-color: black;
+    background-image: linear-gradient(white, #4788C7);
+}
+.bgTransparent{
+    background-color: rgba(255, 255, 255, .7);
+    width: 100%;
+    height: 100%;
+}
+.bgJumbo{
+    background-image: url("../img/stone-tower-yoga.jpg");
+}
+.parallaxe {
+    background-attachment: fixed; /*Pour l'effet*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bgMontagne{
+    background-image: url("../img/silhouette-yoga.jpg");
+    height: 50vh;
+}
+.bgLac{
+    background-image: url("../img/stone-tower-yoga.jpg");
+    height: 50vh;
+}
+.bgPaysage{
+    background-image: url("../img/palmier.jpg");
+    height: 50vh;
+}
+.photoSature{
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+.icone{
+    height: 10vh;
+}
+.nav-link:link{
+    color: black;
+    text-shadow: 1px 1px 2px white;
+    font-size: 1.5rem;
+}
+.fab{
+    color: black;
+}
+.nav-link:hover{
+    font-size: xx-large;
+}
+.nav-link:visited{
+    color: #4788C7;
+}
+#meditationNav{
+    color: #4788C7;
+}
+.couleurLogo{
+    color: #4788C7;
+}
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4rem;
+}
+h2{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
+p{
+    font-size: 1.5rem;
+}
+hr{
+    margin-bottom:15px;
+    margin-top:15px;
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #343A40;
+}
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-indicators{
+    bottom: 75%;
+    filter: invert(1);
+}
+ul{ /*Pour enlever les puces*/
+    list-style-type: none;
+}
+.carousel-item h3, .carousel-item h2{
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+}
+.ombre{
+    box-shadow: 5px 10px 8px #888888;
+}
+.cache{
+    display: none;
+}
+.fa-chevron-down:hover{
+    cursor: pointer;
+}
+@media only screen and (max-width: 767px){ /*s-xs*/
+
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.3rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    li{
+        font-size: 0.8rem;
+    }
+    #myCarouselMeditation{
+        display: none;
+    }
+    .bgMdXs{
+        background-image: url("../img/silhouette-yoga.jpg");
+        background-color: white;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        filter: invert(1);
+        -webkit-filter: invert(1);
+    }
+    .cache{
+        display: block;
+    }
+    .article {
+        height: 15vh;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 992px){/*md*/
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+
+    #myCarouselMeditation{
+        display: none;
+    }
+    .bgMdXs{
+        background-image: url("../img/meditation3.jpg");
+        background-color: white;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        filter: invert(1);
+        -webkit-filter: invert(1);
+    }
+    .cache{
+        display: block;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){/*l*/
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+}

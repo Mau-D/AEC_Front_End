@@ -1,0 +1,220 @@
+/*styleyoga.css, projet final cours intégration web*/
+/*Maud Harvey*/
+/*20 mars 2020*/
+html,body { margin:0; padding: 0; height:100%;}
+.bgBanniereYoga {
+    background-image: url("../img/rock-yoga.jpg");
+    height: 100vh; /*hauteur du parallaxe*/
+}
+.parallaxe {
+    background-attachment: fixed; /*Pour l'effet*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hauteur80{
+    height: 85vh;
+}
+
+.icone{
+    height: 10vh;
+}
+#yogaNav{
+    color: #4788C7;
+}
+.nav-link:link{
+    color: black;
+    text-shadow: 1px 1px 2px white;
+    font-size: 1.5rem;
+}
+.fab{
+    color: black;
+}
+.nav-link:hover{
+    font-size: xx-large;
+}
+.nav-link:visited{
+    color: #4788C7;
+}
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4rem;
+}
+h2, .card-body p, .card-footer p, .modal-title{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+p{
+    font-size: 1.3rem;
+}
+hr{
+    margin-bottom:15px;
+    margin-top:15px;
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #343A40;
+}
+.fa-chevron-down:hover{
+    cursor: pointer;
+}
+.bgTransparent{
+    background-color: rgba(255, 255, 255, .7);
+    width: 100%;
+    height: 55%;
+}
+.rownav{
+    height: 10vh;
+}
+.couleurLogo{
+    color: #4788C7;
+}
+.couleurTitre{
+    color: #4788C7;
+}
+.bgJumbo{
+    background-image: url("../img/stone-tower-yoga.jpg");
+}
+.card-header, #inscription{
+    border-top: 5px solid #4788C7;
+}
+.card-body{
+    color: white;
+}
+.bg1{
+    background-image: url("../img/jour1.jpg");
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg2{
+    background-image: url("../img/jour2.jpg");
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg3{
+    background-image: url("../img/jour3.jpg");
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg4{
+    background-image: url("../img/jour4.jpg");
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg5{
+    background-image: url("../img/jour5.jpg");
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bgfooter{
+    background-color: black;
+    background-image: linear-gradient(white, #4788C7);
+}
+.photo-gris img {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+}
+.bouton8 {
+    border-radius:12px 0 12px 0;
+    background: #f5f5f5;
+    border:none;
+    color:#555;
+    font:bold 12px Verdana;
+    padding:6px 6px 6px 6px;
+    box-shadow:1px 1px 3px #999;
+}
+@media only screen and (max-width: 767px){
+    h1{
+        font-size: 1.5rem;
+    }
+    h2, .card-body p, .card-footer p, .modal-title{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .bgTransparent{
+        height: 80%;
+    }
+    .bgBanniereYoga {
+        background-image: url("../img/silhouette-yoga.jpg");
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 992px){
+    .bgTransparent{
+        height: 40%;
+    }
+    .bgBanniereYoga {
+        background-image: url("../img/beach-yoga.jpg");
+    }
+    h1{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 2.5rem;
+    }
+    h2, .card-body p, .modal-title{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 2rem;
+    }
+    h3, .card-footer p{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .couleurTitre{
+        color: white;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    h1{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 4rem;
+    }
+    h2, .card-body p, .modal-title{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 2rem;
+    }
+    h3, .card-footer p{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .bgTransparent{
+        height: 75%;
+    }
+    .couleurTitre{
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    h1{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 4rem;
+    }
+    h2, .card-body p, .modal-title{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 3rem;
+    }
+    h3, .card-footer p{
+        font-size: 1.8rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    .bgTransparent{
+        height: 50%;
+    }
+}

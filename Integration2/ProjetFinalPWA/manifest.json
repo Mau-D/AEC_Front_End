@@ -1,0 +1,20 @@
+{
+  "name": "Bien-être",
+  "short-name": "Bien",
+  "icons": [
+    {
+      "src": "/img/icons/icondeer192x192.png",
+      "sizes": "192x192",
+      "types": "image/png"
+    },
+    {
+      "src": "/img/icons/icondeer512x512.png",
+      "sizes": "512x512",
+      "types": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#042C5C",
+  "theme_color": "#94C9FA"
+}
