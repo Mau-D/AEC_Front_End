@@ -1,0 +1,167 @@
+const adventuremotorcycles = [
+  {
+    id: 1,
+    modele: "G310GS",
+    fabricant: "BMW",
+    photo:
+      "https://cdn.hiconsumption.com/wp-content/uploads/2019/08/BMW-G310GS.jpg",
+    specifications: [
+      {
+        description:
+          "BMW is an industry staple when it comes to the manufacture of capable adventure bikes, and the company’s G310GS has more than enough utility to solidify its place on our list. The bike’s futuristic design, rambunctious orientation, and powerful liquid-cooled, single-cylinder 4-stroke engine are the epitome of hybrid rideability, thanks to its generous 313cc capacity. A six-speed constant-mesh gearbox and lightweight tubular steel frame ensure that the bike keeps up with its competition, however; bringing the adaptable cycle in-line with some of the genre’s more-powerful offerings.",
+      },
+      {
+        prix: "$5,795",
+      },
+    ],
+  },
+  {
+    id: 2,
+    modele: "XR650L",
+    fabricant: "HONDA",
+    photo:
+      "https://cdn.hiconsumption.com/wp-content/uploads/2019/08/Honda-XR650L.jpg",
+    specifications: [
+      {
+        description:
+          "Honda’s admittance into the realm of adventure cycles isn’t as flashy as some of the others that have graced our list, but the XR650L is certainly a legendary platform that’s worth its weight in salt. Aside from winning an alarming number of overland races in its heyday, the XR650L boasts one of the most traditional designs in the industry, harkening back to square, and somewhat barbaric, classics from the 1970s and 80s. When it comes to performance, the bike utilizes a 644cc overhead-cam air-cooled engine, capable long-travel suspension, and a gear-driven counterbalancer to reduce vibrations during your ride, making it the quintessential dual-sport bike for on, and off the blacktop.",
+      },
+      {
+        prix: "$7,000",
+      },
+    ],
+  },
+  {
+    id: 3,
+    modele: "TIGER 800",
+    fabricant: "TRIUMPH",
+    photo:
+      "https://cdn.hiconsumption.com/wp-content/uploads/2019/08/Triumph-Tiger-800.jpg",
+    specifications: [
+      {
+        description:
+          "Triumph’s Tiger 800 is as intimidating as it sounds; and, in its own way, it’s the king of the jungle when it comes to high-end adventure motorcycles. As one of the most popular platforms in the company’s robust catalog, the Tiger 800 features elaborate upgrades, improved tech, and capable ergonomics that make it a monster on, and off the roadway, thanks to a responsive 800cc engine, low-ratio gear architecture, and an on-board computer that provides riders with up to six tailored riding modes, full-color TFT instruments, and signature LED lighting. The Tiger is prepared for a world where perfection isn’t recognized and provides the perfect adaptable platform to navigate life’s biggest roadblocks.",
+      },
+      {
+        prix: "$12,000",
+      },
+    ],
+  },
+  {
+    id: 4,
+    modele: "V-STROM 1000 ABS",
+    fabricant: "SUZUKI",
+    photo:
+      "https://cdn.hiconsumption.com/wp-content/uploads/2019/08/Suzuki-V-Strom-1000-ABS.jpg",
+    specifications: [
+      {
+        description:
+          "Suzuki’s V-Strom 1000 ABS is the company’s ace in the hole when it comes to adventure-oriented cycles, boasting innovative systems to dictate engine performance, fuel economy, and riding style. Like many of the platforms on this list, it features enhanced rider assist technology, like Motion Track Anti-Lock, and a Combined Brake System that’s been conceptualized to keep you safe, no matter what terrain you’re hoping to surmount. A powerful 1037cc liquid-cooled engine, five-axis inertial measurement, and twin throttle bodies keep performance at the forefront, while frugal fuel consumption, superior combustion efficiency, and efficient peripherals help to keep the V-Strom in contention as one of the most intuitive adventure cycles on the road today.",
+      },
+      {
+        prix: "$13,000",
+      },
+    ],
+  },
+  {
+    id: 5,
+    modele: "790 ADVENTURE R",
+    fabricant: "KTM",
+    photo:
+      "https://cdn.hiconsumption.com/wp-content/uploads/2019/08/KTM-790-Adventure-R.jpg",
+    specifications: [
+      {
+        description:
+          "KTM’s 790 Adventure R is an amalgamation of the companies virtuous racing platforms, and its relentless drive for unsurpassed offroad utilization. This bike has been outfitted with all of the company’s most advantageous peripherals, including a smooth and reliable 799cc two-cylinder, four-stroke, parallel twin engine, six-speed transmission, and Bosch EMS. Below the plastic, the bike boasts a durable Chromium-Molybdenum-Steel frame and WP-PDS monoshock, allowing riders to navigate the world’s harshest terrain without having to worry about structural integrity. The bike’s futuristic styling and intuitive tech attributes help to keep it at the top of many a rider’s bucket list, while proprietary additions like Motorcycle Traction Control, off-road ABS, and cornering ABS help to keep even the most amateur of operators out of harm’s way.",
+      },
+      {
+        prix: "$13,500",
+      },
+    ],
+  },
+  {
+    id: 6,
+    modele: "AFRICA TWIN CRF1000L",
+    fabricant: "HONDA",
+    photo:
+      "https://cdn.hiconsumption.com/wp-content/uploads/2019/08/Honda-Africa-Twin-CRF1000L.jpg",
+    specifications: [
+      {
+        description:
+          "Honda’s Africa Twin CRF1000L is so versatile, it transcends the genres of Enduro, Dual-Sport, and Adventure. Since its conception in 1988, the Africa Twin has remained one of the industry’s most sought-after platforms for off-road use, boasting a resilient frame, retro body panels, and a powerful architecture that was made to traverse any terrain that’s been put in front of it. Since its revitalization in 2016, the bike has become even more capable, offering riders enhanced range, comfort, and travel through the implementation of a 998cc liquid-cooled Unicam parallel-twin engine, Selectable Torque Control, and intuitive ABS. The bike’s improved long-travel suspension and knobby tires ensure adequate control on, and off of the roadway. Pair these attractive attributes with the bike’s generous fuel capacity, and you’ve got yourself an iconic adventure bike that won’t let you down when the going gets rough.",
+      },
+      {
+        prix: "$13,600",
+      },
+    ],
+  },
+  {
+    id: 7,
+    modele: "SUPER TENERE",
+    fabricant: "YAMAHA",
+    photo:
+      "https://cdn.hiconsumption.com/wp-content/uploads/2019/08/Yamaha-Super-Tenere.jpg",
+    specifications: [
+      {
+        description:
+          "Yamaha’s Super Tenere checks all the boxes when it comes to an off-road adventure bike, offering a powerful 1199cc parallel-twin engine, wide-ratio six-speed transmission, and twin-downdraft throttle body fuel injection for optimum performance, whether you’re traversing your favorite backroad, or commuting to your job downtown. It features a unique shaft drive that’s protected from the elements via enclosure, dependable traction control, and an advanced regulation system that calculates fuel injection, ignition timing, and throttle valve openings based on wheel spin, providing a streamlined experience throughout the entirety of the bike’s rev range. A lower orientation means that it’s not as viable for extreme clearance as its counterparts; but what it loses in off-road capability, it more than makes up for on the blacktop, ensuring a well-balanced architecture that’s as responsive as they come.",
+      },
+      {
+        prix: "$15,100",
+      },
+    ],
+  },
+  {
+    id: 8,
+    modele: "1290 SUPER ADVENTURE R",
+    fabricant: "KTM",
+    photo:
+      "https://cdn.hiconsumption.com/wp-content/uploads/2019/08/KTM-1290-Super-Adventure-R.jpg",
+    specifications: [
+      {
+        description:
+          "KTM’s 1290 Super Adventure R is the big brother of the company’s similarly-endowed 790, making it an attractive proposition for riders who are looking for all of the dependable attributes associated with the brand’s less-powerful offerings but in one quintessential package. To say that the 1290 Super Adventure R is capable would be an understatement — it features a powerful 1301cc V-twin engine, a state-of-the-art four-valve cylinder head, and bespoke features that have become relatively commonplace within KTM’s variants. Built atop one of the world’s most advanced travel enduro chassis, this all-terrain beast borrows many of the design cues from the brand’s 1290 Super Duke R, offering riders a chrome-molybdenum steel trellis frame, long-haul peripherals, and revered ABS technologies, resulting in an experiential ride that they won’t soon forget.",
+      },
+      {
+        prix: "$18,500",
+      },
+    ],
+  },
+  {
+    id: 9,
+    modele: "R1250GS ADVENTURE",
+    fabricant: "BMW",
+    photo:
+      "https://cdn.hiconsumption.com/wp-content/uploads/2019/08/BMW-R1250GS-Adventure.jpg",
+    specifications: [
+      {
+        description:
+          "The BMW R1250GS Adventure was conceptualized to confront anything that the road could conjure, including the world’s most adverse weather, routes, and remote areas. The bike’s powerful 1254cc engine is more than capable, allowing it to traverse vast expanses of wilderness thanks to BMW’s proprietary variable camshaft control, throttle control, dynamic traction control, and suspension compensation Dynamic ESA. To keep the bike’s power within arm’s reach, a constant-mesh 6-speed gearbox, electronic fuel injection, and hydraulically operated wet clutch offer the company’s most advanced systems in one, quintessential platform, pairing power and passion with relative ease.",
+      },
+      {
+        prix: "$19,945",
+      },
+    ],
+  },
+  {
+    id: 10,
+    modele: "MULTISTRADA 1260 ENDURO",
+    fabricant: "DUCATI",
+    photo:
+      "https://cdn.hiconsumption.com/wp-content/uploads/2019/08/Ducati-Multistrada-1260-Enduro.jpg",
+    specifications: [
+      {
+        description:
+          "Ducati’s Multistrada 1260 Enduro rounds out our list as one of the most well-designed platforms available. Thanks to the company’s legendary lineage within the world of two-wheeled fare, the Enduro boasts a tasteful off-road chassis that’s been outfitted with a Ducati Skyhook Suspension Evo (DSS) system, advanced electronic instrumentation, and bespoke safety measures like Ride By Wire, Ducati Wheelie Control, and active traction control that helps to keep things smooth throughout the entirety of the powerband. Trust us when we say that you’re going to need it; the bike’s supremely powerful Testastretta DVT 1262cc engine offers sporty performance with minimal regard for common sense, allowing riders to hit speeds close to 160 miles-per-hour. A Bosch electronic fuel injection system, six-speed Ducati Quick Shift transmission, and fully-adjustable mono-shock suspension bring the company’s most influential components to the Multistrada, resulting in an entirely-capable off-road warrior that, at times, might seem like overkill for day-to-day use.",
+      },
+      {
+        prix: "$24,395",
+      },
+    ],
+  },
+];
+
+// Using CommonJS style export so we can consume via Node (without using Babel-node)
+module.exports = {
+  adventuremotorcycles,
+};

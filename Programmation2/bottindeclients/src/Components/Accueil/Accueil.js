@@ -1,7 +1,6 @@
 import React from "react";
 import { BottinClients } from "../BottinClients/BottinClients";
 import { Connexion } from "../Connexion/Connexion";
-import Container from "react-bootstrap/Container";
 //Component qui gère l'affichage si l'usager a entré le bon mot de passe
 export class Accueil extends React.Component {
   constructor(props) {

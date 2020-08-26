@@ -1,7 +1,6 @@
 import React from 'react';
-
 import Button from 'react-bootstrap/Button';
-//import { Connexion } from '../Connexion/Connexion';
+
 
 export class Deconnexion extends React.Component {
     constructor(props) { 

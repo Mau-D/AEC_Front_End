@@ -69,7 +69,7 @@ export class NouveauClient extends React.Component {
               </Form.Group>
               <Button
                 className="silverButton  border-dark"
-                type="submit"
+                type=""
                 onClick={this.handleClick}
               >
                 Enregistrer

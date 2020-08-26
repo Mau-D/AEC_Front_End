@@ -30,8 +30,8 @@ export class TvShow extends React.Component {
             //Style avec ternary operator
             <Col xs lg={2}>
                 <Image
-                    onMouseOver={this.onMouseOver}//Attribut qui appelle la fonction 
-                    onMouseOut={this.onMouseOut}//Attribut qui appelle la fonction 
+                    onMouseOver={this.onMouseOver}//événement qui appelle la fonction 
+                    onMouseOut={this.onMouseOut}//événement qui appelle la fonction 
                     fluid
                     src={this.props.src}
                     alt={this.props.alt}
