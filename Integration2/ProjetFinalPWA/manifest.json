@@ -1,6 +1,6 @@
 {
   "name": "Bien-être",
-  "short-name": "Bien",
+  "short_name": "Bien",
   "icons": [
     {
       "src": "/AEC_Front_End/Integration2/ProjetFinalPWA/img/icons/icondeer192x192.png",
