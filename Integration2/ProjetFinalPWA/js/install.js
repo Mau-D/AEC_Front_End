@@ -12,7 +12,7 @@ window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
  */
 function logAppInstalled(evt) {
 // Add code to log the event
-    console.log('Weather App was installed.', evt);
+    console.log('Bienêtre App was installed.', evt);
 }
 
 function installPWA(evt) {
