@@ -23,6 +23,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#94C9FA">
     <meta name="apple-mobile-web-app-title" content="Bien-être PWA">
     <link rel="apple-touch-icon" href="img/icons/icondeer192x192.png">
+    <script src="js/install.js"></script>
     <script>
         // Register service worker.
         if ('serviceWorker' in navigator) {
@@ -38,6 +39,9 @@
 <body>
 <div class="container-fluid px-0 mx-0"><!--Contient l'intégralité du site-->
     <header><!--barre de navigation, vidéo background, message-->
+        <!-- Bouton application -->
+        <button class="nav-link px-lg-4 px-2" id="butInstall"
+                aria-label="Install" hidden>Installer la PWA</button>
         <div class="container-fluid">
             <nav class="navbar fixed-top navbar-collapse navbar-expand-md">
                 <a class="navbar-brand py-0 my-0">

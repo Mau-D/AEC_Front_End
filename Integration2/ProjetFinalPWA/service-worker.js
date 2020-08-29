@@ -1,8 +1,8 @@
-//Ce fichier a été pris par d'autres dources, donc pour l'utiliser modifier le code et changer les commentaires
+//Ce fichier a été pris par d'autres sources, donc pour l'utiliser modifier le code et changer les commentaires
 
 //Update cache names any time any of the cached files change.
 //Changer la version après chaque modification*******************
-const CACHE_NAME = 'static-cache-v3';
+const CACHE_NAME = 'static-cache-v4';
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
     'offline.html',
