@@ -1,14 +1,12 @@
 import React from "react";
-import logo from "./logo.svg";
+import logo from "../logo.svg";
 import "./App.css";
-import { Button } from "react-bootstrap";
+import BoutonInstallPWA from "./BoutonInstallPWA";
 function App() {
   return (
     <div className="App">
+      <BoutonInstallPWA />
       <header className="App-header">
-        <Button variant="primary" size="lg" block id="boutonInstall">
-          Installer l'application
-        </Button>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
