@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 
 function BoutonInstallPWA() {
   return (
-    <Button variant="primary" size="lg" block id="boutonInstall">
+    <Button variant="primary" size="lg" block id="boutonInstall" hidden>
       Installer l'application
     </Button>
   );
