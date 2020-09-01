@@ -2,7 +2,7 @@
 
 //Update cache names any time any of the cached files change.
 //Changer la version après chaque modification*******************
-const CACHE_NAME = 'static-cache-v10';
+const CACHE_NAME = 'static-cache-v11';
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
     'offline.html',
