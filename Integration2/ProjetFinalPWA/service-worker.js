@@ -6,8 +6,6 @@ const CACHE_NAME = 'static-cache-v10';
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
     'offline.html',
-    'css',
-    'img',
 ];
 self.addEventListener('install', (evt) => {
     console.log('[ServiceWorker] Install');
