@@ -1,7 +1,9 @@
 import React from "react";
 import "../style/App.css"; /*Modifier ce fichier pour le style en sass*/
 import { Accueil } from "./Accueil";
+import AjouterTrip from "./AjouterTrip";
 import ManageTrips from "./ManageTrips";
+import BoutonAjoutTrip from "./BoutonAjoutTrip";
 import { useLocation, Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
@@ -21,7 +23,7 @@ function App() {
           <Route path="/" exact component={Accueil} />
           {/*Dans la page d'accueil, lien pour la liste des road trips*/}
           <Route path="/listeTrips" component={ManageTrips} />
-          {/*Dans la liste des trips, bouton pour ajouter un trip
+          {/*Dans la liste des trips, bouton pour ajouter un trip*/}
           <Route path="/ajouterTrip" component={AjouterTrip} />
           {/*Un lien dans chacune des cards des différents trips, amène à un formulaire d'édition
           <Route path="/trip/:titre" component={FormEditTrip} />
@@ -29,6 +31,7 @@ function App() {
           <Route component={PageNotFoundHook} />*/}
         </Switch>
       </Container>
+      <BoutonAjoutTrip />
 
       {/*{location.pathname !== "/" && <BoutonRetourAccueil />}*/}
     </>

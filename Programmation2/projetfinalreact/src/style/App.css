@@ -1,11 +1,6 @@
-#pageAccueil {
-  background-image: url("../img/road.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: white;
-  background-attachment: fixed; /*Pour l'effet*/
-  background-position: center;
-}
+/*Code ajouté pour test*/
+
+/*Fin*/
 .App {
   text-align: center;
 }

@@ -3,7 +3,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import sr from "./ScrollReveal";
 import Fade from "react-reveal/Fade";
-import "../style/App.css"; /*Modifier ce fichier pour le style en sass*/
+import "../style/accueil.sass"; /*Modifier ce fichier pour le style en sass*/
 
 //Variables pour téléverser les photos des régions
 const photos = {
@@ -38,7 +38,9 @@ export class Accueil extends React.Component {
       <Container fluid>
         <Row>
           <Col>
-            <h1 ref="box1">La trotteuse</h1>
+            <h1 ref="box1" className="color">
+              La trotteuse
+            </h1>
             <h2 ref="box2">Vous amènera où vous voulez</h2>
           </Col>
         </Row>
