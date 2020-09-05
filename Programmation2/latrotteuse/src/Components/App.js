@@ -11,7 +11,11 @@ function App() {
       <Container fluid>
         <Switch>
           {/*Accueil est la première page*/}
-          <Route path="/" exact component={Accueil} />
+          <Route
+            path="https://mau-d.github.io/AEC_Front_End/Programmation2/latrotteuse/build/"
+            exact
+            component={Accueil}
+          />
           <Route path="/ajouterTrip" component={AjouterTrip} />
         </Switch>
       </Container>
