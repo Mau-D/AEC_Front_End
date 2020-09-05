@@ -7,7 +7,7 @@ function BoutonAjouterTrip() {
   return (
     <Row>
       <Col className="text-right">
-        <Link to="/ajouterMoto" className="btn btn-primary">
+        <Link to="/ajouterTrip" className="btn btn-primary">
           Ajouter un Road Trip
         </Link>
       </Col>
