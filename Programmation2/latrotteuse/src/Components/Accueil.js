@@ -2,7 +2,7 @@ import React from "react";
 //import BoutonAjoutTrip from "./BoutonAjoutTrip";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import sr from "./ScrollReveal";
+//import sr from "./ScrollReveal";
 import Fade from "react-reveal/Fade";
 import "../style/accueil.sass"; /*Modifier ce fichier pour le style en sass*/
 
@@ -16,7 +16,7 @@ const photos = {
 //Component pour la page d'accueil avec un lien vers manageTrips
 export class Accueil extends React.Component {
   //Pour le titre,
-  componentDidMount = () => {
+  /*componentDidMount = () => {
     const config = {
       origin: "right",
       duration: 1000,
@@ -32,7 +32,7 @@ export class Accueil extends React.Component {
 
     sr.reveal(this.refs.box1, config);
     sr.reveal(this.refs.box2, config2);
-  };
+  };*/
 
   render() {
     return (
