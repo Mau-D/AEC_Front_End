@@ -4,12 +4,13 @@ import FormAjouterTrip from "./FormAjouterTrip";
 //Remplacer la class par la function
 //Mettre le mot props en paramètre
 //aller chercher le props = props.history, le defaultProps n'a pas besoin du props.
+//history={props.history}
 function AjouterTrip(props) {
   return (
     <>
-      <FormAjouterTrip history={props.history} />
+      <FormAjouterTrip />
     </>
   );
 }
-AjouterTrip.defaultProps = { history: "/" };
+//AjouterTrip.defaultProps = { history: "/" };
 export default AjouterTrip;

@@ -110,5 +110,5 @@ function FormAjouterTrip(props) {
     </Container>
   );
 }
-FormAjouterTrip.defaultProps = { history: "/" };
+//FormAjouterTrip.defaultProps = { history: "/" };
 export default FormAjouterTrip;
