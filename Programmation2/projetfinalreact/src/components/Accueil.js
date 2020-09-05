@@ -1,4 +1,5 @@
 import React from "react";
+import BoutonAjoutTrip from "./BoutonAjoutTrip";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import sr from "./ScrollReveal";
@@ -98,6 +99,7 @@ export class Accueil extends React.Component {
         <Row>
           <Col>
             <Link to={"listeTrips/"}>Voir tous les road trips...</Link>
+            <BoutonAjoutTrip />
           </Col>
         </Row>
       </Container>

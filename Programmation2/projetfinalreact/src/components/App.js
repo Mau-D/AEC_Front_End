@@ -3,7 +3,6 @@ import "../style/App.css"; /*Modifier ce fichier pour le style en sass*/
 import { Accueil } from "./Accueil";
 import AjouterTrip from "./AjouterTrip";
 import ManageTrips from "./ManageTrips";
-import BoutonAjoutTrip from "./BoutonAjoutTrip";
 import { useLocation, Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
@@ -31,7 +30,6 @@ function App() {
           <Route component={PageNotFoundHook} />*/}
         </Switch>
       </Container>
-      <BoutonAjoutTrip />
 
       {/*{location.pathname !== "/" && <BoutonRetourAccueil />}*/}
     </>
