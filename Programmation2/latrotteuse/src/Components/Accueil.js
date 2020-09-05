@@ -1,10 +1,6 @@
 import React from "react";
 //import BoutonAjoutTrip from "./BoutonAjoutTrip";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
-//import sr from "./ScrollReveal";
-//import Fade from "react-reveal/Fade";
-//import "../style/accueil.sass"; /*Modifier ce fichier pour le style en sass*/
 
 //Variables pour téléverser les photos des régions
 const photos = {
@@ -16,23 +12,6 @@ const photos = {
 //Component pour la page d'accueil avec un lien vers manageTrips
 export class Accueil extends React.Component {
   //Pour le titre,
-  /*componentDidMount = () => {
-    const config = {
-      origin: "right",
-      duration: 1000,
-      delay: 150,
-      distance: "500px",
-      scale: 1,
-      easing: "ease",
-    };
-    const config2 = {
-      duration: 5000,
-      delay: 500,
-    };
-
-    sr.reveal(this.refs.box1, config);
-    sr.reveal(this.refs.box2, config2);
-  };*/
 
   render() {
     return (
@@ -90,7 +69,7 @@ export class Accueil extends React.Component {
         </Container>
         <Row>
           <Col>
-            <Link>Voir tous les road trips...</Link>
+            <p>Lien</p>
           </Col>
         </Row>
       </Container>
