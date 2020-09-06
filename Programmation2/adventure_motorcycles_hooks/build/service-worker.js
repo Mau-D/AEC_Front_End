@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/AEC_Front_End/Programmation2/adventure_motorcycles_hooks/build/precache-manifest.0e2d7ad49af7f2f45754de44dbde7ea6.js"
+  "/AEC_Front_End/Programmation2/adventure_motorcycles_hooks/build/precache-manifest.0612d5134891b0f9a6a9f6bf1f2fde09.js"
 );
 
 self.addEventListener('message', (event) => {
