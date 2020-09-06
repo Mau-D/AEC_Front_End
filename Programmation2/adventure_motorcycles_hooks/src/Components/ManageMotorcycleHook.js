@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import MotorcycleHook from "./MotorcycleHook";
 import { Container, Row } from "react-bootstrap";
+import ScrollReveal from "scrollreveal";
+
 //Remplacer la class par une fonction
 //L'état(donneesRecues) et la méthode pour changer l'état(setDonneesRecues)
 //La valeur par défaut est dans le useState(un tableau vide)
@@ -29,9 +31,18 @@ function ManageMotorcycleHook() {
       console.log(error);
     }
   }
+  ScrollReveal().reveal(".headline");
+  ScrollReveal().reveal(".tagline", { delay: 500 });
+  ScrollReveal({ duration: 5000 });
+  ScrollReveal().reveal(".punchline", { delay: 2000 });
 
   return (
     <Container fluid>
+      <h1 className="headline">Affichage de la liste des motos</h1>
+      <p class="tagline">
+        The perfect widgets.
+        <span className="punchline">Forever.</span>
+      </p>
       <h1>Affichage de la liste des motos</h1>
       <Row>
         {donneesRecues.map((key, i) => (
