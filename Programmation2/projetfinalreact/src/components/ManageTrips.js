@@ -1,16 +1,52 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import Trip from "./Trip";
+import { Container, Row } from "react-bootstrap";
+import { API } from "../constantes";
 
-//Component pour la structure du site et le lien vers manage de la bd
-function ManageTrips() {
+//Remplacer la class par une fonction
+//L'état(donneesRecues) et la méthode pour changer l'état(setDonneesRecues)
+//La valeur par défaut est dans le useState(un tableau vide)
+function ManageTrip() {
+  const [donneesRecues, setDonneesRecues] = useState([]);
+
+  //Pour le CRUD utiliser useEffect
+  useEffect(() => {
+    //appelle la fonction getMotorcycles
+    getTrip();
+  }, [donneesRecues.join(",")]); //Si on enlève le second paramètre, on obtient une boucle infinie, indique quelle constante à vérifier
+  //Changer le componentDidMount par une fonction
+  async function getTrip() {
+    try {
+      const response = await fetch(API);
+      const reponseDeApi = await response.json();
+      setDonneesRecues(reponseDeApi);
+      if (!response.ok) {
+        //Permet d'attraper l'erreur 500 et l'erreur 400
+        throw Error(response.statusText);
+      }
+    } catch (error) {
+      //On gère l'erreur
+      console.log(error);
+    }
+  }
+
   return (
     <Container fluid>
-      <Row className="text-center">
-        <Col>
-          <p>Hello ManageTrips</p>
-        </Col>
+      <h1>Affichage de la liste des road trips</h1>
+
+      <Row>
+        {donneesRecues.map((key, i) => (
+          <Trip
+            photo={key.image}
+            nomTrip={key.nomTrip}
+            nomAttrait={key.attraits[0].nomAttrait}
+            endroit={key.attraits[1].endroit}
+            id={key._id}
+          ></Trip>
+        ))}
       </Row>
     </Container>
   );
 }
-export default ManageTrips;
+//Il faut exporter les fonctions
+export default ManageTrip;

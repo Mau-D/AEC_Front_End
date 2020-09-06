@@ -33,7 +33,7 @@ function FormAjouterTrip(props) {
       });
       if (response.ok) {
         const jsonResponse = await response.json();
-        props.history.push("/"); //Retour à la page d'accueil
+        //props.history.push("/"); //Retour à la page d'accueil
         //toast.success("Ajout de la moto, modèle:  " + model);
         console.log("ajout du trip réussi");
 
@@ -53,7 +53,7 @@ function FormAjouterTrip(props) {
     const photo = document.getElementById("urlPhoto").value;
     const nomTrip = document.getElementById("nomDuTrip").value;
     const nomAttrait = document.getElementById("nomDeLAttrait").value;
-    const endroit = document.getElementById("EndroitDeLattrait").value;
+    const endroit = document.getElementById("endroitDeLAttrait").value;
 
     /*Fonction pour entrer les infos dans la bd */
     addTrip(photo, nomTrip, nomAttrait, endroit);
@@ -93,7 +93,7 @@ function FormAjouterTrip(props) {
             </Form.Group>
             <Form.Group controlId="nomDeLAttrait">
               <Form.Label>Entrer le nom de l'attrait principal</Form.Label>
-              <Form.Control type="text" placeholder="exemple: KTM" />
+              <Form.Control type="text" />
             </Form.Group>
 
             <Form.Group controlId="endroitDeLAttrait">
@@ -110,5 +110,5 @@ function FormAjouterTrip(props) {
     </Container>
   );
 }
-//FormAjouterTrip.defaultProps = { history: "/" };
+FormAjouterTrip.defaultProps = { history: "/" };
 export default FormAjouterTrip;

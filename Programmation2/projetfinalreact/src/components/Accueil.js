@@ -98,7 +98,7 @@ export class Accueil extends React.Component {
         </Container>
         <Row>
           <Col>
-            <Link>Voir tous les road trips...</Link>
+            <Link to={"/listetrips"}>Voir tous les road trips...</Link>
             <BoutonAjoutTrip />
           </Col>
         </Row>
