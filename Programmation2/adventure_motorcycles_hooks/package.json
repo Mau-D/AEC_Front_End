@@ -2,7 +2,7 @@
   "name": "adventure_motorcycles_hooks",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://mau-d.github.io/AEC_Front_End/Programmation2/adventure_motorcycles_hooks/build",
+  "homepage": "https://mau-d.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

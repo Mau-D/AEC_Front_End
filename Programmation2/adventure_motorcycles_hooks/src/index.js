@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router } from "react-router-dom";
 //"homepage": "https://mau-d.github.io/AEC_Front_End/Programmation2/adventure_motorcycles_hooks/build",
 ReactDOM.render(
-  <Router basename="https://mau-d.github.io/AEC_Front_End/Programmation2/adventure_motorcycles_hooks/build">
+  <Router basename="https://mau-d.github.io">
     <App />
   </Router>,
   document.getElementById("root")
