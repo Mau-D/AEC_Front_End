@@ -3,6 +3,7 @@ import "../style/App.css"; /*Modifier ce fichier pour le style en sass*/
 import { Accueil } from "./Accueil";
 import AjouterTrip from "./AjouterTrip";
 import ManageTrips from "./ManageTrips";
+import FormEditTrip from "./FormEditTrip";
 import { useLocation, Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
@@ -25,7 +26,7 @@ function App() {
           <Route path="/listetrips" component={ManageTrips} />
 
           <Route path="/ajoutertrip" component={AjouterTrip} />
-          {/*Un lien dans chacune des cards des différents trips, amène à un formulaire d'édition
+          {/*Un lien dans chacune des cards des différents trips, amène à un formulaire d'édition*/}
           <Route path="/trip/:titre" component={FormEditTrip} />
           {/*En cas d'erreur dans l'url une page 404 s'affiche
           <Route component={PageNotFoundHook} />*/}
