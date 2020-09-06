@@ -10,7 +10,7 @@ function App() {
     <>
       <Container fluid>
         {/*Accueil est la première page*/}
-        <Route path={process.env.PUBLIC_URL + "/"} exact component={Accueil} />
+        <Route path="/" exact component={Accueil} />
         <Route path="/ajouterTrip" component={AjouterTrip} />
       </Container>
     </>
