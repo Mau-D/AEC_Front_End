@@ -9,14 +9,14 @@ function Trip(props) {
     <Col sm={3} className="mt-5">
       <Fade left cascade>
         <Card style={{ width: "28rem" }}>
-          <Card.Img variant="top" src={props.photo} />
+          <Card.Img variant="top" src={props.picture} />
           <Card.Body>
             <Card.Title>
-              <h2>{props.nomTrip}</h2>
+              <h2>{props.nameTrip}</h2>
               <h2>Nom du trip</h2>
             </Card.Title>
-            <Card.Text>{props.nomAttrait}</Card.Text>
-            <Card.Text>{props.endroit}</Card.Text>
+            <Card.Text>{props.nameAttrait}</Card.Text>
+            <Card.Text>{props.city}</Card.Text>
             <Card.Text>endroit</Card.Text>
           </Card.Body>
         </Card>
