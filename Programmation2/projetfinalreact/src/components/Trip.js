@@ -13,7 +13,7 @@ function Trip(props) {
           <Card.Body>
             <Card.Title>
               <Link to={"trip/" + props.nameTrip + "?id=" + props.id}>
-                <h2>Nom du road trip: {props.nameTrip}</h2>
+                <h2>{props.nameTrip}</h2>
               </Link>
             </Card.Title>
             <Card.Text>attrait principal: {props.nameAttrait}</Card.Text>

@@ -13,7 +13,7 @@ function ManageTrip() {
   useEffect(() => {
     //appelle la fonction getMotorcycles
     getTrip();
-  }, [donneesRecues.join(",")]); //Si on enlève le second paramètre, on obtient une boucle infinie, indique quelle constante à vérifier
+  }, []); //Si on enlève le second paramètre, on obtient une boucle infinie, indique quelle constante à vérifier
   //Changer le componentDidMount par une fonction
   async function getTrip() {
     try {
@@ -38,7 +38,7 @@ function ManageTrip() {
         {donneesRecues.map((key, i) => (
           <Trip
             picture={key.image}
-            nameTrip={key.nomTrip}
+            nameTrip={key.nom}
             nameAttrait={key.attraits[0].nomAttrait}
             city={key.attraits[1].endroit}
             id={key._id}
