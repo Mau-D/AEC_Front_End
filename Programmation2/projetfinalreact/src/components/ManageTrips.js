@@ -38,7 +38,7 @@ function ManageTrip() {
       <Row>
         {donneesRecues.map((key, i) => (
           <Trip
-            picture={key.image}
+            picture={key.image1}
             nameTrip={key.nom}
             nameAttrait={key.attraits[0].nomAttrait}
             city={key.attraits[1].endroit}

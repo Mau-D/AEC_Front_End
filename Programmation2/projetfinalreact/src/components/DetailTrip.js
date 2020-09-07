@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { API } from "../constantes";
+import "../style/test.sass"; /*Modifier ce fichier pour le style en sass*/
 
 //Fonction pour afficher les détails du road trip
 function DetailTrip(props) {
@@ -9,7 +10,10 @@ function DetailTrip(props) {
   const [donneesRecuesDetail, setDonneesRecuesDetail] = useState({
     _id: "",
     nom: "",
-    image: "",
+    image1: "",
+    image2: "",
+    image3: "",
+    description: "",
     attraits: ["", ""],
   });
 
@@ -37,12 +41,35 @@ function DetailTrip(props) {
     }
   }
   return (
-    <Container fluid>
+    <Container>
       <h1>Affichage détaillée du road trip</h1>
       <Row>
         {/* Carousselle d'images */}
-        <Col class sm={12}>
+        <Col className="h-50" sm={12}>
           <Image src={donneesRecuesDetail.image} />
+          <Carousel id="myCarousel">
+            <Carousel.Item>
+              <Image
+                className="d-block w-100"
+                src={donneesRecuesDetail.image1}
+                alt="First slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image
+                className="d-block w-100"
+                src={donneesRecuesDetail.image2}
+                alt="Third slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image
+                className="d-block w-100"
+                src={donneesRecuesDetail.image3}
+                alt="Third slide"
+              />
+            </Carousel.Item>
+          </Carousel>
         </Col>
       </Row>
       <Row>
@@ -58,6 +85,12 @@ function DetailTrip(props) {
           >
             <h2>Nom du road trip: {donneesRecuesDetail.nom}</h2>
           </Link>
+        </Col>
+      </Row>
+      <Row>
+        {/* description*/}
+        <Col class sm={12}>
+          <p>{donneesRecuesDetail.description}</p>
         </Col>
       </Row>
       <Row>

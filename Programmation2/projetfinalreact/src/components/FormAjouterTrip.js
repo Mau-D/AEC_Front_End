@@ -9,7 +9,15 @@ function FormAjouterTrip(props) {
   //Hook d'état pour la photo téléchargée voir plus tard, importer {useState}
   //const [photo, setPhoto] = useState("");
 
-  async function addTrip(photo, nomTrip, nomAttrait, endroit) {
+  async function addTrip(
+    photo1,
+    photo2,
+    photo3,
+    nomTrip,
+    descriptionTrip,
+    nomAttrait,
+    endroit
+  ) {
     try {
       const response = await fetch(API, {
         /*Pour un ajout utiliser la méthode POST */
@@ -20,7 +28,10 @@ function FormAjouterTrip(props) {
         },
         body: JSON.stringify({
           nom: nomTrip,
-          image: photo,
+          image1: photo1,
+          image2: photo2,
+          image2: photo3,
+          description: descriptionTrip,
           attraits: [
             {
               nomAttrait: nomAttrait,
@@ -50,13 +61,24 @@ function FormAjouterTrip(props) {
   function handleAdd(event) {
     event.preventDefault(); /*Empêche de rafraîchir la page, car le bouton est de type submit*/
     /*variables des infos entrées dans le formulaire*/
-    const photo = document.getElementById("urlPhoto").value;
+    const photo1 = document.getElementById("urlPhoto1").value;
+    const photo2 = document.getElementById("urlPhoto2").value;
+    const photo3 = document.getElementById("urlPhoto3").value;
+    const descriptionTrip = document.getElementById("descriptionTrip").value;
     const nomTrip = document.getElementById("nomDuTrip").value;
     const nomAttrait = document.getElementById("nomDeLAttrait").value;
     const endroit = document.getElementById("endroitDeLAttrait").value;
 
     /*Fonction pour entrer les infos dans la bd */
-    addTrip(photo, nomTrip, nomAttrait, endroit);
+    addTrip(
+      photo1,
+      photo2,
+      photo3,
+      nomTrip,
+      descriptionTrip,
+      nomAttrait,
+      endroit
+    );
   }
 
   //Affiche la photo entrer en input, lorsque la souris sort du champ, grâce au changement d'état
@@ -72,8 +94,32 @@ function FormAjouterTrip(props) {
         <Col>
           <h1>Formulaire d'enregistrement d'un nouveau road trip</h1>
           <Form>
-            <Form.Group controlId="urlPhoto">
-              <Form.Label>Entrer l'url de l'image</Form.Label>
+            <Form.Group controlId="urlPhoto1">
+              <Form.Label>Entrer l'url de la première image</Form.Label>
+              <Form.Control type="text" />
+
+              {/*<Form.Control
+                onBlur={() =>
+                  setPhoto(document.getElementById("urlPhoto").value)
+                }
+                type="text"
+            />
+              {photo !== "" && <Image src={photo} rounded width="125" />}*/}
+            </Form.Group>
+            <Form.Group controlId="urlPhoto2">
+              <Form.Label>Entrer l'url de la deuxième image</Form.Label>
+              <Form.Control type="text" />
+
+              {/*<Form.Control
+                onBlur={() =>
+                  setPhoto(document.getElementById("urlPhoto").value)
+                }
+                type="text"
+            />
+              {photo !== "" && <Image src={photo} rounded width="125" />}*/}
+            </Form.Group>
+            <Form.Group controlId="urlPhoto3">
+              <Form.Label>Entrer l'url de la troisième image</Form.Label>
               <Form.Control type="text" />
 
               {/*<Form.Control
@@ -90,6 +136,10 @@ function FormAjouterTrip(props) {
               <Form.Text className="text-muted">
                 ajouter une validation
               </Form.Text>
+            </Form.Group>
+            <Form.Group controlId="descriptionTrip">
+              <Form.Label>Description du road trip</Form.Label>
+              <Form.Control as="textarea" rows="3" />
             </Form.Group>
             <Form.Group controlId="nomDeLAttrait">
               <Form.Label>Entrer le nom de l'attrait principal</Form.Label>

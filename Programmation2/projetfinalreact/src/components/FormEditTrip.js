@@ -7,7 +7,10 @@ import { API } from "../constantes";
 function FormEditTrip(props) {
   const [donneesRecues, setDonneesRecues] = useState({
     nom: "",
-    image: "",
+    image1: "",
+    image2: "",
+    image3: "",
+    description: "",
     attraits: ["", ""],
   });
 
@@ -37,7 +40,15 @@ function FormEditTrip(props) {
   }
   //editTrip(picture, nametrip, nameactivity, place);
   //Méthode pour modifier la bd avec le formulaire, semblable à l'ajout ajouter l'id à l'URL et changer la methode pour PUT
-  async function editTrip(picture, nametrip, nameactivity, place) {
+  async function editTrip(
+    picture1,
+    picture2,
+    picture3,
+    nametrip,
+    descriptiontrip,
+    nameactivity,
+    place
+  ) {
     try {
       const response = await fetch(API + tripID, {
         /*Pour un ajout utiliser la méthode POST */
@@ -49,7 +60,10 @@ function FormEditTrip(props) {
 
         body: JSON.stringify({
           nom: nametrip,
-          image: picture,
+          image1: picture1,
+          image2: picture2,
+          image3: picture3,
+          description: descriptiontrip,
           attraits: [
             {
               nomAttrait: nameactivity,
@@ -78,13 +92,24 @@ function FormEditTrip(props) {
   function handleEdit(event) {
     event.preventDefault(); /*Empêche de rafraîchir la page, car le bouton est de type submit*/
     /*variables des infos entrées dans le formulaire*/
-    const picture = document.getElementById("pictureID").value;
+    const picture1 = document.getElementById("pictureID1").value;
+    const picture2 = document.getElementById("pictureID2").value;
+    const picture3 = document.getElementById("pictureID3").value;
     const nametrip = document.getElementById("nametripID").value;
+    const descriptiontrip = document.getElementById("descriptionTripID").value;
     const nameactivity = document.getElementById("nameactivityID").value;
     const place = document.getElementById("placeID").value;
 
     /*Fonction pour entrer les infos dans la bd */
-    editTrip(picture, nametrip, nameactivity, place);
+    editTrip(
+      picture1,
+      picture2,
+      picture3,
+      nametrip,
+      descriptiontrip,
+      nameactivity,
+      place
+    );
   }
   //Méthode pour supprimer le road trip  de la bd, method delete
   async function removeTrip() {
@@ -123,16 +148,42 @@ function FormEditTrip(props) {
                 <Form.Control type="text" defaultValue={donneesRecues.nom} />
               </Form.Group>
 
-              <Form.Group controlId="pictureID">
-                <Form.Label>URL d'une photo du road trip</Form.Label>
+              <Form.Group controlId="pictureID1">
+                <Form.Label>Image 1</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Entrer une URL valide"
-                  defaultValue={donneesRecues.image}
+                  defaultValue={donneesRecues.image1}
                 />
                 {donneesRecues.photo !== "" && (
-                  <Image src={donneesRecues.image} rounded width="125" />
+                  <Image src={donneesRecues.image1} rounded width="125" />
                 )}
+              </Form.Group>
+              <Form.Group controlId="pictureID2">
+                <Form.Label>Image 2</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Entrer une URL valide"
+                  defaultValue={donneesRecues.image2}
+                />
+                {donneesRecues.photo !== "" && (
+                  <Image src={donneesRecues.image2} rounded width="125" />
+                )}
+              </Form.Group>
+              <Form.Group controlId="pictureID3">
+                <Form.Label>Image 3</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Entrer une URL valide"
+                  defaultValue={donneesRecues.image3}
+                />
+                {donneesRecues.photo !== "" && (
+                  <Image src={donneesRecues.image3} rounded width="125" />
+                )}
+              </Form.Group>
+              <Form.Group controlId="descriptionTripID">
+                <Form.Label>Description du road trip</Form.Label>
+                <Form.Control as="textarea" rows="3" />
               </Form.Group>
 
               <Form.Group controlId="nameactivityID">
