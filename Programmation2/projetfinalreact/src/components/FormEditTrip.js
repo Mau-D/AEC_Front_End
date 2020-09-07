@@ -49,7 +49,7 @@ function FormEditTrip(props) {
 
         body: JSON.stringify({
           nom: nametrip,
-          photo: picture,
+          image: picture,
           attraits: [
             {
               nomAttrait: nameactivity,

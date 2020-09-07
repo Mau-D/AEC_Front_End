@@ -7,6 +7,7 @@ import { API } from "../constantes";
 function DetailTrip(props) {
   //Constantes en useState pour les infos et l'id
   const [donneesRecuesDetail, setDonneesRecuesDetail] = useState({
+    _id: "",
     nom: "",
     image: "",
     attraits: ["", ""],
@@ -49,7 +50,7 @@ function DetailTrip(props) {
         <Col class sm={12}>
           <Link
             to={
-              "trip/" +
+              "edit/" +
               donneesRecuesDetail.nom +
               "?id=" +
               donneesRecuesDetail._id
