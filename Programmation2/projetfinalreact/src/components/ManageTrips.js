@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Trip from "./Trip";
-import { Container, Row } from "react-bootstrap";
+import BoutonAjoutTrip from "./BoutonAjoutTrip";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { API } from "../constantes";
 
 //Remplacer la class par une fonction
@@ -44,6 +45,11 @@ function ManageTrip() {
             id={key._id}
           ></Trip>
         ))}
+      </Row>
+      <Row>
+        <Col>
+          <BoutonAjoutTrip />
+        </Col>
       </Row>
     </Container>
   );

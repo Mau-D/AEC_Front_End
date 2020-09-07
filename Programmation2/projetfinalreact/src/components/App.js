@@ -4,20 +4,19 @@ import { Accueil } from "./Accueil";
 import AjouterTrip from "./AjouterTrip";
 import ManageTrips from "./ManageTrips";
 import FormEditTrip from "./FormEditTrip";
-import { Route, Switch } from "react-router-dom";
+import BoutonRetourAccueil from "./BoutonRetourAccueil";
+import BoutonRetourManage from "./BoutonRetourManage";
+import { useLocation, Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import DetailTrip from "./DetailTrip";
 
 function App() {
-  /*let location = useLocation(); variable de la page où je me trouve */
+  let location = useLocation(); /*variable de la page où je me trouve */
   return (
     <>
       {/*Pour enlever le bouton ajouter dans la page d'ajout, la modification et la page not found
       <ToastContainer autoClose={3000} hideProgressBar />
-      {location.pathname !== "/ajouterMoto" &&
-        !location.pathname.startsWith("/Motorcycle") && (
-          <BoutonAjouterMotoHook />
-        )} */}
+      */}
       <Container fluid>
         <Switch>
           {/*Accueil est la première page*/}
@@ -35,7 +34,10 @@ function App() {
         </Switch>
       </Container>
 
-      {/*{location.pathname !== "/" && <BoutonRetourAccueil />}*/}
+      {location.pathname !== "/" && <BoutonRetourAccueil />}
+      {location.pathname !== "trip/" &&
+        location.pathname !== "/" &&
+        location.pathname !== "/listetrips" && <BoutonRetourManage />}
     </>
   );
 }

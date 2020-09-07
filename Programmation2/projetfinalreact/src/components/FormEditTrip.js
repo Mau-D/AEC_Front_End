@@ -62,7 +62,9 @@ function FormEditTrip(props) {
       });
       if (response.ok) {
         //const jsonResponse = await response.json();
-        //props.history.push("/"); //Retour à la page d'accueil
+        props.history.push(
+          "/listetrips/" + donneesRecues.nom + "?id=" + donneesRecues._id
+        ); //Retour à la page d'accueil
         //toast.warning("Modification de la moto, modèle:  " + model);
 
         return response;
@@ -96,7 +98,7 @@ function FormEditTrip(props) {
 
         console.log("SUPPRESSION!");
 
-        //props.history.push("/");
+        props.history.push("/listetrips");
 
         //toast.error("Supression de la moto ");
 
@@ -161,4 +163,5 @@ function FormEditTrip(props) {
     </>
   );
 }
+FormEditTrip.defaultProps = { history: "/listetrips" };
 export default FormEditTrip;

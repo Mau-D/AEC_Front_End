@@ -8,9 +8,10 @@ import FormAjouterTrip from "./FormAjouterTrip";
 function AjouterTrip(props) {
   return (
     <>
-      <FormAjouterTrip />
+      <FormAjouterTrip history={props.history} />
     </>
   );
 }
-//AjouterTrip.defaultProps = { history: "/" };
+
+AjouterTrip.defaultProps = { history: "/listetrips" };
 export default AjouterTrip;

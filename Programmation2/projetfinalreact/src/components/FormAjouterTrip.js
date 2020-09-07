@@ -33,7 +33,7 @@ function FormAjouterTrip(props) {
       });
       if (response.ok) {
         const jsonResponse = await response.json();
-        //props.history.push("/"); //Retour à la page d'accueil
+        props.history.push("/listetrips"); //Retour à la page d'accueil
         //toast.success("Ajout de la moto, modèle:  " + model);
         console.log("ajout du trip réussi");
 
@@ -110,5 +110,5 @@ function FormAjouterTrip(props) {
     </Container>
   );
 }
-FormAjouterTrip.defaultProps = { history: "/" };
+FormAjouterTrip.defaultProps = { history: "/listetrips" };
 export default FormAjouterTrip;
