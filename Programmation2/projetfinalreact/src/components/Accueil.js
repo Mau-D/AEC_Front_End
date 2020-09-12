@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import sr from "./ScrollReveal";
 import Fade from "react-reveal/Fade";
@@ -61,6 +61,10 @@ export class Accueil extends React.Component {
   render() {
     return (
       <Container fluid>
+        <Button variant="primary" size="lg" block id="boutonInstall">
+          Installer l'application
+        </Button>
+
         <Row>
           <Col sm={12}>
             <h2>Vous êtes prêt à partir...</h2>
