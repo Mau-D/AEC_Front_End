@@ -10,6 +10,7 @@ const photos = {
   coccinelle: require("../img/coccinelle.jpg"),
   pieds: require("../img/pieds.jpg"),
   camion: require("../img/camion.jpg"),
+  plaque: require("../img/plaque.png"),
 };
 
 //Component pour la page d'accueil avec un lien vers manageTrips
@@ -95,7 +96,7 @@ export class Accueil extends React.Component {
               </Fade>
             </Col>
             <Col md={2} className="px-0 border border-dark">
-              <p>TEXTE</p>
+              <p>« Rien ne développe l’intelligence comme les voyages. »</p>
             </Col>
             <Col md={5} className="px-0 border border-dark">
               <Fade right>
@@ -105,7 +106,10 @@ export class Accueil extends React.Component {
           </Row>
           <Row>
             <Col md={3} className="px-0 border border-dark">
-              <p>TEXTE</p>
+              <p>
+                « Lorsqu’elle s’enfuit, la route est la seule amante qui vaille
+                la peine d’être suivie. »
+              </p>
             </Col>
             <Col md={6} className="px-0 border border-dark">
               <Fade down>
@@ -113,7 +117,7 @@ export class Accueil extends React.Component {
               </Fade>
             </Col>
             <Col md={3} className="px-0 border border-dark">
-              <p>TEXTE</p>
+              <Image fluid className="p-5" src={photos.plaque} rounded />
             </Col>
           </Row>
         </Container>

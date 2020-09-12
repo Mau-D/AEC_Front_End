@@ -1,29 +1,30 @@
 {
   "files": {
     "main.css": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.128a356c.chunk.css",
-    "main.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.a17aa3be.chunk.js",
-    "main.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.a17aa3be.chunk.js.map",
+    "main.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.815c9bec.chunk.js",
+    "main.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.815c9bec.chunk.js.map",
     "runtime-main.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/runtime-main.f79fa73b.js",
     "runtime-main.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/runtime-main.f79fa73b.js.map",
     "static/css/2.19e10c4f.chunk.css": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/2.19e10c4f.chunk.css",
-    "static/js/2.b96cf148.chunk.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.b96cf148.chunk.js",
-    "static/js/2.b96cf148.chunk.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.b96cf148.chunk.js.map",
+    "static/js/2.cc1dff12.chunk.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.cc1dff12.chunk.js",
+    "static/js/2.cc1dff12.chunk.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.cc1dff12.chunk.js.map",
     "index.html": "/AEC_Front_End/Programmation2/projetfinalreact/build/index.html",
-    "precache-manifest.fc69692737c24afcb58c2b715507b1bb.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/precache-manifest.fc69692737c24afcb58c2b715507b1bb.js",
+    "precache-manifest.f13d60cd8faf9303d586e1dba6d08a78.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/precache-manifest.f13d60cd8faf9303d586e1dba6d08a78.js",
     "service-worker.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/service-worker.js",
     "static/css/2.19e10c4f.chunk.css.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/2.19e10c4f.chunk.css.map",
     "static/css/main.128a356c.chunk.css.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.128a356c.chunk.css.map",
-    "static/js/2.b96cf148.chunk.js.LICENSE.txt": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.b96cf148.chunk.js.LICENSE.txt",
+    "static/js/2.cc1dff12.chunk.js.LICENSE.txt": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.cc1dff12.chunk.js.LICENSE.txt",
     "static/media/camion.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/camion.30586d39.jpg",
     "static/media/coccinelle.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/coccinelle.5ad5bf0a.jpg",
     "static/media/pieds.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/pieds.c7fe3a9d.jpg",
+    "static/media/plaque.png": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/plaque.1a5ebf5d.png",
     "static/media/accueil.sass": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/road.2ad24a36.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f79fa73b.js",
     "static/css/2.19e10c4f.chunk.css",
-    "static/js/2.b96cf148.chunk.js",
+    "static/js/2.cc1dff12.chunk.js",
     "static/css/main.128a356c.chunk.css",
-    "static/js/main.a17aa3be.chunk.js"
+    "static/js/main.815c9bec.chunk.js"
   ]
 }

@@ -2,30 +2,38 @@ import React, { useState } from "react";
 import { Row, Col, Form, Button, Container, Modal } from "react-bootstrap";
 //importer la constante de l'API
 import { API } from "../constantes";
-import { APIattraits } from "../constantes";
 import { toast } from "react-toastify";
 
 //Formulaire d'ajout pour une nouveau road trip
 function FormAjouterTrip(props) {
   const [show, setShow] = useState(false);
-  const [InfosAttraits, setInfosAttraits] = useState([]);
-  const [idAttraits, setIdAttraits] = useState([]);
+  const [infosAttraits, setInfosAttraits] = useState([]);
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   function handleSave() {
     const nomActivity = document.getElementById("nomAttraitID").value;
-    const endroitActivity = document.getElementById("endroitAttraitID").value;
 
-    InfosAttraits.push({ nom_attrait: nomActivity, ville: endroitActivity });
+    /*const endroitActivity = document.getElementById("endroitAttraitID").value;
+    const imageActivity = document.getElementById("imageAttraitID").value;
+    const descriptionActivity = document.getElementById("descriptionAttraitID")
+  .value;*/
+
+    infosAttraits.push({
+      nom_attrait: nomActivity,
+      /*ville: endroitActivity,
+      image_attrait: imageActivity,
+      description_attrait: descriptionActivity,*/
+    });
 
     handleClose();
-    console.log(InfosAttraits);
+    console.log(infosAttraits);
   }
   //const [photo, setPhoto] = useState("");
 
-  async function addTrip(photo1, photo2, photo3, nomTrip, descriptionTrip) {
-    InfosAttraits.map((objet) => addAttraits(objet));
+  async function addTrip(photo1, photo2, nomTrip, descriptionTrip) {
+    //InfosAttraits.map((objet) => addAttraits(objet));
 
     try {
       const response = await fetch(API, {
@@ -39,9 +47,8 @@ function FormAjouterTrip(props) {
           nom: nomTrip,
           image1: photo1,
           image2: photo2,
-          image2: photo3,
           description: descriptionTrip,
-          attraits: InfosAttraits,
+          attraits: infosAttraits,
         }),
       });
       if (response.ok) {
@@ -58,37 +65,9 @@ function FormAjouterTrip(props) {
     }
   }
 
-  async function addAttraits(objet) {
-    console.log("je suis dans addAttraits");
-    console.log(InfosAttraits);
-    try {
-      const response = await fetch(APIattraits, {
-        /*Pour un ajout utiliser la méthode POST */
-        method: "POST",
-        /*Pour un ajout ajouter un headers */
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          nom_attrait: objet.nom_attrait,
-          endroit_attrait: objet.ville,
-        }),
-      });
-      if (response.ok) {
-        const jsonResponse = await response.json();
-
-        console.log("ajout des attraits réussi");
-
-        return jsonResponse;
-      }
-      throw new Error("Request failed!");
-    } catch (error) {
-      console.log(error);
-    }
-  }
   async function remove() {
     try {
-      const response = await fetch(APIattraits + "5f5ab2c1d899cd03e8b4e14f", {
+      const response = await fetch(API + "5f5ac2b4d899cd03e8b4e161", {
         method: "delete",
       });
 
@@ -110,22 +89,11 @@ function FormAjouterTrip(props) {
     /*variables des infos entrées dans le formulaire*/
     const photo1 = document.getElementById("urlPhoto1").value;
     const photo2 = document.getElementById("urlPhoto2").value;
-    const photo3 = document.getElementById("urlPhoto3").value;
-    const descriptionTrip = document.getElementById("descriptionTrip").value;
-    const nomTrip = document.getElementById("nomDuTrip").value;
-    const nomAttrait = document.getElementById("nomDeLAttrait").value;
-    const endroit = document.getElementById("endroitDeLAttrait").value;
+    const descriptionTrip = document.getElementById("descriptionTripID").value;
+    const nomTrip = document.getElementById("nomDuTripID").value;
 
     /*Fonction pour entrer les infos dans la bd */
-    addTrip(
-      photo1,
-      photo2,
-      photo3,
-      nomTrip,
-      descriptionTrip,
-      nomAttrait,
-      endroit
-    );
+    addTrip(photo1, photo2, nomTrip, descriptionTrip);
   }
 
   //Affiche la photo entrer en input, lorsque la souris sort du champ, grâce au changement d'état
@@ -166,37 +134,17 @@ function FormAjouterTrip(props) {
             />
               {photo !== "" && <Image src={photo} rounded width="125" />}*/}
               </Form.Group>
-              <Form.Group controlId="urlPhoto3">
-                <Form.Label>Entrer l'url de la troisième image</Form.Label>
-                <Form.Control type="text" />
 
-                {/*<Form.Control
-                onBlur={() =>
-                  setPhoto(document.getElementById("urlPhoto").value)
-                }
-                type="text"
-            />
-              {photo !== "" && <Image src={photo} rounded width="125" />}*/}
-              </Form.Group>
-              <Form.Group controlId="nomDuTrip">
+              <Form.Group controlId="nomDuTripID">
                 <Form.Label>Entrer le nom du trip</Form.Label>
                 <Form.Control type="text" />
                 <Form.Text className="text-muted">
                   ajouter une validation
                 </Form.Text>
               </Form.Group>
-              <Form.Group controlId="descriptionTrip">
+              <Form.Group controlId="descriptionTripID">
                 <Form.Label>Description du road trip</Form.Label>
                 <Form.Control as="textarea" rows="3" />
-              </Form.Group>
-              <Form.Group controlId="nomDeLAttrait">
-                <Form.Label>Entrer le nom de l'attrait principal</Form.Label>
-                <Form.Control type="text" />
-              </Form.Group>
-
-              <Form.Group controlId="endroitDeLAttrait">
-                <Form.Label>Endroit</Form.Label>
-                <Form.Control type="text" />
               </Form.Group>
             </Form>
           </Col>
@@ -220,13 +168,33 @@ function FormAjouterTrip(props) {
                   ajouter une validation
                 </Form.Text>
               </Form.Group>
-              <Form.Group controlId="endroitAttraitID">
-                <Form.Label>Entrer le nom de l'attrait touristique</Form.Label>
+              {/*<Form.Group controlId="endroitAttraitID">
+                <Form.Label>
+                  Entrer l'endroit de l'attrait touristique
+                </Form.Label>
                 <Form.Control type="text" />
                 <Form.Text className="text-muted">
                   ajouter une validation
                 </Form.Text>
               </Form.Group>
+              <Form.Group controlId="imageAttraitID">
+                <Form.Label>
+                  Entrer l'url d'une image de l'attrait touristique
+                </Form.Label>
+                <Form.Control type="text" />
+                <Form.Text className="text-muted">
+                  ajouter une validation
+                </Form.Text>
+              </Form.Group>
+              <Form.Group controlId="descriptionAttraitID">
+                <Form.Label>
+                  Entrer la description de l'attrait touristique
+                </Form.Label>
+                <Form.Control type="text" />
+                <Form.Text className="text-muted">
+                  ajouter une validation
+                </Form.Text>
+            </Form.Group>*/}
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>

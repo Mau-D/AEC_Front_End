@@ -38,10 +38,10 @@ function ManageTrip() {
       <Row>
         {donneesRecues.map((key, i) => (
           <Trip
-            picture={key.image1}
+            picture1={key.image1}
             nameTrip={key.nom}
-            nameAttrait={key.attraits.nom_attrait}
-            cityAttrait={key.attraits.ville}
+            descriptionTrip={key.description}
+            attraitsTrip={key.attraits}
             id={key._id}
           ></Trip>
         ))}

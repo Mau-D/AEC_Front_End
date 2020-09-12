@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d031baef7769407effd4abf781c52704",
+    "revision": "46a61762223254cf9bdfff2480933c1e",
     "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/index.html"
   },
   {
-    "revision": "a536c9ee852651947ce4",
+    "revision": "c817d1a5f1ea09701fe0",
     "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/2.19e10c4f.chunk.css"
   },
   {
-    "revision": "97131ec7a90eb799483b",
+    "revision": "d2faf04dbe2b8f674b2a",
     "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.128a356c.chunk.css"
   },
   {
-    "revision": "a536c9ee852651947ce4",
-    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.b96cf148.chunk.js"
+    "revision": "c817d1a5f1ea09701fe0",
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.cc1dff12.chunk.js"
   },
   {
     "revision": "7c0d33404c40478d39388afe86212e89",
-    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.b96cf148.chunk.js.LICENSE.txt"
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.cc1dff12.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "97131ec7a90eb799483b",
-    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.a17aa3be.chunk.js"
+    "revision": "d2faf04dbe2b8f674b2a",
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.815c9bec.chunk.js"
   },
   {
     "revision": "6375e56d7e5428dba3fc",
@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c7fe3a9d844d36a77a350a3db3d84de1",
     "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/pieds.c7fe3a9d.jpg"
+  },
+  {
+    "revision": "1a5ebf5df50f1288f3e1f0429c19ab92",
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/plaque.1a5ebf5d.png"
   },
   {
     "revision": "2ad24a36c43712f0ff0526e5893506b4",

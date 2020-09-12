@@ -5,20 +5,24 @@ import Fade from "react-reveal/Fade";
 
 //Component pour l'affichage des motos dans des cards
 function Trip(props) {
-  console.log(props.nameAttrait);
   return (
     <Col sm={3} className="mt-5">
       <Fade left cascade>
         <Card style={{ width: "28rem" }}>
-          <Card.Img variant="top" src={props.picture} />
+          <Card.Img variant="top" src={props.picture1} />
           <Card.Body>
             <Card.Title>
               <Link to={"trip/" + props.nameTrip + "?id=" + props.id}>
                 <h2>{props.nameTrip}</h2>
               </Link>
             </Card.Title>
-            <Card.Text>{props.nameAttrait}</Card.Text>
-            <Card.Text>endroit: {props.cityAttrait}</Card.Text>
+            <Card.Text>
+              <ul>
+                {Object.keys(props.attraitsTrip).map((key) => (
+                  <li>{props.attraitsTrip[key].nom_attrait}</li>
+                ))}
+              </ul>
+            </Card.Text>
           </Card.Body>
         </Card>
       </Fade>

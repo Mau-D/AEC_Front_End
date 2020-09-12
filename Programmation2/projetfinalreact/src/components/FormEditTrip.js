@@ -189,7 +189,7 @@ function FormEditTrip(props) {
                 <Form.Label>Attrait principal</Form.Label>
                 <Form.Control
                   type="text"
-                  defaultValue={donneesRecues.attraits[0].nomAttrait}
+                  defaultValue={donneesRecues.attraits[0].nom_attrait}
                 />
               </Form.Group>
               <Form.Group controlId="placeID">
