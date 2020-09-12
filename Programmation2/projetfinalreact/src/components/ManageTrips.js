@@ -40,8 +40,8 @@ function ManageTrip() {
           <Trip
             picture={key.image1}
             nameTrip={key.nom}
-            nameAttrait={key.attraits[0].nomAttrait}
-            city={key.attraits[1].endroit}
+            nameAttrait={key.attraits.nom_attrait}
+            cityAttrait={key.attraits.ville}
             id={key._id}
           ></Trip>
         ))}

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Form, Button, Image, Container, Row, Col } from "react-bootstrap";
 import { API } from "../constantes";
-
-//import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 function FormEditTrip(props) {
   const [donneesRecues, setDonneesRecues] = useState({
@@ -77,9 +76,9 @@ function FormEditTrip(props) {
       if (response.ok) {
         //const jsonResponse = await response.json();
         props.history.push(
-          "/listetrips/" + donneesRecues.nom + "?id=" + donneesRecues._id
+          "/trip/" + donneesRecues.nom + "?id=" + donneesRecues._id
         ); //Retour à la page d'accueil
-        //toast.warning("Modification de la moto, modèle:  " + model);
+        toast.dark("Modification du road trip:  " + donneesRecues.nom);
 
         return response;
       }
@@ -125,7 +124,7 @@ function FormEditTrip(props) {
 
         props.history.push("/listetrips");
 
-        //toast.error("Supression de la moto ");
+        toast.error("Supression du road trip:  " + donneesRecues.nom);
 
         return response;
       }

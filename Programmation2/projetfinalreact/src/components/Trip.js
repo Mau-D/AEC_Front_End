@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade";
 
 //Component pour l'affichage des motos dans des cards
 function Trip(props) {
+  console.log(props.nameAttrait);
   return (
     <Col sm={3} className="mt-5">
       <Fade left cascade>
@@ -16,8 +17,8 @@ function Trip(props) {
                 <h2>{props.nameTrip}</h2>
               </Link>
             </Card.Title>
-            <Card.Text>attrait principal: {props.nameAttrait}</Card.Text>
-            <Card.Text>endroit: {props.city}</Card.Text>
+            <Card.Text>{props.nameAttrait}</Card.Text>
+            <Card.Text>endroit: {props.cityAttrait}</Card.Text>
           </Card.Body>
         </Card>
       </Fade>

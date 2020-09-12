@@ -96,8 +96,8 @@ function DetailTrip(props) {
       <Row>
         {/* titre*/}
         <Col class sm={12}>
-          <h1>{donneesRecuesDetail.attraits[0].nomAttrait}</h1>
-          <h1>{donneesRecuesDetail.attraits[1].endroit}</h1>
+          <h1>{donneesRecuesDetail.attraits.nom_attrait}</h1>
+          <h1>{donneesRecuesDetail.attraits.ville}</h1>
         </Col>
       </Row>
     </Container>

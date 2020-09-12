@@ -7,17 +7,34 @@ import FormEditTrip from "./FormEditTrip";
 import BoutonRetourAccueil from "./BoutonRetourAccueil";
 import BoutonRetourManage from "./BoutonRetourManage";
 import { useLocation, Route, Switch } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import DetailTrip from "./DetailTrip";
+import { Titre } from "./Titre";
 
 function App() {
   let location = useLocation(); /*variable de la page où je me trouve */
+
   return (
     <>
-      {/*Pour enlever le bouton ajouter dans la page d'ajout, la modification et la page not found
-      <ToastContainer autoClose={3000} hideProgressBar />
-      */}
+      {/*Pour enlever le bouton ajouter dans la page d'ajout, la modification et la page not found*/}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      {/* Same as */}
+      <ToastContainer />
+
       <Container fluid>
+        <Titre />
         <Switch>
           {/*Accueil est la première page*/}
           <Route path="/" exact component={Accueil} />
@@ -33,7 +50,6 @@ function App() {
           <Route component={PageNotFoundHook} />*/}
         </Switch>
       </Container>
-
       {location.pathname !== "/" && <BoutonRetourAccueil />}
       {location.pathname !== "trip/" &&
         location.pathname !== "/" &&
