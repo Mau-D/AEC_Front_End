@@ -86,6 +86,24 @@ function DetailTrip(props) {
           <p>{donneesRecuesDetail.region}</p>
         </Col>
       </Row>
+
+      {/* Les attraits*/}
+
+      {Object.keys(donneesRecuesDetail.attraits).map((key) => (
+        <Row>
+          <Col md={4}>
+            <Image
+              fluid
+              src={donneesRecuesDetail.attraits[key].image_attrait}
+            />
+          </Col>
+          <Col md={8}>
+            <h3>{donneesRecuesDetail.attraits[key].nom_attrait}</h3>
+            <p>{donneesRecuesDetail.attraits[key].description_attrait}</p>
+            <p>{donneesRecuesDetail.attraits[key].ville}</p>
+          </Col>
+        </Row>
+      ))}
     </Container>
   );
 }

@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 function FormAjouterTrip(props) {
   const [show, setShow] = useState(false);
   const [infosAttraits, setInfosAttraits] = useState([]);
-  const [regionState, setRegionState] = useState(""); //Ajouter la première valeur si le onChange n'est pas pris en charge
+  const [regionState, setRegionState] = useState("Bas Saint-Laurent"); //Ajouter la première valeur si le onChange n'est pas pris en charge
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -17,16 +17,16 @@ function FormAjouterTrip(props) {
   function handleSave() {
     const nomActivity = document.getElementById("nomAttraitID").value;
 
-    /*const endroitActivity = document.getElementById("endroitAttraitID").value;
+    const endroitActivity = document.getElementById("endroitAttraitID").value;
     const imageActivity = document.getElementById("imageAttraitID").value;
     const descriptionActivity = document.getElementById("descriptionAttraitID")
-  .value;*/
+      .value;
 
     infosAttraits.push({
       nom_attrait: nomActivity,
-      /*ville: endroitActivity,
+      ville: endroitActivity,
       image_attrait: imageActivity,
-      description_attrait: descriptionActivity,*/
+      description_attrait: descriptionActivity,
     });
 
     handleClose();
@@ -35,8 +35,6 @@ function FormAjouterTrip(props) {
   //const [photo, setPhoto] = useState("");
 
   async function addTrip(photo1, photo2, nomTrip, descriptionTrip) {
-    //InfosAttraits.map((objet) => addAttraits(objet));
-
     try {
       const response = await fetch(API, {
         /*Pour un ajout utiliser la méthode POST */
@@ -151,7 +149,7 @@ function FormAjouterTrip(props) {
               </Form.Group>
               <Form.Group controlId="descriptionTripID">
                 <Form.Label>Description du road trip</Form.Label>
-                <Form.Control as="textarea" />
+                <Form.Control as="textarea" row="3" />
               </Form.Group>
               <Form.Group>
                 <Form.Label>Région</Form.Label>
@@ -185,9 +183,10 @@ function FormAjouterTrip(props) {
                   ajouter une validation
                 </Form.Text>
               </Form.Group>
-              {/*<Form.Group controlId="endroitAttraitID">
+
+              <Form.Group controlId="endroitAttraitID">
                 <Form.Label>
-                  Entrer l'endroit de l'attrait touristique
+                  Entrer la ville de l'attrait touristique
                 </Form.Label>
                 <Form.Control type="text" />
                 <Form.Text className="text-muted">
@@ -207,11 +206,11 @@ function FormAjouterTrip(props) {
                 <Form.Label>
                   Entrer la description de l'attrait touristique
                 </Form.Label>
-                <Form.Control type="text" />
+                <Form.Control as="textarea" row="3" type="text" />
                 <Form.Text className="text-muted">
                   ajouter une validation
                 </Form.Text>
-            </Form.Group>*/}
+              </Form.Group>
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>
