@@ -42,11 +42,9 @@ function FormEditTrip(props) {
   async function editTrip(
     picture1,
     picture2,
-    picture3,
     nametrip,
     descriptiontrip,
-    nameactivity,
-    place
+    regionTrip
   ) {
     try {
       const response = await fetch(API + tripID, {
@@ -61,16 +59,8 @@ function FormEditTrip(props) {
           nom: nametrip,
           image1: picture1,
           image2: picture2,
-          image3: picture3,
           description: descriptiontrip,
-          attraits: [
-            {
-              nomAttrait: nameactivity,
-            },
-            {
-              endroit: place,
-            },
-          ],
+          region: regionTrip,
         }),
       });
       if (response.ok) {
@@ -93,22 +83,12 @@ function FormEditTrip(props) {
     /*variables des infos entrées dans le formulaire*/
     const picture1 = document.getElementById("pictureID1").value;
     const picture2 = document.getElementById("pictureID2").value;
-    const picture3 = document.getElementById("pictureID3").value;
     const nametrip = document.getElementById("nametripID").value;
     const descriptiontrip = document.getElementById("descriptionTripID").value;
-    const nameactivity = document.getElementById("nameactivityID").value;
-    const place = document.getElementById("placeID").value;
+    const regionTrip = document.getElementById("regionTripID").value;
 
     /*Fonction pour entrer les infos dans la bd */
-    editTrip(
-      picture1,
-      picture2,
-      picture3,
-      nametrip,
-      descriptiontrip,
-      nameactivity,
-      place
-    );
+    editTrip(picture1, picture2, nametrip, descriptiontrip, regionTrip);
   }
   //Méthode pour supprimer le road trip  de la bd, method delete
   async function removeTrip() {
@@ -169,35 +149,17 @@ function FormEditTrip(props) {
                   <Image src={donneesRecues.image2} rounded width="125" />
                 )}
               </Form.Group>
-              <Form.Group controlId="pictureID3">
-                <Form.Label>Image 3</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Entrer une URL valide"
-                  defaultValue={donneesRecues.image3}
-                />
-                {donneesRecues.photo !== "" && (
-                  <Image src={donneesRecues.image3} rounded width="125" />
-                )}
-              </Form.Group>
               <Form.Group controlId="descriptionTripID">
                 <Form.Label>Description du road trip</Form.Label>
-                <Form.Control as="textarea" rows="3" />
-              </Form.Group>
-
-              <Form.Group controlId="nameactivityID">
-                <Form.Label>Attrait principal</Form.Label>
                 <Form.Control
-                  type="text"
-                  defaultValue={donneesRecues.attraits[0].nom_attrait}
+                  as="textarea"
+                  rows="3"
+                  defaultValue={donneesRecues.description}
                 />
               </Form.Group>
-              <Form.Group controlId="placeID">
+              <Form.Group controlId="regionTripID">
                 <Form.Label>endroit</Form.Label>
-                <Form.Control
-                  type="text"
-                  defaultValue={donneesRecues.attraits[1].endroit}
-                />
+                <Form.Control type="text" defaultValue={donneesRecues.region} />
               </Form.Group>
 
               <Button variant="primary" type="submit" onClick={handleEdit}>

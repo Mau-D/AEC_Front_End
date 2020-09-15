@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { Row, Col, Form, Button, Container, Modal } from "react-bootstrap";
 //importer la constante de l'API
 import { API } from "../constantes";
+import { regions } from "../constantes";
 import { toast } from "react-toastify";
 
 //Formulaire d'ajout pour une nouveau road trip
 function FormAjouterTrip(props) {
   const [show, setShow] = useState(false);
   const [infosAttraits, setInfosAttraits] = useState([]);
+  const [regionState, setRegionState] = useState(""); //Ajouter la première valeur si le onChange n'est pas pris en charge
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -48,6 +50,7 @@ function FormAjouterTrip(props) {
           image1: photo1,
           image2: photo2,
           description: descriptionTrip,
+          region: regionState,
           attraits: infosAttraits,
         }),
       });
@@ -67,7 +70,7 @@ function FormAjouterTrip(props) {
 
   async function remove() {
     try {
-      const response = await fetch(API + "5f5ac2b4d899cd03e8b4e161", {
+      const response = await fetch(API + "5f5cf93fd899cd03e8b4e246", {
         method: "delete",
       });
 
@@ -94,6 +97,10 @@ function FormAjouterTrip(props) {
 
     /*Fonction pour entrer les infos dans la bd */
     addTrip(photo1, photo2, nomTrip, descriptionTrip);
+  }
+  function handleChange(e) {
+    console.log("Region Selected!!");
+    setRegionState(e.target.value);
   }
 
   //Affiche la photo entrer en input, lorsque la souris sort du champ, grâce au changement d'état
@@ -144,7 +151,17 @@ function FormAjouterTrip(props) {
               </Form.Group>
               <Form.Group controlId="descriptionTripID">
                 <Form.Label>Description du road trip</Form.Label>
-                <Form.Control as="textarea" rows="3" />
+                <Form.Control as="textarea" />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Région</Form.Label>
+                <select value="" onChange={handleChange}>
+                  {regions.map((key) => (
+                    <option key={key} value={key}>
+                      {key}
+                    </option>
+                  ))}
+                </select>
               </Form.Group>
             </Form>
           </Col>

@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "46a61762223254cf9bdfff2480933c1e",
+    "revision": "6947194e4a894e3332a79a9434d19ce7",
     "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/index.html"
   },
   {
-    "revision": "c817d1a5f1ea09701fe0",
+    "revision": "b9414ec6be200e68709c",
     "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/2.19e10c4f.chunk.css"
   },
   {
-    "revision": "d2faf04dbe2b8f674b2a",
+    "revision": "a829affbccd296ed6f7d",
     "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.128a356c.chunk.css"
   },
   {
-    "revision": "c817d1a5f1ea09701fe0",
-    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.cc1dff12.chunk.js"
+    "revision": "b9414ec6be200e68709c",
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.97b2d835.chunk.js"
   },
   {
     "revision": "7c0d33404c40478d39388afe86212e89",
-    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.cc1dff12.chunk.js.LICENSE.txt"
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.97b2d835.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d2faf04dbe2b8f674b2a",
-    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.815c9bec.chunk.js"
+    "revision": "a829affbccd296ed6f7d",
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.9869118c.chunk.js"
   },
   {
     "revision": "6375e56d7e5428dba3fc",
@@ -46,5 +46,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2ad24a36c43712f0ff0526e5893506b4",
     "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/road.2ad24a36.jpg"
+  },
+  {
+    "revision": "9b29d18f729bdbf1c2ba2c05a1d99058",
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/vintage.9b29d18f.jpg"
   }
 ]);

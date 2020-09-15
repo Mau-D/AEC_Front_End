@@ -46,7 +46,6 @@ function DetailTrip(props) {
       <Row>
         {/* Carousselle d'images */}
         <Col className="h-50" sm={12}>
-          <Image src={donneesRecuesDetail.image} />
           <Carousel id="myCarousel">
             <Carousel.Item>
               <Image
@@ -59,13 +58,6 @@ function DetailTrip(props) {
               <Image
                 className="d-block w-100"
                 src={donneesRecuesDetail.image2}
-                alt="Third slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <Image
-                className="d-block w-100"
-                src={donneesRecuesDetail.image3}
                 alt="Third slide"
               />
             </Carousel.Item>
@@ -91,13 +83,7 @@ function DetailTrip(props) {
         {/* description*/}
         <Col class sm={12}>
           <p>{donneesRecuesDetail.description}</p>
-        </Col>
-      </Row>
-      <Row>
-        {/* titre*/}
-        <Col class sm={12}>
-          <h1>{donneesRecuesDetail.attraits.nom_attrait}</h1>
-          <h1>{donneesRecuesDetail.attraits.ville}</h1>
+          <p>{donneesRecuesDetail.region}</p>
         </Col>
       </Row>
     </Container>

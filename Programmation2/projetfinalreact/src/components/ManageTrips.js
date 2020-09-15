@@ -41,6 +41,7 @@ function ManageTrip() {
             picture1={key.image1}
             nameTrip={key.nom}
             descriptionTrip={key.description}
+            regionTrip={key.region}
             attraitsTrip={key.attraits}
             id={key._id}
           ></Trip>

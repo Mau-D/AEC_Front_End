@@ -11,6 +11,7 @@ const photos = {
   pieds: require("../img/pieds.jpg"),
   camion: require("../img/camion.jpg"),
   plaque: require("../img/plaque.png"),
+  vintage: require("../img/vintage.jpg"),
 };
 
 //Component pour la page d'accueil avec un lien vers manageTrips
@@ -88,62 +89,76 @@ export class Accueil extends React.Component {
             <Link to={"/listetrips"}>Voir tous les road trips...</Link>
           </Col>
         </Row>
-        <Container fluid id="pageAccueil">
-          <Row className="text-center">
-            <Col md={5} className="px-0 border border-dark">
-              <Fade left>
-                <Image fluid src={photos.coccinelle} rounded />
-              </Fade>
-            </Col>
-            <Col md={2} className="px-0 border border-dark">
-              <p>« Rien ne développe l’intelligence comme les voyages. »</p>
-            </Col>
-            <Col md={5} className="px-0 border border-dark">
-              <Fade right>
-                <Image fluid className="" src={photos.camion} rounded />
-              </Fade>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={3} className="px-0 border border-dark">
-              <p>
-                « Lorsqu’elle s’enfuit, la route est la seule amante qui vaille
-                la peine d’être suivie. »
-              </p>
-            </Col>
-            <Col md={6} className="px-0 border border-dark">
-              <Fade down>
-                <Image fluid src={photos.pieds} rounded />
-              </Fade>
-            </Col>
-            <Col md={3} className="px-0 border border-dark">
-              <Image fluid className="p-5" src={photos.plaque} rounded />
-            </Col>
-          </Row>
-        </Container>
-        <Container>
-          <Row>
-            <Col md={12}>
-              <p>
-                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                voluptatem. Ut enim ad minima veniam, quis nostrum
-                exercitationem ullam corporis suscipit laboriosam, nisi ut
-                aliquid ex ea commodi consequatur? Quis autem vel eum iure
-                reprehenderit qui in ea voluptate velit esse quam nihil
-                molestiae consequatur, vel illum qui dolorem eum fugiat quo
-                voluptas nulla pariatur?"
-              </p>
-            </Col>
-          </Row>
-        </Container>
+        <Row>
+          <Container fluid id="pageAccueil">
+            <Row className="text-center">
+              <Col md={5} className="px-0 border border-dark">
+                <Fade left>
+                  <Image fluid src={photos.coccinelle} rounded />
+                </Fade>
+              </Col>
+              <Col md={2} className="px-0 border border-dark">
+                <p>« Rien ne développe l’intelligence comme les voyages. »</p>
+              </Col>
+              <Col md={5} className="px-0 border border-dark">
+                <Fade right>
+                  <Image fluid className="" src={photos.camion} rounded />
+                </Fade>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={3} className="px-0 border border-dark">
+                <p>
+                  « Lorsqu’elle s’enfuit, la route est la seule amante qui
+                  vaille la peine d’être suivie. »
+                </p>
+              </Col>
+              <Col md={6} className="px-0 border border-dark">
+                <Fade down>
+                  <Image fluid src={photos.pieds} rounded />
+                </Fade>
+              </Col>
+              <Col md={3} className="px-0 border border-dark">
+                <Image fluid className="p-5" src={photos.plaque} rounded />
+              </Col>
+            </Row>
+          </Container>
+        </Row>
+        <Row>
+          <Container class="my-5">
+            <h1>À propos de nous...</h1>
+            <Row>
+              <Col md={{ span: 4, offset: 1 }}>
+                <Image fluid className="h-50" src={photos.vintage} rounded />
+              </Col>
+              <Col md={{ span: 6, offset: 1 }}>
+                <p>
+                  "Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem accusantium doloremque laudantium, totam rem
+                  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                  architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                  voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur magni dolores eos qui ratione voluptatem
+                  sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                  quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                  numquam eius modi tempora incidunt ut labore et dolore magnam
+                  aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+                  nostrum exercitationem ullam corporis suscipit laboriosam,
+                  nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
+                  iure reprehenderit qui in ea voluptate velit esse quam nihil
+                  molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                  voluptas nulla pariatur?"
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </Row>
+        <Row>
+          <Container>
+            <p>Tout ce que vous pouvez voir!</p>
+            <p>Placer les images des différents attraits</p>
+          </Container>
+        </Row>
       </Container>
     );
   }
