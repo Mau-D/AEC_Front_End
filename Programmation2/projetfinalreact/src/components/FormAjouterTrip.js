@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Row, Col, Form, Button, Container, Modal } from "react-bootstrap";
 //importer la constante de l'API
 import { API } from "../constantes";
+
 import { regions } from "../constantes";
 import { toast } from "react-toastify";
 
@@ -56,7 +57,7 @@ function FormAjouterTrip(props) {
         const jsonResponse = await response.json();
         props.history.push("/listetrips"); //Retour à la page d'accueil
         toast("Ajout du nouveau road trip " + nomTrip);
-        console.log("ajout du trip réussi");
+        console.log("modification du trip réussi");
 
         return jsonResponse;
       }

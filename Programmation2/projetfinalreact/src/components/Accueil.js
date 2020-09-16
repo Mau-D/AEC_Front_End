@@ -3,6 +3,9 @@ import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import sr from "./ScrollReveal";
 import Fade from "react-reveal/Fade";
+import { API } from "../constantes";
+import { toast } from "react-toastify";
+
 import "../style/accueil.sass"; /*Modifier ce fichier pour le style en sass*/
 
 //Variables pour téléverser les photos des régions
@@ -16,6 +19,10 @@ const photos = {
 
 //Component pour la page d'accueil avec un lien vers manageTrips
 export class Accueil extends React.Component {
+  constructor(props) {
+    super(props);
+    this.remove = this.remove.bind(this);
+  }
   //Pour le titre,
   componentDidMount = () => {
     const config = {
@@ -59,7 +66,25 @@ export class Accueil extends React.Component {
     sr.reveal(this.refs.box6, config6);
     sr.reveal(this.refs.box7, config7);
   };
+  async remove() {
+    try {
+      const response = await fetch(API + "5f625540d899cd03e8b4e482", {
+        method: "delete",
+      });
 
+      if (response.ok) {
+        //const jsonResponse = await response.json();
+
+        console.log("SUPPRESSION!");
+
+        return response;
+      }
+
+      throw new Error("Request failed!");
+    } catch (error) {
+      console.log(error);
+    }
+  }
   render() {
     return (
       <Container fluid>
@@ -159,6 +184,9 @@ export class Accueil extends React.Component {
             <p>Placer les images des différents attraits</p>
           </Container>
         </Row>
+        <Button variant="primary" type="submit" onClick={this.remove}>
+          supprimer
+        </Button>
       </Container>
     );
   }

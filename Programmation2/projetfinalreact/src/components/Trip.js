@@ -23,11 +23,9 @@ function Trip(props) {
               <h3>{props.regionTrip}</h3>
             </Card.Text>
             <Card.Text>
-              <div>
-                {Object.keys(props.attraitsTrip).map((key) => (
-                  <p>{props.attraitsTrip[key].nom_attrait}</p>
-                ))}
-              </div>
+              {Object.keys(props.attraitsTrip).map((key) => (
+                <p>{props.attraitsTrip[key].nom_attrait}</p>
+              ))}
             </Card.Text>
           </Card.Body>
         </Card>
