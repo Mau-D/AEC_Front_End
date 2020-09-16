@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import AffichageImageAttraits from "./AffichageImageAttraits";
 import sr from "./ScrollReveal";
 import Fade from "react-reveal/Fade";
 import { API } from "../constantes";
-import { toast } from "react-toastify";
 
 import "../style/accueil.sass"; /*Modifier ce fichier pour le style en sass*/
 
@@ -179,10 +179,7 @@ export class Accueil extends React.Component {
           </Container>
         </Row>
         <Row>
-          <Container>
-            <p>Tout ce que vous pouvez voir!</p>
-            <p>Placer les images des différents attraits</p>
-          </Container>
+          <AffichageImageAttraits />
         </Row>
         <Button variant="primary" type="submit" onClick={this.remove}>
           supprimer

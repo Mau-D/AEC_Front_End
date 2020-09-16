@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Trip from "./Trip";
 import BoutonAjoutTrip from "./BoutonAjoutTrip";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { API } from "../constantes";
 
 //Remplacer la class par une fonction
@@ -36,7 +36,7 @@ function ManageTrip() {
       <h1>Affichage de la liste des road trips</h1>
 
       <Row>
-        {donneesRecues.map((key, i) => (
+        {donneesRecues.map((key) => (
           <Trip
             picture1={key.image1}
             nameTrip={key.nom}
