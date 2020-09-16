@@ -29,7 +29,7 @@ function AffichageImageAttraits() {
   }
   return (
     <Container>
-      <h1>Affichage des images</h1>
+      <h1>Tout ce que vous pouvez voir</h1>
 
       <Row>
         {donneesRecuesImages.map((key) => (

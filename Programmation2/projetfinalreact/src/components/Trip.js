@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Card } from "react-bootstrap";
+import { Col, Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 
@@ -17,17 +17,19 @@ function Trip(props) {
               </Link>
             </Card.Title>
             <Card.Text>
-              <h3>{props.descriptionTrip}</h3>
+              <h5>{props.regionTrip}</h5>
             </Card.Text>
             <Card.Text>
-              <h3>{props.regionTrip}</h3>
-            </Card.Text>
-            <Card.Text>
-              {Object.keys(props.attraitsTrip).map((key) => (
-                <p>{props.attraitsTrip[key].nom_attrait}</p>
-              ))}
+              <h3>Attraits touristiques</h3>
             </Card.Text>
           </Card.Body>
+          <ListGroup className="list-group-flush">
+            {Object.keys(props.attraitsTrip).map((key) => (
+              <ListGroupItem>
+                {props.attraitsTrip[key].nom_attrait}
+              </ListGroupItem>
+            ))}
+          </ListGroup>
         </Card>
       </Fade>
     </Col>

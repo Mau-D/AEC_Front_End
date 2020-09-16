@@ -88,10 +88,6 @@ export class Accueil extends React.Component {
   render() {
     return (
       <Container fluid>
-        <Button variant="primary" size="lg" block id="boutonInstall">
-          Installer l'application
-        </Button>
-
         <Row>
           <Col sm={12}>
             <h2>Vous êtes prêt à partir...</h2>
@@ -111,7 +107,9 @@ export class Accueil extends React.Component {
         </Row>
         <Row>
           <Col>
-            <Link to={"/listetrips"}>Voir tous les road trips...</Link>
+            <Link to={"/listetrips"}>
+              <h1>Nos RoadTrips</h1>
+            </Link>
           </Col>
         </Row>
         <Row>

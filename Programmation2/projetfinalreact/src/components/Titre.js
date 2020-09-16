@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import sr from "./ScrollReveal";
 import "../style/accueil.sass"; /*Modifier ce fichier pour le style en sass*/
 
@@ -22,10 +22,15 @@ export class Titre extends React.Component {
   render() {
     return (
       <Row>
-        <Col sm={12}>
+        <Col sm={9}>
           <h2 className="rouge" ref="box1">
             La trotteuse
           </h2>
+        </Col>
+        <Col sm={3}>
+          <Button variant="secondary" size="sm" block id="boutonInstall">
+            Installer l'application
+          </Button>
         </Col>
       </Row>
     );
