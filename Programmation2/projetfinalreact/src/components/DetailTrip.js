@@ -17,8 +17,9 @@ function DetailTrip(props) {
     attraits: ["", ""],
   });
 
-  const [tripDetailID, setTripDetailID] = useState(
-    props.location.search.substring(4, props.location.search.length)
+  const tripDetailID = props.location.search.substring(
+    4,
+    props.location.search.length
   );
   //Appel à l'API, pour obtenir les données du road trip à partir de l'id
   useEffect(() => {
@@ -40,12 +41,13 @@ function DetailTrip(props) {
       console.log(error);
     }
   }
+
   return (
     <Container>
-      <h1>Affichage détaillée du road trip</h1>
+      <h1>Vous êtes enfin prêt!</h1>
       <Row>
         {/* Carousselle d'images */}
-        <Col className="h-50" sm={12}>
+        <Col className="h-50 mb-5" sm={12}>
           <Carousel id="myCarousel">
             <Carousel.Item>
               <Image
@@ -66,7 +68,7 @@ function DetailTrip(props) {
       </Row>
       <Row>
         {/* titre*/}
-        <Col class sm={12}>
+        <Col className="mb-5" sm={12}>
           <Link
             to={
               "edit/" +
@@ -75,35 +77,49 @@ function DetailTrip(props) {
               donneesRecuesDetail._id
             }
           >
-            <h2>Nom du road trip: {donneesRecuesDetail.nom}</h2>
+            <h2>{donneesRecuesDetail.nom}</h2>
           </Link>
         </Col>
       </Row>
       <Row>
         {/* description*/}
-        <Col class sm={12}>
+        <Col className="mb-5" sm={12}>
           <p>{donneesRecuesDetail.description}</p>
-          <p>{donneesRecuesDetail.region}</p>
+          <h4>{donneesRecuesDetail.region}</h4>
         </Col>
       </Row>
-
       {/* Les attraits*/}
-
-      {Object.keys(donneesRecuesDetail.attraits).map((key) => (
-        <Row>
-          <Col md={4}>
-            <Image
-              fluid
-              src={donneesRecuesDetail.attraits[key].image_attrait}
-            />
-          </Col>
-          <Col md={8}>
-            <h3>{donneesRecuesDetail.attraits[key].nom_attrait}</h3>
-            <p>{donneesRecuesDetail.attraits[key].description_attrait}</p>
-            <p>{donneesRecuesDetail.attraits[key].ville}</p>
-          </Col>
-        </Row>
-      ))}
+      {Object.keys(donneesRecuesDetail.attraits).map((key) =>
+        Number.isInteger([key] / 2) ? (
+          <Row>
+            <Col className="mb-4" md={4}>
+              <Image
+                fluid
+                src={donneesRecuesDetail.attraits[key].image_attrait}
+              />
+            </Col>
+            <Col className="mb-4" md={8}>
+              <h3>{donneesRecuesDetail.attraits[key].nom_attrait}</h3>
+              <p>{donneesRecuesDetail.attraits[key].description_attrait}</p>
+              <p>{donneesRecuesDetail.attraits[key].ville}</p>
+            </Col>
+          </Row>
+        ) : (
+          <Row>
+            <Col className="mb-4" md={8}>
+              <h3>{donneesRecuesDetail.attraits[key].nom_attrait}</h3>
+              <p>{donneesRecuesDetail.attraits[key].description_attrait}</p>
+              <p>{donneesRecuesDetail.attraits[key].ville}</p>
+            </Col>
+            <Col className="mb-4" md={4}>
+              <Image
+                fluid
+                src={donneesRecuesDetail.attraits[key].image_attrait}
+              />
+            </Col>
+          </Row>
+        )
+      )}
     </Container>
   );
 }

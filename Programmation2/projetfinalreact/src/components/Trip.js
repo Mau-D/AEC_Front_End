@@ -19,10 +19,10 @@ function Trip(props) {
             <Card.Text>
               <h5>{props.regionTrip}</h5>
             </Card.Text>
-            <Card.Text>
-              <h3>Attraits touristiques</h3>
-            </Card.Text>
           </Card.Body>
+          <Card.Header>
+            <h3>Attraits touristiques</h3>
+          </Card.Header>
           <ListGroup className="list-group-flush">
             {Object.keys(props.attraitsTrip).map((key) => (
               <ListGroupItem>

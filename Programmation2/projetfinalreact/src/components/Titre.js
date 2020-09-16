@@ -22,12 +22,12 @@ export class Titre extends React.Component {
   render() {
     return (
       <Row>
-        <Col sm={9}>
+        <Col sm={8}>
           <h2 className="rouge" ref="box1">
             La trotteuse
           </h2>
         </Col>
-        <Col sm={3}>
+        <Col sm={2}>
           <Button variant="secondary" size="sm" block id="boutonInstall">
             Installer l'application
           </Button>
