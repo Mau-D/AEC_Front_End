@@ -32,10 +32,11 @@ function ManageTrip() {
   }
 
   return (
-    <Container fluid>
-      <h1>Affichage de la liste des road trips</h1>
+    <Container fluid className="my-5" id="liste">
+      <h1 className="font-xlarge text-center">Liste des road trips</h1>
 
-      <Row>
+      <Row id="listCards">
+        <Col sm={2}></Col>
         {donneesRecues.map((key) => (
           <Trip
             picture1={key.image1}

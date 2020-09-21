@@ -5,7 +5,6 @@ import AffichageImageAttraits from "./AffichageImageAttraits";
 import sr from "./ScrollReveal";
 import Fade from "react-reveal/Fade";
 import { API } from "../constantes";
-
 import "../style/accueil.sass"; /*Modifier ce fichier pour le style en sass*/
 
 //Variables pour téléverser les photos des régions
@@ -87,7 +86,7 @@ export class Accueil extends React.Component {
   }
   render() {
     return (
-      <Container fluid className="px-0">
+      <Container fluid className="px-0" id="accueil">
         <Row>
           <Container fluid id="pageAccueil" className="border border-dark">
             <Row className="text-center haut-40">

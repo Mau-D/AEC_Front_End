@@ -21,7 +21,7 @@ export class Titre extends React.Component {
 
   render() {
     return (
-      <Row>
+      <Row id="titre">
         <Col sm={8}>
           <h1 className="rouge" ref="box1">
             La trotteuse

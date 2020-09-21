@@ -8,8 +8,7 @@
   src: local(Monoton), url('font/Monoton/Monoton-Regular.ttf') format('truetype')
 
 /*Font family*/
-h1
-  font-family: 'Monoton', sans-serif;
+
 
 @mixin families($family:"")
   @if $family == "Vidaloka"
@@ -17,10 +16,15 @@ h1
   @if $family == "Monoton"
     font-family: 'Monoton', sans-serif
 
+
 h1
   @include families($family: "Monoton")
-h2, p
+#accueil    
+  h2, p, 
+    @include families($family: "Vidaloka")
+#liste
   @include families($family: "Vidaloka")
+ 
 
 /*Hauteur*/
 $hauteurs: 5, 25, 50, 75
@@ -47,6 +51,9 @@ $fontSizes: ("small": 1, "medium": 1.5, "large": 2, "xlarge": 3)
     color: #91C09E
   @else if $couleurTexte == "gris"
     color: #746F62
+  @else if $couleurTexte == "grisfonce"
+    color: #3F362A
+   
 
 /*Couleur de background*/
 @mixin couleursBkg($couleurBkg: "")
@@ -60,22 +67,36 @@ $fontSizes: ("small": 1, "medium": 1.5, "large": 2, "xlarge": 3)
     background-color: #91C09E
   @else if $couleurBkg == "gris"
     background-color: #746F62
-
-h1
-  @include couleursTexte($couleurTexte: "rose")
-
-h2
-  @include couleursTexte($couleurTexte: "vert")
-
-p
+p, .list-group-item, h5
   @include couleursTexte($couleurTexte: "gris")
-  @include couleursBkg($couleurBkg: "beige")
 
+#titre, #accueil
+  h1
+    @include couleursTexte($couleurTexte: "rose")
+#liste
+  h1
+    @include couleursTexte($couleurTexte: "jaune")
+#accueil
+  h2
+    @include couleursTexte($couleurTexte: "grisfonce")
+
+
+#accueil
+  p
+    @include couleursBkg($couleurBkg: "beige")
+
+#liste
+  h3, h2
+    @include couleursTexte($couleurTexte: "grisfonce")
 
 #pageAccueil
   p  
-    @include couleursTexte($couleurTexte: "gris")
+    @include couleursTexte($couleurTexte: "grisfonce")
     @include couleursBkg($couleurBkg: "vert")
+
+div
+  .card-header
+    @include couleursBkg($couleurBkg: "jaune")
 
 .affichagePhoto
       @include couleursBkg($couleurBkg: "beige")
@@ -89,6 +110,14 @@ p
   min-height: 10vh
   background-attachment: fixed /*Pour l'effet*/
   
+#listCards
+  background-image: url("../img/voiture_vintage.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-color: white
+  min-height: 10vh
+  background-attachment: fixed /*Pour l'effet*/
+    
 .accueilImg 
   object-fit: cover
   min-height: 50vh
