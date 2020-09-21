@@ -97,7 +97,7 @@ export class Accueil extends React.Component {
                 </Fade>
               </Col>
               <Col md={2} className="px-1 my-auto">
-                <p className="font-medium">
+                <p className="font-medium p-2">
                   « Rien ne développe l’intelligence comme les voyages. »
                 </p>
               </Col>
@@ -114,7 +114,7 @@ export class Accueil extends React.Component {
             </Row>
             <Row className="text-center haut-40">
               <Col md={3} className="px-1 my-auto">
-                <p className="font-medium">
+                <p className="font-medium p-2">
                   « Lorsqu’elle s’enfuit, la route est la seule amante qui
                   vaille la peine d’être suivie. »
                 </p>
@@ -168,13 +168,13 @@ export class Accueil extends React.Component {
         </Row>
         <Row className="my-5 haut-50">
           <Container>
-            <h1>À propos de nous...</h1>
+            <h2>À propos de nous...</h2>
             <Row>
               <Col md={{ span: 4, offset: 1 }}>
                 <Image fluid src={photos.vintage} rounded />
               </Col>
               <Col md={{ span: 6, offset: 1 }}>
-                <p>
+                <p className="p-4">
                   "Sed ut perspiciatis unde omnis iste natus error sit
                   voluptatem accusantium doloremque laudantium, totam rem
                   aperiam, eaque ipsa quae ab illo inventore veritatis et quasi

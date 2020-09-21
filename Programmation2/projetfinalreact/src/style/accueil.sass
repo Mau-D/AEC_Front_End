@@ -1,6 +1,86 @@
+/*Font face*/
 
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap");
+@font-face
+  font-family: 'Vidaloka'
+  src: local(Vidaloka), url('font/Vidaloka/Vidaloka-Regular.ttf') format('truetype')
+@font-face
+  font-family: 'Monoton'
+  src: local(Monoton), url('font/Monoton/Monoton-Regular.ttf') format('truetype')
 
+/*Font family*/
+h1
+  font-family: 'Monoton', sans-serif;
+
+@mixin families($family:"")
+  @if $family == "Vidaloka"
+    font-family: "Vidaloka", sans-serif
+  @if $family == "Monoton"
+    font-family: 'Monoton', sans-serif
+
+h1
+  @include families($family: "Monoton")
+h2, p
+  @include families($family: "Vidaloka")
+
+/*Hauteur*/
+$hauteurs: 5, 25, 50, 75
+@each $hauteur in $hauteurs
+  .haut-#{$hauteur}
+    height: $hauteur + vh
+
+/*Hauteur du texte */
+$fontSizes: ("small": 1, "medium": 1.5, "large": 2, "xlarge": 3)
+@each $grandeur, $valeur in $fontSizes
+  .font-#{$grandeur}
+    font-size: $valeur + rem
+
+
+/*Couleur de texte*/
+@mixin couleursTexte($couleurTexte: "")
+  @if $couleurTexte == "rose"
+    color: #F75E50
+  @else if $couleurTexte == "jaune"
+    color: #EAC761
+  @else if $couleurTexte == "beige"
+    color: #E8DF9C
+  @else if $couleurTexte == "vert"
+    color: #91C09E
+  @else if $couleurTexte == "gris"
+    color: #746F62
+
+/*Couleur de background*/
+@mixin couleursBkg($couleurBkg: "")
+  @if $couleurBkg == "rose"
+    background-color: #F75E50
+  @else if $couleurBkg == "jaune"
+    background-color: #EAC761
+  @else if $couleurBkg == "beige"
+    background-color: #E8DF9C
+  @else if $couleurBkg == "vert"
+    background-color: #91C09E
+  @else if $couleurBkg == "gris"
+    background-color: #746F62
+
+h1
+  @include couleursTexte($couleurTexte: "rose")
+
+h2
+  @include couleursTexte($couleurTexte: "vert")
+
+p
+  @include couleursTexte($couleurTexte: "gris")
+  @include couleursBkg($couleurBkg: "beige")
+
+
+#pageAccueil
+  p  
+    @include couleursTexte($couleurTexte: "gris")
+    @include couleursBkg($couleurBkg: "vert")
+
+.affichagePhoto
+      @include couleursBkg($couleurBkg: "beige")
+
+/***************************************/
 #pageAccueil 
   background-image: url("../img/road.jpg")
   background-repeat: no-repeat
@@ -9,22 +89,6 @@
   min-height: 10vh
   background-attachment: fixed /*Pour l'effet*/
   
-
-h2
-  font-family: 'Orbitron', sans-serif;
-
-/*Hauteur*/
-$hauteurs: 5, 25, 50, 75
-@each $hauteur in $hauteurs
-  .haut-#{$hauteur}
-    height: $hauteur + vh
-
-/*Hauteur du texte *************************************/
-$fontSizes: ("small": 1, "medium": 1.5, "large": 2, "xlarge": 3)
-@each $grandeur, $valeur in $fontSizes
-  .font-#{$grandeur}
-    font-size: $valeur + rem
-
 .accueilImg 
   object-fit: cover
   min-height: 50vh
