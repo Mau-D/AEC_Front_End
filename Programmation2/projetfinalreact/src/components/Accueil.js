@@ -87,72 +87,91 @@ export class Accueil extends React.Component {
   }
   render() {
     return (
-      <Container fluid>
+      <Container fluid className="px-0">
         <Row>
-          <Col sm={12}>
-            <h2>Vous êtes prêt à partir...</h2>
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={6}>
-            <h2 ref="box2">Quand?</h2>
-            <h2 ref="box4">Où?</h2>
-            <h2 ref="box6">Comment?</h2>
-          </Col>
-          <Col sm={6}>
-            <h2 ref="box3">Maintenant</h2>
-            <h2 ref="box5">N'importe où</h2>
-            <h2 ref="box7">En voiture... bien sûr!</h2>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Link to={"/listetrips"}>
-              <h1>Nos RoadTrips</h1>
-            </Link>
-          </Col>
-        </Row>
-        <Row>
-          <Container fluid id="pageAccueil">
-            <Row className="text-center">
+          <Container fluid id="pageAccueil" className="border border-dark">
+            <Row className="text-center haut-40">
               <Col md={5} className="px-0 border border-dark">
                 <Fade left>
-                  <Image fluid src={photos.coccinelle} rounded />
+                  <Image fluid className="accueilImg" src={photos.coccinelle} />
                 </Fade>
               </Col>
-              <Col md={2} className="px-0 border border-dark">
-                <p>« Rien ne développe l’intelligence comme les voyages. »</p>
+              <Col md={2} className="px-1 my-auto">
+                <p className="font-medium">
+                  « Rien ne développe l’intelligence comme les voyages. »
+                </p>
               </Col>
               <Col md={5} className="px-0 border border-dark">
                 <Fade right>
-                  <Image fluid className="" src={photos.camion} rounded />
+                  <Image
+                    fluid
+                    className="accueilImg"
+                    src={photos.camion}
+                    rounded
+                  />
                 </Fade>
               </Col>
             </Row>
-            <Row>
-              <Col md={3} className="px-0 border border-dark">
-                <p>
+            <Row className="text-center haut-40">
+              <Col md={3} className="px-1 my-auto">
+                <p className="font-medium">
                   « Lorsqu’elle s’enfuit, la route est la seule amante qui
                   vaille la peine d’être suivie. »
                 </p>
               </Col>
               <Col md={6} className="px-0 border border-dark">
                 <Fade down>
-                  <Image fluid src={photos.pieds} rounded />
+                  <Image fluid className="mh-100" src={photos.pieds} rounded />
                 </Fade>
               </Col>
-              <Col md={3} className="px-0 border border-dark">
+              <Col md={3} className="px-0 my-auto">
                 <Image fluid className="p-5" src={photos.plaque} rounded />
               </Col>
             </Row>
           </Container>
         </Row>
-        <Row>
-          <Container class="my-5">
+        <Row className="my-5">
+          <Col sm={12}>
+            <h2 className="font-xlarge">Vous êtes prêt à partir...</h2>
+          </Col>
+        </Row>
+        <Row className="haut-25 text-center">
+          <Col sm={6}>
+            <h2 className="font-large my-4" ref="box2">
+              Quand?
+            </h2>
+            <h2 className="font-large my-4" ref="box4">
+              Où?
+            </h2>
+            <h2 className="font-large my-4" ref="box6">
+              Comment?
+            </h2>
+          </Col>
+          <Col sm={6}>
+            <h2 className="font-large my-4" ref="box3">
+              Maintenant
+            </h2>
+            <h2 className="font-large my-4" ref="box5">
+              N'importe où
+            </h2>
+            <h2 className="font-large my-4" ref="box7">
+              En voiture... bien sûr!
+            </h2>
+          </Col>
+        </Row>
+        <Row className="text-center">
+          <Col>
+            <Link to={"/listetrips"}>
+              <h1 className="font-xlarge">Nos RoadTrips</h1>
+            </Link>
+          </Col>
+        </Row>
+        <Row className="my-5 haut-50">
+          <Container>
             <h1>À propos de nous...</h1>
             <Row>
               <Col md={{ span: 4, offset: 1 }}>
-                <Image fluid className="h-50" src={photos.vintage} rounded />
+                <Image fluid src={photos.vintage} rounded />
               </Col>
               <Col md={{ span: 6, offset: 1 }}>
                 <p>

@@ -5,9 +5,13 @@ import { Image, Col } from "react-bootstrap";
 function Photo(props) {
   return (
     <>
-      {Object.keys(props.photosAttrait).map((key) => (
-        <Col sm={4}>
-          <Image fluid src={props.photosAttrait[key].image_attrait} />
+      {Object.keys(props.photosAttrait).map((key, i) => (
+        <Col sm="4" className="my-4">
+          <Image
+            height="100%"
+            width="100%"
+            src={props.photosAttrait[key].image_attrait}
+          />
         </Col>
       ))}
     </>
