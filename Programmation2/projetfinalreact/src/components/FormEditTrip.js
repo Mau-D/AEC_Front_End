@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Form,
-  Button,
-  Image,
-  Container,
-  Row,
-  Col,
-  Modal,
-} from "react-bootstrap";
+import { Form, Button, Image, Container, Row, Col } from "react-bootstrap";
 import { API } from "../constantes";
 import { regions } from "../constantes";
 import { toast } from "react-toastify";
@@ -28,18 +20,16 @@ function FormEditTrip(props) {
       },
     ],
   });
-  const [show, setShow] = useState(false);
+
   const [regionState, setRegionState] = useState("Bas Saint-Laurent"); //Ajouter la première valeur si le onChange n'est pas pris en charge
   const [editInfosAttraits, setEditInfosAttraits] = useState([]);
+  const [donneesAttraits, setdonneesAttraits] = useState([]);
   const [position, setPosition] = useState(0);
-
   const tripID = props.location.search.substring(
     4,
     props.location.search.length
   );
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const donneesAttraits = donneesRecues.attraits;
+
   //useEffect
   useEffect(() => {
     getTripInfos();
@@ -59,10 +49,10 @@ function FormEditTrip(props) {
     } catch (error) {
       console.log(error);
     }
-    setEditInfosAttraits(donneesRecues.attraits);
   }
-  function edithandleSave() {
+  function edithandleSave(event) {
     toast.dark("Sauvegarde des données");
+    event.preventDefault();
 
     const nomEditActivity = document.getElementById("editAttraitNom").value;
     const endroitEditActivity = document.getElementById("editAttraitVille")
@@ -78,14 +68,6 @@ function FormEditTrip(props) {
       image_attrait: imageEditActivity,
       description_attrait: descriptionEditActivity,
     });
-    handleClose();
-    toast.dark("Fermeture du modal");
-    setPosition(position + 1);
-    if (donneesAttraits.length - 1 > position) {
-      affichageModal();
-    } else {
-      handleClose();
-    }
   }
   //editTrip(picture, nametrip, nameactivity, place);
   //Méthode pour modifier la bd avec le formulaire, semblable à l'ajout ajouter l'id à l'URL et changer la methode pour PUT
@@ -163,14 +145,6 @@ function FormEditTrip(props) {
     console.log("Region Selected!!");
     setRegionState(e.target.value);
   }
-  function modifyActivities() {
-    setEditInfosAttraits([]);
-    affichageModal();
-  }
-  function affichageModal() {
-    toast.dark("Ouverture du modal");
-    handleShow();
-  }
 
   return (
     <>
@@ -182,7 +156,6 @@ function FormEditTrip(props) {
                 <Form.Label>Titre du road trip</Form.Label>
                 <Form.Control type="text" defaultValue={donneesRecues.nom} />
               </Form.Group>
-
               <Form.Group controlId="pictureID1">
                 <Form.Label>Image 1</Form.Label>
                 <Form.Control
@@ -226,8 +199,7 @@ function FormEditTrip(props) {
                 </select>
               </Form.Group>
               {/*Bouton pour modifier les attraits */}
-
-              {/*Édition des attraits
+              Édition des attraits
               {Object.keys(donneesRecues.attraits).map((key) => (
                 <Form.Group>
                   <Form.Control
@@ -263,17 +235,11 @@ function FormEditTrip(props) {
                     }
                     id="editAttraitDescription"
                   />
-                  <Button type="submit" onClick={handleSave}>
+                  <Button type="submit" onClick={edithandleSave}>
                     Enregistrer la modification attrait touristique
                   </Button>
                 </Form.Group>
-              ))}*/}
-              <Button
-                className="btn btn-danger ml-3 mt-3"
-                onClick={modifyActivities}
-              >
-                Modifier les attraits
-              </Button>
+              ))}
               <Button variant="primary" type="submit" onClick={handleEdit}>
                 Enregistrer
               </Button>
@@ -283,68 +249,6 @@ function FormEditTrip(props) {
             </Form>
           </Col>
         </Row>
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Form.Group controlId="editAttraitNom">
-              <Form.Label>Entrer le nom de l'attrait touristique</Form.Label>
-              <Form.Control
-                type="text"
-                defaultValue={donneesAttraits[position].nom_attrait}
-              />
-              <Form.Text className="text-muted">
-                ajouter une validation
-              </Form.Text>
-            </Form.Group>
-
-            <Form.Group controlId="editAttraitVille">
-              <Form.Label>Entrer la ville de l'attrait touristique</Form.Label>
-              <Form.Control
-                type="text"
-                defaultValue={donneesAttraits[position].ville}
-              />
-              <Form.Text className="text-muted">
-                ajouter une validation
-              </Form.Text>
-            </Form.Group>
-            <Form.Group controlId="editAttraitImage">
-              <Form.Label>
-                Entrer l'url d'une image de l'attrait touristique
-              </Form.Label>
-              <Form.Control
-                type="text"
-                defaultValue={donneesAttraits[position].image_attrait}
-              />
-              <Form.Text className="text-muted">
-                ajouter une validation
-              </Form.Text>
-            </Form.Group>
-            <Form.Group controlId="editAttraitDescription">
-              <Form.Label>
-                Entrer la description de l'attrait touristique
-              </Form.Label>
-              <Form.Control
-                as="textarea"
-                row="3"
-                type="text"
-                defaultValue={donneesAttraits[position].description_attrait}
-              />
-              <Form.Text className="text-muted">
-                ajouter une validation
-              </Form.Text>
-            </Form.Group>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" type="submit" onClick={edithandleSave}>
-              Save Changes
-            </Button>
-          </Modal.Footer>
-        </Modal>
       </Container>
     </>
   );

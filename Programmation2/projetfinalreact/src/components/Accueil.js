@@ -67,7 +67,7 @@ export class Accueil extends React.Component {
   };
   async remove() {
     try {
-      const response = await fetch(API + "5f625540d899cd03e8b4e482", {
+      const response = await fetch(API + "5f69f267d899cd03e8b4e661", {
         method: "delete",
       });
 
@@ -194,9 +194,7 @@ export class Accueil extends React.Component {
             </Row>
           </Container>
         </Row>
-        <Row>
-          <AffichageImageAttraits />
-        </Row>
+        <Row>{/*<AffichageImageAttraits />*/}</Row>
         <Button variant="primary" type="submit" onClick={this.remove}>
           supprimer
         </Button>

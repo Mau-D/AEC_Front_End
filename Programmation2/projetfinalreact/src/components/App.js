@@ -11,6 +11,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DetailTrip from "./DetailTrip";
+
 import { Titre } from "./Titre";
 
 function App() {
@@ -32,7 +33,6 @@ function App() {
       />
       {/* Same as */}
       <ToastContainer />
-
       <Container fluid>
         <Titre />
         <Switch>
