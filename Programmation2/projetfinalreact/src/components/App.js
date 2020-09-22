@@ -33,23 +33,23 @@ function App() {
       />
       {/* Same as */}
       <ToastContainer />
-      <Container fluid>
-        <Titre />
-        <Switch>
-          {/*Accueil est la première page*/}
-          <Route path="/" exact component={Accueil} />
-          {/*Dans la page d'accueil, lien pour la liste des road trips*/}
-          {/*Dans la liste des trips, bouton pour ajouter un trip*/}
-          <Route path="/listetrips" component={ManageTrips} />
-          <Route path="/ajoutertrip" component={AjouterTrip} />
-          {/*Un lien dans chacune des cards des différents trips, amène à un formulaire d'édition*/}
-          <Route path="/trip/edit/:titre" component={FormEditTrip} />
-          {/*Un lien dans chacune des cards des différents trips, amène à page détaillée du road trip*/}
-          <Route path="/trip/:titre" component={DetailTrip} />
-          {/*En cas d'erreur dans l'url une page 404 s'affiche
+
+      <Titre />
+      <Switch>
+        {/*Accueil est la première page*/}
+        <Route path="/" exact component={Accueil} />
+        {/*Dans la page d'accueil, lien pour la liste des road trips*/}
+        {/*Dans la liste des trips, bouton pour ajouter un trip*/}
+        <Route path="/listetrips" component={ManageTrips} />
+        <Route path="/ajoutertrip" component={AjouterTrip} />
+        {/*Un lien dans chacune des cards des différents trips, amène à un formulaire d'édition*/}
+        <Route path="/trip/edit/:titre" component={FormEditTrip} />
+        {/*Un lien dans chacune des cards des différents trips, amène à page détaillée du road trip*/}
+        <Route path="/trip/:titre" component={DetailTrip} />
+        {/*En cas d'erreur dans l'url une page 404 s'affiche
           <Route component={PageNotFoundHook} />*/}
-        </Switch>
-      </Container>
+      </Switch>
+
       {location.pathname !== "/" && <BoutonRetourAccueil />}
       {location.pathname !== "trip/" &&
         location.pathname !== "/" &&

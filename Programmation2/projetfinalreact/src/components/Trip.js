@@ -16,17 +16,15 @@ function Trip(props) {
                 <h2>{props.nameTrip}</h2>
               </Link>
             </Card.Title>
-            <Card.Text>
-              <h5>{props.regionTrip}</h5>
-            </Card.Text>
+            <Card.Text>{props.regionTrip}</Card.Text>
           </Card.Body>
           <Card.Header>
             <h3>Attraits touristiques</h3>
           </Card.Header>
           <ListGroup className="list-group-flush">
-            {Object.keys(props.attraitsTrip).map((key) => (
-              <ListGroupItem>
-                {props.attraitsTrip[key].nom_attrait}
+            {Object.keys(props.attraitsTrip).map((liste, i) => (
+              <ListGroupItem key={"liste" + i}>
+                {props.attraitsTrip[liste].nom_attrait}
               </ListGroupItem>
             ))}
           </ListGroup>

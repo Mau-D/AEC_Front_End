@@ -21,10 +21,10 @@ function FormEditTrip(props) {
     ],
   });
 
-  const [regionState, setRegionState] = useState("Bas Saint-Laurent"); //Ajouter la première valeur si le onChange n'est pas pris en charge
+  //Ajouter la première valeur si le onChange n'est pas pris en charge
+  const [regionState, setRegionState] = useState("");
   const [editInfosAttraits, setEditInfosAttraits] = useState([]);
-  const [donneesAttraits, setdonneesAttraits] = useState([]);
-  const [position, setPosition] = useState(0);
+  const [donneesAttraits, setdonneesAttraits] = useState({});
   const tripID = props.location.search.substring(
     4,
     props.location.search.length
@@ -49,11 +49,13 @@ function FormEditTrip(props) {
     } catch (error) {
       console.log(error);
     }
+    setRegionState(donneesRecues.region);
   }
-  function edithandleSave(event) {
+
+  {
+    /*function edithandleSave(event) {
     toast.dark("Sauvegarde des données");
     event.preventDefault();
-
     const nomEditActivity = document.getElementById("editAttraitNom").value;
     const endroitEditActivity = document.getElementById("editAttraitVille")
       .value;
@@ -61,14 +63,23 @@ function FormEditTrip(props) {
     const descriptionEditActivity = document.getElementById(
       "editAttraitDescription"
     ).value;
-
-    editInfosAttraits.push({
-      nom_attrait: nomEditActivity,
-      ville: endroitEditActivity,
-      image_attrait: imageEditActivity,
-      description_attrait: descriptionEditActivity,
-    });
+    editTableau(
+      nomEditActivity,
+      endroitEditActivity,
+      imageEditActivity,
+      descriptionEditActivity
+    );
   }
+  function editTableau(nom, endroit, image, description) {
+    editInfosAttraits.push({
+      nom_attrait: nom,
+      ville: endroit,
+      image_attrait: image,
+      description_attrait: description,
+    });
+  }*/
+  }
+
   //editTrip(picture, nametrip, nameactivity, place);
   //Méthode pour modifier la bd avec le formulaire, semblable à l'ajout ajouter l'id à l'URL et changer la methode pour PUT
   async function editTrip(picture1, picture2, nametrip, descriptiontrip) {
@@ -87,7 +98,7 @@ function FormEditTrip(props) {
           image2: picture2,
           description: descriptiontrip,
           region: regionState,
-          attraits: editInfosAttraits,
+          attraits: donneesRecues.attraits,
         }),
       });
       if (response.ok) {
@@ -95,7 +106,8 @@ function FormEditTrip(props) {
         props.history.push(
           "/trip/" + donneesRecues.nom + "?id=" + donneesRecues._id
         ); //Retour à la page d'accueil
-        toast.dark("Modification du road trip:  " + donneesRecues.nom);
+
+        toast.dark(regionState);
 
         return response;
       }
@@ -188,8 +200,9 @@ function FormEditTrip(props) {
               </Form.Group>
               <Form.Group>
                 <select
-                  defaultvalue={donneesRecues.region}
+                  id="selectRegion"
                   onChange={handleChange}
+                  defaultValue={donneesRecues.region}
                 >
                   {regions.map((key) => (
                     <option key={key} value={key}>
@@ -198,25 +211,24 @@ function FormEditTrip(props) {
                   ))}
                 </select>
               </Form.Group>
-              {/*Bouton pour modifier les attraits */}
+              {/*
               Édition des attraits
-              {Object.keys(donneesRecues.attraits).map((key) => (
+              {Object.keys(donneesRecues.attraits).map((i) => (
                 <Form.Group>
                   <Form.Control
                     type="text"
-                    defaultValue={donneesRecues.attraits[key].nom_attrait}
+                    defaultvalue={donneesRecues.attraits[i].nom_attrait}
                     id="editAttraitNom"
                   />
-
                   <Form.Control
                     type="text"
                     placeholder="Entrer une URL valide"
-                    defaultValue={donneesRecues.attraits[key].image_attrait}
+                    defaultvalue={donneesRecues.attraits[i].image_attrait}
                     id="editAttraitImage"
                   />
-                  {donneesRecues.attraits[key].image_attrait !== "" && (
+                  {donneesRecues.attraits[i].image_attrait !== "" && (
                     <Image
-                      src={donneesRecues.attraits[key].image_attrait}
+                      src={donneesRecues.attraits[i].image_attrait}
                       rounded
                       width="125"
                     />
@@ -224,22 +236,20 @@ function FormEditTrip(props) {
 
                   <Form.Control
                     type="text"
-                    defaultValue={donneesRecues.attraits[key].ville}
+                    defaultvalue={donneesRecues.attraits[i].ville}
                     id="editAttraitVille"
                   />
 
                   <Form.Control
                     type="text"
-                    defaultValue={
-                      donneesRecues.attraits[key].description_attrait
-                    }
+                    defaultvalue={donneesRecues.attraits[i].description_attrait}
                     id="editAttraitDescription"
                   />
                   <Button type="submit" onClick={edithandleSave}>
                     Enregistrer la modification attrait touristique
                   </Button>
                 </Form.Group>
-              ))}
+              ))}*/}
               <Button variant="primary" type="submit" onClick={handleEdit}>
                 Enregistrer
               </Button>

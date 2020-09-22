@@ -20,7 +20,6 @@ export const regions = [
   "Laval",
   "Lanaudière",
   "Laurentides",
-  "Laurentides",
   "Centre-du-Québec",
 ];
 

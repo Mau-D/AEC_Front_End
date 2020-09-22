@@ -89,32 +89,32 @@ function DetailTrip(props) {
         </Col>
       </Row>
       {/* Les attraits*/}
-      {Object.keys(donneesRecuesDetail.attraits).map((key) =>
-        Number.isInteger([key] / 2) ? (
-          <Row>
+      {Object.keys(donneesRecuesDetail.attraits).map((att, i) =>
+        Number.isInteger([att] / 2) ? (
+          <Row key={"details" + i}>
             <Col className="mb-4" md={4}>
               <Image
                 fluid
-                src={donneesRecuesDetail.attraits[key].image_attrait}
+                src={donneesRecuesDetail.attraits[att].image_attrait}
               />
             </Col>
             <Col className="mb-4" md={8}>
-              <h3>{donneesRecuesDetail.attraits[key].nom_attrait}</h3>
-              <p>{donneesRecuesDetail.attraits[key].description_attrait}</p>
-              <p>{donneesRecuesDetail.attraits[key].ville}</p>
+              <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
+              <p>{donneesRecuesDetail.attraits[att].description_attrait}</p>
+              <p>{donneesRecuesDetail.attraits[att].ville}</p>
             </Col>
           </Row>
         ) : (
-          <Row>
+          <Row key={"details" + i}>
             <Col className="mb-4" md={8}>
-              <h3>{donneesRecuesDetail.attraits[key].nom_attrait}</h3>
-              <p>{donneesRecuesDetail.attraits[key].description_attrait}</p>
-              <p>{donneesRecuesDetail.attraits[key].ville}</p>
+              <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
+              <p>{donneesRecuesDetail.attraits[att].description_attrait}</p>
+              <p>{donneesRecuesDetail.attraits[att].ville}</p>
             </Col>
             <Col className="mb-4" md={4}>
               <Image
                 fluid
-                src={donneesRecuesDetail.attraits[key].image_attrait}
+                src={donneesRecuesDetail.attraits[att].image_attrait}
               />
             </Col>
           </Row>

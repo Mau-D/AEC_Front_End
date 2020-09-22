@@ -1,43 +1,30 @@
-import React, { useEffect, useState } from "react";
-//importer la constante de l'API
-import { ajoutBD } from "../constantes";
+import React from "react";
+import { Button } from "react-bootstrap";
 import { API } from "../constantes";
 
+//importer la constante de l'API
+import { ajoutBD } from "../constantes";
+
 //Formulaire d'ajout pour une nouveau road trip
-function AjoutBD() {
-  const [donneesRecues, setDonneesRecues] = useState({});
+function AjoutBD(props) {
+  //const [photo, setPhoto] = useState("");
 
-  useEffect(() => {
-    getBDInfos();
-  }, []);
-  //On récupère la moto pour ensuite remplir le formulaire.Pour le hook renommer getMoto
-  async function getBDInfos() {
-    //On récupère le dernier caractère de l'url substring(4,fin du string)
-    //*********Le state motoID, n'est pas déclaré au début de la fonction ou classe************ */
-    try {
-      const response = await fetch(ajoutBD);
-      const reponseDeBD = await response;
-      setDonneesRecues(reponseDeBD);
-
-      if (!response.ok) {
-        throw Error(response.statusText);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-    ajouterBD(donneesRecues);
-  }
-  async function ajouterBD(donneesRecues) {
+  async function addBD() {
     try {
       const response = await fetch(API, {
         /*Pour un ajout utiliser la méthode POST */
         method: "POST",
         /*Pour un ajout ajouter un headers */
         headers: {
-          "Content-Type": "array",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          donneesRecues,
+          nom: ajoutBD.nom,
+          image1: ajoutBD.image1,
+          image2: ajoutBD.image2,
+          description: ajoutBD.description,
+          region: ajoutBD.region,
+          attraits: ajoutBD.attraits,
         }),
       });
       if (response.ok) {
@@ -50,7 +37,7 @@ function AjoutBD() {
       console.log(error);
     }
   }
-  return console.log("bdréussie");
+  return <Button onClick={addBD}>Ajouter la bd</Button>;
 }
 
 export default AjoutBD;

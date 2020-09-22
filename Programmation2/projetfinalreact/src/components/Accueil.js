@@ -1,10 +1,12 @@
 import React from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import AffichageImageAttraits from "./AffichageImageAttraits";
+//import AffichageImageAttraits from "./AffichageImageAttraits";
 import sr from "./ScrollReveal";
 import Fade from "react-reveal/Fade";
 import { API } from "../constantes";
+import AjoutBD from "./AjoutBD";
+
 import "../style/accueil.sass"; /*Modifier ce fichier pour le style en sass*/
 
 //Variables pour téléverser les photos des régions
@@ -67,7 +69,7 @@ export class Accueil extends React.Component {
   };
   async remove() {
     try {
-      const response = await fetch(API + "5f69f267d899cd03e8b4e661", {
+      const response = await fetch(API + "5f6a355ad899cd03e8b4e676", {
         method: "delete",
       });
 
@@ -198,6 +200,7 @@ export class Accueil extends React.Component {
         <Button variant="primary" type="submit" onClick={this.remove}>
           supprimer
         </Button>
+        <AjoutBD></AjoutBD>
       </Container>
     );
   }

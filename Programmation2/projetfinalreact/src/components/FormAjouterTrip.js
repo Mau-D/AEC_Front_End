@@ -156,7 +156,7 @@ function FormAjouterTrip(props) {
                 <Form.Label>Région</Form.Label>
                 <select onChange={handleChange}>
                   {regions.map((key) => (
-                    <option key={key} value={key}>
+                    <option key={"region" + key} value={key}>
                       {key}
                     </option>
                   ))}

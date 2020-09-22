@@ -37,14 +37,15 @@ function ManageTrip() {
 
       <Row id="listCards">
         <Col sm={2}></Col>
-        {donneesRecues.map((key) => (
+        {donneesRecues.map((infos, i) => (
           <Trip
-            picture1={key.image1}
-            nameTrip={key.nom}
-            descriptionTrip={key.description}
-            regionTrip={key.region}
-            attraitsTrip={key.attraits}
-            id={key._id}
+            picture1={infos.image1}
+            nameTrip={infos.nom}
+            descriptionTrip={infos.description}
+            regionTrip={infos.region}
+            attraitsTrip={infos.attraits}
+            key={"manage" + i}
+            id={infos._id}
           ></Trip>
         ))}
       </Row>
