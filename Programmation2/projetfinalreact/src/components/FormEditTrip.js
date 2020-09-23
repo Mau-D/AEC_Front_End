@@ -4,7 +4,6 @@ import { API } from "../constantes";
 import { regions } from "../constantes";
 import { toast } from "react-toastify";
 import "../style/formulaires.sass"; /*Modifier ce fichier pour le style en sass*/
-
 function FormEditTrip(props) {
   const [donneesRecues, setDonneesRecues] = useState({
     nom: "",
@@ -19,13 +18,25 @@ function FormEditTrip(props) {
         image_attrait: "",
         description_attrait: "",
       },
+      {
+        nom_attrait: "",
+        ville: "",
+        image_attrait: "",
+        description_attrait: "",
+      },
+      {
+        nom_attrait: "",
+        ville: "",
+        image_attrait: "",
+        description_attrait: "",
+      },
     ],
   });
 
   //Ajouter la première valeur si le onChange n'est pas pris en charge
   const [regionState, setRegionState] = useState("");
   const [editInfosAttraits, setEditInfosAttraits] = useState([]);
-  const [donneesAttraits, setdonneesAttraits] = useState({});
+  const [donneesAttraits, setDonneesAttraits] = useState({});
   const tripID = props.location.search.substring(
     4,
     props.location.search.length
@@ -43,7 +54,7 @@ function FormEditTrip(props) {
       const response = await fetch(API + tripID);
       const reponseDeApi = await response.json();
       setDonneesRecues(reponseDeApi);
-
+      setRegionState(reponseDeApi.region);
       if (!response.ok) {
         throw Error(response.statusText);
       }
@@ -55,12 +66,11 @@ function FormEditTrip(props) {
   function edithandleSave(event) {
     toast.dark("Sauvegarde des données");
     event.preventDefault();
-    const nomEditActivity = document.getElementById("editAttraitNom").value;
-    const endroitEditActivity = document.getElementById("editAttraitVille")
-      .value;
-    const imageEditActivity = document.getElementById("editAttraitImage").value;
+    const nomEditActivity = document.getElementById("nomattrait1").value;
+    const endroitEditActivity = document.getElementById("villeattrait1").value;
+    const imageEditActivity = document.getElementById("imageattrait1").value;
     const descriptionEditActivity = document.getElementById(
-      "editAttraitDescription"
+      "descriptionattrait1"
     ).value;
 
     editInfosAttraits.push({
@@ -68,6 +78,19 @@ function FormEditTrip(props) {
       ville: endroitEditActivity,
       image_attrait: imageEditActivity,
       description_attrait: descriptionEditActivity,
+    });
+    const nomEditActivity2 = document.getElementById("nomattrait2").value;
+    const endroitEditActivity2 = document.getElementById("villeattrait2").value;
+    const imageEditActivity2 = document.getElementById("imageattrait2").value;
+    const descriptionEditActivity2 = document.getElementById(
+      "descriptionattrait2"
+    ).value;
+
+    editInfosAttraits.push({
+      nom_attrait: nomEditActivity2,
+      ville: endroitEditActivity2,
+      image_attrait: imageEditActivity2,
+      description_attrait: descriptionEditActivity2,
     });
   }
 
@@ -188,7 +211,7 @@ function FormEditTrip(props) {
                 <Form.Label>Description du road trip</Form.Label>
                 <Form.Control
                   as="textarea"
-                  rows="3"
+                  rows="8"
                   defaultValue={donneesRecues.description}
                 />
               </Form.Group>
@@ -198,6 +221,7 @@ function FormEditTrip(props) {
                   onChange={handleChange}
                   defaultValue={donneesRecues.region}
                 >
+                  <option selected>{donneesRecues.region}</option>
                   {regions.map((key) => (
                     <option key={key} value={key}>
                       {key}
@@ -205,44 +229,11 @@ function FormEditTrip(props) {
                   ))}
                 </select>
               </Form.Group>
-              Édition des attraits
-              {Object.keys(donneesRecues.attraits).map((key, i) => (
-                <Form.Group key={"edit" + key}>
-                  <Form.Control
-                    type="text"
-                    defaultValue={donneesRecues.attraits[i].nom_attrait}
-                    id="editAttraitNom"
-                  />
-                  <Form.Control
-                    type="text"
-                    placeholder="Entrer une URL valide"
-                    defaultValue={donneesRecues.attraits[i].image_attrait}
-                    id="editAttraitImage"
-                  />
-                  {donneesRecues.attraits[key].image_attrait !== "" && (
-                    <Image
-                      src={donneesRecues.attraits[i].image_attrait}
-                      rounded
-                      width="125"
-                    />
-                  )}
+              {/*Édition des attraits****************************************/}
 
-                  <Form.Control
-                    type="text"
-                    defaultValue={donneesRecues.attraits[i].ville}
-                    id="editAttraitVille"
-                  />
-
-                  <Form.Control
-                    type="text"
-                    defaultValue={donneesRecues.attraits[i].description_attrait}
-                    id="editAttraitDescription"
-                  />
-                  <Button type="submit" onClick={edithandleSave}>
-                    Enregistrer la modification attrait touristique
-                  </Button>
-                </Form.Group>
-              ))}
+              <Button type="submit" onClick={edithandleSave}>
+                Modifier les attraits
+              </Button>
               <Button variant="primary" type="submit" onClick={handleEdit}>
                 Enregistrer
               </Button>

@@ -125,13 +125,13 @@ function DetailTrip(props) {
         {Object.keys(donneesRecuesDetail.attraits).map((att, i) =>
           Number.isInteger([att] / 2) ? (
             <Row key={"details" + i} className="mt-5 detailsText ">
-              <Col className="my-4 haut-25" md={4}>
+              <Col className="my-4" md={4}>
                 <Image
                   fluid
                   src={donneesRecuesDetail.attraits[att].image_attrait}
                 />
               </Col>
-              <Col className="my-4 haut-25 p-2" md={8}>
+              <Col className="my-4 p-2" md={8}>
                 <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
                 <p className="font-small">
                   {donneesRecuesDetail.attraits[att].description_attrait}
@@ -141,7 +141,7 @@ function DetailTrip(props) {
             </Row>
           ) : (
             <Row key={"details" + i} className="mt-5 detailsText">
-              <Col className="my-4 haut-25 p-2" md={8}>
+              <Col className="my-4 p-2" md={8}>
                 <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
                 <p className="font-small">
                   {donneesRecuesDetail.attraits[att].description_attrait}
