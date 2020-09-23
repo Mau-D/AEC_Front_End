@@ -55,6 +55,7 @@ function FormEditTrip(props) {
       const reponseDeApi = await response.json();
       setDonneesRecues(reponseDeApi);
       setRegionState(reponseDeApi.region);
+      setDonneesAttraits(reponseDeApi.attraits);
       if (!response.ok) {
         throw Error(response.statusText);
       }
@@ -63,33 +64,33 @@ function FormEditTrip(props) {
     }
   }
 
-  function edithandleSave(event) {
+  function edithandleSave() {
     toast.dark("Sauvegarde des données");
-    event.preventDefault();
-    const nomEditActivity = document.getElementById("nomattrait1").value;
-    const endroitEditActivity = document.getElementById("villeattrait1").value;
-    const imageEditActivity = document.getElementById("imageattrait1").value;
-    const descriptionEditActivity = document.getElementById(
-      "descriptionattrait1"
+
+    const nomEditActivity1 = document.getElementById("nomAttrait1ID").value;
+    const imageEditActivity1 = document.getElementById("imageAttrait1ID").value;
+    const villeEditActivity1 = document.getElementById("villeAttrait1ID").value;
+    const descriptionEditActivity1 = document.getElementById(
+      "descriptionAttrait1ID"
     ).value;
 
     editInfosAttraits.push({
-      nom_attrait: nomEditActivity,
-      ville: endroitEditActivity,
-      image_attrait: imageEditActivity,
-      description_attrait: descriptionEditActivity,
+      nom_attrait: nomEditActivity1,
+      image_attrait: imageEditActivity1,
+      ville: villeEditActivity1,
+      description_attrait: descriptionEditActivity1,
     });
-    const nomEditActivity2 = document.getElementById("nomattrait2").value;
-    const endroitEditActivity2 = document.getElementById("villeattrait2").value;
-    const imageEditActivity2 = document.getElementById("imageattrait2").value;
+    const nomEditActivity2 = document.getElementById("nomAttrait2ID").value;
+    const imageEditActivity2 = document.getElementById("imageAttrait2ID").value;
+    const villeEditActivity2 = document.getElementById("villeAttrait2ID").value;
     const descriptionEditActivity2 = document.getElementById(
-      "descriptionattrait2"
+      "descriptionAttrait2ID"
     ).value;
 
     editInfosAttraits.push({
       nom_attrait: nomEditActivity2,
-      ville: endroitEditActivity2,
       image_attrait: imageEditActivity2,
+      ville: villeEditActivity2,
       description_attrait: descriptionEditActivity2,
     });
   }
@@ -112,7 +113,7 @@ function FormEditTrip(props) {
           image2: picture2,
           description: descriptiontrip,
           region: regionState,
-          attraits: donneesRecues.attraits,
+          attraits: editInfosAttraits,
         }),
       });
       if (response.ok) {
@@ -131,6 +132,7 @@ function FormEditTrip(props) {
 
   function handleEdit(event) {
     event.preventDefault(); /*Empêche de rafraîchir la page, car le bouton est de type submit*/
+    edithandleSave();
     /*variables des infos entrées dans le formulaire*/
     const picture1 = document.getElementById("pictureID1").value;
     const picture2 = document.getElementById("pictureID2").value;
@@ -229,18 +231,101 @@ function FormEditTrip(props) {
                   ))}
                 </select>
               </Form.Group>
-              {/*Édition des attraits****************************************/}
-
-              <Button type="submit" onClick={edithandleSave}>
-                Modifier les attraits
-              </Button>
-              <Button variant="primary" type="submit" onClick={handleEdit}>
-                Enregistrer
-              </Button>
-              <Button className="btn btn-danger ml-3 mt-3" onClick={removeTrip}>
-                Supprimer le road trip
-              </Button>
             </Form>
+            <Form>
+              <h2>Attrait #1</h2>
+              <Form.Group>
+                <Form.Label>Nom de l'attrait 1</Form.Label>
+                <Form.Control
+                  id="nomAttrait1ID"
+                  type="text"
+                  defaultValue={donneesRecues.attraits[0].nom_attrait}
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Endroit de l'attrait attrait 1</Form.Label>
+                <Form.Control
+                  id="villeAttrait1ID"
+                  type="text"
+                  defaultValue={donneesRecues.attraits[0].ville}
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Image de l'attrait 1</Form.Label>
+                <Form.Control
+                  id="imageAttrait1ID"
+                  type="text"
+                  defaultValue={donneesRecues.attraits[0].image_attrait}
+                />
+                {donneesRecues.attraits[0].image_attrait !== "" && (
+                  <Image
+                    src={donneesRecues.attraits[0].image_attrait}
+                    rounded
+                    width="125"
+                  />
+                )}
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Description de l'attrait 1</Form.Label>
+                <Form.Control
+                  id="descriptionAttrait1ID"
+                  as="textarea"
+                  rows="8"
+                  defaultValue={donneesRecues.attraits[0].description_attrait}
+                />
+              </Form.Group>
+            </Form>
+
+            <Form>
+              <h2>Attrait #2</h2>
+              <Form.Group>
+                <Form.Label>Nom attrait 2</Form.Label>
+                <Form.Control
+                  id="nomAttrait2ID"
+                  type="text"
+                  defaultValue={donneesRecues.attraits[1].nom_attrait}
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Endroit de l'attrait attrait 2</Form.Label>
+                <Form.Control
+                  id="villeAttrait2ID"
+                  type="text"
+                  defaultValue={donneesRecues.attraits[1].ville}
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Image de l'attrait 2</Form.Label>
+                <Form.Control
+                  id="imageAttrait2ID"
+                  type="text"
+                  defaultValue={donneesRecues.attraits[1].image_attrait}
+                />
+                {donneesRecues.attraits[1].image_attrait !== "" && (
+                  <Image
+                    src={donneesRecues.attraits[1].image_attrait}
+                    rounded
+                    width="125"
+                  />
+                )}
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Description de l'attrait 2</Form.Label>
+                <Form.Control
+                  id="descriptionAttrait2ID"
+                  as="textarea"
+                  rows="8"
+                  defaultValue={donneesRecues.attraits[1].description_attrait}
+                />
+              </Form.Group>
+            </Form>
+
+            <Button variant="primary" type="submit" onClick={handleEdit}>
+              Enregistrer
+            </Button>
+            <Button className="btn btn-danger ml-3 mt-3" onClick={removeTrip}>
+              Supprimer le road trip
+            </Button>
           </Col>
         </Row>
       </Container>
