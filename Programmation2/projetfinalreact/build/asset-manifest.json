@@ -1,34 +1,36 @@
 {
   "files": {
-    "main.css": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.40a94377.chunk.css",
-    "main.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.2fea6321.chunk.js",
-    "main.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.2fea6321.chunk.js.map",
+    "main.css": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.f191c6d7.chunk.css",
+    "main.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.11b250c9.chunk.js",
+    "main.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.11b250c9.chunk.js.map",
     "runtime-main.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/runtime-main.f79fa73b.js",
     "runtime-main.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/runtime-main.f79fa73b.js.map",
     "static/css/2.19e10c4f.chunk.css": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/2.19e10c4f.chunk.css",
-    "static/js/2.34157d58.chunk.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.34157d58.chunk.js",
-    "static/js/2.34157d58.chunk.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.34157d58.chunk.js.map",
+    "static/js/2.b15d10eb.chunk.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.b15d10eb.chunk.js",
+    "static/js/2.b15d10eb.chunk.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.b15d10eb.chunk.js.map",
     "index.html": "/AEC_Front_End/Programmation2/projetfinalreact/build/index.html",
-    "precache-manifest.45609af3c7382bf8dcd468ea22d80581.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/precache-manifest.45609af3c7382bf8dcd468ea22d80581.js",
+    "precache-manifest.caa2493db644fe57d0276d83d373699b.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/precache-manifest.caa2493db644fe57d0276d83d373699b.js",
     "service-worker.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/service-worker.js",
     "static/css/2.19e10c4f.chunk.css.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/2.19e10c4f.chunk.css.map",
-    "static/css/main.40a94377.chunk.css.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.40a94377.chunk.css.map",
-    "static/js/2.34157d58.chunk.js.LICENSE.txt": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.34157d58.chunk.js.LICENSE.txt",
+    "static/css/main.f191c6d7.chunk.css.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.f191c6d7.chunk.css.map",
+    "static/js/2.b15d10eb.chunk.js.LICENSE.txt": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.b15d10eb.chunk.js.LICENSE.txt",
     "static/media/10.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/10.ac0814dc.jpg",
-    "static/media/accueil.sass": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/voiture_vintage.52889449.jpg",
+    "static/media/details.sass": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/road.2ad24a36.jpg",
     "static/media/camion.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/camion.30586d39.jpg",
     "static/media/coccinelle.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/coccinelle.5ad5bf0a.jpg",
+    "static/media/formulaires.sass": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/fond_vintage.e5f38ae6.jpg",
     "static/media/pieds.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/pieds.c7fe3a9d.jpg",
     "static/media/plaque.png": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/plaque.1a5ebf5d.png",
     "static/media/rue.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/rue.f0c4a98e.jpg",
     "static/media/vintage.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/vintage.9b29d18f.jpg",
-    "static/media/voiture_orange.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/voiture_orange.39e416b1.jpg"
+    "static/media/voiture_orange.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/voiture_orange.39e416b1.jpg",
+    "static/media/liste.sass": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/voiture_vintage.52889449.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f79fa73b.js",
     "static/css/2.19e10c4f.chunk.css",
-    "static/js/2.34157d58.chunk.js",
-    "static/css/main.40a94377.chunk.css",
-    "static/js/main.2fea6321.chunk.js"
+    "static/js/2.b15d10eb.chunk.js",
+    "static/css/main.f191c6d7.chunk.css",
+    "static/js/main.11b250c9.chunk.js"
   ]
 }

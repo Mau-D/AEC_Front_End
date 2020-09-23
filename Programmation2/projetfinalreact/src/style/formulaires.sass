@@ -1,0 +1,25 @@
+@import "accueil.sass";
+
+#formAjout, #formEdit
+    h1
+        @include couleursTexte($couleurTexte: "grisfonce")
+
+label.form-label
+     @include families($family: "Vidaloka")
+
+#formAjout, #formEdit
+    background-image: url("../img/fond_vintage.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-color: white
+    min-height: 10vh
+    background-attachment: fixed /*Pour l'effet*/
+    
+
+#ajoutAttrait
+    .btn
+        border: 1px solid #e6e6e6
+        @include couleursTexte($couleurTexte: "grisfonce")
+        display: inline-block
+        background-color: #F0F0F0
+    

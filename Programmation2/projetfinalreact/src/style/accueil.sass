@@ -22,15 +22,9 @@ h1
 #accueil    
   h2, p, 
     @include families($family: "Vidaloka")
-#liste
-  @include families($family: "Vidaloka")
-#details
-  h2, p
-    @include families($family: "Vidaloka")
- 
 
 /*Hauteur*/
-$hauteurs: 5, 25, 50, 75
+$hauteurs: 5, 25, 50, 75, 100
 @each $hauteur in $hauteurs
   .haut-#{$hauteur}
     height: $hauteur + vh
@@ -71,15 +65,13 @@ $fontSizes: ("small": 1.2, "medium": 1.5, "large": 2, "xlarge": 3)
   @else if $couleurBkg == "gris"
     background-color: #746F62
 
-p, .list-group-item, h5
+p, h5
   @include couleursTexte($couleurTexte: "gris")
 
 #titre, #accueil
   h1
     @include couleursTexte($couleurTexte: "rose")
-#liste
-  h1
-    @include couleursTexte($couleurTexte: "jaune")
+
 #accueil
   h2
     @include couleursTexte($couleurTexte: "grisfonce")
@@ -88,24 +80,12 @@ p, .list-group-item, h5
   p
     @include couleursBkg($couleurBkg: "beige")
 
-#liste
-  h3, h2
-    @include couleursTexte($couleurTexte: "grisfonce")
+
 
 #pageAccueil, 
   p,
     @include couleursTexte($couleurTexte: "grisfonce")
     @include couleursBkg($couleurBkg: "vert")
-.detailsText
-  @include couleursBkg($couleurBkg: "vert")
-
-#details
-  h2, h3
-    @include couleursTexte($couleurTexte: "rose")
- 
-div
-  .card-header
-    @include couleursBkg($couleurBkg: "jaune")
 
 .affichagePhoto
       @include couleursBkg($couleurBkg: "beige")
@@ -119,35 +99,10 @@ div
   min-height: 10vh
   background-attachment: fixed /*Pour l'effet*/
   
-#listCards
-  background-image: url("../img/voiture_vintage.jpg")
-  background-repeat: no-repeat
-  background-size: cover
-  background-color: white
-  min-height: 10vh
-  background-attachment: fixed /*Pour l'effet*/
     
 .accueilImg 
   object-fit: cover
   min-height: 50vh
   
-#myCarousel 
-    height: 600px
-    width: auto
-    overflow: hidden
-    
-.my-div
-  position: relative
-  height: 50vh
-  width: 100%
-  background: black
-  display: flex
-  box-shadow: 0px 10px 40px rgba(0,0,0,.4)
 
-canvas
-  position: absolute
-  border-radius: 6px
-  z-index: 0
 
-.animText
-   z-index: 99

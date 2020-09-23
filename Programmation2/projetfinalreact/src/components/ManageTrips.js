@@ -3,6 +3,7 @@ import Trip from "./Trip";
 import BoutonAjoutTrip from "./BoutonAjoutTrip";
 import { Container, Row, Col } from "react-bootstrap";
 import { API } from "../constantes";
+import "../style/liste.sass"; /*Modifier ce fichier pour le style en sass*/
 
 //Remplacer la class par une fonction
 //L'état(donneesRecues) et la méthode pour changer l'état(setDonneesRecues)

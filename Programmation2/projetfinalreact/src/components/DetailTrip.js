@@ -3,7 +3,7 @@ import { Container, Row, Col, Image, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { API } from "../constantes";
 import hoverEffect from "hover-effect";
-import "../style/test.sass"; /*Modifier ce fichier pour le style en sass*/
+import "../style/details.sass"; /*Modifier ce fichier pour le style en sass*/
 
 //Fonction pour afficher les détails du road trip
 function DetailTrip(props) {
@@ -133,7 +133,9 @@ function DetailTrip(props) {
               </Col>
               <Col className="my-4 haut-25 p-2" md={8}>
                 <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
-                <p>{donneesRecuesDetail.attraits[att].description_attrait}</p>
+                <p className="font-small">
+                  {donneesRecuesDetail.attraits[att].description_attrait}
+                </p>
                 <p>{donneesRecuesDetail.attraits[att].ville}</p>
               </Col>
             </Row>
@@ -141,7 +143,9 @@ function DetailTrip(props) {
             <Row key={"details" + i} className="mt-5 detailsText">
               <Col className="my-4 haut-25 p-2" md={8}>
                 <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
-                <p>{donneesRecuesDetail.attraits[att].description_attrait}</p>
+                <p className="font-small">
+                  {donneesRecuesDetail.attraits[att].description_attrait}
+                </p>
                 <p>{donneesRecuesDetail.attraits[att].ville}</p>
               </Col>
               <Col className="my-4" md={4}>

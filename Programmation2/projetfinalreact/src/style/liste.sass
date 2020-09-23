@@ -1,0 +1,27 @@
+@import "accueil.sass";
+
+#liste
+    @include families($family: "Vidaloka")
+
+.list-group-item
+    @include couleursTexte($couleurTexte: "gris")
+
+h1
+    @include couleursTexte($couleurTexte: "jaune")
+
+#liste
+    h3, h2
+        @include couleursTexte($couleurTexte: "rose")
+
+#liste
+    .card-header
+        @include couleursBkg($couleurBkg: "jaune")
+
+/*****************************/
+#listCards
+  background-image: url("../img/voiture_vintage.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-color: white
+  min-height: 10vh
+  background-attachment: fixed /*Pour l'effet*/

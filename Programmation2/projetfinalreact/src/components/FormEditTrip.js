@@ -3,6 +3,7 @@ import { Form, Button, Image, Container, Row, Col } from "react-bootstrap";
 import { API } from "../constantes";
 import { regions } from "../constantes";
 import { toast } from "react-toastify";
+import "../style/formulaires.sass"; /*Modifier ce fichier pour le style en sass*/
 
 function FormEditTrip(props) {
   const [donneesRecues, setDonneesRecues] = useState({
@@ -49,11 +50,9 @@ function FormEditTrip(props) {
     } catch (error) {
       console.log(error);
     }
-    setRegionState(donneesRecues.region);
   }
 
-  {
-    /*function edithandleSave(event) {
+  function edithandleSave(event) {
     toast.dark("Sauvegarde des données");
     event.preventDefault();
     const nomEditActivity = document.getElementById("editAttraitNom").value;
@@ -63,21 +62,13 @@ function FormEditTrip(props) {
     const descriptionEditActivity = document.getElementById(
       "editAttraitDescription"
     ).value;
-    editTableau(
-      nomEditActivity,
-      endroitEditActivity,
-      imageEditActivity,
-      descriptionEditActivity
-    );
-  }
-  function editTableau(nom, endroit, image, description) {
+
     editInfosAttraits.push({
-      nom_attrait: nom,
-      ville: endroit,
-      image_attrait: image,
-      description_attrait: description,
+      nom_attrait: nomEditActivity,
+      ville: endroitEditActivity,
+      image_attrait: imageEditActivity,
+      description_attrait: descriptionEditActivity,
     });
-  }*/
   }
 
   //editTrip(picture, nametrip, nameactivity, place);
@@ -106,8 +97,6 @@ function FormEditTrip(props) {
         props.history.push(
           "/trip/" + donneesRecues.nom + "?id=" + donneesRecues._id
         ); //Retour à la page d'accueil
-
-        toast.dark(regionState);
 
         return response;
       }
@@ -159,8 +148,13 @@ function FormEditTrip(props) {
   }
 
   return (
-    <>
+    <Container fluid id="formEdit">
       <Container>
+        <Row>
+          <Col>
+            <h1 className="my-5 text-center">Modification du road trip</h1>
+          </Col>
+        </Row>
         <Row>
           <Col>
             <Form>
@@ -211,22 +205,21 @@ function FormEditTrip(props) {
                   ))}
                 </select>
               </Form.Group>
-              {/*
               Édition des attraits
-              {Object.keys(donneesRecues.attraits).map((i) => (
-                <Form.Group>
+              {Object.keys(donneesRecues.attraits).map((key, i) => (
+                <Form.Group key={"edit" + key}>
                   <Form.Control
                     type="text"
-                    defaultvalue={donneesRecues.attraits[i].nom_attrait}
+                    defaultValue={donneesRecues.attraits[i].nom_attrait}
                     id="editAttraitNom"
                   />
                   <Form.Control
                     type="text"
                     placeholder="Entrer une URL valide"
-                    defaultvalue={donneesRecues.attraits[i].image_attrait}
+                    defaultValue={donneesRecues.attraits[i].image_attrait}
                     id="editAttraitImage"
                   />
-                  {donneesRecues.attraits[i].image_attrait !== "" && (
+                  {donneesRecues.attraits[key].image_attrait !== "" && (
                     <Image
                       src={donneesRecues.attraits[i].image_attrait}
                       rounded
@@ -236,20 +229,20 @@ function FormEditTrip(props) {
 
                   <Form.Control
                     type="text"
-                    defaultvalue={donneesRecues.attraits[i].ville}
+                    defaultValue={donneesRecues.attraits[i].ville}
                     id="editAttraitVille"
                   />
 
                   <Form.Control
                     type="text"
-                    defaultvalue={donneesRecues.attraits[i].description_attrait}
+                    defaultValue={donneesRecues.attraits[i].description_attrait}
                     id="editAttraitDescription"
                   />
                   <Button type="submit" onClick={edithandleSave}>
                     Enregistrer la modification attrait touristique
                   </Button>
                 </Form.Group>
-              ))}*/}
+              ))}
               <Button variant="primary" type="submit" onClick={handleEdit}>
                 Enregistrer
               </Button>
@@ -260,7 +253,7 @@ function FormEditTrip(props) {
           </Col>
         </Row>
       </Container>
-    </>
+    </Container>
   );
 }
 FormEditTrip.defaultProps = { history: "/listetrips" };
