@@ -32,7 +32,7 @@ function AffichageImageAttraits() {
       <h2>Tout ce que vous pouvez voir</h2>
       <Row className="affichagePhoto">
         {donneesRecuesImages.map((key) => (
-          <Photo photosAttrait={key.attraits} />
+          <Photo photosAttrait={key.attraits} className="haut-5" />
         ))}
       </Row>
     </Container>

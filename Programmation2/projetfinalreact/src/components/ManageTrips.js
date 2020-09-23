@@ -32,11 +32,10 @@ function ManageTrip() {
   }
 
   return (
-    <Container fluid className="my-5" id="liste">
+    <Container fluid className="my-5 " id="liste">
       <h1 className="font-xlarge text-center">Liste des road trips</h1>
 
-      <Row id="listCards">
-        <Col sm={2}></Col>
+      <Row id="listCards" className="p-5">
         {donneesRecues.map((infos, i) => (
           <Trip
             picture1={infos.image1}

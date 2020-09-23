@@ -24,6 +24,9 @@ h1
     @include families($family: "Vidaloka")
 #liste
   @include families($family: "Vidaloka")
+#details
+  h2, p
+    @include families($family: "Vidaloka")
  
 
 /*Hauteur*/
@@ -33,7 +36,7 @@ $hauteurs: 5, 25, 50, 75
     height: $hauteur + vh
 
 /*Hauteur du texte */
-$fontSizes: ("small": 1, "medium": 1.5, "large": 2, "xlarge": 3)
+$fontSizes: ("small": 1.2, "medium": 1.5, "large": 2, "xlarge": 3)
 @each $grandeur, $valeur in $fontSizes
   .font-#{$grandeur}
     font-size: $valeur + rem
@@ -67,6 +70,7 @@ $fontSizes: ("small": 1, "medium": 1.5, "large": 2, "xlarge": 3)
     background-color: #91C09E
   @else if $couleurBkg == "gris"
     background-color: #746F62
+
 p, .list-group-item, h5
   @include couleursTexte($couleurTexte: "gris")
 
@@ -80,7 +84,6 @@ p, .list-group-item, h5
   h2
     @include couleursTexte($couleurTexte: "grisfonce")
 
-
 #accueil
   p
     @include couleursBkg($couleurBkg: "beige")
@@ -89,11 +92,17 @@ p, .list-group-item, h5
   h3, h2
     @include couleursTexte($couleurTexte: "grisfonce")
 
-#pageAccueil
-  p  
+#pageAccueil, 
+  p,
     @include couleursTexte($couleurTexte: "grisfonce")
     @include couleursBkg($couleurBkg: "vert")
+.detailsText
+  @include couleursBkg($couleurBkg: "vert")
 
+#details
+  h2, h3
+    @include couleursTexte($couleurTexte: "rose")
+ 
 div
   .card-header
     @include couleursBkg($couleurBkg: "jaune")
@@ -122,4 +131,23 @@ div
   object-fit: cover
   min-height: 50vh
   
+#myCarousel 
+    height: 600px
+    width: auto
+    overflow: hidden
+    
+.my-div
+  position: relative
+  height: 50vh
+  width: 100%
+  background: black
+  display: flex
+  box-shadow: 0px 10px 40px rgba(0,0,0,.4)
 
+canvas
+  position: absolute
+  border-radius: 6px
+  z-index: 0
+
+.animText
+   z-index: 99

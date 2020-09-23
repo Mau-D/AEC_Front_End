@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-//import AffichageImageAttraits from "./AffichageImageAttraits";
+import AffichageImageAttraits from "./AffichageImageAttraits";
 import sr from "./ScrollReveal";
 import Fade from "react-reveal/Fade";
 import { API } from "../constantes";
@@ -196,7 +196,9 @@ export class Accueil extends React.Component {
             </Row>
           </Container>
         </Row>
-        <Row>{/*<AffichageImageAttraits />*/}</Row>
+        <Row>
+          <AffichageImageAttraits />
+        </Row>
         <Button variant="primary" type="submit" onClick={this.remove}>
           supprimer
         </Button>
