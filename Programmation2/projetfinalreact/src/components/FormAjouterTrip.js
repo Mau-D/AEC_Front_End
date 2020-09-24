@@ -26,12 +26,10 @@ function FormAjouterTrip(props) {
 
   function handleSave() {
     const nomActivity = document.getElementById("nomAttraitID").value;
-
     const endroitActivity = document.getElementById("endroitAttraitID").value;
     const imageActivity = document.getElementById("imageAttraitID").value;
     const descriptionActivity = document.getElementById("descriptionAttraitID")
       .value;
-
     infosAttraits.push({
       nom_attrait: nomActivity,
       ville: endroitActivity,
@@ -42,8 +40,6 @@ function FormAjouterTrip(props) {
     handleClose();
     console.log(infosAttraits);
   }
-  //const [photo, setPhoto] = useState("");
-
   async function addTrip(photo1, photo2, nomTrip, descriptionTrip) {
     try {
       const response = await fetch(API, {
@@ -67,32 +63,15 @@ function FormAjouterTrip(props) {
         props.history.push("/listetrips"); //Retour à la page d'accueil
         toast("Ajout du nouveau road trip " + nomTrip);
         console.log("modification du trip réussi");
-
         return jsonResponse;
       }
+
       throw new Error("Request failed!");
     } catch (error) {
       console.log(error);
     }
   }
 
-  async function remove() {
-    try {
-      const response = await fetch(API + "5f5cf93fd899cd03e8b4e246", {
-        method: "delete",
-      });
-
-      if (response.ok) {
-        //const jsonResponse = await response.json();
-
-        console.log("SUPPRESSION!");
-        return response;
-      }
-      throw new Error("Request failed!");
-    } catch (error) {
-      console.log(error);
-    }
-  }
   //Retourne le prochain ID pour savoir où ajouter la nouvel objet
 
   function handleAdd(event) {
@@ -102,7 +81,16 @@ function FormAjouterTrip(props) {
     const photo2 = document.getElementById("urlPhoto2").value;
     const descriptionTrip = document.getElementById("descriptionTripID").value;
     const nomTrip = document.getElementById("nomDuTripID").value;
-
+    if (infosAttraits.length < 4) {
+      for (var i = infosAttraits.length; i < 4; i++) {
+        infosAttraits.push({
+          nom_attrait: "",
+          ville: "",
+          image_attrait: "",
+          description_attrait: "",
+        });
+      }
+    }
     /*Fonction pour entrer les infos dans la bd */
     addTrip(photo1, photo2, nomTrip, descriptionTrip);
   }
@@ -111,15 +99,8 @@ function FormAjouterTrip(props) {
     setRegionState(e.target.value);
   }
 
-  //Affiche la photo entrer en input, lorsque la souris sort du champ, grâce au changement d'état
-  //handlePhoto() {
-  // const image = document.getElementById("urlPhoto").value;
-  //  this.setState({ photo: image });
-  // }
-  //Remplacer dans l'événement dans le return avec le hook d'état
-
   return (
-    <Container fluid className="haut-100" id="formAjout">
+    <Container fluid id="formAjout">
       <Container>
         <Row>
           <Col>
@@ -185,38 +166,19 @@ function FormAjouterTrip(props) {
             </Form>
           </Col>
         </Row>
-        <Row>
-          <Col sm={8}>
-            <Button id="ajoutAttrait" type="submit" onClick={handleShow}>
-              <svg
-                class="bi bi-plus"
-                width="1em"
-                height="1em"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"
-                />
-              </svg>
-              Ajouter un nouvel attrait touristique
-            </Button>
-            <Button
-              className="mt-3"
-              variant="primary"
-              type="submit"
-              onClick={remove}
-            >
-              supprimer
-            </Button>
-          </Col>
-        </Row>
+        {infosAttraits.length < 4 ? (
+          <Row>
+            <Col sm={8}>
+              <Button id="ajoutAttrait" type="submit" onClick={handleShow}>
+                Ajouter un nouvel attrait touristique
+              </Button>
+            </Col>
+            <Col sm={8}>
+              <p>Ajout de {infosAttraits.length} attraits</p>
+            </Col>
+          </Row>
+        ) : null}
+
         <Row>
           <Col>
             <Button variant="primary" type="submit" onClick={handleAdd}>
@@ -251,7 +213,6 @@ function FormAjouterTrip(props) {
               Entrer la description de l'attrait touristique
             </Form.Label>
             <Form.Control as="textarea" row="3" type="text" />
-            <Form.Text className="text-muted">ajouter une validation</Form.Text>
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>

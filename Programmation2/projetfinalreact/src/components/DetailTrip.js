@@ -123,39 +123,41 @@ function DetailTrip(props) {
 
         {/* Les attraits*/}
         {Object.keys(donneesRecuesDetail.attraits).map((att, i) =>
-          Number.isInteger([att] / 2) ? (
-            <Row key={"details" + i} className="mt-5 detailsText ">
-              <Col className="my-4" md={4}>
-                <Image
-                  fluid
-                  src={donneesRecuesDetail.attraits[att].image_attrait}
-                />
-              </Col>
-              <Col className="my-4 p-2" md={8}>
-                <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
-                <p className="font-small">
-                  {donneesRecuesDetail.attraits[att].description_attrait}
-                </p>
-                <p>{donneesRecuesDetail.attraits[att].ville}</p>
-              </Col>
-            </Row>
-          ) : (
-            <Row key={"details" + i} className="mt-5 detailsText">
-              <Col className="my-4 p-2" md={8}>
-                <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
-                <p className="font-small">
-                  {donneesRecuesDetail.attraits[att].description_attrait}
-                </p>
-                <p>{donneesRecuesDetail.attraits[att].ville}</p>
-              </Col>
-              <Col className="my-4" md={4}>
-                <Image
-                  fluid
-                  src={donneesRecuesDetail.attraits[att].image_attrait}
-                />
-              </Col>
-            </Row>
-          )
+          donneesRecuesDetail.attraits[att].nom_attrait !== "" ? (
+            Number.isInteger([att] / 2) ? (
+              <Row key={"details" + i} className="mt-5 detailsText ">
+                <Col className="my-4" md={4}>
+                  <Image
+                    fluid
+                    src={donneesRecuesDetail.attraits[att].image_attrait}
+                  />
+                </Col>
+                <Col className="my-4 p-2" md={8}>
+                  <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
+                  <p className="font-small">
+                    {donneesRecuesDetail.attraits[att].description_attrait}
+                  </p>
+                  <p>{donneesRecuesDetail.attraits[att].ville}</p>
+                </Col>
+              </Row>
+            ) : (
+              <Row key={"details" + i} className="mt-5 detailsText">
+                <Col className="my-4 p-2" md={8}>
+                  <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
+                  <p className="font-small">
+                    {donneesRecuesDetail.attraits[att].description_attrait}
+                  </p>
+                  <p>{donneesRecuesDetail.attraits[att].ville}</p>
+                </Col>
+                <Col className="my-4" md={4}>
+                  <Image
+                    fluid
+                    src={donneesRecuesDetail.attraits[att].image_attrait}
+                  />
+                </Col>
+              </Row>
+            )
+          ) : null
         )}
       </Container>
     </>

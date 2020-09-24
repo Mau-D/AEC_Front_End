@@ -69,7 +69,7 @@ export class Accueil extends React.Component {
   };
   async remove() {
     try {
-      const response = await fetch(API + "5f6a638ad899cd03e8b4e68a", {
+      const response = await fetch(API + "5f6cb996d899cd03e8b4e7b9", {
         method: "delete",
       });
 
