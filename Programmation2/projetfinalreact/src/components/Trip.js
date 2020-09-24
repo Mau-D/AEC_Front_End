@@ -25,12 +25,13 @@ function Trip(props) {
             <h3>Attraits touristiques</h3>
           </Card.Header>
           <ListGroup className="list-group-flush">
-            {Object.keys(props.attraitsTrip).map((liste, i) =>
-              props.attraitsTrip[liste].nom_attrait !== "" ? (
-                <ListGroupItem key={"liste" + i}>
-                  {props.attraitsTrip[liste].nom_attrait}
-                </ListGroupItem>
-              ) : null
+            {Object.keys(props.attraitsTrip).map(
+              (liste, i) =>
+                props.attraitsTrip[liste].nom_attrait !== "" && (
+                  <ListGroupItem key={"liste" + i}>
+                    {props.attraitsTrip[liste].nom_attrait}
+                  </ListGroupItem>
+                )
             )}
           </ListGroup>
         </Card>

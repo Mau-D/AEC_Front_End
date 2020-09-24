@@ -4,15 +4,12 @@ import { Accueil } from "./Accueil";
 import AjouterTrip from "./AjouterTrip";
 import ManageTrips from "./ManageTrips";
 import FormEditTrip from "./FormEditTrip";
-import BoutonRetourAccueil from "./BoutonRetourAccueil";
 import BoutonRetourManage from "./BoutonRetourManage";
+import Menu from "./Menu";
 import { useLocation, Route, Switch } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DetailTrip from "./DetailTrip";
-
-import { Titre } from "./Titre";
 
 function App() {
   let location = useLocation(); /*variable de la page où je me trouve */
@@ -34,7 +31,7 @@ function App() {
       {/* Same as */}
       <ToastContainer />
 
-      <Titre />
+      <Menu />
       <Switch>
         {/*Accueil est la première page*/}
         <Route path="/" exact component={Accueil} />
@@ -50,7 +47,6 @@ function App() {
           <Route component={PageNotFoundHook} />*/}
       </Switch>
 
-      {location.pathname !== "/" && <BoutonRetourAccueil />}
       {location.pathname !== "trip/" &&
         location.pathname !== "/" &&
         location.pathname !== "/listetrips" && <BoutonRetourManage />}

@@ -27,11 +27,6 @@ export class Titre extends React.Component {
             La trotteuse
           </h1>
         </Col>
-        <Col sm={2}>
-          <Button variant="secondary" size="sm" block id="boutonInstall">
-            Installer l'application
-          </Button>
-        </Col>
       </Row>
     );
   }

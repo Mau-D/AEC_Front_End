@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function BoutonAjouterTrip() {
   return (
     <Row>
-      <Col className="text-right">
+      <Col className="text-center">
         <Link to="/ajoutertrip" className="btn btn-primary">
           Ajouter un Road Trip
         </Link>

@@ -35,7 +35,7 @@ function ManageTrip() {
   return (
     <Container fluid className="my-5 " id="liste">
       <h1 className="font-xlarge text-center">Liste des road trips</h1>
-
+      <BoutonAjoutTrip />
       <Row id="listCards" className="p-5">
         {donneesRecues.map((infos, i) => (
           <Trip
@@ -48,11 +48,6 @@ function ManageTrip() {
             id={infos._id}
           ></Trip>
         ))}
-      </Row>
-      <Row>
-        <Col>
-          <BoutonAjoutTrip />
-        </Col>
       </Row>
     </Container>
   );

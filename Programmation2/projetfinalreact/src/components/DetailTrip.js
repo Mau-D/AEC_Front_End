@@ -122,9 +122,10 @@ function DetailTrip(props) {
         </Row>
 
         {/* Les attraits*/}
-        {Object.keys(donneesRecuesDetail.attraits).map((att, i) =>
-          donneesRecuesDetail.attraits[att].nom_attrait !== "" ? (
-            Number.isInteger([att] / 2) ? (
+        {Object.keys(donneesRecuesDetail.attraits).map(
+          (att, i) =>
+            donneesRecuesDetail.attraits[att].nom_attrait !== "" &&
+            (Number.isInteger([att] / 2) ? (
               <Row key={"details" + i} className="mt-5 detailsText ">
                 <Col className="my-4" md={4}>
                   <Image
@@ -156,8 +157,7 @@ function DetailTrip(props) {
                   />
                 </Col>
               </Row>
-            )
-          ) : null
+            ))
         )}
       </Container>
     </>
