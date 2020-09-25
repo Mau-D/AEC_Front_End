@@ -62,7 +62,7 @@ function DetailTrip(props) {
     <>
       <Container id="details">
         <Row className="mb-5">
-          <Col sm={12}>
+          <Col xs={12}>
             <div className="my-div">
               <h1 className="animText m-5 font-xlarge">
                 Vous êtes enfin prêt!
@@ -71,37 +71,37 @@ function DetailTrip(props) {
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col xs={12}>
             <div className="my-div h-100"></div>
           </Col>
         </Row>
+
         <Row>
-          <Row>
-            {/* titre*/}
-            <Col className="mb-5" sm={12}>
-              <Link
-                to={
-                  "edit/" +
-                  donneesRecuesDetail.nom +
-                  "?id=" +
-                  donneesRecuesDetail._id
-                }
-              >
-                <h2 className="mt-5 font-xlarge">{donneesRecuesDetail.nom}</h2>
-              </Link>
-            </Col>
-          </Row>
-          <Row>
-            {/* description*/}
-            <Col className="mb-5" sm={12}>
-              <p className="mt-5 font-medium">
-                {donneesRecuesDetail.description}
-              </p>
-              <h4 className="mt-5 font-small">{donneesRecuesDetail.region}</h4>
-            </Col>
-          </Row>
+          {/* titre*/}
+          <Col className="mb-5" xs={12}>
+            <Link
+              to={
+                "edit/" +
+                donneesRecuesDetail.nom +
+                "?id=" +
+                donneesRecuesDetail._id
+              }
+            >
+              <h2 className="mt-5 font-large">{donneesRecuesDetail.nom}</h2>
+            </Link>
+          </Col>
+        </Row>
+        <Row>
+          {/* description*/}
+          <Col className="mb-5" xs={12}>
+            <p className="mt-5 font-small">{donneesRecuesDetail.description}</p>
+            <h4 className="mt-5 font-small">{donneesRecuesDetail.region}</h4>
+          </Col>
+        </Row>
+        <Row>
           {/* Carousselle d'images */}
-          <Col className="h-50 mb-5" sm={12}>
+
+          <Col className="mb-3" xs={12}>
             <Carousel id="myCarousel">
               <Carousel.Item>
                 <Image
@@ -120,20 +120,24 @@ function DetailTrip(props) {
             </Carousel>
           </Col>
         </Row>
-
+        <Row>
+          <Col>
+            <h3 className="mt-3 font-large">Les attraits touritiques</h3>
+          </Col>
+        </Row>
         {/* Les attraits*/}
         {Object.keys(donneesRecuesDetail.attraits).map(
           (att, i) =>
             donneesRecuesDetail.attraits[att].nom_attrait !== "" &&
             (Number.isInteger([att] / 2) ? (
-              <Row key={"details" + i} className="mt-5 detailsText ">
-                <Col className="my-4" md={4}>
+              <Row key={"details" + i} className="mt-2 detailsText ">
+                <Col className="my-4" xs={12} md={4}>
                   <Image
                     fluid
                     src={donneesRecuesDetail.attraits[att].image_attrait}
                   />
                 </Col>
-                <Col className="my-4 p-2" md={8}>
+                <Col className="my-4 p-2" xs={12} md={8}>
                   <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
                   <p className="font-small">
                     {donneesRecuesDetail.attraits[att].description_attrait}
@@ -142,15 +146,15 @@ function DetailTrip(props) {
                 </Col>
               </Row>
             ) : (
-              <Row key={"details" + i} className="mt-5 detailsText">
-                <Col className="my-4 p-2" md={8}>
+              <Row key={"details" + i} className="mt-2 detailsText">
+                <Col className="my-4 p-2" xs={12} md={8}>
                   <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
                   <p className="font-small">
                     {donneesRecuesDetail.attraits[att].description_attrait}
                   </p>
                   <p>{donneesRecuesDetail.attraits[att].ville}</p>
                 </Col>
-                <Col className="my-4" md={4}>
+                <Col className="my-4" xs={12} md={4}>
                   <Image
                     fluid
                     src={donneesRecuesDetail.attraits[att].image_attrait}
