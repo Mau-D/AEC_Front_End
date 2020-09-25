@@ -5,15 +5,18 @@ import { Image, Col } from "react-bootstrap";
 function Photo(props) {
   return (
     <>
-      {Object.keys(props.photosAttrait).map((key, i) => (
-        <Col sm="4" className="my-4">
-          <Image
-            height="100%"
-            width="100%"
-            src={props.photosAttrait[key].image_attrait}
-          />
-        </Col>
-      ))}
+      {Object.keys(props.photosAttrait).map(
+        (key, i) =>
+          props.photosAttrait[key].image_attrait !== "" && (
+            <Col sm="4" className="my-4" key={"image" + i}>
+              <Image
+                height="100%"
+                width="100%"
+                src={props.photosAttrait[key].image_attrait}
+              />
+            </Col>
+          )
+      )}
     </>
   );
 }

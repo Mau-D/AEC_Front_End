@@ -101,7 +101,7 @@ function FormAjouterTrip(props) {
 
   return (
     <Container fluid id="formAjout">
-      <Container>
+      <Container className="pb-5">
         <Row>
           <Col>
             <h1 className="my-5 text-center">
@@ -109,7 +109,7 @@ function FormAjouterTrip(props) {
             </h1>
           </Col>
         </Row>
-        <Row>
+        <Row className="fondGris">
           <Col>
             <Form>
               <Form.Group controlId="urlPhoto1">
@@ -167,7 +167,7 @@ function FormAjouterTrip(props) {
           </Col>
         </Row>
         {infosAttraits.length < 4 ? (
-          <Row>
+          <Row className="fondGris">
             <Col sm={8}>
               <Button id="ajoutAttrait" type="submit" onClick={handleShow}>
                 Ajouter un nouvel attrait touristique
@@ -179,8 +179,8 @@ function FormAjouterTrip(props) {
           </Row>
         ) : null}
 
-        <Row>
-          <Col>
+        <Row className="fondGris">
+          <Col className="pb-5">
             <Button variant="primary" type="submit" onClick={handleAdd}>
               Ajouter un Road trip
             </Button>

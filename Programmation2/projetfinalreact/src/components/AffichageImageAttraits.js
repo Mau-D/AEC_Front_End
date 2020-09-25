@@ -31,8 +31,12 @@ function AffichageImageAttraits() {
     <Container>
       <h2>Tout ce que vous pouvez voir</h2>
       <Row className="affichagePhoto">
-        {donneesRecuesImages.map((key) => (
-          <Photo photosAttrait={key.attraits} className="haut-5" />
+        {donneesRecuesImages.map((key, i) => (
+          <Photo
+            photosAttrait={key.attraits}
+            className="haut-5"
+            key={"attrait" + i}
+          />
         ))}
       </Row>
     </Container>

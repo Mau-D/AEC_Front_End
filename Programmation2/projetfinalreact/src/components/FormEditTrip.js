@@ -221,10 +221,10 @@ function FormEditTrip(props) {
             <h1 className="my-5 text-center">Modification du road trip</h1>
           </Col>
         </Row>
-        <Row>
+        <Row className="fondGris font-medium">
           <Col>
             {/*Édition du road trip*/}
-            <Form>
+            <Form className="py-5">
               <Form.Group controlId="nametripID">
                 <Form.Label>Titre du road trip</Form.Label>
                 <Form.Control type="text" defaultValue={donneesRecues.nom} />
@@ -238,6 +238,7 @@ function FormEditTrip(props) {
                   type="text"
                   placeholder="Entrer une URL valide"
                   defaultValue={donneesRecues.image1}
+                  className="mb-3 d-block"
                 />
                 {photo1 !== "" ? (
                   <Image src={photo1} rounded width="125" />
@@ -254,6 +255,7 @@ function FormEditTrip(props) {
                   type="text"
                   placeholder="Entrer une URL valide"
                   defaultValue={donneesRecues.image2}
+                  className="mb-3 d-block"
                 />
                 {photo2 !== "" ? (
                   <Image src={photo2} rounded width="125" />
@@ -312,6 +314,7 @@ function FormEditTrip(props) {
                   id="imageAttrait1ID"
                   type="text"
                   defaultValue={donneesRecues.attraits[0].image_attrait}
+                  className="mb-3 d-block"
                 />
                 {photoA1 !== "" ? (
                   <Image src={photoA1} rounded width="125" />
@@ -361,6 +364,7 @@ function FormEditTrip(props) {
                   id="imageAttrait2ID"
                   type="text"
                   defaultValue={donneesRecues.attraits[1].image_attrait}
+                  className="mb-3 d-block"
                 />
                 {photoA2 !== "" ? (
                   <Image src={photoA2} rounded width="125" />
@@ -410,6 +414,7 @@ function FormEditTrip(props) {
                   id="imageAttrait3ID"
                   type="text"
                   defaultValue={donneesRecues.attraits[2].image_attrait}
+                  className="mb-3 d-block"
                 />
                 {photoA3 !== "" ? (
                   <Image src={photoA3} rounded width="125" />
@@ -459,6 +464,7 @@ function FormEditTrip(props) {
                   id="imageAttrait4ID"
                   type="text"
                   defaultValue={donneesRecues.attraits[3].image_attrait}
+                  className="mb-3 d-block"
                 />
                 {photoA4 !== "" ? (
                   <Image src={photoA4} rounded width="125" />
@@ -480,10 +486,18 @@ function FormEditTrip(props) {
                 />
               </Form.Group>
             </Form>
-            <Button variant="primary" type="submit" onClick={handleEdit}>
+            <Button
+              className="mb-5"
+              variant="primary"
+              type="submit"
+              onClick={handleEdit}
+            >
               Enregistrer
             </Button>
-            <Button className="btn btn-danger ml-3 mt-3" onClick={removeTrip}>
+            <Button
+              className="btn btn-danger ml-3 mt-3 mb-5"
+              onClick={removeTrip}
+            >
               Supprimer le road trip
             </Button>
           </Col>

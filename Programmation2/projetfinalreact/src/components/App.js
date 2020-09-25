@@ -4,7 +4,7 @@ import { Accueil } from "./Accueil";
 import AjouterTrip from "./AjouterTrip";
 import ManageTrips from "./ManageTrips";
 import FormEditTrip from "./FormEditTrip";
-import BoutonRetourManage from "./BoutonRetourManage";
+//import BoutonRetourManage from "./BoutonRetourManage";
 import Menu from "./Menu";
 import { useLocation, Route, Switch } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -47,9 +47,9 @@ function App() {
           <Route component={PageNotFoundHook} />*/}
       </Switch>
 
-      {location.pathname !== "trip/" &&
+      {/*{location.pathname !== "trip/" &&
         location.pathname !== "/" &&
-        location.pathname !== "/listetrips" && <BoutonRetourManage />}
+        location.pathname !== "/listetrips" && <BoutonRetourManage />}*/}
     </>
   );
 }
