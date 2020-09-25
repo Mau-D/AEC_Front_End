@@ -7,7 +7,7 @@ function Menu() {
   const activeStyle = { color: "pink" };
   return (
     <>
-      <Navbar bg="light" variant="dark" expand="lg">
+      <Navbar expand="lg" class>
         <Navbar.Brand>
           <Titre />
         </Navbar.Brand>

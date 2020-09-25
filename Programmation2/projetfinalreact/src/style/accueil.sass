@@ -30,7 +30,7 @@ $hauteurs: 5, 50, 75, 100
     height: $hauteur + vh
 
 /*Hauteur du texte */
-$fontSizes: ("small": 1.2, "medium": 1.5, "large": 2, "xlarge": 3)
+$fontSizes: ("small": 1.2, "medium": 1.5, "large": 2, "xlarge": 2.6)
 @each $grandeur, $valeur in $fontSizes
   .font-#{$grandeur}
     font-size: $valeur + rem
@@ -90,11 +90,17 @@ p, h5
 .affichagePhoto
       @include couleursBkg($couleurBkg: "beige")
 
+/*alignement verticale*/
+.vertical
+  display: flex
+  align-items: center
+
 /***************************************/
 #pageAccueil 
   background-image: url("../img/road.jpg")
   background-repeat: no-repeat
   background-size: cover
+  background-position: center
   background-color: white
   min-height: 10vh
   background-attachment: fixed /*Pour l'effet*/

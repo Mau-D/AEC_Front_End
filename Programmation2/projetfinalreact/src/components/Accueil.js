@@ -69,7 +69,7 @@ export class Accueil extends React.Component {
   };
   async remove() {
     try {
-      const response = await fetch(API + "5f6cb996d899cd03e8b4e7b9", {
+      const response = await fetch(API + "5f6a9363d899cd03e8b4e6ce", {
         method: "delete",
       });
 
@@ -88,44 +88,56 @@ export class Accueil extends React.Component {
   }
   render() {
     return (
-      <Container fluid className="px-0" id="accueil">
+      <Container fluid className="px-1 mx-0" id="accueil">
         <Row>
           <Container fluid id="pageAccueil" className="border border-dark">
             <Row className="text-center haut-40">
-              <Col md={5} className="px-0 border border-dark">
+              <Col md={4} lg={5} className="px-0 border border-dark">
                 <Fade left>
                   <Image fluid className="accueilImg" src={photos.coccinelle} />
                 </Fade>
               </Col>
-              <Col md={2} className="px-1 my-auto">
-                <p className="font-medium p-2">
+              <Col md={4} lg={2} className="p-1 vertical">
+                <p className="font-medium p-2 my-0">
                   « Rien ne développe l’intelligence comme les voyages. »
                 </p>
               </Col>
-              <Col md={5} className="px-0 border border-dark">
+              <Col md={4} lg={5} className="px-0 border border-dark">
                 <Fade right>
                   <Image
                     fluid
-                    className="accueilImg"
+                    className="accueilImg p-auto"
                     src={photos.camion}
                     rounded
                   />
                 </Fade>
               </Col>
             </Row>
-            <Row className="text-center haut-40">
-              <Col md={3} className="px-1 my-auto">
-                <p className="font-medium p-2">
+            <Row className="text-center haut-40 align-items-center">
+              <Col lg md={{ order: "first" }} md={12} lg={3} className="p-1">
+                <p className="font-medium p-2 m-0">
                   « Lorsqu’elle s’enfuit, la route est la seule amante qui
                   vaille la peine d’être suivie. »
                 </p>
               </Col>
-              <Col md={6} className="px-0 border border-dark">
+              <Col
+                lg={{ order: "first" }}
+                md
+                md={12}
+                lg={6}
+                className="px-0 border border-dark"
+              >
                 <Fade down>
                   <Image fluid className="mh-100" src={photos.pieds} rounded />
                 </Fade>
               </Col>
-              <Col md={3} className="px-0 my-auto">
+              <Col
+                lg={{ order: "last" }}
+                md={{ order: "last" }}
+                md={12}
+                lg={3}
+                className="px-0 my-auto"
+              >
                 <Image fluid className="p-5" src={photos.plaque} rounded />
               </Col>
             </Row>
@@ -133,11 +145,11 @@ export class Accueil extends React.Component {
         </Row>
         <Row className="my-5">
           <Col sm={12}>
-            <h2 className="font-xlarge">Vous êtes prêt à partir...</h2>
+            <h2 className="font-large">Vous êtes prêt à partir...</h2>
           </Col>
         </Row>
         <Row className="haut-25 text-center">
-          <Col sm={6}>
+          <Col xs={12} md={6}>
             <h2 className="font-large my-4" ref="box2">
               Quand?
             </h2>
@@ -148,7 +160,7 @@ export class Accueil extends React.Component {
               Comment?
             </h2>
           </Col>
-          <Col sm={6}>
+          <Col xs={12} md={6}>
             <h2 className="font-large my-4" ref="box3">
               Maintenant
             </h2>
@@ -167,14 +179,14 @@ export class Accueil extends React.Component {
             </Link>
           </Col>
         </Row>
-        <Row className="my-5 haut-50">
+        <Row className="my-5">
           <Container>
             <h2>À propos de nous...</h2>
             <Row>
-              <Col md={{ span: 4, offset: 1 }}>
+              <Col xs={12} md={{ span: 3, offset: 1 }}>
                 <Image fluid src={photos.vintage} rounded />
               </Col>
-              <Col md={{ span: 6, offset: 1 }}>
+              <Col xs={12} md={{ span: 7, offset: 1 }}>
                 <p className="p-4">
                   "Sed ut perspiciatis unde omnis iste natus error sit
                   voluptatem accusantium doloremque laudantium, totam rem

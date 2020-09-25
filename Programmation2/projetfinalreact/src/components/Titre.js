@@ -22,8 +22,8 @@ export class Titre extends React.Component {
   render() {
     return (
       <Row id="titre">
-        <Col sm={8}>
-          <h1 className="rouge" ref="box1">
+        <Col xs={12} sm={8}>
+          <h1 className="font-large" ref="box1">
             La trotteuse
           </h1>
         </Col>

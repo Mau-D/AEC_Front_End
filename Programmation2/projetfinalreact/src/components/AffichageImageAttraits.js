@@ -29,7 +29,7 @@ function AffichageImageAttraits() {
   }
   return (
     <Container>
-      <h2>Tout ce que vous pouvez voir</h2>
+      <h2>Tout ce que vous pouvez voir...</h2>
       <Row className="affichagePhoto">
         {donneesRecuesImages.map((key, i) => (
           <Photo
