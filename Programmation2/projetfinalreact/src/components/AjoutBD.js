@@ -47,6 +47,14 @@ function AjoutBD(props) {
               description_attrait:
                 "Grâce à la passion qu’il met à produire des cidres qui plaisent aux amateurs, le Domaine Pinnacle s’est forgé une réputation internationale, notamment grâce à son cidre de glace qu’on retrouve désormais sur les plus grandes tables. D’ailleurs, au cours des dernières années, l’entreprise a remporté les honneurs lors de nombreuses compétitions, raflant à maintes reprises des médailles d’or.",
             },
+            {
+              nom_attrait: "Centre d'Interprétation des Mammifères Marins",
+              ville: "Tadoussac",
+              image_attrait:
+                "https://www.bonjourquebec.com/fiche/images/800x600/f93813ef-60c9-49ef-ab58-5c95fd756393/centre-dinterpretation-des-mammiferes-marins-cimm-exterieur.jpg",
+              description_attrait:
+                "Rencontrez un cachalot de 13 m et explorez l'univers des baleines. Vidéos inédits, univers sonore, jeux et collection de squelettes, film exclusif dans une salle climatisée : une expérience incontournable et complémentaire aux excursions. Les spécialistes sur place répondront à vos questions et vos achats à la boutique contribueront à aider les baleines. Promenez-vous dans le Jardin de la Grève pour admirer la flore de la Côte-Nord et les sculptures de cinq bélugas grandeur nature. Participez à un cours de chants de baleines et venez rencontrer nos chercheurs!",
+            },
           ],
         }),
       });
@@ -75,6 +83,22 @@ function AjoutBD(props) {
                 "https://images.radio-canada.ca/q_auto,w_1250/v1/ici-info/16x9/minganie-iles-mingan.jpg",
               description_attrait:
                 "Avec ses géants de calcaire qui semblent surgir d’un autre monde, l’archipel de Mingan envoûte dès le premier regard. Alors, qu’à l’horizon, baleines et phoques batifolent dans l’immensité bleue, les quelque mille îles et îlots fascinent tant par leur flore unique qu’à cause des colonies d’oiseaux marins qui les peuplent. Profitez pleinement de ce décor intemporel en prenant part à une expédition en mer ou en explorant les îles!",
+            },
+            {
+              nom_attrait: "Centre d'Interprétation des Mammifères Marins",
+              ville: "Tadoussac",
+              image_attrait:
+                "https://www.bonjourquebec.com/fiche/images/800x600/f93813ef-60c9-49ef-ab58-5c95fd756393/centre-dinterpretation-des-mammiferes-marins-cimm-exterieur.jpg",
+              description_attrait:
+                "Rencontrez un cachalot de 13 m et explorez l'univers des baleines. Vidéos inédits, univers sonore, jeux et collection de squelettes, film exclusif dans une salle climatisée : une expérience incontournable et complémentaire aux excursions. Les spécialistes sur place répondront à vos questions et vos achats à la boutique contribueront à aider les baleines. Promenez-vous dans le Jardin de la Grève pour admirer la flore de la Côte-Nord et les sculptures de cinq bélugas grandeur nature. Participez à un cours de chants de baleines et venez rencontrer nos chercheurs!",
+            },
+            {
+              nom_attrait: "Centre d'Interprétation des Mammifères Marins",
+              ville: "Tadoussac",
+              image_attrait:
+                "https://www.bonjourquebec.com/fiche/images/800x600/f93813ef-60c9-49ef-ab58-5c95fd756393/centre-dinterpretation-des-mammiferes-marins-cimm-exterieur.jpg",
+              description_attrait:
+                "Rencontrez un cachalot de 13 m et explorez l'univers des baleines. Vidéos inédits, univers sonore, jeux et collection de squelettes, film exclusif dans une salle climatisée : une expérience incontournable et complémentaire aux excursions. Les spécialistes sur place répondront à vos questions et vos achats à la boutique contribueront à aider les baleines. Promenez-vous dans le Jardin de la Grève pour admirer la flore de la Côte-Nord et les sculptures de cinq bélugas grandeur nature. Participez à un cours de chants de baleines et venez rencontrer nos chercheurs!",
             },
             {
               nom_attrait: "Centre d'Interprétation des Mammifères Marins",

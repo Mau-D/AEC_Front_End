@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Trip from "./Trip";
 import BoutonAjoutTrip from "./BoutonAjoutTrip";
-import { Container, Row, Col } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  CardColumns,
+  Col,
+  Grid,
+  CardDeck,
+} from "react-bootstrap";
 import { API } from "../constantes";
+
 import "../style/liste.sass"; /*Modifier ce fichier pour le style en sass*/
 
 //Remplacer la class par une fonction
@@ -36,18 +44,21 @@ function ManageTrip() {
     <Container fluid className="my-5 " id="liste">
       <h1 className="font-xlarge text-center">Liste des road trips</h1>
       <BoutonAjoutTrip />
-      <Row id="listCards" className="p-5">
-        {donneesRecues.map((infos, i) => (
-          <Trip
-            picture1={infos.image1}
-            nameTrip={infos.nom}
-            descriptionTrip={infos.description}
-            regionTrip={infos.region}
-            attraitsTrip={infos.attraits}
-            key={"manage" + i}
-            id={infos._id}
-          ></Trip>
-        ))}
+
+      <Row id="listCards" className="p-lg-5 d-flex flex-wrap">
+        <CardColumns className="mx-auto responsiveCard">
+          {donneesRecues.map((infos, i) => (
+            <Trip
+              picture1={infos.image1}
+              nameTrip={infos.nom}
+              descriptionTrip={infos.description}
+              regionTrip={infos.region}
+              attraitsTrip={infos.attraits}
+              key={"manage" + i}
+              id={infos._id}
+            ></Trip>
+          ))}
+        </CardColumns>
       </Row>
     </Container>
   );
