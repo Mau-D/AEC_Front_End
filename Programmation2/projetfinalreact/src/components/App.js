@@ -6,7 +6,7 @@ import ManageTrips from "./ManageTrips";
 import FormEditTrip from "./FormEditTrip";
 //import BoutonRetourManage from "./BoutonRetourManage";
 import Menu from "./Menu";
-import { useLocation, Route, Switch } from "react-router-dom";
+import { useLocation, Route, Switch, Redirect } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DetailTrip from "./DetailTrip";
@@ -46,6 +46,7 @@ function App() {
           <Route path="/trip/:titre" component={DetailTrip} />
           {/*En cas d'erreur dans l'url une page 404 s'affiche
           <Route component={PageNotFoundHook} />*/}
+          <Redirect to="/" />
         </Switch>
       </Container>
       {/*{location.pathname !== "trip/" &&

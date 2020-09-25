@@ -4,10 +4,10 @@ import { NavLink } from "react-router-dom";
 import { Titre } from "./Titre";
 
 function Menu() {
-  const activeStyle = { color: "pink" };
+  const activeStyle = { color: "#F75E50" };
   return (
     <>
-      <Navbar expand="lg" class>
+      <Navbar expand="lg">
         <Navbar.Brand>
           <Titre />
         </Navbar.Brand>
@@ -28,9 +28,7 @@ function Menu() {
             </NavLink>
           </Nav>
           <Nav>
-            <Button variant="secondary" size="sm" id="boutonInstall">
-              Installer l'application
-            </Button>
+            <Button id="boutonInstall">Installer l'application</Button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

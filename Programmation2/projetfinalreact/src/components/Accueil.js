@@ -108,7 +108,6 @@ export class Accueil extends React.Component {
                     fluid
                     className="accueilImg p-auto"
                     src={photos.camion}
-                    rounded
                   />
                 </Fade>
               </Col>
@@ -128,7 +127,7 @@ export class Accueil extends React.Component {
                 className="px-0 border border-dark"
               >
                 <Fade down>
-                  <Image fluid className="mh-100" src={photos.pieds} rounded />
+                  <Image fluid className="mh-100" src={photos.pieds} />
                 </Fade>
               </Col>
               <Col

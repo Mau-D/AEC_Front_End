@@ -217,12 +217,14 @@ function FormEditTrip(props) {
     <Container fluid id="formEdit">
       <Container>
         <Row>
-          <Col>
-            <h1 className="my-5 text-center">Modification du road trip</h1>
+          <Col xs={12}>
+            <h1 className="my-5 text-center font-large">
+              Modifier le road trip
+            </h1>
           </Col>
         </Row>
-        <Row className="fondGris font-medium">
-          <Col>
+        <Row className="fondGris">
+          <Col xs={12}>
             {/*Édition du road trip*/}
             <Form className="py-5">
               <Form.Group controlId="nametripID">
@@ -487,6 +489,7 @@ function FormEditTrip(props) {
               </Form.Group>
             </Form>
             <Button
+              id="enregistrer"
               className="mb-5"
               variant="primary"
               type="submit"
@@ -495,7 +498,7 @@ function FormEditTrip(props) {
               Enregistrer
             </Button>
             <Button
-              className="btn btn-danger ml-3 mt-3 mb-5"
+              className="btn btn-danger ml-3 mb-5 float-right"
               onClick={removeTrip}
             >
               Supprimer le road trip

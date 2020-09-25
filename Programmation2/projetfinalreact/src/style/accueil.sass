@@ -30,7 +30,7 @@ $hauteurs: 5, 50, 75, 100
     max-height: $hauteur + vh
 
 /*Hauteur du texte */
-$fontSizes: ("xsmall": 0.8,"small": 1, "medium": 1.5, "large": 2, "xlarge": 2.6)
+$fontSizes: ("small": 1.2, "medium": 1.7, "large": 2, "xlarge": 2.6)
 @each $grandeur, $valeur in $fontSizes
   .font-#{$grandeur}
     font-size: $valeur + rem
@@ -64,6 +64,9 @@ $fontSizes: ("xsmall": 0.8,"small": 1, "medium": 1.5, "large": 2, "xlarge": 2.6)
     background-color: #91C09E
   @else if $couleurBkg == "gris"
     background-color: #746F62
+.navbar-nav
+  a
+    @include couleursTexte($couleurTexte: "vert")
 
 p, h5
   @include couleursTexte($couleurTexte: "gris")
@@ -88,12 +91,44 @@ p, h5
     @include couleursBkg($couleurBkg: "vert")
 
 .affichagePhoto
-      @include couleursBkg($couleurBkg: "beige")
+  @include couleursBkg($couleurBkg: "beige")
+
+.modal-header, .modal-footer
+  @include couleursBkg($couleurBkg: "vert")
+
 
 /*alignement verticale*/
 .vertical
   display: flex
   align-items: center
+
+/*boutons*/
+@mixin boutons($bouton: "")
+  border-radius: 20px
+  padding: 15px 50px
+  @if $bouton == "app"
+    border: 2px solid #F75E50
+    @include couleursTexte($couleurTexte: "rose")
+    @include couleursBkg($couleurBkg: "vert")
+
+  @if $bouton == "ajout"
+    border: 2px solid #3F362A
+    @include couleursTexte($couleurTexte: "grisfonce")
+    @include couleursBkg($couleurBkg: "jaune")
+    
+  @if $bouton == "attrait"
+    border: 2px solid #3F362A
+    @include couleursTexte($couleurTexte: "grisfonce")
+    @include couleursBkg($couleurBkg: "jaune")
+
+#boutonInstall, #save, #enregistrer
+  @include boutons($bouton: "app")
+#ajoutRT, #ajoutTrip
+  @include boutons($bouton: "ajout")
+#ajoutAttrait
+  @include boutons($bouton: "app")
+  width: 80%
+
 
 /***************************************/
 #pageAccueil 

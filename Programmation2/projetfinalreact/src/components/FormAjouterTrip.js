@@ -21,6 +21,8 @@ function FormAjouterTrip(props) {
   const [regionState, setRegionState] = useState("Bas Saint-Laurent"); //Ajouter la première valeur si le onChange n'est pas pris en charge
   const [photo, setPhoto] = useState("");
   const [photo2, setPhoto2] = useState("");
+  const [photoAttrait, setPhotoAttrait] = useState("");
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -103,17 +105,15 @@ function FormAjouterTrip(props) {
     <Container fluid id="formAjout">
       <Container className="pb-5">
         <Row>
-          <Col>
-            <h1 className="my-5 text-center">
-              Enregistrement d'un nouveau road trip
-            </h1>
+          <Col sm={12}>
+            <h1 className="my-5 text-center font-large">Nouveau road trip</h1>
           </Col>
         </Row>
         <Row className="fondGris">
-          <Col>
+          <Col xs={12}>
             <Form>
               <Form.Group controlId="urlPhoto1">
-                <Form.Label className="font-medium mt-3">
+                <Form.Label className="font-small mt-3">
                   Entrer l'url de la première image
                 </Form.Label>
                 <Form.Control
@@ -126,7 +126,7 @@ function FormAjouterTrip(props) {
                 {photo !== "" && <Image src={photo} rounded width="125" />}
               </Form.Group>
               <Form.Group controlId="urlPhoto2">
-                <Form.Label className="font-medium mt-3">
+                <Form.Label className="font-small mt-3">
                   Entrer l'url de la deuxième image
                 </Form.Label>
                 <Form.Control
@@ -140,21 +140,19 @@ function FormAjouterTrip(props) {
               </Form.Group>
 
               <Form.Group controlId="nomDuTripID">
-                <Form.Label className="font-medium mt-3">
+                <Form.Label className="font-small mt-3">
                   Entrer le nom du trip
                 </Form.Label>
                 <Form.Control type="text" />
               </Form.Group>
               <Form.Group controlId="descriptionTripID">
-                <Form.Label className="font-medium mt-3">
+                <Form.Label className="font-small mt-3">
                   Description du road trip
                 </Form.Label>
                 <Form.Control as="textarea" rows="8" />
               </Form.Group>
               <Form.Group>
-                <Form.Label className="font-medium mt-3 mr-2">
-                  Région
-                </Form.Label>
+                <Form.Label className="font-small mt-3 mr-2">Région</Form.Label>
                 <select onChange={handleChange}>
                   {regions.map((key) => (
                     <option key={"region" + key} value={key}>
@@ -167,29 +165,34 @@ function FormAjouterTrip(props) {
           </Col>
         </Row>
         {infosAttraits.length < 4 ? (
-          <Row className="fondGris">
-            <Col sm={8}>
+          <Row className="fondGris text-center">
+            <Col xs={12}>
               <Button id="ajoutAttrait" type="submit" onClick={handleShow}>
-                Ajouter un nouvel attrait touristique
+                Ajouter un attrait touristique
               </Button>
             </Col>
-            <Col sm={8}>
-              <p>Ajout de {infosAttraits.length} attraits</p>
+            <Col xs={{ span: 8, offset: 2 }}>
+              <p>Ajout de {infosAttraits.length} attraits (maximum: 4)</p>
             </Col>
           </Row>
         ) : null}
 
         <Row className="fondGris">
-          <Col className="pb-5">
-            <Button variant="primary" type="submit" onClick={handleAdd}>
-              Ajouter un Road trip
+          <Col xs={12} className="pb-5">
+            <Button
+              id="ajoutTrip"
+              variant="primary"
+              type="submit"
+              onClick={handleAdd}
+            >
+              Enregistrer le Road trip
             </Button>
           </Col>
         </Row>
       </Container>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Attrait #{infosAttraits.length + 1}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form.Group controlId="nomAttraitID">
@@ -205,8 +208,16 @@ function FormAjouterTrip(props) {
             <Form.Label>
               Entrer l'url d'une image de l'attrait touristique
             </Form.Label>
-            <Form.Control type="text" />
-            <Form.Text className="text-muted">ajouter une validation</Form.Text>
+            <Form.Control
+              type="text"
+              onBlur={() =>
+                setPhotoAttrait(document.getElementById("imageAttraitID").value)
+              }
+              type="text"
+            />
+            {photoAttrait !== "" && (
+              <Image src={photoAttrait} rounded width="125" />
+            )}
           </Form.Group>
           <Form.Group controlId="descriptionAttraitID">
             <Form.Label>
@@ -217,10 +228,10 @@ function FormAjouterTrip(props) {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Annuler
           </Button>
-          <Button variant="primary" onClick={handleSave}>
-            Save Changes
+          <Button id="save" variant="primary" onClick={handleSave}>
+            Sauvegarder
           </Button>
         </Modal.Footer>
       </Modal>

@@ -11,7 +11,7 @@ import {
 } from "react-bootstrap";
 import { API } from "../constantes";
 
-import "../style/liste.sass"; /*Modifier ce fichier pour le style en sass*/
+import "../style/liste.sass";
 
 //Remplacer la class par une fonction
 //L'état(donneesRecues) et la méthode pour changer l'état(setDonneesRecues)
