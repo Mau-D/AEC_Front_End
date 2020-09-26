@@ -29,7 +29,7 @@ function Menu() {
             </NavLink>
           </Nav>
           <Nav>
-            <Button id="boutonInstall" block hidden>
+            <Button id="boutonInstall" block>
               Installer l'application
             </Button>
           </Nav>
