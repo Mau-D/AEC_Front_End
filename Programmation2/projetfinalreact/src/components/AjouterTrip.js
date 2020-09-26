@@ -4,7 +4,7 @@ import FormAjouterTrip from "./FormAjouterTrip";
 function AjouterTrip(props) {
   return (
     <>
-      <FormAjouterTrip history={props.history} />
+      <FormAjouterTrip historyAjout={props.history} />
     </>
   );
 }

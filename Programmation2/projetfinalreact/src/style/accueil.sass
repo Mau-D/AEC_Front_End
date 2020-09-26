@@ -24,10 +24,7 @@ h1
     @include families($family: "Vidaloka")
 
 /*Hauteur*/
-$hauteurs: 5, 50, 75, 100
-@each $hauteur in $hauteurs
-  .haut-#{$hauteur}
-    max-height: $hauteur + vh
+
 
 /*Hauteur du texte */
 $fontSizes: ("small": 1.2, "medium": 1.7, "large": 2, "xlarge": 2.6)
@@ -42,8 +39,6 @@ $fontSizes: ("small": 1.2, "medium": 1.7, "large": 2, "xlarge": 2.6)
     color: #F75E50
   @else if $couleurTexte == "jaune"
     color: #EAC761
-  @else if $couleurTexte == "beige"
-    color: #E8DF9C
   @else if $couleurTexte == "vert"
     color: #91C09E
   @else if $couleurTexte == "gris"
@@ -54,16 +49,13 @@ $fontSizes: ("small": 1.2, "medium": 1.7, "large": 2, "xlarge": 2.6)
 
 /*Couleur de background*/
 @mixin couleursBkg($couleurBkg: "")
-  @if $couleurBkg == "rose"
-    background-color: #F75E50
-  @else if $couleurBkg == "jaune"
+  @if $couleurBkg == "jaune"
     background-color: #EAC761
   @else if $couleurBkg == "beige"
     background-color: #E8DF9C
   @else if $couleurBkg == "vert"
     background-color: #91C09E
-  @else if $couleurBkg == "gris"
-    background-color: #746F62
+ 
 .navbar-nav
   a
     @include couleursTexte($couleurTexte: "vert")
@@ -92,9 +84,10 @@ p, h5
 
 .affichagePhoto
   @include couleursBkg($couleurBkg: "beige")
+  
 
-.modal-header, .modal-footer
-  @include couleursBkg($couleurBkg: "vert")
+.haut-5
+    height: 5vh
 
 
 /*alignement verticale*/
@@ -120,6 +113,7 @@ p, h5
 
 .bigGray
   @include ombres($ombre: "bigGray")
+
 .smallGray
   @include ombres($ombre: "smallGray")
 
@@ -143,18 +137,19 @@ p, h5
     @include couleursTexte($couleurTexte: "grisfonce")
     @include couleursBkg($couleurBkg: "jaune")
 
-#boutonInstall, #save, #enregistrer
+#boutonInstall
   @include boutons($bouton: "app")
   @include ombres($ombre: "bordRose")
-#ajoutRT, #ajoutTrip
-  @include boutons($bouton: "ajout")
-#ajoutAttrait
-  @include boutons($bouton: "app")
-  width: 80%
 
+.accueilImg 
+  object-fit: cover
+  min-height: 50vh
+  
 
 
 /***************************************/
+
+
 #pageAccueil 
   background-image: url("../img/road.jpg")
   background-repeat: no-repeat
@@ -165,9 +160,6 @@ p, h5
   background-attachment: fixed /*Pour l'effet*/
   
     
-.accueilImg 
-  object-fit: cover
-  min-height: 50vh
-  
+
 
 

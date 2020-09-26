@@ -10,6 +10,7 @@ function Photo(props) {
           props.photosAttrait[key].image_attrait !== "" && (
             <Col xs={4} className="my-4" key={"image" + i}>
               <Image
+                className="smallGray"
                 height="100%"
                 width="100%"
                 src={props.photosAttrait[key].image_attrait}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Row,
   Col,
@@ -62,7 +63,7 @@ function FormAjouterTrip(props) {
       });
       if (response.ok) {
         const jsonResponse = await response.json();
-        props.history.push("/listetrips"); //Retour à la page d'accueil
+        props.historyAjout.push("/listetrips"); //Retour à la page d'accueil
         toast("Ajout du nouveau road trip " + nomTrip);
         console.log("modification du trip réussi");
         return jsonResponse;
@@ -178,7 +179,7 @@ function FormAjouterTrip(props) {
         ) : null}
 
         <Row className="fondGris">
-          <Col xs={12} className="pb-5">
+          <Col xs={12} md={6} className="pb-5">
             <Button
               id="ajoutTrip"
               variant="primary"
@@ -187,6 +188,11 @@ function FormAjouterTrip(props) {
             >
               Enregistrer le Road trip
             </Button>
+          </Col>
+          <Col xs={12} md={6} className="text-right">
+            <Link to="/listetrips" className="btn btn-primary " id="retourRT">
+              Retour à la liste des road trips
+            </Link>
           </Col>
         </Row>
       </Container>
@@ -238,5 +244,5 @@ function FormAjouterTrip(props) {
     </Container>
   );
 }
-FormAjouterTrip.defaultProps = { history: "/listetrips" };
+FormAjouterTrip.defaultProps = { historyAjout: "/listetrips" };
 export default FormAjouterTrip;

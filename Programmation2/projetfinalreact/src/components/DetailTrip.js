@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { API } from "../constantes";
 import hoverEffect from "hover-effect";
 import "../style/details.sass"; /*Modifier ce fichier pour le style en sass*/
+import BoutonRetourManage from "./BoutonRetourManage";
 
 //Fonction pour afficher les détails du road trip
 function DetailTrip(props) {
@@ -19,7 +20,7 @@ function DetailTrip(props) {
     image2: "",
     image3: "",
     description: "",
-    attraits: ["", ""],
+    attraits: [],
   });
 
   const tripDetailID = props.location.search.substring(
@@ -163,6 +164,8 @@ function DetailTrip(props) {
               </Row>
             ))
         )}
+
+        <BoutonRetourManage />
       </Container>
     </>
   );

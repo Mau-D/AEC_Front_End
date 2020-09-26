@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar, Button, Container, Row, Col } from "react-bootstrap";
+import { Nav, Navbar, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { Titre } from "./Titre";
 

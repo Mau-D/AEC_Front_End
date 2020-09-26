@@ -6,15 +6,13 @@ import ManageTrips from "./ManageTrips";
 import FormEditTrip from "./FormEditTrip";
 //import BoutonRetourManage from "./BoutonRetourManage";
 import Menu from "./Menu";
-import { useLocation, Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DetailTrip from "./DetailTrip";
 import { Container } from "react-bootstrap";
 
 function App() {
-  let location = useLocation(); /*variable de la page où je me trouve */
-
   return (
     <>
       {/*Pour enlever le bouton ajouter dans la page d'ajout, la modification et la page not found*/}

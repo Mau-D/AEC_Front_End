@@ -91,7 +91,7 @@ export class Accueil extends React.Component {
       <Container fluid className="px-1 mx-0" id="accueil">
         <Row>
           <Container fluid id="pageAccueil" className="bigGray">
-            <Row className="text-center haut-40">
+            <Row className="text-center">
               <Col md={4} lg={5} className="px-0 bigGray">
                 <Fade left>
                   <Image fluid className="accueilImg" src={photos.coccinelle} />
@@ -112,18 +112,20 @@ export class Accueil extends React.Component {
                 </Fade>
               </Col>
             </Row>
-            <Row className="text-center haut-40 align-items-center">
-              <Col lg md={{ order: "first" }} md={12} lg={3} className="p-1">
+            <Row className="text-center align-items-center">
+              <Col
+                md={{ span: 12, order: 2 }}
+                lg={{ span: 3, order: 1 }}
+                className="p-1"
+              >
                 <p className="font-medium p-2 m-0 bordRose">
                   « Lorsqu’elle s’enfuit, la route est la seule amante qui
                   vaille la peine d’être suivie. »
                 </p>
               </Col>
               <Col
-                lg={{ order: "first" }}
-                md
-                md={12}
-                lg={6}
+                md={{ span: 12, order: 1 }}
+                lg={{ span: 6, order: 2 }}
                 className="px-0 bigGray"
               >
                 <Fade down>
@@ -131,10 +133,8 @@ export class Accueil extends React.Component {
                 </Fade>
               </Col>
               <Col
-                lg={{ order: "last" }}
-                md={{ order: "last" }}
-                md={12}
-                lg={3}
+                lg={{ span: 3, order: 3 }}
+                md={{ span: 12, order: 3 }}
                 className="px-0 my-auto"
               >
                 <Image fluid className="p-5" src={photos.plaque} rounded />
@@ -182,26 +182,26 @@ export class Accueil extends React.Component {
           <Container>
             <h2>À propos de nous...</h2>
             <Row>
-              <Col xs={12} md={{ span: 3, offset: 1 }}>
+              <Col xs={12} md={{ span: 3, offset: 1 }} className="my-1">
                 <Image fluid src={photos.vintage} rounded />
               </Col>
-              <Col xs={12} md={{ span: 7, offset: 1 }}>
+              <Col xs={12} md={{ span: 7, offset: 1 }} className="my-1">
                 <p className="p-4 bigGray">
-                  "Sed ut perspiciatis unde omnis iste natus error sit
-                  voluptatem accusantium doloremque laudantium, totam rem
-                  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                  architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                  voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                  sed quia consequuntur magni dolores eos qui ratione voluptatem
-                  sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-                  quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                  numquam eius modi tempora incidunt ut labore et dolore magnam
-                  aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
-                  nostrum exercitationem ullam corporis suscipit laboriosam,
-                  nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
-                  iure reprehenderit qui in ea voluptate velit esse quam nihil
-                  molestiae consequatur, vel illum qui dolorem eum fugiat quo
-                  voluptas nulla pariatur?"
+                  "Ah le Québec… c’est indubitablement l’un des terrains de
+                  voyage privilégiés des Français, à la recherche de nature, de
+                  grands espaces et d’aventures… mais sans le souci de la
+                  barrière de la langue! Lors de mon expatriation de quelques
+                  mois au Québec, je m’étais contentée de visiter les
+                  essentiels, par manque de temps, d’argent et de connaissances.
+                  Québec, Montréal, Tadoussac, Ottawa, Toronto et les Chutes du
+                  Niagara. Classique, classique… Lors de ce voyage de cinq
+                  semaines au Canada, je voulais vraiment profiter de la nature
+                  québécoise, m’immerger dans un Québec différent et surtout
+                  découvrir un Canada et un Québec hors des sentiers battus,
+                  tout du moins pour les Français. Après mes passages au
+                  Saguenay Lac-Saint-Jean et aux Iles de la Madeleine, faire le
+                  Tour de la Gaspésie en road-trip était pour moi comme une
+                  évidence."
                 </p>
               </Col>
             </Row>

@@ -51,7 +51,7 @@ function FormEditTrip(props) {
   //Ajouter la première valeur si le onChange n'est pas pris en charge
   const [regionState, setRegionState] = useState("");
   const [editInfosAttraits, setEditInfosAttraits] = useState([]);
-  const [donneesAttraits, setDonneesAttraits] = useState({});
+  //const [donneesAttraits, setDonneesAttraits] = useState({});
   const tripID = props.location.search.substring(
     4,
     props.location.search.length
@@ -76,7 +76,7 @@ function FormEditTrip(props) {
       const reponseDeApi = await response.json();
       setDonneesRecues(reponseDeApi);
       setRegionState(reponseDeApi.region);
-      setDonneesAttraits(reponseDeApi.attraits);
+      //setDonneesAttraits(reponseDeApi.attraits);
       if (!response.ok) {
         throw Error(response.statusText);
       }

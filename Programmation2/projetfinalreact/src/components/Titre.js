@@ -23,7 +23,7 @@ export class Titre extends React.Component {
     return (
       <Row id="titre">
         <Col xs={12} sm={8}>
-          <Image fluid src={clock} className="haut-5" />
+          <Image src={clock} className="haut-5" />
           <h1 className="font-large" ref="box1">
             La trotteuse
           </h1>
