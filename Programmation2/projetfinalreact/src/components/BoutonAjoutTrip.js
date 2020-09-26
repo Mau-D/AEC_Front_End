@@ -9,7 +9,7 @@ function BoutonAjouterTrip() {
       <Col className="text-center mb-3">
         <Link
           to="/ajoutertrip"
-          className="btn btn-primary font-large"
+          className="btn btn-primary font-medium"
           id="ajoutRT"
         >
           Ajouter un Road Trip

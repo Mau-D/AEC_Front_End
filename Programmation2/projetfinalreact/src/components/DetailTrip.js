@@ -101,15 +101,15 @@ function DetailTrip(props) {
           {/* Carousselle d'images */}
 
           <Col className="mb-3" xs={12}>
-            <Carousel id="myCarousel" className="bigGray">
-              <Carousel.Item>
+            <Carousel id="myCarousel">
+              <Carousel.Item className="bigGray">
                 <Image
                   className="d-block w-100"
                   src={donneesRecuesDetail.image1}
                   alt="First slide"
                 />
               </Carousel.Item>
-              <Carousel.Item>
+              <Carousel.Item className="bigGray">
                 <Image
                   className="d-block w-100"
                   src={donneesRecuesDetail.image2}
