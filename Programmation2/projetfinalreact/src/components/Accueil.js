@@ -5,7 +5,7 @@ import AffichageImageAttraits from "./AffichageImageAttraits";
 import sr from "./ScrollReveal";
 import Fade from "react-reveal/Fade";
 //import { API } from "../constantes";
-import AjoutBD from "./AjoutBD";
+//import AjoutBD from "./AjoutBD";
 
 import "../style/accueil.sass"; /*Modifier ce fichier pour le style en sass*/
 
@@ -70,7 +70,7 @@ export class Accueil extends React.Component {
   /*function pour supprimer avec l'id de la bd
   async remove() {
     try {
-      const response = await fetch(API + "5f6e3bb3d899cd03e8b4e830", {
+      const response = await fetch(API + "5f6f64b3d899cd03e8b4e8b6", {
         method: "delete",
       });
 
@@ -214,8 +214,8 @@ export class Accueil extends React.Component {
         {/*Bouton pour la suppression par l'id
         <Button variant="primary" type="submit" onClick={this.remove}>
           supprimer
-        </Button> */}
-        <AjoutBD />
+        </Button>
+        <AjoutBD />*/}
       </Container>
     );
   }
