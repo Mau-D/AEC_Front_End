@@ -29,9 +29,7 @@ function Menu() {
             </NavLink>
           </Nav>
           <Nav>
-            <Button id="boutonInstall" block>
-              Installer l'application
-            </Button>
+            <Button id="boutonInstall">Installer l'application</Button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
