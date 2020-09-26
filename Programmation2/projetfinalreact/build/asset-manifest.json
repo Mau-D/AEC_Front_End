@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.23dedb88.chunk.css",
-    "main.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.6c3bc48b.chunk.js",
-    "main.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.6c3bc48b.chunk.js.map",
+    "main.css": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.fd34a166.chunk.css",
+    "main.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.5d8c9a0c.chunk.js",
+    "main.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.5d8c9a0c.chunk.js.map",
     "runtime-main.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/runtime-main.f79fa73b.js",
     "runtime-main.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/runtime-main.f79fa73b.js.map",
     "static/css/2.19e10c4f.chunk.css": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/2.19e10c4f.chunk.css",
-    "static/js/2.f9f2beef.chunk.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.f9f2beef.chunk.js",
-    "static/js/2.f9f2beef.chunk.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.f9f2beef.chunk.js.map",
+    "static/js/2.6ecbc7da.chunk.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.6ecbc7da.chunk.js",
+    "static/js/2.6ecbc7da.chunk.js.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.6ecbc7da.chunk.js.map",
     "index.html": "/AEC_Front_End/Programmation2/projetfinalreact/build/index.html",
-    "precache-manifest.2bde08b3573bc010c9461b01535878f7.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/precache-manifest.2bde08b3573bc010c9461b01535878f7.js",
+    "precache-manifest.ed563bd797ba7c8a1f77829513cb2663.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/precache-manifest.ed563bd797ba7c8a1f77829513cb2663.js",
     "service-worker.js": "/AEC_Front_End/Programmation2/projetfinalreact/build/service-worker.js",
     "static/css/2.19e10c4f.chunk.css.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/2.19e10c4f.chunk.css.map",
-    "static/css/main.23dedb88.chunk.css.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.23dedb88.chunk.css.map",
-    "static/js/2.f9f2beef.chunk.js.LICENSE.txt": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.f9f2beef.chunk.js.LICENSE.txt",
+    "static/css/main.fd34a166.chunk.css.map": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.fd34a166.chunk.css.map",
+    "static/js/2.6ecbc7da.chunk.js.LICENSE.txt": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.6ecbc7da.chunk.js.LICENSE.txt",
     "static/media/10.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/10.ac0814dc.jpg",
     "static/media/details.sass": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/road.2ad24a36.jpg",
     "static/media/camion.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/camion.30586d39.jpg",
+    "static/media/clock.png": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/clock.bdceb3d3.png",
     "static/media/coccinelle.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/coccinelle.5ad5bf0a.jpg",
     "static/media/formulaires.sass": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/fond_vintage.e5f38ae6.jpg",
     "static/media/pieds.jpg": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/pieds.c7fe3a9d.jpg",
@@ -29,8 +30,8 @@
   "entrypoints": [
     "static/js/runtime-main.f79fa73b.js",
     "static/css/2.19e10c4f.chunk.css",
-    "static/js/2.f9f2beef.chunk.js",
-    "static/css/main.23dedb88.chunk.css",
-    "static/js/main.6c3bc48b.chunk.js"
+    "static/js/2.6ecbc7da.chunk.js",
+    "static/css/main.fd34a166.chunk.css",
+    "static/js/main.5d8c9a0c.chunk.js"
   ]
 }

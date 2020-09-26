@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Form, Button, Image, Container, Row, Col } from "react-bootstrap";
+import {
+  Form,
+  Button,
+  Image,
+  Container,
+  Row,
+  Col,
+  Accordion,
+  Card,
+} from "react-bootstrap";
 import { API } from "../constantes";
 import { regions } from "../constantes";
 import { toast } from "react-toastify";
@@ -274,11 +283,7 @@ function FormEditTrip(props) {
                 />
               </Form.Group>
               <Form.Group>
-                <select
-                  id="selectRegion"
-                  onChange={handleChange}
-                  defaultValue={donneesRecues.region}
-                >
+                <select id="selectRegion" onChange={handleChange}>
                   <option selected>{donneesRecues.region}</option>
                   {regions.map((key) => (
                     <option key={key} value={key}>
@@ -288,209 +293,266 @@ function FormEditTrip(props) {
                 </select>
               </Form.Group>
             </Form>
-            {/*Édition de l'attrait 1*/}
-            <Form>
-              <h2>Attrait #1</h2>
-              <Form.Group>
-                <Form.Label>Nom de l'attrait 1</Form.Label>
-                <Form.Control
-                  id="nomAttrait1ID"
-                  type="text"
-                  defaultValue={donneesRecues.attraits[0].nom_attrait}
-                />
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Endroit de l'attrait attrait 1</Form.Label>
-                <Form.Control
-                  id="villeAttrait1ID"
-                  type="text"
-                  defaultValue={donneesRecues.attraits[0].ville}
-                />
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Image de l'attrait 1</Form.Label>
-                <Form.Control
-                  onBlur={() =>
-                    setPhotoA1(document.getElementById("imageAttrait1ID").value)
-                  }
-                  id="imageAttrait1ID"
-                  type="text"
-                  defaultValue={donneesRecues.attraits[0].image_attrait}
-                  className="mb-3 d-block"
-                />
-                {photoA1 !== "" ? (
-                  <Image src={photoA1} rounded width="125" />
-                ) : (
-                  <Image
-                    src={donneesRecues.attraits[0].image_attrait}
-                    rounded
-                    width="125"
-                  />
-                )}
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Description de l'attrait 1</Form.Label>
-                <Form.Control
-                  id="descriptionAttrait1ID"
-                  as="textarea"
-                  rows="8"
-                  defaultValue={donneesRecues.attraits[0].description_attrait}
-                />
-              </Form.Group>
-            </Form>
-            {/*Édition de l'attrait 1*/}
-            <Form>
-              <h2>Attrait #2</h2>
-              <Form.Group>
-                <Form.Label>Nom de l'attrait 2</Form.Label>
-                <Form.Control
-                  id="nomAttrait2ID"
-                  type="text"
-                  defaultValue={donneesRecues.attraits[1].nom_attrait}
-                />
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Endroit de l'attrait attrait 2</Form.Label>
-                <Form.Control
-                  id="villeAttrait2ID"
-                  type="text"
-                  defaultValue={donneesRecues.attraits[1].ville}
-                />
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Image de l'attrait 2</Form.Label>
-                <Form.Control
-                  onBlur={() =>
-                    setPhotoA2(document.getElementById("imageAttrait2ID").value)
-                  }
-                  id="imageAttrait2ID"
-                  type="text"
-                  defaultValue={donneesRecues.attraits[1].image_attrait}
-                  className="mb-3 d-block"
-                />
-                {photoA2 !== "" ? (
-                  <Image src={photoA2} rounded width="125" />
-                ) : (
-                  <Image
-                    src={donneesRecues.attraits[1].image_attrait}
-                    rounded
-                    width="125"
-                  />
-                )}
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Description de l'attrait 2</Form.Label>
-                <Form.Control
-                  id="descriptionAttrait2ID"
-                  as="textarea"
-                  rows="8"
-                  defaultValue={donneesRecues.attraits[1].description_attrait}
-                />
-              </Form.Group>
-            </Form>
-            {/*Édition de l'attrait 3*/}
-            <Form>
-              <h2>Attrait #3</h2>
-              <Form.Group>
-                <Form.Label>Nom de l'attrait 3</Form.Label>
-                <Form.Control
-                  id="nomAttrait3ID"
-                  type="text"
-                  defaultValue={donneesRecues.attraits[2].nom_attrait}
-                />
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Endroit de l'attrait attrait 3</Form.Label>
-                <Form.Control
-                  id="villeAttrait3ID"
-                  type="text"
-                  defaultValue={donneesRecues.attraits[2].ville}
-                />
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Image de l'attrait 3</Form.Label>
-                <Form.Control
-                  onBlur={() =>
-                    setPhotoA3(document.getElementById("imageAttrait3ID").value)
-                  }
-                  id="imageAttrait3ID"
-                  type="text"
-                  defaultValue={donneesRecues.attraits[2].image_attrait}
-                  className="mb-3 d-block"
-                />
-                {photoA3 !== "" ? (
-                  <Image src={photoA3} rounded width="125" />
-                ) : (
-                  <Image
-                    src={donneesRecues.attraits[2].image_attrait}
-                    rounded
-                    width="125"
-                  />
-                )}
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Description de l'attrait 3</Form.Label>
-                <Form.Control
-                  id="descriptionAttrait3ID"
-                  as="textarea"
-                  rows="8"
-                  defaultValue={donneesRecues.attraits[2].description_attrait}
-                />
-              </Form.Group>
-            </Form>
-            {/*Édition de l'attrait 4*/}
-            <Form>
-              <h2>Attrait #4</h2>
-              <Form.Group>
-                <Form.Label>Nom de l'attrait 4</Form.Label>
-                <Form.Control
-                  id="nomAttrait4ID"
-                  type="text"
-                  defaultValue={donneesRecues.attraits[3].nom_attrait}
-                />
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Endroit de l'attrait attrait 4</Form.Label>
-                <Form.Control
-                  id="villeAttrait4ID"
-                  type="text"
-                  defaultValue={donneesRecues.attraits[3].ville}
-                />
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Image de l'attrait 4</Form.Label>
-                <Form.Control
-                  onBlur={() =>
-                    setPhotoA4(document.getElementById("imageAttrait4ID").value)
-                  }
-                  id="imageAttrait4ID"
-                  type="text"
-                  defaultValue={donneesRecues.attraits[3].image_attrait}
-                  className="mb-3 d-block"
-                />
-                {photoA4 !== "" ? (
-                  <Image src={photoA4} rounded width="125" />
-                ) : (
-                  <Image
-                    src={donneesRecues.attraits[3].image_attrait}
-                    rounded
-                    width="125"
-                  />
-                )}
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Description de l'attrait 4</Form.Label>
-                <Form.Control
-                  id="descriptionAttrait4ID"
-                  as="textarea"
-                  rows="8"
-                  defaultValue={donneesRecues.attraits[3].description_attrait}
-                />
-              </Form.Group>
-            </Form>
+            {/*Accordion*/}
+            <Accordion>
+              <Card className="w-100">
+                <Card.Header className="text-center">
+                  <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                    <h2>Attrait #1</h2>
+                  </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="0">
+                  <Card.Body>
+                    <Form>
+                      <Form.Group>
+                        <Form.Label>Nom de l'attrait 1</Form.Label>
+                        <Form.Control
+                          id="nomAttrait1ID"
+                          type="text"
+                          defaultValue={donneesRecues.attraits[0].nom_attrait}
+                        />
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Endroit de l'attrait attrait 1</Form.Label>
+                        <Form.Control
+                          id="villeAttrait1ID"
+                          type="text"
+                          defaultValue={donneesRecues.attraits[0].ville}
+                        />
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Image de l'attrait 1</Form.Label>
+                        <Form.Control
+                          onBlur={() =>
+                            setPhotoA1(
+                              document.getElementById("imageAttrait1ID").value
+                            )
+                          }
+                          id="imageAttrait1ID"
+                          type="text"
+                          defaultValue={donneesRecues.attraits[0].image_attrait}
+                          className="mb-3 d-block"
+                        />
+                        {photoA1 !== "" ? (
+                          <Image src={photoA1} rounded width="125" />
+                        ) : (
+                          <Image
+                            src={donneesRecues.attraits[0].image_attrait}
+                            rounded
+                            width="125"
+                          />
+                        )}
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Description de l'attrait 1</Form.Label>
+                        <Form.Control
+                          id="descriptionAttrait1ID"
+                          as="textarea"
+                          rows="8"
+                          defaultValue={
+                            donneesRecues.attraits[0].description_attrait
+                          }
+                        />
+                      </Form.Group>
+                    </Form>
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+              {/*attrait 2 */}
+              <Card className="w-100">
+                <Card.Header className="text-center">
+                  <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                    <h2>Attrait #2</h2>
+                  </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="1">
+                  <Card.Body>
+                    <Form>
+                      <Form.Group>
+                        <Form.Label>Nom de l'attrait 2</Form.Label>
+                        <Form.Control
+                          id="nomAttrait2ID"
+                          type="text"
+                          defaultValue={donneesRecues.attraits[1].nom_attrait}
+                        />
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Endroit de l'attrait attrait 2</Form.Label>
+                        <Form.Control
+                          id="villeAttrait2ID"
+                          type="text"
+                          defaultValue={donneesRecues.attraits[1].ville}
+                        />
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Image de l'attrait 2</Form.Label>
+                        <Form.Control
+                          onBlur={() =>
+                            setPhotoA2(
+                              document.getElementById("imageAttrait2ID").value
+                            )
+                          }
+                          id="imageAttrait2ID"
+                          type="text"
+                          defaultValue={donneesRecues.attraits[1].image_attrait}
+                          className="mb-3 d-block"
+                        />
+                        {photoA2 !== "" ? (
+                          <Image src={photoA2} rounded width="125" />
+                        ) : (
+                          <Image
+                            src={donneesRecues.attraits[1].image_attrait}
+                            rounded
+                            width="125"
+                          />
+                        )}
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Description de l'attrait 2</Form.Label>
+                        <Form.Control
+                          id="descriptionAttrait2ID"
+                          as="textarea"
+                          rows="8"
+                          defaultValue={
+                            donneesRecues.attraits[1].description_attrait
+                          }
+                        />
+                      </Form.Group>
+                    </Form>
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+              <Card className="w-100">
+                <Card.Header className="text-center">
+                  <Accordion.Toggle as={Button} variant="link" eventKey="2">
+                    <h2>Attrait #3</h2>
+                  </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="2">
+                  <Card.Body>
+                    <Form>
+                      <Form.Group>
+                        <Form.Label>Nom de l'attrait 3</Form.Label>
+                        <Form.Control
+                          id="nomAttrait3ID"
+                          type="text"
+                          defaultValue={donneesRecues.attraits[2].nom_attrait}
+                        />
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Endroit de l'attrait attrait 3</Form.Label>
+                        <Form.Control
+                          id="villeAttrait3ID"
+                          type="text"
+                          defaultValue={donneesRecues.attraits[2].ville}
+                        />
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Image de l'attrait 3</Form.Label>
+                        <Form.Control
+                          onBlur={() =>
+                            setPhotoA3(
+                              document.getElementById("imageAttrait3ID").value
+                            )
+                          }
+                          id="imageAttrait3ID"
+                          type="text"
+                          defaultValue={donneesRecues.attraits[2].image_attrait}
+                          className="mb-3 d-block"
+                        />
+                        {photoA3 !== "" ? (
+                          <Image src={photoA3} rounded width="125" />
+                        ) : (
+                          <Image
+                            src={donneesRecues.attraits[2].image_attrait}
+                            rounded
+                            width="125"
+                          />
+                        )}
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Description de l'attrait 3</Form.Label>
+                        <Form.Control
+                          id="descriptionAttrait3ID"
+                          as="textarea"
+                          rows="8"
+                          defaultValue={
+                            donneesRecues.attraits[2].description_attrait
+                          }
+                        />
+                      </Form.Group>
+                    </Form>
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+              <Card className="w-100">
+                <Card.Header className="text-center">
+                  <Accordion.Toggle as={Button} variant="link" eventKey="3">
+                    <h2>Attrait #4</h2>
+                  </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="3">
+                  <Card.Body>
+                    <Form>
+                      <Form.Group>
+                        <Form.Label>Nom de l'attrait 4</Form.Label>
+                        <Form.Control
+                          id="nomAttrait4ID"
+                          type="text"
+                          defaultValue={donneesRecues.attraits[3].nom_attrait}
+                        />
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Endroit de l'attrait attrait 4</Form.Label>
+                        <Form.Control
+                          id="villeAttrait4ID"
+                          type="text"
+                          defaultValue={donneesRecues.attraits[3].ville}
+                        />
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Image de l'attrait 4</Form.Label>
+                        <Form.Control
+                          onBlur={() =>
+                            setPhotoA4(
+                              document.getElementById("imageAttrait4ID").value
+                            )
+                          }
+                          id="imageAttrait4ID"
+                          type="text"
+                          defaultValue={donneesRecues.attraits[3].image_attrait}
+                          className="mb-3 d-block"
+                        />
+                        {photoA4 !== "" ? (
+                          <Image src={photoA4} rounded width="125" />
+                        ) : (
+                          <Image
+                            src={donneesRecues.attraits[3].image_attrait}
+                            rounded
+                            width="125"
+                          />
+                        )}
+                      </Form.Group>
+                      <Form.Group>
+                        <Form.Label>Description de l'attrait 4</Form.Label>
+                        <Form.Control
+                          id="descriptionAttrait4ID"
+                          as="textarea"
+                          rows="8"
+                          defaultValue={
+                            donneesRecues.attraits[3].description_attrait
+                          }
+                        />
+                      </Form.Group>
+                    </Form>
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+            </Accordion>
+
             <Button
               id="enregistrer"
-              className="mb-5"
+              className="my-5"
               variant="primary"
               type="submit"
               onClick={handleEdit}
@@ -498,7 +560,7 @@ function FormEditTrip(props) {
               Enregistrer
             </Button>
             <Button
-              className="btn btn-danger ml-3 mb-5 float-right"
+              className="btn btn-danger ml-3 my-5 float-right"
               onClick={removeTrip}
             >
               Supprimer le road trip

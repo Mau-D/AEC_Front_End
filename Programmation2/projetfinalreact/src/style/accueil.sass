@@ -102,6 +102,28 @@ p, h5
   display: flex
   align-items: center
 
+/*ombre et bordure*/
+@mixin ombres($ombre: "")
+  
+  @if $ombre == "bordRose"
+    border: 2px solid #F75E50
+    box-shadow: 0 4px 8px 0 rgba(247, 94, 80, 0.3), 0 6px 20px 0 rgba(247, 94, 80, 0.2);
+  @if $ombre == "bigGray"
+    border: 10px solid #3F362A
+  @if $ombre == "smallGray"
+    border: 2px solid #3F362A
+    box-shadow: 0 4px 8px 0 rgba(63, 54, 42, 0.3), 0 6px 20px 0 rgba(63, 54, 42, 0.3);
+
+     
+.bordRose
+  @include ombres($ombre: "bordRose")
+
+.bigGray
+  @include ombres($ombre: "bigGray")
+.smallGray
+  @include ombres($ombre: "smallGray")
+
+
 /*boutons*/
 @mixin boutons($bouton: "")
   border-radius: 20px
@@ -112,22 +134,24 @@ p, h5
     @include couleursBkg($couleurBkg: "vert")
 
   @if $bouton == "ajout"
-    border: 2px solid #3F362A
+    @include ombres($ombre: "smallGray")
     @include couleursTexte($couleurTexte: "grisfonce")
     @include couleursBkg($couleurBkg: "jaune")
     
   @if $bouton == "attrait"
-    border: 2px solid #3F362A
+    @include ombres($ombre: "smallGray")
     @include couleursTexte($couleurTexte: "grisfonce")
     @include couleursBkg($couleurBkg: "jaune")
 
 #boutonInstall, #save, #enregistrer
   @include boutons($bouton: "app")
+  @include ombres($ombre: "bordRose")
 #ajoutRT, #ajoutTrip
   @include boutons($bouton: "ajout")
 #ajoutAttrait
   @include boutons($bouton: "app")
   width: 80%
+
 
 
 /***************************************/

@@ -112,7 +112,7 @@ function AjoutBD(props) {
         }),
       });
       if (response.ok) {
-        const jsonResponse = await response.json();
+        const jsonResponse = await response2.json();
 
         return jsonResponse;
       }

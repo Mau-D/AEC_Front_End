@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Photo from "./Photo";
 import { API } from "../constantes";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 //Component pour Le cas d'une page introuvable
 function AffichageImageAttraits() {
@@ -30,7 +30,7 @@ function AffichageImageAttraits() {
   return (
     <Container>
       <h2>Tout ce que vous pouvez voir...</h2>
-      <Row className="affichagePhoto">
+      <Row className="affichagePhoto bigGray">
         {donneesRecuesImages.map((key, i) => (
           <Photo
             photosAttrait={key.attraits}

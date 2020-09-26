@@ -102,7 +102,7 @@ function DetailTrip(props) {
           {/* Carousselle d'images */}
 
           <Col className="mb-3" xs={12}>
-            <Carousel id="myCarousel">
+            <Carousel id="myCarousel" className="bigGray">
               <Carousel.Item>
                 <Image
                   className="d-block w-100"
@@ -130,7 +130,7 @@ function DetailTrip(props) {
           (att, i) =>
             donneesRecuesDetail.attraits[att].nom_attrait !== "" &&
             (Number.isInteger([att] / 2) ? (
-              <Row key={"details" + i} className="mt-2 detailsText ">
+              <Row key={"details" + i} className="mt-2 detailsText smallGray">
                 <Col className="my-4" xs={12} md={4}>
                   <Image
                     fluid
@@ -146,7 +146,7 @@ function DetailTrip(props) {
                 </Col>
               </Row>
             ) : (
-              <Row key={"details" + i} className="mt-2 detailsText">
+              <Row key={"details" + i} className="mt-2 detailsText smallGray">
                 <Col className="my-4 p-2" xs={12} md={8}>
                   <h3>{donneesRecuesDetail.attraits[att].nom_attrait}</h3>
                   <p className="font-small">

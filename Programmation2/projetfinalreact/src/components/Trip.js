@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Col,
-  Card,
-  ListGroup,
-  ListGroupItem,
-  CardColumns,
-} from "react-bootstrap";
+import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 
@@ -13,7 +7,7 @@ import Fade from "react-reveal/Fade";
 function Trip(props) {
   return (
     <Fade left cascade>
-      <Card>
+      <Card className="bordRose">
         <Card.Img variant="top" src={props.picture1} />
         <Card.Body>
           <Card.Title>

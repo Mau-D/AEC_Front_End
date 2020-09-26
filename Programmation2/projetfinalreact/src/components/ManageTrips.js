@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Trip from "./Trip";
 import BoutonAjoutTrip from "./BoutonAjoutTrip";
-import {
-  Container,
-  Row,
-  CardColumns,
-  Col,
-  Grid,
-  CardDeck,
-} from "react-bootstrap";
+import { Container, Row, CardColumns } from "react-bootstrap";
 import { API } from "../constantes";
 
 import "../style/liste.sass";
@@ -41,11 +34,11 @@ function ManageTrip() {
   }
 
   return (
-    <Container fluid className="my-5 " id="liste">
+    <Container fluid className="my-5" id="liste">
       <h1 className="font-xlarge text-center">Liste des road trips</h1>
       <BoutonAjoutTrip />
 
-      <Row id="listCards" className="p-lg-5 d-flex flex-wrap">
+      <Row id="listCards" className="p-lg-5 d-flex flex-wrap  bigGray">
         <CardColumns className="mx-auto responsiveCard">
           {donneesRecues.map((infos, i) => (
             <Trip

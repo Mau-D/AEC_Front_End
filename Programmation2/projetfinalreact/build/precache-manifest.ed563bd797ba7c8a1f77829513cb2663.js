@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df794e519aa93e17a1054010a0b8ff5a",
+    "revision": "4a0a21e055985cc7659aae5111d502ac",
     "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/index.html"
   },
   {
-    "revision": "daa2b983aa2d3526e26c",
+    "revision": "f0a888661550e086f0a6",
     "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/2.19e10c4f.chunk.css"
   },
   {
-    "revision": "be3309198dbafa64d759",
-    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.23dedb88.chunk.css"
+    "revision": "4d0c1e9f1fae5ab27acd",
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/css/main.fd34a166.chunk.css"
   },
   {
-    "revision": "daa2b983aa2d3526e26c",
-    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.f9f2beef.chunk.js"
+    "revision": "f0a888661550e086f0a6",
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.6ecbc7da.chunk.js"
   },
   {
     "revision": "309f35e5bb9ecd34ffd18a43e1ac3ef6",
-    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.f9f2beef.chunk.js.LICENSE.txt"
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/2.6ecbc7da.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "be3309198dbafa64d759",
-    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.6c3bc48b.chunk.js"
+    "revision": "4d0c1e9f1fae5ab27acd",
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/js/main.5d8c9a0c.chunk.js"
   },
   {
     "revision": "6375e56d7e5428dba3fc",
@@ -42,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "30586d3924d98bbdc67b7e7bb1cc23eb",
     "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/camion.30586d39.jpg"
+  },
+  {
+    "revision": "bdceb3d35079014b9abf63e66a3a21eb",
+    "url": "/AEC_Front_End/Programmation2/projetfinalreact/build/static/media/clock.bdceb3d3.png"
   },
   {
     "revision": "5ad5bf0a19828b8733bdf1ffbd17120f",

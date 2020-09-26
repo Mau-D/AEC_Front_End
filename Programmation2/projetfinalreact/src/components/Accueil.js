@@ -90,19 +90,19 @@ export class Accueil extends React.Component {
     return (
       <Container fluid className="px-1 mx-0" id="accueil">
         <Row>
-          <Container fluid id="pageAccueil" className="border border-dark">
+          <Container fluid id="pageAccueil" className="bigGray">
             <Row className="text-center haut-40">
-              <Col md={4} lg={5} className="px-0 border border-dark">
+              <Col md={4} lg={5} className="px-0 bigGray">
                 <Fade left>
                   <Image fluid className="accueilImg" src={photos.coccinelle} />
                 </Fade>
               </Col>
               <Col md={4} lg={2} className="p-1 vertical">
-                <p className="font-medium p-2 my-0">
+                <p className="font-medium p-2 my-0 bordRose">
                   « Rien ne développe l’intelligence comme les voyages. »
                 </p>
               </Col>
-              <Col md={4} lg={5} className="px-0 border border-dark">
+              <Col md={4} lg={5} className="px-0 bigGray">
                 <Fade right>
                   <Image
                     fluid
@@ -114,7 +114,7 @@ export class Accueil extends React.Component {
             </Row>
             <Row className="text-center haut-40 align-items-center">
               <Col lg md={{ order: "first" }} md={12} lg={3} className="p-1">
-                <p className="font-medium p-2 m-0">
+                <p className="font-medium p-2 m-0 bordRose">
                   « Lorsqu’elle s’enfuit, la route est la seule amante qui
                   vaille la peine d’être suivie. »
                 </p>
@@ -124,7 +124,7 @@ export class Accueil extends React.Component {
                 md
                 md={12}
                 lg={6}
-                className="px-0 border border-dark"
+                className="px-0 bigGray"
               >
                 <Fade down>
                   <Image fluid className="mh-100" src={photos.pieds} />
@@ -186,7 +186,7 @@ export class Accueil extends React.Component {
                 <Image fluid src={photos.vintage} rounded />
               </Col>
               <Col xs={12} md={{ span: 7, offset: 1 }}>
-                <p className="p-4">
+                <p className="p-4 bigGray">
                   "Sed ut perspiciatis unde omnis iste natus error sit
                   voluptatem accusantium doloremque laudantium, totam rem
                   aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
