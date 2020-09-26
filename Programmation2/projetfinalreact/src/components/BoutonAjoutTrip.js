@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-//Component pour Le cas d'une page introuvable
+//Fonction pour le bouton d'ajout d'un road trip
 function BoutonAjouterTrip() {
   return (
     <Row>

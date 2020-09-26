@@ -3,12 +3,9 @@ import Trip from "./Trip";
 import BoutonAjoutTrip from "./BoutonAjoutTrip";
 import { Container, Row, CardColumns } from "react-bootstrap";
 import { API } from "../constantes";
-
 import "../style/liste.sass";
 
-//Remplacer la class par une fonction
-//L'état(donneesRecues) et la méthode pour changer l'état(setDonneesRecues)
-//La valeur par défaut est dans le useState(un tableau vide)
+//Afficher les road trips
 function ManageTrip() {
   const [donneesRecues, setDonneesRecues] = useState([]);
 
@@ -16,8 +13,9 @@ function ManageTrip() {
   useEffect(() => {
     //appelle la fonction getMotorcycles
     getTrip();
-  }, []); //Si on enlève le second paramètre, on obtient une boucle infinie, indique quelle constante à vérifier
-  //Changer le componentDidMount par une fonction
+  }, []);
+
+  /*Va chercher les infos dans la bd */
   async function getTrip() {
     try {
       const response = await fetch(API);

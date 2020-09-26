@@ -4,11 +4,8 @@ import { Col } from "react-bootstrap";
 
 import "../style/test.sass"; /*Modifier ce fichier pour le style en sass*/
 
-//Component pour la page d'accueil avec un lien vers manageTrips
+//Component pour l'animation de l'en-tête des détails des road Trips
 export class AnimationHover extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   //Pour le titre,
   componentDidMount = () => {
     /*animation */
@@ -28,14 +25,7 @@ export class AnimationHover extends React.Component {
     return (
       <Col className="fond vh-100" sm={12}>
         <div className="ticket">
-          <div className="overlay"></div>
-          <div className="flight-info">
-            <h3>Vous êtes enfin prêt!</h3>
-            <div className="flight-locations">
-              <h1>LAX</h1>
-              <h1>JFK</h1>
-            </div>
-          </div>
+          <h3>Vous êtes enfin prêt!</h3>
         </div>
       </Col>
     );

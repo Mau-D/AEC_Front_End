@@ -3,6 +3,7 @@ import { Nav, Navbar, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { Titre } from "./Titre";
 
+/*Barre de navigation */
 function Menu() {
   const activeStyle = { color: "#F75E50" };
   return (

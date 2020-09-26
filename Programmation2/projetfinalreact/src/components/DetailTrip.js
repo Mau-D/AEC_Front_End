@@ -8,6 +8,7 @@ import BoutonRetourManage from "./BoutonRetourManage";
 
 //Fonction pour afficher les détails du road trip
 function DetailTrip(props) {
+  /*Importation des images pour l'animation de l'entête, 2 images affichées et une pour la transition */
   const rue = require("../img/rue.jpg");
   const voiture = require("../img/voiture_orange.jpg");
   const transition = require("../img/10.jpg");
@@ -32,10 +33,7 @@ function DetailTrip(props) {
     getInfosDetail();
   }, []);
 
-  //On récupère la moto pour ensuite remplir le formulaire.Pour le hook renommer getMoto
   async function getInfosDetail() {
-    //On récupère le dernier caractère de l'url substring(4,fin du string)
-    //*********Le state motoID, n'est pas déclaré au début de la fonction ou classe************ */
     try {
       const response = await fetch(API + tripDetailID);
       const reponseDeApi = await response.json();

@@ -3,9 +3,9 @@ import { Row, Col, Image } from "react-bootstrap";
 import sr from "./ScrollReveal";
 import "../style/accueil.sass"; /*Modifier ce fichier pour le style en sass*/
 const clock = require("../img/clock.png");
-//Component pour la page d'accueil avec un lien vers manageTrips
+//Logo et titre avec animation
 export class Titre extends React.Component {
-  //Pour le titre,
+  //Pour l'animation du titre,
   componentDidMount = () => {
     const config = {
       origin: "right",

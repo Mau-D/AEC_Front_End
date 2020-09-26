@@ -2,10 +2,9 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { API } from "../constantes";
 
-//Formulaire d'ajout pour une nouveau road trip
-function AjoutBD(props) {
-  //const [photo, setPhoto] = useState("");
-
+//Formulaire d'ajout pour implenter la bd
+function AjoutBD() {
+  /*Envoi les infos dans la bd */
   async function addBD() {
     try {
       const response = await fetch(API, {

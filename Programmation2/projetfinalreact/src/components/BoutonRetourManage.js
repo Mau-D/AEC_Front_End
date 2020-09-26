@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../style/details.sass"; /*Modifier ce fichier pour le style en sass*/
 
-//Component pour Le cas d'une page introuvable
+//Fonction pour le retour à la liste des road trips
 function BoutonRetourManage() {
   return (
     <Row>

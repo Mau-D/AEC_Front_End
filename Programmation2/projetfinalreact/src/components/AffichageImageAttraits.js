@@ -3,16 +3,15 @@ import Photo from "./Photo";
 import { API } from "../constantes";
 import { Container, Row } from "react-bootstrap";
 
-//Component pour Le cas d'une page introuvable
+//Funcition pour afficher les images des attraits dans la page d'accueil
 function AffichageImageAttraits() {
   const [donneesRecuesImages, setDonneesRecuesImages] = useState([]);
 
-  //Pour le CRUD utiliser useEffect
   useEffect(() => {
-    //appelle la fonction getMotorcycles
     getImages();
-  }, []); //Si on enlève le second paramètre, on obtient une boucle infinie, indique quelle constante à vérifier
-  //Changer le componentDidMount par une fonction
+  }, []);
+
+  /*Va chercher les images dans la bd */
   async function getImages() {
     try {
       const response = await fetch(API);
@@ -42,5 +41,5 @@ function AffichageImageAttraits() {
     </Container>
   );
 }
-//Il faut exporter les fonctions
+
 export default AffichageImageAttraits;

@@ -1,3 +1,20 @@
+/*Background en parallaxe*/
+
+@mixin parallaxeBkg
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  background-color: white
+  min-height: 10vh
+  background-attachment: fixed 
+
+#pageAccueil 
+  background-image: url("../img/road.jpg")
+  @include parallaxeBkg
+  
+
+ 
+
 /*Font face*/
 
 @font-face
@@ -150,14 +167,7 @@ p, h5
 /***************************************/
 
 
-#pageAccueil 
-  background-image: url("../img/road.jpg")
-  background-repeat: no-repeat
-  background-size: cover
-  background-position: center
-  background-color: white
-  min-height: 10vh
-  background-attachment: fixed /*Pour l'effet*/
+
   
     
 

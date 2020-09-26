@@ -12,7 +12,8 @@ import {
 import { API } from "../constantes";
 import { regions } from "../constantes";
 import { toast } from "react-toastify";
-import "../style/formulaires.sass"; /*Modifier ce fichier pour le style en sass*/
+import "../style/formulaires.sass";
+/*Fonstion pour l'édition du road trip */
 function FormEditTrip(props) {
   const [donneesRecues, setDonneesRecues] = useState({
     nom: "",
@@ -48,10 +49,8 @@ function FormEditTrip(props) {
     ],
   });
 
-  //Ajouter la première valeur si le onChange n'est pas pris en charge
   const [regionState, setRegionState] = useState("");
   const [editInfosAttraits, setEditInfosAttraits] = useState([]);
-  //const [donneesAttraits, setDonneesAttraits] = useState({});
   const tripID = props.location.search.substring(
     4,
     props.location.search.length
@@ -67,7 +66,7 @@ function FormEditTrip(props) {
   useEffect(() => {
     getTripInfos();
   }, []);
-  //On récupère la moto pour ensuite remplir le formulaire.Pour le hook renommer getMoto
+  //On récupère les infos de la bd
   async function getTripInfos() {
     //On récupère le dernier caractère de l'url substring(4,fin du string)
     //*********Le state motoID, n'est pas déclaré au début de la fonction ou classe************ */
@@ -84,7 +83,7 @@ function FormEditTrip(props) {
       console.log(error);
     }
   }
-
+  /*Ajout des attraits dans un tableau */
   function edithandleSave() {
     toast.dark("Sauvegarde des données");
     //Ajout de l'attrait 1 dans un tableau
@@ -145,7 +144,6 @@ function FormEditTrip(props) {
     });
   }
 
-  //editTrip(picture, nametrip, nameactivity, place);
   //Méthode pour modifier la bd avec le formulaire, semblable à l'ajout ajouter l'id à l'URL et changer la methode pour PUT
   async function editTrip(picture1, picture2, nametrip, descriptiontrip) {
     try {
@@ -179,7 +177,7 @@ function FormEditTrip(props) {
       console.log(error);
     }
   }
-
+  /* Va chercher les infos des inputs du formulaire */
   function handleEdit(event) {
     event.preventDefault(); /*Empêche de rafraîchir la page, car le bouton est de type submit*/
     edithandleSave();
@@ -192,7 +190,7 @@ function FormEditTrip(props) {
     /*Fonction pour entrer les infos dans la bd */
     editTrip(picture1, picture2, nametrip, descriptiontrip);
   }
-  //Méthode pour supprimer le road trip  de la bd, method delete
+  //Fonction pour supprimer le road trip  de la bd, method delete
   async function removeTrip() {
     try {
       const response = await fetch(API + tripID, {
@@ -216,7 +214,7 @@ function FormEditTrip(props) {
       console.log(error);
     }
   }
-  //Méthode sur événement onBlur, si une image est changé elle s'affichera lorsque l'on sort du champ
+  //Fonction pour le changement de région
   function handleChange(e) {
     console.log("Region Selected!!");
     setRegionState(e.target.value);
@@ -284,6 +282,7 @@ function FormEditTrip(props) {
               </Form.Group>
               <Form.Group>
                 <select id="selectRegion" onChange={handleChange}>
+                  {/*pour garder la valeur dans le formulaire */}
                   <option selected>{donneesRecues.region}</option>
                   {regions.map((key) => (
                     <option key={key} value={key}>
@@ -293,7 +292,7 @@ function FormEditTrip(props) {
                 </select>
               </Form.Group>
             </Form>
-            {/*Accordion*/}
+            {/*Accordion pour les 4 attraits*/}
             <Accordion>
               <Card className="w-100">
                 <Card.Header className="text-center">

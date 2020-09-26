@@ -1,15 +1,15 @@
 import React from "react";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import AffichageImageAttraits from "./AffichageImageAttraits";
 import sr from "./ScrollReveal";
 import Fade from "react-reveal/Fade";
-import { API } from "../constantes";
+//import { API } from "../constantes";
 import AjoutBD from "./AjoutBD";
 
 import "../style/accueil.sass"; /*Modifier ce fichier pour le style en sass*/
 
-//Variables pour téléverser les photos des régions
+//Variables pour téléverser les photos du portfolio
 const photos = {
   coccinelle: require("../img/coccinelle.jpg"),
   pieds: require("../img/pieds.jpg"),
@@ -20,11 +20,11 @@ const photos = {
 
 //Component pour la page d'accueil avec un lien vers manageTrips
 export class Accueil extends React.Component {
-  constructor(props) {
-    super(props);
-    this.remove = this.remove.bind(this);
-  }
-  //Pour le titre,
+  //constructor(props) {
+  //super(props);
+  //this.remove = this.remove.bind(this);
+  // }
+  //Animation pour le titre,
   componentDidMount = () => {
     const config = {
       origin: "right",
@@ -67,6 +67,7 @@ export class Accueil extends React.Component {
     sr.reveal(this.refs.box6, config6);
     sr.reveal(this.refs.box7, config7);
   };
+  /*function pour supprimer avec l'id de la bd
   async remove() {
     try {
       const response = await fetch(API + "5f6e3bb3d899cd03e8b4e830", {
@@ -85,7 +86,7 @@ export class Accueil extends React.Component {
     } catch (error) {
       console.log(error);
     }
-  }
+  }*/
   render() {
     return (
       <Container fluid className="px-1 mx-0" id="accueil">
@@ -210,10 +211,11 @@ export class Accueil extends React.Component {
         <Row>
           <AffichageImageAttraits />
         </Row>
+        {/*Bouton pour la suppression par l'id
         <Button variant="primary" type="submit" onClick={this.remove}>
           supprimer
-        </Button>
-        <AjoutBD></AjoutBD>
+        </Button> */}
+        <AjoutBD />
       </Container>
     );
   }

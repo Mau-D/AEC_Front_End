@@ -9,11 +9,11 @@ import {
   Modal,
   Image,
 } from "react-bootstrap";
-//importer la constante de l'API
+
 import { API } from "../constantes";
 import { regions } from "../constantes";
 import { toast } from "react-toastify";
-import "../style/formulaires.sass"; /*Modifier ce fichier pour le style en sass*/
+import "../style/formulaires.sass";
 
 //Formulaire d'ajout pour une nouveau road trip
 function FormAjouterTrip(props) {
@@ -23,10 +23,11 @@ function FormAjouterTrip(props) {
   const [photo, setPhoto] = useState("");
   const [photo2, setPhoto2] = useState("");
   const [photoAttrait, setPhotoAttrait] = useState("");
-
+  /*Constante pour le modal */
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  /*Fonction pour enregistrer les infos des attraits dans un tableau*/
   function handleSave() {
     const nomActivity = document.getElementById("nomAttraitID").value;
     const endroitActivity = document.getElementById("endroitAttraitID").value;
@@ -43,6 +44,7 @@ function FormAjouterTrip(props) {
     handleClose();
     console.log(infosAttraits);
   }
+  /*Fonction pour inclure le nouveau road trip dans la bd */
   async function addTrip(photo1, photo2, nomTrip, descriptionTrip) {
     try {
       const response = await fetch(API, {
@@ -75,8 +77,7 @@ function FormAjouterTrip(props) {
     }
   }
 
-  //Retourne le prochain ID pour savoir où ajouter la nouvel objet
-
+  /*function pour prendre les informations inscrites dans les inputs du formulaire */
   function handleAdd(event) {
     event.preventDefault(); /*Empêche de rafraîchir la page, car le bouton est de type submit*/
     /*variables des infos entrées dans le formulaire*/
@@ -94,9 +95,10 @@ function FormAjouterTrip(props) {
         });
       }
     }
-    /*Fonction pour entrer les infos dans la bd */
+
     addTrip(photo1, photo2, nomTrip, descriptionTrip);
   }
+  /*Fonction pour la sélection de la région dans un SELECT */
   function handleChange(e) {
     console.log("Region Selected!!");
     setRegionState(e.target.value);
@@ -165,6 +167,7 @@ function FormAjouterTrip(props) {
             </Form>
           </Col>
         </Row>
+        {/*Condition pour afficher le bouton seulement pour 4 attraits maximum */}
         {infosAttraits.length < 4 ? (
           <Row className="fondGris text-center">
             <Col xs={12}>
@@ -196,6 +199,7 @@ function FormAjouterTrip(props) {
           </Col>
         </Row>
       </Container>
+      {/*Modal pour l'ajout des attraits */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Attrait #{infosAttraits.length + 1}</Modal.Title>

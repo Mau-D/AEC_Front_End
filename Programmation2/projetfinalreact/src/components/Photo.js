@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Col } from "react-bootstrap";
 
-//Component pour Le cas d'une page introuvable
+//Créer une image avec les urls des images des attraits
 function Photo(props) {
   return (
     <>

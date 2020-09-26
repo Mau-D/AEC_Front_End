@@ -3,7 +3,7 @@ import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 
-//Component pour l'affichage des motos dans des cards
+//Afficher les Card  dea road trips
 function Trip(props) {
   return (
     <Fade left cascade>
