@@ -93,9 +93,13 @@ export class Accueil extends React.Component {
         <Row>
           <Container fluid id="pageAccueil" className="bigGray">
             <Row className="text-center">
-              <Col md={4} lg={5} className="px-0 bigGray">
+              <Col md={4} lg={5} className="px-0">
                 <Fade left>
-                  <Image fluid className="accueilImg" src={photos.coccinelle} />
+                  <Image
+                    fluid
+                    className="accueilImg bigGray"
+                    src={photos.coccinelle}
+                  />
                 </Fade>
               </Col>
               <Col md={4} lg={2} className="p-1 vertical">
@@ -103,11 +107,11 @@ export class Accueil extends React.Component {
                   « Rien ne développe l’intelligence comme les voyages. »
                 </p>
               </Col>
-              <Col md={4} lg={5} className="px-0 bigGray">
+              <Col md={4} lg={5} className="px-0 ">
                 <Fade right>
                   <Image
                     fluid
-                    className="accueilImg p-auto"
+                    className="accueilImg p-auto bigGray"
                     src={photos.camion}
                   />
                 </Fade>
@@ -127,10 +131,10 @@ export class Accueil extends React.Component {
               <Col
                 md={{ span: 12, order: 1 }}
                 lg={{ span: 6, order: 2 }}
-                className="px-0 bigGray"
+                className="px-0"
               >
                 <Fade down>
-                  <Image fluid className="mh-100" src={photos.pieds} />
+                  <Image fluid className="mh-100 bigGray" src={photos.pieds} />
                 </Fade>
               </Col>
               <Col
