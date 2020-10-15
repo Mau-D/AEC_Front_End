@@ -1,0 +1,116 @@
+<!--  index.html  -->
+<!--  Examen 2 Zelda -->
+<!--  Par Maud Harvey  -->
+<!--  Le 13 juin 2020  -->
+
+<!DOCTYPE html>
+<html lang="fr-ca">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>Zelda</title>
+    <!--Librairies-->
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no"><!--Pour utiliser Bootstrap-->
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css"><!--Provient du dossier Bootstrap-->
+    <link rel="icon" type="image/jpg" href="img/zeldaFavicon.jpg" /><!-- Favicon -->
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script><!--Lien GOOGLE pour les graphiques-->
+    <!--Feuilles de style-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="aos-master/aos-master/dist/aos.css"><!-- Lien CSS pour la librairie AOS -->
+    <!-- <link rel="stylesheet" href="Hover-master/css/hover-min.css">
+    Pour la librairie Hover-master, pas nécessaire puisqu'on utilise seulement un des effets de la librairie,
+     copier le code css dans notre page de style, style.css-->
+
+</head>
+<body>
+<!-- Header -->
+<header class="banniere">
+    <div class="container-fluid  text-center pt-3">
+        <div class="row">
+            <div class="col-3 col-sm-2 col-xl-1 ">
+                <a class="hvr-grow" href="#">Jeux</a><!-- Ajouter la class hvr-grow -->
+            </div>
+            <div class="col-3 col-sm-2 col-xl-1 mr-5">
+                <a class="hvr-grow" href="#">Marchandise</a>
+            </div>
+            <div class="col-3 col-sm-2 col-xl-1 mr-2">
+                <a class="hvr-grow" href="#">FanArt</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid  text-center sous-titre ">
+        <div class="row">
+            <div class="col-12">
+                <h1>La légende de </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h1 class="zelda">Zelda </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid separation">
+        <div class="row ">
+            <div class="col-12 text-center">
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- liste -->
+<div class="container">
+    <div class="row pt-3 pb-3">
+        <div class="col-12">
+            <input class="form-control" type="text" id="myInput" onKeyup="myFunction()" placeholder="Rechercher un jeu...">
+            <hr>
+            <ul class="list-group text-center" id="myUL">
+                <li class="list-group-item"><a href="#">Breath of the wild</a></li>
+                <li class="list-group-item"><a href="#">Ocarina of Time</a></li>
+                <li class="list-group-item"><a href="#">Four Swords</a></li>
+                <li class="list-group-item"><a href="#">The Minish Cap</a></li>
+                <li class="list-group-item"><a href="#">Skyward Sword</a></li>
+                <li class="list-group-item"><a href="#">Majora's Mask </a></li>
+                <li class="list-group-item"><a href="#">Twilight Princess</a></li>
+                <li class="list-group-item"><a href="#">The Legend of Zelda</a></li>
+                <li class="list-group-item"><a href="#">A Link to the Past</a></li>
+                <li class="list-group-item"><a href="#">Link's Awakening</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Graphiques -->
+<div class="container-fluid graphiques pt-5">
+    <div class="row" data-aos="fade-up"> <!-- Appliquer l'animation de la librairie AOS -->
+        <div class="col-12 text-center pb-5">
+            <h1> Zelda en chiffres</h1>
+        </div>
+    </div>
+    <div class="row" data-aos="fade-up"><!-- Appliquer l'animation de la librairie AOS -->
+        <!--Graphique en pointe de tarte-->
+        <div class="col-12 text-center pb-5">
+            <div id="piechart"></div>
+        </div>
+    </div>
+    <div class="row" data-aos="fade-up" data-aos-delay="300"><!-- Appliquer l'animation de la librairie AOS , ajouter un délai pour mieux voir l'animation sur ce graphique-->
+        <!--Graphique géographique-->
+        <div class="col-12 text-center pb-5">
+            <div id="regions_div" ></div>
+        </div>
+    </div>
+</div>
+
+<!--CDN JQuery hébergé par GOOGLE-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- script de la librairie AOS, placer avant le fichier script.js -->
+<script src="aos-master/aos-master/dist/aos.js"></script>
+<!--script ajouté-->
+<script src="js/script.js"></script>
+<!--script Bootstrap-->
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+</body>
+</html>

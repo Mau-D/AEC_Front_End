@@ -1,0 +1,116 @@
+/*style.css*/
+/*Examen 2 - Zelda*/
+/*Maud Harvey*/
+/*13 juin 2020*/
+
+/*Font*/
+@font-face {
+    font-family: "cinzel";
+    src: url("../font/CinzelDecorative-Bold.ttf");
+}
+
+/*Bannière, image de zelda*/
+.banniere{
+    background-image: url("../img/banniere.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*les liens du header sont blancs soulignés et de taille 1.5rem*/
+header a{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: underline;
+}
+
+/*Pattern comme image de fond pour le body*/
+body{
+    background-image: url("../img/pattern-triforce-2x.png");
+    background-color: #234f30;
+    background-repeat: repeat;
+}
+
+/*Placeholder en blanc*/
+input::placeholder {
+    color: white !important;
+}
+
+hr{
+    border-top: 2px solid rgb(185, 195, 70);
+}
+
+/*Tous les h1 incluant le titre ont un font et une ombre*/
+h1{
+    color: white;
+    font-family: cinzel;
+    text-shadow: 0 0 4px black;
+}
+
+li a{
+    color: white;
+    font-family: cinzel;
+}
+
+a:hover{
+    color: #11a30e;
+}
+
+.sous-titre{
+    padding-bottom: 10%;
+    padding-top: 24%;
+}
+
+.separation{
+    background-image: url("../img/hyrule_rule.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2%;
+}
+
+.zelda {
+    font-size: 5rem;
+}
+
+.graphiques{
+    background-color: black;
+}
+
+.list-group-item{
+    background-color: #d9a936;
+    border: 2px solid rgb(9, 60, 25);
+}
+
+.form-control{
+    background-color: #ceb373ad;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+/*Style du graphique géographique*/
+/*style="width: 100%; height: 100%;*/
+#regions_div{
+    width: 100%;
+    height: 100%;
+}
+
+/*Effet pour le menu de navigation*/
+/*Si vous prévoyez d'utiliser uniquement un ou plusieurs effets, il est préférable de copier et coller un effet dans votre
+propre feuille de style, afin qu'un utilisateur n'ait pas à télécharger `css / hover.css` dans son intégralité.*/
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
