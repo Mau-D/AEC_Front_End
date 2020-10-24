@@ -4,7 +4,9 @@ $bg-img: '../img/banniere.jpg'
 #banniere  
     background-color: black
     background-image: url($bg-img)
-    height: 75vh
+    background-size: cover
+    background-repeat: no-repeat
+    height: 80vh
 
 /*Photo avec effet polaroid*/
 .polaroid   
@@ -20,9 +22,24 @@ $bg-img: '../img/banniere.jpg'
     box-shadow: 3px 3px 3px #777 
     
 .polaroid p 
+    color: #11A3D9
     font-size: 2rem
     position: absolute  
     text-align: center
     width: 100%  
     bottom: 1%
     color: #888
+
+.card
+    width: 18rem
+    height: 32vh
+    border: 20px solid #fff
+    padding: 0px
+    border-bottom: 100px solid #fff
+    box-shadow: 3px 3px 3px #777 
+
+   
+.apropos, .contact
+    transform: rotate(10deg)
+.projets
+    transform: rotate(-7deg)
