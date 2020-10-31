@@ -3,7 +3,7 @@ import React from "react";
 //import Contact from "./Contact";
 import { IMAGES } from "../constantes";
 import { Link, useLocation } from "react-router-dom";
-import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Image, Card } from "react-bootstrap";
 
 import "../styles/principal.sass";
 
@@ -24,7 +24,7 @@ function Accueil() {
                   xs={{ span: 8, offset: 2 }}
                   className="text-center mt-5 text-light"
                 >
-                  Bonjour, Je me présente Maud <br></br> Développeur Web
+                  MAU-D Bonjour, Je me présente Maud <br></br> Développeur Web
                   Front-End Junior
                 </Col>
                 {/*Texte*/}
@@ -33,7 +33,7 @@ function Accueil() {
                     <span className="pl-5">Présentement étudiante,</span> je
                     suis à la recherche d'un stage ou d'un emploi stimulant. Ce
                     changement de carrière fait suite à ma passion des
-                    technologies et mon désir d'apprendre constant. J'adore la
+                    technologies et mon désir constant d'apprendre. J'adore la
                     résolution de problème et je suis attirée vers ce nouveau
                     style de vie combinant création et techniques.
                   </p>
@@ -56,7 +56,7 @@ function Accueil() {
             </Container>
           </Col>
           {/*Photo*/}
-          <Col xs={3} className="p-5 mt-5">
+          <Col xs={3} className="p-5 mt-4">
             <div className="polaroid">
               <p>C'est moi!</p>
               <Image fluid src={IMAGES.photo} id="photoMoi" />
@@ -69,8 +69,12 @@ function Accueil() {
               <Card className="apropos mt-3">
                 <Card.Img variant="top" src={IMAGES.chemin} className="p-2" />
                 <Card.Body className="pt-0">
-                  <Card.Title className="m-0">À propos</Card.Title>
-                  <Card.Text>Explorer mon cheminement professionnel</Card.Text>
+                  <Card.Title className="m-0">
+                    <Link to={"apropos/"}>
+                      <h2>À propos</h2>
+                    </Link>
+                  </Card.Title>
+                  <Card.Text>Pour me connaître</Card.Text>
                 </Card.Body>
               </Card>
 
