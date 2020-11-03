@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <div className="hautDePage">
-        <p>Header</p>
+        <p>Header, faire un entête, nav Link</p>
       </div>
     </>
   );

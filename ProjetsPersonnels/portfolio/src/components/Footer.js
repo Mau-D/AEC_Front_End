@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <p>Footer</p>
+      <p>Footer: nom, lien github,lien linkedIn et courriel</p>
     </>
   );
 }

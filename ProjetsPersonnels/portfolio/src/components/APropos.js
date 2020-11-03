@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import Chart from "react-google-charts";
 import Logos from "./Logos";
+import DetailsFormation from "./DetailsFormation";
 
 //import CV from "./CV";
 //import Projets from "./Projets";
 
 function APropos() {
+  const [show, setShow] = useState(false);
+  function handleClick() {
+    setShow(true);
+  }
   return (
     <>
       <Container fluid>
@@ -72,113 +76,63 @@ function APropos() {
                   null,
                 ],
                 [
-                  "2014Summer",
-                  "Summer 2014",
-                  "summer",
-                  new Date(2014, 5, 21),
-                  new Date(2014, 8, 20),
+                  "Programmation1",
+                  "Techniques de programmation Web 1",
+                  "90 heures",
+                  new Date(2019, 10, 15),
+                  new Date(2020, 4, 4),
                   null,
                   100,
                   null,
                 ],
                 [
-                  "2014Autumn",
-                  "Autumn 2014",
-                  "autumn",
-                  new Date(2014, 8, 21),
-                  new Date(2014, 11, 20),
+                  "PHP",
+                  "Infrastructure WEB",
+                  "60 heures",
+                  new Date(2020, 4, 14),
+                  new Date(2020, 9, 26),
                   null,
                   100,
                   null,
                 ],
                 [
-                  "2014Winter",
-                  "Winter 2014",
-                  "winter",
-                  new Date(2014, 11, 21),
-                  new Date(2015, 2, 21),
+                  "Intégration2",
+                  "Techniques d'intégration d'interfaces Web 2",
+                  "60 heures",
+                  new Date(2020, 4, 14),
+                  new Date(2020, 9, 26),
                   null,
                   100,
                   null,
                 ],
                 [
-                  "2015Spring",
-                  "Spring 2015",
-                  "spring",
-                  new Date(2015, 2, 22),
-                  new Date(2015, 5, 20),
-                  null,
-                  50,
-                  null,
-                ],
-                [
-                  "2015Summer",
-                  "Summer 2015",
-                  "summer",
-                  new Date(2015, 5, 21),
-                  new Date(2015, 8, 20),
-                  null,
-                  0,
-                  null,
-                ],
-                [
-                  "2015Autumn",
-                  "Autumn 2015",
-                  "autumn",
-                  new Date(2015, 8, 21),
-                  new Date(2015, 11, 20),
-                  null,
-                  0,
-                  null,
-                ],
-                [
-                  "2015Winter",
-                  "Winter 2015",
-                  "winter",
-                  new Date(2015, 11, 21),
-                  new Date(2016, 2, 21),
-                  null,
-                  0,
-                  null,
-                ],
-                [
-                  "Football",
-                  "Football Season",
-                  "sports",
-                  new Date(2014, 8, 4),
-                  new Date(2015, 1, 1),
+                  "Programmation2",
+                  "Techniques de programmation Web 2",
+                  "90 heures",
+                  new Date(2020, 4, 14),
+                  new Date(2020, 9, 26),
                   null,
                   100,
                   null,
                 ],
                 [
-                  "Baseball",
-                  "Baseball Season",
-                  "sports",
-                  new Date(2015, 2, 31),
-                  new Date(2015, 9, 20),
+                  "Programmation3",
+                  "Techniques de programmation Web 3",
+                  "90 heures",
+                  new Date(2020, 10, 6),
+                  new Date(2021, 3, 4),
                   null,
-                  14,
-                  null,
-                ],
-                [
-                  "Basketball",
-                  "Basketball Season",
-                  "sports",
-                  new Date(2014, 9, 28),
-                  new Date(2015, 5, 20),
-                  null,
-                  86,
+                  20,
                   null,
                 ],
                 [
-                  "Hockey",
-                  "Hockey Season",
-                  "sports",
-                  new Date(2014, 9, 8),
-                  new Date(2015, 5, 21),
+                  "Utilisateur",
+                  "Intégration d'interface utilisateur",
+                  "60 heures",
+                  new Date(2020, 10, 6),
+                  new Date(2021, 3, 4),
                   null,
-                  89,
+                  20,
                   null,
                 ],
               ]}
@@ -195,9 +149,11 @@ function APropos() {
         {/* Lien des détails de la formation*/}
         <Row>
           <Col>
-            <Link to={"detailsformation/"}>Voir Détails</Link>
+            <Button onClick={handleClick}>Voir Détails</Button>
           </Col>
         </Row>
+        {/* Affichage de la section des détails de la formation lors du clic*/}
+        {show ? <DetailsFormation /> : null}
         {/* Logos des différents langages, librairies et frameworks */}
         <Row>
           <Logos></Logos>
