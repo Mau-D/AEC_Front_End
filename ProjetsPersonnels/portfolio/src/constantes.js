@@ -54,3 +54,59 @@ export const LOGOS = [
     title: "Angular et TypeScript",
   },
 ];
+//Variables pour téléverser les détails des formations
+export const FORMATIONS = [
+  {
+    id: 1,
+    nomCours: "Techniques d'intégration des interfaces Web 1",
+    nombreHeures: "60 heures",
+    methodes: ["HTML5", "CSS3", "Bootstrap"],
+  },
+  {
+    id: 2,
+    nomCours: "Techniques de programmation Web 1",
+    nombreHeures: "90 heures",
+    methodes: ["JavaScript", "JQuery"],
+  },
+  {
+    id: 3,
+    nomCours: "Techniques d'intégration des interfaces Web 2",
+    nombreHeures: "60 heures",
+    methodes: [
+      "Sass",
+      "PWA",
+      "Validation de formulaire côté client",
+      "Plateforme de paiement",
+      "Images vectorielles et canevas",
+      "Filtres et tris de tableaux",
+      "Librairies de graphiques Google",
+      "Animations CSS et Javascript",
+    ],
+  },
+  {
+    id: 4,
+    nomCours: "Infrastructure Web",
+    nombreHeures: "60 heures",
+    methodes: [
+      "Bases de données relationnelles",
+      "Langages PHP",
+      "Utilisation de AMPPS et PhpMyAdmin",
+      "Opérations CRUD, à l'aide de MySQLi",
+      "Formulaires et contrôles liés aux données",
+    ],
+  },
+  {
+    id: 5,
+    nomCours: "Techniques de programmation Web 2",
+    nombreHeures: "90 heures",
+    methodes: [
+      "Librairie REACT",
+      "Requête à une API Web",
+      "React Router",
+      "MockAPI",
+      "Opérations CRUD",
+      "Hooks",
+      "PWA",
+    ],
+  },
+];

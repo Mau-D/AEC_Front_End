@@ -1,11 +1,19 @@
 import React from "react";
+import { Col } from "react-bootstrap";
+import { FORMATIONS } from "../constantes";
+import Formation from "./Formation";
 
-function DetailsFormation() {
-  return (
-    <>
-      <p>Détails de la formation</p>
-    </>
-  );
+function DetailsFormation(props) {
+  return FORMATIONS.map((key, i) => (
+    <Col xs={4}>
+      <Formation
+        key={key + FORMATIONS[i].id}
+        nom={FORMATIONS[i].nomCours}
+        duree={FORMATIONS[i].nombreHeures}
+        concepts={FORMATIONS[i].methodes}
+      />
+    </Col>
+  ));
 }
 
 export default DetailsFormation;

@@ -1,0 +1,12 @@
+div {
+  background-color: #d9ead3;
+  border: solid black 1px;
+  width: 100%;
+  margin-bottom: 2%;
+}
+h3 {
+  padding: 20px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

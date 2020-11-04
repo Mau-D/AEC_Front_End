@@ -1,0 +1,10 @@
+div {
+  background-color: #b6d7a8;
+  border: solid black 1px;
+  margin-bottom: 1%;
+  height: 5vh;
+}
+p {
+  padding: 10px 10px;
+  margin: 0;
+}

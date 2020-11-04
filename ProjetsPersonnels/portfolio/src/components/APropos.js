@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Chart from "react-google-charts";
 import Logos from "./Logos";
 import DetailsFormation from "./DetailsFormation";
@@ -152,8 +152,12 @@ function APropos() {
             <Button onClick={handleClick}>Voir Détails</Button>
           </Col>
         </Row>
-        {/* Affichage de la section des détails de la formation lors du clic*/}
-        {show ? <DetailsFormation /> : null}
+        <Container>
+          <Row>
+            {/* Affichage de la section des détails de la formation lors du clic*/}
+            {show ? <DetailsFormation /> : null}
+          </Row>
+        </Container>
         {/* Logos des différents langages, librairies et frameworks */}
         <Row>
           <Logos></Logos>

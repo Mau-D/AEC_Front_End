@@ -1,0 +1,28 @@
+.main {
+  background-color: #d5a6bd;
+  width: 100%;
+  margin-top: 3%;
+  border: solid black 1px;
+}
+.container {
+  width: 97%;
+  padding: 1% 1% 1% 2%;
+  margin: 0;
+}
+.contenu {
+  width: 100%;
+  padding-bottom: 1%;
+}
+h2 {
+  padding: 10px 10px;
+  margin: 0;
+}
+.sectionGauche {
+  width: 40%;
+  border: none;
+  height: 60vh;
+  float: left;
+}
+.sectionDroite {
+  height: 60vh;
+}
