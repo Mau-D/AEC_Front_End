@@ -1,0 +1,15 @@
+div {
+  background-color: #e7e6e6;
+  width: 98%;
+  margin: 1%;
+  border: solid black 1px;
+}
+/*.contenu {
+  border: none;
+  padding: 1%;
+  width: 96%;
+}*/
+h2 {
+  padding: 10px 10px;
+  margin: 0;
+}

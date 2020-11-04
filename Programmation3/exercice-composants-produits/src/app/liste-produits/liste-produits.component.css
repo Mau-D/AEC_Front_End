@@ -1,0 +1,12 @@
+div {
+  background-color: #ffff00;
+  width: 96%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-bottom: 1%;
+}
+.mat-divider {
+  margin: 1%;
+}

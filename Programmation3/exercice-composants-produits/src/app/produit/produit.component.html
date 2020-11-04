@@ -1,0 +1,18 @@
+
+  
+    <mat-card-title>{{nom}}</mat-card-title>
+    <h3 *ngIf="quantite== 0; else elseBlock1">***Non-disponible***</h3>
+    <ng-template #elseBlock1><h3 *ngIf="quantite< 6">***Quantités limitée***</h3></ng-template>
+    
+   
+    
+    
+
+  <mat-card-content>
+    <p>
+      {{description}}
+    </p>
+  </mat-card-content>
+ <!-- <div> <p class="nom">{{nom}}</p>
+  <p class="desc">{{description}}</p> </div>-->
+

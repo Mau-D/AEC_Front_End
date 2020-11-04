@@ -1,0 +1,30 @@
+<div>
+  <mat-card class="example-card">
+    <!-- Proprietes de nom et de quantité-->
+    <mat-card-header>
+      <app-produit [nom]=proprietesProduit.nom [quantite]=proprietesProduit.qteStock></app-produit>
+      <app-prix [prix]=proprietesProduit.prix></app-prix>
+    </mat-card-header>
+    <app-image [image]=proprietesProduit.image></app-image>
+    <app-produit [description]=proprietesProduit.description></app-produit>
+    <mat-card-actions>
+      <app-details></app-details>
+    </mat-card-actions>
+  </mat-card>
+  <mat-divider></mat-divider>
+  </div>
+  <!--  <p>Fiche produit</p>
+  <div class="contenu">
+    <div class="sectionImage">
+      <app-image></app-image>
+    </div>
+    <div class="sectionProduit">
+      <app-produit [nom]=proprietesProduit.nom [description]=proprietesProduit.description></app-produit>
+    </div>
+    <div class="sectionDroite">
+      Définir une autre variable, car il y a un composant petit-enfant où sera affiché la valeur
+      <app-prix [prix]=proprietesProduit.prix></app-prix>
+      <app-details></app-details>
+    </div>
+  </div>-->
+

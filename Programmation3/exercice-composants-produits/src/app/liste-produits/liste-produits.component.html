@@ -1,0 +1,9 @@
+<!-- Dans le template du composant-parent, créé un nom de variable (proprietesProduit)
+et associer la variable correspondante dans l'instanciation de l'objet -->
+<!-- Mettre les fiches produits dans une liste, utiliser un grid list pour ajuster les hauteurs -->
+
+<mat-list>  
+  <app-fiche-produit mat-list-item *ngFor="let item of produits" [proprietesProduit]=item></app-fiche-produit>
+</mat-list>
+ 
+ 

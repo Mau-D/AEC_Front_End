@@ -1,0 +1,9 @@
+.mat-toolbar {
+  background-color: #d9ead3;
+  border: solid black 1px;
+  width: 100%;
+  margin-bottom: 1%;
+}
+h3 {
+  padding: 10px 10px;
+}
