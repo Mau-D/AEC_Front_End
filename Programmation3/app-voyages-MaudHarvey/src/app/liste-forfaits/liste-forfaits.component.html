@@ -1,4 +1,7 @@
 <!-- Composant liste-forfaits, faire une boucle pour afficher tous les forfaits -->
 <div *ngFor="let item of forfaits">
+    <app-forfait-complet  [proprietesForfait]=item></app-forfait-complet>
+</div>  
+<div *ngFor="let item of forfaits">
     <app-forfait [proprietesForfait]=item></app-forfait>
 </div>

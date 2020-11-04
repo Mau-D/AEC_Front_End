@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 ///Importations de l'interface et du tableau mock
 import { Forfait } from '../forfait';
+
+
+
 import {FORFAITS } from '../mock-forfaits'
 
 
@@ -10,8 +13,10 @@ import {FORFAITS } from '../mock-forfaits'
   styleUrls: ['./liste-forfaits.component.css']
 })
 export class ListeForfaitsComponent implements OnInit {
-  //variable contenant le tableau mock
+  //variable pour le forfait entier contenant le tableau mock
 forfaits: Forfait[] = FORFAITS;
+//variable pour les caractéristiques de l'hôtel
+//caracteristiquesHotel: Hotel[];
   constructor() { }
 
   ngOnInit(): void {

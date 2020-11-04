@@ -8,7 +8,7 @@ export const FORFAITS: Forfait[] = [
         villeDeDepart: 'Montréal',
         hotel: {
             nomDeLHotel:'Dos Amigos',
-            Coordonnées: '5 rue de la plage',
+            coordonnees: '5 rue de la plage',
             nombresDEtoiles: 5,
             nombreDeChambres: 2,
             caracteristiques: ['plage','allo'],
@@ -23,7 +23,7 @@ export const FORFAITS: Forfait[] = [
         villeDeDepart: 'Québec',
         hotel: {
             nomDeLHotel:'Falljraven',
-            Coordonnées: '5 rue de la plage',
+            coordonnees: '5 rue de la plage',
             nombresDEtoiles: 5,
             nombreDeChambres: 2,
             caracteristiques: ['plage','allo'],
@@ -37,7 +37,7 @@ export const FORFAITS: Forfait[] = [
         villeDeDepart: 'Toronto',
         hotel: {
             nomDeLHotel: 'Les Champs Élysées',
-            Coordonnées: '5 rue de la plage',
+            coordonnees: '5 rue de la plage',
             nombresDEtoiles: 5,
             nombreDeChambres: 2,
             caracteristiques: ['plage','allo'],

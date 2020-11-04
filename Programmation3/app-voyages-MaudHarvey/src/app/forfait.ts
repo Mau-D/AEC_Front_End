@@ -1,6 +1,8 @@
 import { Hotel } from './hotel';
 
-//Interface Forfait
+//Interface Forfait, pour la propriété hotel utiliser l'interface Hotel
+//Importer l'interface Hotel
+
 export interface Forfait {
     id: string,
     destination: string,

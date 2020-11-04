@@ -1,0 +1,44 @@
+<mat-grid-list cols="5" rowHeight="4:1">
+    <!-- Image col=1 row=2 -->
+    <mat-grid-tile class="image" [rowspan]="6">
+        <img src="../../assets/img/voyage.jpg"/>
+    </mat-grid-tile>
+    <!-- description voyage-->
+    <mat-grid-tile class="description" [colspan]="2">
+        <h3>{{proprietesForfait.destination}}</h3>
+    </mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile><!-- espace -->
+    <mat-grid-tile class="prix">
+        <h1>Prix</h1>
+    </mat-grid-tile>
+    <mat-grid-tile class="description" [colspan]="2">
+        <h1>{{proprietesForfait.hotel.nomDeLHotel}}</h1>
+    </mat-grid-tile>
+    <mat-grid-tile class="espace" [rowspan]="6" [colspan]="2"></mat-grid-tile><!-- espace -->
+    <mat-grid-tile class="description" [colspan]="2">
+        <h2>Nombre d'étoiles: {{proprietesForfait.hotel.nombresDEtoiles}}</h2>
+    </mat-grid-tile>
+    <mat-grid-tile class="description" [colspan]="2">
+        <h4>{{proprietesForfait.hotel.nombreDeChambres}} chambres</h4>
+    </mat-grid-tile>
+    <mat-grid-tile class="caracteristiques" [colspan]="2">
+        <div>
+            <h3>Caractéristiques de l'hotel</h3>
+            <ul>
+                <li *ngFor="let item of proprietesForfait.hotel.caracteristiques">{{item}}</li>
+            </ul>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="adresse" [colspan]="2">
+        <h5>{{proprietesForfait.hotel.coordonnees}}</h5>
+    </mat-grid-tile>
+    <mat-grid-tile class="villeDepart">
+        <h1>{{proprietesForfait.villeDeDepart}}</h1>
+    </mat-grid-tile>
+    <mat-grid-tile class="depart">
+        <h1>{{proprietesForfait.dateDeDepart}}</h1>
+    </mat-grid-tile>
+    <mat-grid-tile class="retour">
+        <h1>{{proprietesForfait.dateDeRetour}}</h1>
+    </mat-grid-tile>
+</mat-grid-list>
