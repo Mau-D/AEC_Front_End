@@ -1,0 +1,31 @@
+.image {
+  background-color: aqua;
+}
+.description {
+  background-color: chartreuse;
+}
+
+.prix {
+  background-color: thistle;
+}
+.caracteristiques {
+  background-color: green;
+}
+.adresse {
+  background-color: khaki;
+}
+.villeDepart {
+  background-color: blueviolet;
+}
+.depart {
+  background-color: salmon;
+}
+.retour {
+  background-color: gold;
+}
+.espace {
+  background-color: lightblue;
+}
+.duree {
+  background-color: sienna;
+}

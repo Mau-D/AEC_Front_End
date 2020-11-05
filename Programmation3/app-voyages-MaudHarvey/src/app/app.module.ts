@@ -10,6 +10,11 @@ import { ForfaitMiniComponent } from './forfait-mini/forfait-mini.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Importations de Angular Material
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatIconModule} from '@angular/material/icon';
+import { EtoileComponent } from './etoile/etoile.component';
+import {MatCardModule} from '@angular/material/card';
+
+
 
 @NgModule({
   declarations: [
@@ -17,13 +22,16 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ListeForfaitsComponent,
     ForfaitComponent,
     ForfaitCompletComponent,
-    ForfaitMiniComponent
+    ForfaitMiniComponent,
+    EtoileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

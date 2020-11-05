@@ -1,1 +1,19 @@
-<p>forfait-mini works!</p>
+<!-- Sous forme de card simple, placer quelques informations à l'aide d'un grid-list -->
+<mat-card>
+    <mat-grid-list cols="2" rowHeight="6:1">
+        <mat-grid-tile>
+            <h3>{{proprietesForfait.destination}}  De {{proprietesForfait.villeDeDepart}}</h3>
+        </mat-grid-tile>
+        <mat-grid-tile></mat-grid-tile>
+        <mat-grid-tile>
+            <h1>{{proprietesForfait.hotel.nomDeLHotel}}</h1>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <h1>Prix</h1>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <h2>{{proprietesForfait.hotel.nombresDEtoiles}}<app-etoile></app-etoile></h2>
+        </mat-grid-tile>
+        <mat-grid-tile><h4>{{proprietesForfait.dateDeDepart}}, 14 jours</h4></mat-grid-tile>
+    </mat-grid-list>
+</mat-card>

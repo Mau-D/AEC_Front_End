@@ -1,4 +1,16 @@
 <!-- Composant liste-forfaits, faire une boucle pour afficher tous les forfaits -->
+<mat-grid-list cols="3" rowHeight="8:3">
+    <mat-grid-tile *ngFor="let item of forfaits">
+        <app-forfait-mini class="child-css" [proprietesForfait]=item></app-forfait-mini>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3"></mat-grid-tile><!-- espace -->
+    <mat-grid-tile [colspan]="3" [rowspan]="3" *ngFor="let item of forfaits">
+        <app-forfait-complet class="child-css" [proprietesForfait]=item></app-forfait-complet>
+    </mat-grid-tile>
+</mat-grid-list>
+<div *ngFor="let item of forfaits">
+    <app-forfait-mini [proprietesForfait]=item></app-forfait-mini>
+</div>
 <div *ngFor="let item of forfaits">
     <app-forfait-complet  [proprietesForfait]=item></app-forfait-complet>
 </div>  

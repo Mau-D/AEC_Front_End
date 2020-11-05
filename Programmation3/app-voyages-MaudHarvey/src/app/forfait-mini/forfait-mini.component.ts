@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Forfait } from '../forfait';
+
 
 @Component({
   selector: 'app-forfait-mini',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forfait-mini.component.css']
 })
 export class ForfaitMiniComponent implements OnInit {
+  @Input() proprietesForfait: Forfait;
 
   constructor() { }
 

@@ -15,7 +15,7 @@ export const FORFAITS: Forfait[] = [
 
         },
         dateDeDepart: '1er novembre 2020',
-        dateDeRetour: '14 nonvembre 2020',
+        dateDeRetour: '14 novembre 2020',
     },
     { 
          id: '2',
