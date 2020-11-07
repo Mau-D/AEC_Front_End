@@ -5,6 +5,7 @@ import OnePager from "./OnePager";
 import Header from "./Header";
 import Footer from "./Footer";
 import Apropos from "./APropos";
+import Contact from "./Contact";
 import { Container } from "react-bootstrap";
 import { Route, Switch, useLocation } from "react-router-dom";
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/onepage" component={OnePager} />
             <Route path="/apropos" component={Apropos} />
             <Route path="/projets" component={Projets} />
+            <Route path="/contact" component={Contact} />
           </Switch>
         </Container>
         {location.pathname !== "/onepage/" && <Footer />}

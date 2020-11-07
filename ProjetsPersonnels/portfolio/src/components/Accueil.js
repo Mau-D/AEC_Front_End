@@ -89,8 +89,9 @@ function Accueil() {
               <Card className="contact mt-1">
                 <Card.Img variant="top" src={IMAGES.contact} className="p-2" />
                 <Card.Body className="pt-0">
-                  <Card.Title className="m-0">Coordonnées</Card.Title>
-                  <Card.Text>Contactez-moi!</Card.Text>
+                  <Link to={"contact/"}>
+                    <Card.Title className="m-0">Contact</Card.Title>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
