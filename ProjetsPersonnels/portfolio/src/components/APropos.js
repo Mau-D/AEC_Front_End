@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Image } from "react-bootstrap";
 import Chart from "react-google-charts";
 import Logos from "./Logos";
 import DetailsFormation from "./DetailsFormation";
@@ -46,9 +46,12 @@ function APropos() {
           <Col xs={3}>
             <h2>AEC Développement Web (NWE.2U)</h2>
             <h3>Développeur Front-end</h3>
-            <div>LOGO Cégep de trois-Rivières</div>
+            <Image
+              fluid
+              src="https://www.lescegeps.com/_image/large/21/i21733prc.jpg"
+            />
           </Col>
-          <Col xs={9}>
+          <Col xs={9} className="mt-5">
             <Chart
               width={"100%"}
               height={"400px"}

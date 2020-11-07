@@ -110,3 +110,92 @@ export const FORMATIONS = [
     ],
   },
 ];
+
+//Variables pour téléverser les détails des projets
+export const PROJETS = [
+  {
+    id: 1,
+    titre: "Premier site",
+    sousTitre: "Intégration d'un site en bootstrap responsive",
+    description: "Évaluation finale du cours de techniques d'intégration Web 1",
+    date: "Mars 2020",
+    liengithub:
+      "https://mau-d.github.io/AEC_Front_End/Integration1/ProjetFinal/",
+    imagePrincipale: require("./img/Integration1_final.jpg"),
+    carousel: [
+      require("./img/Integration1_final_1.jpg"),
+      require("./img/Integration1_final_2.jpg"),
+      require("./img/Integration1_final_3.jpg"),
+    ],
+    detailsProjet:
+      "Ce projet, en sujet libre, de trois pages contient 4 sections responsives en utilisant bootstrap, les medias queries et les polices inclusives (REM). Ce projet comprend plusieurs éléments, tel que des bannières, un formulaire, une section jumbotron, une card, un modal avec carousel et des sections en parallax.",
+  },
+  {
+    id: 2,
+    titre: "Photociti",
+    sousTitre: "Projet Programmation 1 en JQuery",
+    description:
+      "Évaluation finale du cours de techniques de programmation Web 1",
+    date: "Mars 2020",
+    liengithub:
+      "https://mau-d.github.io/AEC_Front_End/Programmation1/ProjetFinalPhotociti/",
+    imagePrincipale: require("./img/prog1_final.jpg"),
+    carousel: [
+      require("./img/prog1_final_1.jpg"),
+      require("./img/prog1_final_2.jpg"),
+      require("./img/prog1_final_3.jpg"),
+    ],
+    detailsProjet:
+      "Ce projet reproduit le site <<http://www.photociti.ca/>> en utilisant JQuery, il comprend trois parties: le choix du mot, Le choix des lettres et le choix du fond. Pour le choix du mot, les erreurs de longueur, les accents et les caractères spéciaux sont gérés. Pour le choix des lettres, un carousel Bootstrap permet de changer l'image. Pour le choix du fond, l'usager sélectionne la couleur et l'étape 4 offre l'impression du cadre seulement.",
+  },
+  {
+    id: 3,
+    titre: "Gestionnaire de nouvelles",
+    sousTitre: "Projet Infrastructure Web",
+    description: "Évaluation finale du cours d'infrastructure Web 1 en PHP",
+    date: "Septembre 2020",
+    liengithub: "http://final.mau-d.com/",
+    imagePrincipale: require("./img/infrastructure_final.jpg"),
+    carousel: [
+      require("./img/infrastructure_final_1.jpg"),
+      require("./img/infrastructure_final_2.jpg"),
+      require("./img/infrastructure_final_3.jpg"),
+    ],
+    detailsProjet:
+      "Ce projet par la gestion de nouvelles démontre la capacité à manipuler une base de données avec le langage PHP. Les categories sont affichés dans le menu, les nouvelles récentes sont affichées sur la page d'accueil. Un affichage par catégorie est accessible par le menu et l'affichage d'une nouvelle détaillée par un lien. Les opérations CRUD sont diponibles par la connexion qui donne accès au menu d'administration. Des ajouts pour la sécurité sont ajoutés et le déploiement est effectué.",
+  },
+  {
+    id: 4,
+    titre: "Spotify québecois",
+    sousTitre: "Projet de Programmation 2",
+    description: "Premier travail en REACT",
+    date: "Juin 2020",
+    liengithub: "http://final.mau-d.com/",
+    imagePrincipale: require("./img/prog2_tp1.jpg"),
+    carousel: [
+      require("./img/prog2_tp1_1.jpg"),
+      require("./img/prog2_tp1_2.jpg"),
+      require("./img/prog2_tp1_3.jpg"),
+    ],
+    detailsProjet:
+      "Ce projet affiche un catalogue d'album, avec une page de connexion. Une barre de recherche sélectionne les albums par leur nom ou celui de l'artiste. Un clic sur l'album amène à la liste des chansons et celui sur une chanson à ses paroles.",
+  },
+  {
+    id: 5,
+    titre: "La trotteuse",
+    sousTitre: "Projet final Programmation 2 et Intégration 2",
+    description:
+      "Évaluation finale combinant intégration et programmation en REACT",
+    date: "Septembre 2020",
+    liengithub:
+      "https://mau-d.github.io/AEC_Front_End/Programmation2/projetfinalreact/build/",
+    imagePrincipale: require("./img/prog2_final.jpg"),
+    carousel: [
+      require("./img/prog2_final_1.jpg"),
+      require("./img/prog2_final_2.jpg"),
+      require("./img/prog2_final_3.jpg"),
+    ],
+    detailsProjet:
+      "Ce projet, en sujet libre, est un site qui comporte les exigences d'une PWA. L'intégration est fait en SASS et comporte des animations de librairies JavaScript. Une API web est utilisé avec le service << cruccrud.com >>, car des formulaires d'ajout et d'édition sont accessibles par un bouton ou de lien sur les titres. Ce projet est programmé avec des composants utilisant soit des classes ou des hooks. À voir!!!, c'est mon meilleur travail...pour l'instant.",
+  },
+];

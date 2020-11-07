@@ -1,5 +1,6 @@
 import React from "react";
 import Accueil from "./Accueil";
+import Projets from "./Projets";
 import OnePager from "./OnePager";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" exact component={Accueil} />
             <Route path="/onepage" component={OnePager} />
             <Route path="/apropos" component={Apropos} />
+            <Route path="/projets" component={Projets} />
           </Switch>
         </Container>
         {location.pathname !== "/onepage/" && <Footer />}

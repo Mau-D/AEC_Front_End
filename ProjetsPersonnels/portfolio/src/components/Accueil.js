@@ -69,11 +69,9 @@ function Accueil() {
               <Card className="apropos mt-3">
                 <Card.Img variant="top" src={IMAGES.chemin} className="p-2" />
                 <Card.Body className="pt-0">
-                  <Card.Title className="m-0">
-                    <Link to={"apropos/"}>
-                      <h2>À propos</h2>
-                    </Link>
-                  </Card.Title>
+                  <Link to={"apropos/"}>
+                    <Card.Title className="m-0">À propos</Card.Title>
+                  </Link>
                   <Card.Text>Pour me connaître</Card.Text>
                 </Card.Body>
               </Card>
@@ -81,7 +79,9 @@ function Accueil() {
               <Card className="projets mt-5">
                 <Card.Img variant="top" src={IMAGES.ordi} className="p-2" />
                 <Card.Body className="pt-0">
-                  <Card.Title className="m-0">Projets</Card.Title>
+                  <Link to={"projets/"}>
+                    <Card.Title className="m-0">Projets</Card.Title>
+                  </Link>
                   <Card.Text>Explorer mes projets Web</Card.Text>
                 </Card.Body>
               </Card>
