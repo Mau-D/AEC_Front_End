@@ -4,14 +4,28 @@
   h1
     @include families($family: "styleEfface")
     @include couleursTexte($couleurTexte: "vert")
-
-
-p
-  @include couleursTexte($couleurTexte: "orange")
-
-.tableauTexte
-  @include couleursBkg($couleurBkg: "noir")
-
-#formation
+  .card-title
+    @include families($family: "normal")
+    @include couleursTexte($couleurTexte: "vert")
+    @include couleursBkg($couleurBkg: "noir")
   .card
     height: 100%
+
+  .card-subtitle
+    @include couleursTexte($couleurTexte: "orange")
+  p
+    @include couleursTexte($couleurTexte: "orange")
+  .card-link
+    @include couleursTexte($couleurTexte: "vert")
+
+
+  .tableauTexte
+    @include couleursBkg($couleurBkg: "noir")
+
+
+  ul
+    @include families($family: "normal")
+    @include couleursTexte($couleurTexte: "noir")
+
+
+

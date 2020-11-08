@@ -4,7 +4,7 @@ import { Col, Image } from "react-bootstrap";
 //Afficher tous les logos des langages étudiés, placés dans une constante et affiché dans la section à propos
 function Logos() {
   return LOGOS.map((key, i) => (
-    <Col xs={1}>
+    <Col xs={1} className="ml-5">
       <Image
         fluid
         key={key + i}

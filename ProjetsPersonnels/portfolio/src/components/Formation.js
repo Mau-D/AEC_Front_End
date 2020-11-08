@@ -4,18 +4,19 @@ import { Card } from "react-bootstrap";
 function Formation(props) {
   return (
     <Card style={{ width: "20rem" }}>
-      <Card.Body>
-        <Card.Title>{props.nom}</Card.Title>
-        <Card.Subtitle className="m-2 text-muted">{props.duree}</Card.Subtitle>
-        <Card.Text>
+      <Card.Body className="p-0">
+        <Card.Title className="p-3">{props.nom}</Card.Title>
+        <Card.Subtitle className="m-2">{props.duree}</Card.Subtitle>
+        <Card.Text className="font-small p-2">
           <ul>
             {props.concepts.map((value) => (
-              <li>{value}</li>
+              <li className="mb-1">{value}</li>
             ))}
           </ul>
         </Card.Text>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Card.Link href="#" className="pl-2">
+          Lien vers les projets
+        </Card.Link>
       </Card.Body>
     </Card>
   );

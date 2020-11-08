@@ -158,7 +158,7 @@ function APropos() {
           </Row>
         </Container>
         {/* Logos des différents langages, librairies et frameworks */}
-        <Row>
+        <Row className="mt-5 text-center">
           <Logos></Logos>
         </Row>
       </Container>
