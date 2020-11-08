@@ -1,9 +1,4 @@
 
-/*Couleurs*/
-/*#3E3E40*/
-/*#FEAE4B*/
-/*#62B6C0*/
-
 /*Bannière, image*/
 $bg-img: '../img/banniere.jpg'
 
@@ -13,7 +8,7 @@ $bg-img: '../img/banniere.jpg'
     background-image: url($bg-img)
     background-size: cover
     background-repeat: no-repeat
-    height: 80vh
+    height: 100vh
 
 /*Photo avec effet polaroid*/
 .polaroid   
@@ -54,3 +49,61 @@ $bg-img: '../img/banniere.jpg'
 
 .imgProjets
     height: 150%;
+
+/*************************************************/
+/*Couleur de texte*/
+@mixin couleursTexte($couleurTexte: "")
+  @if $couleurTexte == "noir"
+    color: #3E3E40
+  @else if $couleurTexte == "orange"
+    color: #FEAE4B
+  @else if $couleurTexte == "vert"
+    color: #62B6C0
+  
+   
+/*Couleur de background*/
+@mixin couleursBkg($couleurBkg: "")
+  @if $couleurBkg == "noir"
+    background-color: #3E3E40
+  @else if $couleurBkg == "orange"
+    background-color: #FEAE4B
+  @else if $couleurBkg == "vert"
+    background-color: #62B6C0
+
+h1, h2, .card-text
+  @include couleursTexte($couleurTexte: "orange")
+h3, p, .card-title
+  @include couleursTexte($couleurTexte: "vert")
+
+/*Font face*/
+
+@font-face
+  font-family: 'LettreAttachée'
+  src: local(LettreAttachée), url('font/Dancing_Script/DancingScript-VariableFont_wght.ttf') format('truetype')
+@font-face
+  font-family: 'styleTitre'
+  src: local(styleTitre), url('font/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf') format('truetype')
+@font-face
+  font-family: 'styleEfface'
+  src: local(styleEfface), url('font/Fredericka_the_Great/FrederickatheGreat-Regular.ttf') format('truetype')
+
+/*Font family*/
+
+@mixin families($family:"")
+    @if $family == "LettreAttachée"
+        font-family: "LettreAttachée", sans-serif
+    @if $family == "styleTitre"
+        font-family: "styleTitre", sans-serif
+    @if $family == "styleEfface"
+        font-family: "styleEfface", sans-serif
+
+p, h3
+  @include families($family: "LettreAttachée")
+h1, h2
+  @include families($family: "styleTitre")
+
+/*Hauteur du texte */
+$fontSizes: ("small": 1.2, "medium": 1.5, "large": 2, "xlarge": 2.6)
+@each $grandeur, $valeur in $fontSizes
+  .font-#{$grandeur}
+    font-size: $valeur + rem

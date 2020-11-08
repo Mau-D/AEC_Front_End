@@ -5,7 +5,7 @@ import Formation from "./Formation";
 
 function DetailsFormation(props) {
   return FORMATIONS.map((key, i) => (
-    <Col xs={4}>
+    <Col xs={4} className="p-2" id="formation">
       <Formation
         key={key + FORMATIONS[i].id}
         nom={FORMATIONS[i].nomCours}

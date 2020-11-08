@@ -4,7 +4,6 @@ import React from "react";
 import { IMAGES } from "../constantes";
 import { Link, useLocation } from "react-router-dom";
 import { Container, Row, Col, Image, Card } from "react-bootstrap";
-
 import "../styles/principal.sass";
 
 function Accueil() {
@@ -16,39 +15,34 @@ function Accueil() {
 
         <Row id="banniere">
           {/*Texte de présentation*/}
-          <Col xs={8}>
+          <Col xs={9}>
             <Container>
               <Row>
                 {/*Titre*/}
-                <Col
-                  xs={{ span: 8, offset: 2 }}
-                  className="text-center mt-5 text-light"
-                >
-                  MAU-D Bonjour, Je me présente Maud <br></br> Développeur Web
-                  Front-End Junior
+                <Col xs={12} className="text-center text-light">
+                  <h1>MAU-D</h1>
+                  <h2>Développeur Web Front-End Junior</h2>
                 </Col>
                 {/*Texte*/}
-                <Col xs={{ span: 8, offset: 2 }} className="mt-5">
-                  <p className="text-left text-light">
-                    <span className="pl-5">Présentement étudiante,</span> je
-                    suis à la recherche d'un stage ou d'un emploi stimulant. Ce
-                    changement de carrière fait suite à ma passion des
-                    technologies et mon désir constant d'apprendre. J'adore la
-                    résolution de problème et je suis attirée vers ce nouveau
-                    style de vie combinant création et techniques.
-                  </p>
-                </Col>
+                <Row>
+                  <Col xs={8}>
+                    <h3>Bonjour, je me présente Maud</h3>
+                    <p className="text-left font-medium p-4">
+                      <span className="pl-5">Présentement étudiante,</span> je
+                      suis à la recherche d'un stage ou d'un emploi stimulant.
+                      Ce changement de carrière fait suite à ma passion des
+                      technologies et mon désir constant d'apprendre.
+                    </p>
+                  </Col>
+                </Row>
               </Row>
               {location.pathname !== "/onepage/" && (
-                <Row className="mt-2">
+                <Row className="mt-1">
                   {/*Lien vers la version une seule page*/}
                   <Col className="text-light">
                     Vous préférez "scroller", allez directement à la version
-                    OnePage.
-                  </Col>
-                  <Col xs={{ span: 4, offset: 1 }}>
                     <Link to={"onepage/"}>
-                      <h2>One Page</h2>
+                      <h3>One Page</h3>
                     </Link>
                   </Col>
                 </Row>
@@ -65,7 +59,11 @@ function Accueil() {
         </Row>
         {location.pathname !== "/onepage/" && (
           <Row className="p-5 d-flex justify-content-center">
-            <Col xs={12} className="text-center d-flex justify-content-center">
+            <Col
+              xs={12}
+              className="text-center d-flex justify-content-center"
+              id="cardLien"
+            >
               <Card className="apropos mt-3">
                 <Card.Img variant="top" src={IMAGES.chemin} className="p-2" />
                 <Card.Body className="pt-0">

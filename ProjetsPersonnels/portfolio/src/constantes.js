@@ -5,6 +5,7 @@ export const IMAGES = {
   chemin: require("./img/chemin.jpg"),
   ordi: require("./img/ordi.jpg"),
   contact: require("./img/contact.jpg"),
+  cv: require("./img/cv.jpg"),
 };
 
 //Variables pour téléverser les images des logos des langages

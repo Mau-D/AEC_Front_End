@@ -3,10 +3,10 @@ import { Card } from "react-bootstrap";
 
 function Formation(props) {
   return (
-    <Card style={{ width: "24rem" }}>
+    <Card style={{ width: "20rem" }}>
       <Card.Body>
         <Card.Title>{props.nom}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">{props.duree}</Card.Subtitle>
+        <Card.Subtitle className="m-2 text-muted">{props.duree}</Card.Subtitle>
         <Card.Text>
           <ul>
             {props.concepts.map((value) => (
