@@ -9,10 +9,10 @@ function ListeProjet(props) {
     <Container fluid id="projet">
       <Row className="mt-5">
         <Col xs={{ span: 6, offset: 3 }}>
-          <Image fluid className="imgProjets" src={props.image} />
+          <Image fluid src={props.image} />
         </Col>
       </Row>
-      <Row className="mb-5">
+      <Row className="mb-5 mt-5">
         <Col xs={{ span: 6, offset: 3 }} className="pl-5 text-center">
           <h1>{props.titre}</h1>
           <h3>{props.sousTitre}</h3>
@@ -26,7 +26,7 @@ function ListeProjet(props) {
         image={props.image}
         carousel1={props.carousel1}
         carousel2={props.carousel2}
-        carousel3={props.carousel2}
+        carousel3={props.carousel3}
         details={props.details}
       />
     </Container>

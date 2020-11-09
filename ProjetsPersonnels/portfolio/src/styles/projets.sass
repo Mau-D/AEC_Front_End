@@ -3,6 +3,7 @@
 #projet
   .bkgnoir
     @include couleursBkg($couleurBkg: "noir")
+    box-shadow: 3px 3px 3px #62B6C0
     transform: rotate(-20deg)
     height: 150px
     width: 150px
@@ -10,6 +11,7 @@
     .bkgorange
         @include couleursBkg($couleurBkg: "orange")
         transform: rotate(20deg)
+        box-shadow: 3px 3px 3px #62B6C0
         height: 150px
         width: 150px
 .listeprojet
@@ -19,3 +21,8 @@
     p
         @include families($family: "normal")
         @include couleursTexte($couleurTexte: "noir")
+#projet
+    img
+        box-shadow: 3px 3px 3px 3px #62B6C0
+
+

@@ -8,6 +8,7 @@ import Apropos from "./APropos";
 import Contact from "./Contact";
 import { Container } from "react-bootstrap";
 import { Route, Switch, useLocation } from "react-router-dom";
+import "../styles/principal.sass";
 
 function App() {
   let location = useLocation(); /*variable de la page où je me trouve */
@@ -15,8 +16,8 @@ function App() {
   return (
     <>
       {/*Contenu de l'app*/}
-      <Container fluid className="p-0">
-        {location.pathname !== "/onepage/" && <Header />}
+      <Container fluid className="p-0 .min100">
+        <Header />
         <Container fluid>
           <Switch>
             {/*Accueil est la première page*/}
@@ -27,7 +28,8 @@ function App() {
             <Route path="/contact" component={Contact} />
           </Switch>
         </Container>
-        {location.pathname !== "/onepage/" && <Footer />}
+        {location.pathname !== "/onepage" ||
+          (location.pathname !== "/contact" && <Footer />)}
       </Container>
     </>
   );

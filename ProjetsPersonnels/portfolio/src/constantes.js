@@ -6,6 +6,7 @@ export const IMAGES = {
   ordi: require("./img/ordi.jpg"),
   contact: require("./img/contact.jpg"),
   cv: require("./img/cv.jpg"),
+  logo: require("./img/logo.jpg"),
 };
 
 //Variables pour téléverser les images des logos des langages

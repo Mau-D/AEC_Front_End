@@ -1,10 +1,16 @@
 import React from "react";
+import { Row, Col } from "react-bootstrap";
 
 function Footer() {
   return (
-    <>
-      <p>Footer: nom, lien github,lien linkedIn et courriel</p>
-    </>
+    <Row id="footer" className="text-center">
+      <Col xs={{ span: 6, offset: 3 }}>
+        <h1>MAU-D</h1>
+        <a href="mailto:harveymaud@gmail.com">
+          <h3>harveymaud@gmail.com </h3>
+        </a>
+      </Col>
+    </Row>
   );
 }
 

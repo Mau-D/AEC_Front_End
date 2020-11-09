@@ -1,14 +1,115 @@
+/*Font face*/
+@font-face
+  font-family: 'LettreAttachée'
+  src: local(LettreAttachée), url('font/Dancing_Script/DancingScript-VariableFont_wght.ttf') format('truetype')
+@font-face
+  font-family: 'styleTitre'
+  src: local(styleTitre), url('font/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf') format('truetype')
+@font-face
+  font-family: 'styleEfface'
+  src: local(styleEfface), url('font/Fredericka_the_Great/FrederickatheGreat-Regular.ttf') format('truetype')
+@font-face
+  font-family: 'normal'
+  src: local(normal), url('font/Heebo/Heebo-VariableFont_wght.ttf') format('truetype')
+
+/*Font family*/
+@mixin families($family:"")
+    @if $family == "LettreAttachée"
+        font-family: "LettreAttachée", sans-serif
+    @if $family == "styleTitre"
+        font-family: "styleTitre", sans-serif
+    @if $family == "styleEfface"
+        font-family: "styleEfface", sans-serif
+    @if $family == "normal"
+        font-family: "normal", sans-serif
+
 
 /*Bannière, image*/
 $bg-img: '../img/banniere.jpg'
+$bg-button: '../img/open.jpg'
+
+/*Background*/
+@mixin bkgcover
+  background-color: black    
+  background-size: cover
+  background-repeat: no-repeat
+  height: 80vh
+
+/*Couleur de texte*/
+@mixin couleursTexte($couleurTexte: "")
+  @if $couleurTexte == "noir"
+    color: #3E3E40
+  @else if $couleurTexte == "orange"
+    color: #FEAE4B
+  @else if $couleurTexte == "vert"
+    color: #62B6C0
+
+/*Couleur de background*/
+@mixin couleursBkg($couleurBkg: "")
+  @if $couleurBkg == "noir"
+    background-color: #3E3E40
+  @else if $couleurBkg == "orange"
+    background-color: #FEAE4B
+  @else if $couleurBkg == "vert"
+    background-color: #62B6C0
+
+/*Hauteur du texte */
+$fontSizes: ("small": 1.1, "medium": 1.8, "large": 2.6)
+@each $grandeur, $valeur in $fontSizes
+  .font-#{$grandeur}
+    font-size: $valeur + rem
+/*************/
+
+#banniere
+  background-image: url($bg-img)  
+  @include bkgcover
+
+h1, h2, .card-text
+  @include couleursTexte($couleurTexte: "orange")
+h3, p, .card-title, h5
+  @include couleursTexte($couleurTexte: "vert")
+
+p, h3, h5
+  @include families($family: "LettreAttachée")
+h1, h2
+  @include families($family: "styleTitre")
+#cardLien
+    .card-title
+        @include families($family: "styleTitre")
+  
+button
+  background-image: url($bg-button)
+  background-size: cover
+  background-repeat: no-repeat
+  height: 20vh
+  width: 20vw
+
+/*Menu de navigation*/
+.navbar
+    @include couleursBkg($couleurBkg: "noir")
+    
+    
+.navbar-nav
+  a
+    @include couleursTexte($couleurTexte: "vert")
+.navbar
+    img
+        height: 10vh
+        box-shadow: 3px 3px 3px #62B6C0
+        transform: rotate(-20deg)
+
+        
+
+.navbar-nav
+    background-color: white
+    height: 10vh
+    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
+  
+  
+/*************************************************/
+/*Rotation*/
 
 
-#banniere  
-    background-color: black
-    background-image: url($bg-img)
-    background-size: cover
-    background-repeat: no-repeat
-    height: 80vh
 
 /*Photo avec effet polaroid*/
 .polaroid   
@@ -31,7 +132,7 @@ $bg-img: '../img/banniere.jpg'
     width: 100%  
     bottom: 1%
     color: #888
-
+/*Card avec effet polaroid*/
 .card
     width: 22%
     height: 40vh
@@ -39,6 +140,7 @@ $bg-img: '../img/banniere.jpg'
     padding: 0px
     border-bottom: 100px solid #fff
     box-shadow: 3px 3px 3px #777 
+
 .card img
     height: 75%
    
@@ -47,72 +149,15 @@ $bg-img: '../img/banniere.jpg'
 .projets
     transform: rotate(-7deg)
 
-.imgProjets
-    height: 150%;
+    
 
-/*************************************************/
-/*Couleur de texte*/
-@mixin couleursTexte($couleurTexte: "")
-  @if $couleurTexte == "noir"
-    color: #3E3E40
-  @else if $couleurTexte == "orange"
-    color: #FEAE4B
-  @else if $couleurTexte == "vert"
-    color: #62B6C0
+
+
   
    
-/*Couleur de background*/
-@mixin couleursBkg($couleurBkg: "")
-  @if $couleurBkg == "noir"
-    background-color: #3E3E40
-  @else if $couleurBkg == "orange"
-    background-color: #FEAE4B
-  @else if $couleurBkg == "vert"
-    background-color: #62B6C0
-
-h1, h2, .card-text
-  @include couleursTexte($couleurTexte: "orange")
-h3, p, .card-title, h5
-  @include couleursTexte($couleurTexte: "vert")
-
-/*Font face*/
-
-@font-face
-  font-family: 'LettreAttachée'
-  src: local(LettreAttachée), url('font/Dancing_Script/DancingScript-VariableFont_wght.ttf') format('truetype')
-@font-face
-  font-family: 'styleTitre'
-  src: local(styleTitre), url('font/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf') format('truetype')
-@font-face
-  font-family: 'styleEfface'
-  src: local(styleEfface), url('font/Fredericka_the_Great/FrederickatheGreat-Regular.ttf') format('truetype')
-@font-face
-  font-family: 'normal'
-  src: local(normal), url('font/Heebo/Heebo-VariableFont_wght.ttf') format('truetype')
-
-/*Font family*/
-
-@mixin families($family:"")
-    @if $family == "LettreAttachée"
-        font-family: "LettreAttachée", sans-serif
-    @if $family == "styleTitre"
-        font-family: "styleTitre", sans-serif
-    @if $family == "styleEfface"
-        font-family: "styleEfface", sans-serif
-    @if $family == "normal"
-        font-family: "normal", sans-serif
 
 
-p, h3, h5
-  @include families($family: "LettreAttachée")
-h1, h2
-  @include families($family: "styleTitre")
-#cardLien
-    .card-title
-        @include families($family: "styleTitre")
+
     
-/*Hauteur du texte */
-$fontSizes: ("small": 1.1, "medium": 1.8, "large": 2.6)
-@each $grandeur, $valeur in $fontSizes
-  .font-#{$grandeur}
-    font-size: $valeur + rem
+
+
