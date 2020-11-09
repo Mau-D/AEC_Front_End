@@ -8,7 +8,6 @@ import Apropos from "./APropos";
 import Contact from "./Contact";
 import { Container } from "react-bootstrap";
 import { Route, Switch, useLocation } from "react-router-dom";
-import DetailsFormation from "./DetailsFormation";
 
 function App() {
   let location = useLocation(); /*variable de la page où je me trouve */

@@ -1,0 +1,21 @@
+@import "principal.sass";
+
+#projet
+  .bkgnoir
+    @include couleursBkg($couleurBkg: "noir")
+    transform: rotate(-20deg)
+    height: 150px
+    width: 150px
+#projet
+    .bkgorange
+        @include couleursBkg($couleurBkg: "orange")
+        transform: rotate(20deg)
+        height: 150px
+        width: 150px
+.listeprojet
+    transform: rotate(-20deg)
+
+#projet
+    p
+        @include families($family: "normal")
+        @include couleursTexte($couleurTexte: "noir")

@@ -151,8 +151,25 @@ export const PROJETS = [
   },
   {
     id: 3,
+    titre: "Spotify québécois",
+    sousTitre: "Projet de Programmation 2",
+    description: "Premier travail en REACT",
+    date: "Juin 2020",
+    liengithub:
+      "https://mau-d.github.io/AEC_Front_End/Programmation2/spotifyTP1/build/",
+    imagePrincipale: require("./img/prog2_tp1.jpg"),
+    carousel: [
+      require("./img/prog2_tp1_1.jpg"),
+      require("./img/prog2_tp1_2.jpg"),
+      require("./img/prog2_tp1_3.jpg"),
+    ],
+    detailsProjet:
+      "Ce projet affiche un catalogue d'album, avec une page de connexion. Une barre de recherche sélectionne les albums par leur nom ou celui de l'artiste. Un clic sur l'album amène à la liste des chansons et celui sur une chanson à ses paroles.",
+  },
+  {
+    id: 4,
     titre: "Gestionnaire de nouvelles",
-    sousTitre: "Projet Infrastructure Web",
+    sousTitre: "Projet Infrastructure Web en PHP",
     description: "Évaluation finale du cours d'infrastructure Web 1 en PHP",
     date: "Septembre 2020",
     liengithub: "http://final.mau-d.com/",
@@ -165,22 +182,7 @@ export const PROJETS = [
     detailsProjet:
       "Ce projet par la gestion de nouvelles démontre la capacité à manipuler une base de données avec le langage PHP. Les categories sont affichés dans le menu, les nouvelles récentes sont affichées sur la page d'accueil. Un affichage par catégorie est accessible par le menu et l'affichage d'une nouvelle détaillée par un lien. Les opérations CRUD sont diponibles par la connexion qui donne accès au menu d'administration. Des ajouts pour la sécurité sont ajoutés et le déploiement est effectué.",
   },
-  {
-    id: 4,
-    titre: "Spotify québecois",
-    sousTitre: "Projet de Programmation 2",
-    description: "Premier travail en REACT",
-    date: "Juin 2020",
-    liengithub: "http://final.mau-d.com/",
-    imagePrincipale: require("./img/prog2_tp1.jpg"),
-    carousel: [
-      require("./img/prog2_tp1_1.jpg"),
-      require("./img/prog2_tp1_2.jpg"),
-      require("./img/prog2_tp1_3.jpg"),
-    ],
-    detailsProjet:
-      "Ce projet affiche un catalogue d'album, avec une page de connexion. Une barre de recherche sélectionne les albums par leur nom ou celui de l'artiste. Un clic sur l'album amène à la liste des chansons et celui sur une chanson à ses paroles.",
-  },
+
   {
     id: 5,
     titre: "La trotteuse",

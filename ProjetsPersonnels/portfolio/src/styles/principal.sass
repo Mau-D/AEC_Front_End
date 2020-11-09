@@ -34,7 +34,7 @@ $bg-img: '../img/banniere.jpg'
 
 .card
     width: 22%
-    height: 42vh
+    height: 40vh
     border: 20px solid #fff
     padding: 0px
     border-bottom: 100px solid #fff
@@ -72,7 +72,7 @@ $bg-img: '../img/banniere.jpg'
 
 h1, h2, .card-text
   @include couleursTexte($couleurTexte: "orange")
-h3, p, .card-title
+h3, p, .card-title, h5
   @include couleursTexte($couleurTexte: "vert")
 
 /*Font face*/
@@ -103,7 +103,7 @@ h3, p, .card-title
         font-family: "normal", sans-serif
 
 
-p, h3
+p, h3, h5
   @include families($family: "LettreAttachée")
 h1, h2
   @include families($family: "styleTitre")
@@ -112,7 +112,7 @@ h1, h2
         @include families($family: "styleTitre")
     
 /*Hauteur du texte */
-$fontSizes: ("small": 1.2, "medium": 1.8, "large": 2.6)
+$fontSizes: ("small": 1.1, "medium": 1.8, "large": 2.6)
 @each $grandeur, $valeur in $fontSizes
   .font-#{$grandeur}
     font-size: $valeur + rem

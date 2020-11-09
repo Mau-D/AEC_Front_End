@@ -14,8 +14,13 @@ function APropos() {
       <Container fluid id="apropos">
         {/* Texte de présentation */}
         <Row>
+          <Col xs={2} className="mb-5 mt-5 bkgorange">
+            <h1 className="p-5">À propos</h1>
+          </Col>
+          <Col xs={10}></Col>
+        </Row>
+        <Row>
           <Col xs={12}>
-            <h1>À propos</h1>
             <div className="tableauTexte p-5 m-5 font-medium">
               <p>
                 Allo! je suis nouvellement arrivée dans la région du Saguenay,
@@ -42,6 +47,7 @@ function APropos() {
             </div>
           </Col>
         </Row>
+
         {/* Nom de la formation et diagramme de gantt */}
         <Row>
           <Col xs={3}>
@@ -49,6 +55,7 @@ function APropos() {
             <h3>Développeur Front-end</h3>
             <Image
               fluid
+              className="pl-5 pr-5"
               src="https://www.lescegeps.com/_image/large/21/i21733prc.jpg"
             />
           </Col>
@@ -150,13 +157,20 @@ function APropos() {
             />
           </Col>
         </Row>
-
-        <Container>
-          <h1>Les détails de ma formation</h1>
-          <Row>
-            <DetailsFormation />
-          </Row>
-        </Container>
+        <Row>
+          <Col xs={4} className="mb-5 bkgorange">
+            <h1 className="mb-5 pt-5">Les détails de ma formation</h1>
+          </Col>
+        </Row>
+        <Row className="mt-5">
+          <Col xs={12}>
+            <Container>
+              <Row>
+                <DetailsFormation />
+              </Row>
+            </Container>
+          </Col>
+        </Row>
         {/* Logos des différents langages, librairies et frameworks */}
         <Row className="mt-5 text-center">
           <Logos></Logos>
