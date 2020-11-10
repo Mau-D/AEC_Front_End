@@ -48,12 +48,7 @@ function Accueil() {
           </Container>
         </Col>
         {/*Photo*/}
-        <Col xs={12} md={4} className="p-5 mt-4 text-right">
-          {/*<div className="polaroid">
-            <p>C'est moi!</p>
-            <Image fluid src={IMAGES.photo} id="photoMoi" />
-            </div>*/}
-
+        <Col xs={10} md={4} className="p-5 mt-4 text-right">
           <Card className="photo mt-3">
             <Card.Img fluid variant="top" src={IMAGES.photo} className="p-2" />
             <Card.Body className="pt-0">
@@ -72,7 +67,7 @@ function Accueil() {
                 src={IMAGES.chemin}
                 className="p-2"
               />
-              <Card.Body className="pt-0">
+              <Card.Body className="p-0">
                 <Link to={"apropos/"}>
                   <Card.Title className="m-0">
                     <span className="font-medium">À propos</span>
@@ -84,8 +79,12 @@ function Accueil() {
           </Col>
           <Col xs={12} sm={4}>
             <Card className="projets mt-1 p-2">
-              <Card.Img variant="top" src={IMAGES.ordi} className="p-2" />
-              <Card.Body className="pt-0">
+              <Card.Img
+                variant="top"
+                src={IMAGES.ordi}
+                className="pb-0 p-2 p-md-2 "
+              />
+              <Card.Body className="p-0">
                 <Link to={"projets/"}>
                   <Card.Title className="m-0 font-medium">
                     <span className="font-medium">Projets</span>

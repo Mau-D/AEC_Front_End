@@ -36,7 +36,7 @@ function DetailsProjet(props) {
       <Col>
         <div className="bkgnoir m-auto"></div>
       </Col>
-      <Col xs={12} xl={5} className="p-5 font-small">
+      <Col xs={12} xl={5} className="pt-5 p-sm-5 font-small">
         <p>{props.details}</p>
       </Col>
     </Row>

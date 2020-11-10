@@ -8,7 +8,7 @@ function ListeProjet(props) {
   return (
     <Container fluid id="projet">
       <Row className="mt-5">
-        <Col xs={{ span: 6, offset: 3 }}>
+        <Col xs={12} sm={{ span: 6, offset: 3 }}>
           <Image fluid src={props.image} />
         </Col>
       </Row>
