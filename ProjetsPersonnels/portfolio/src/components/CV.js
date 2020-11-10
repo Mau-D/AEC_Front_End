@@ -17,7 +17,7 @@ function CV() {
         </Col>
       </Row>
       <Row>
-        <Col xs={12}>
+        <Col xs={12} className="text-center">
           <Image fluid src={IMAGES.cv} />
         </Col>
       </Row>

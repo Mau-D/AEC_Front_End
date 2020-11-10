@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 
 function Formation(props) {
   return (
-    <Card style={{ width: "20rem" }}>
+    <Card style={{ width: "16rem" }}>
       <Card.Body className="p-0">
         <Card.Title className="p-3">{props.nom}</Card.Title>
         <Card.Subtitle className="m-2">{props.duree}</Card.Subtitle>

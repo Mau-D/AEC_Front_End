@@ -28,8 +28,8 @@ function App() {
             <Route path="/contact" component={Contact} />
           </Switch>
         </Container>
-        {location.pathname !== "/onepage" ||
-          (location.pathname !== "/contact" && <Footer />)}
+
+        {location.pathname !== "/contact" && <Footer />}
       </Container>
     </>
   );

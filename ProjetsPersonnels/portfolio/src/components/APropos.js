@@ -14,14 +14,14 @@ function APropos() {
       <Container fluid id="apropos">
         {/* Texte de présentation */}
         <Row>
-          <Col xs={2} className="mb-5 mt-5 bkgorange">
+          <Col xs={4} sm={2} className="mb-5 mt-5 bkgorange">
             <h1 className="p-5">À propos</h1>
           </Col>
           <Col xs={10}></Col>
         </Row>
         <Row>
           <Col xs={12}>
-            <div className="tableauTexte p-5 m-5 font-medium">
+            <div className="tableauTexte p-1 p-sm-5 m-sm-5 font-medium">
               <p>
                 Allo! je suis nouvellement arrivée dans la région du Saguenay,
                 je possède un diplôme en technologie physique avec quinze ans
@@ -50,7 +50,7 @@ function APropos() {
 
         {/* Nom de la formation et diagramme de gantt */}
         <Row>
-          <Col xs={3}>
+          <Col xs={12} md={3}>
             <h2>AEC Développement Web (NWE.2U)</h2>
             <h3>Développeur Front-end</h3>
             <Image
@@ -59,7 +59,7 @@ function APropos() {
               src="https://www.lescegeps.com/_image/large/21/i21733prc.jpg"
             />
           </Col>
-          <Col xs={9} className="mt-5">
+          <Col xs={12} md={9} className="mt-5">
             <Chart
               width={"100%"}
               height={"400px"}
@@ -78,7 +78,7 @@ function APropos() {
                 ],
                 [
                   "Integration1",
-                  "Techniques d'intégration d'interfaces Web 1",
+                  "Intégration 1",
                   "60 heures",
                   new Date(2019, 10, 15),
                   new Date(2020, 4, 4),
@@ -88,7 +88,7 @@ function APropos() {
                 ],
                 [
                   "Programmation1",
-                  "Techniques de programmation Web 1",
+                  "Programmation 1",
                   "90 heures",
                   new Date(2019, 10, 15),
                   new Date(2020, 4, 4),
@@ -98,7 +98,7 @@ function APropos() {
                 ],
                 [
                   "PHP",
-                  "Infrastructure WEB",
+                  "Infrastructure",
                   "60 heures",
                   new Date(2020, 4, 14),
                   new Date(2020, 9, 26),
@@ -108,7 +108,7 @@ function APropos() {
                 ],
                 [
                   "Intégration2",
-                  "Techniques d'intégration d'interfaces Web 2",
+                  "Intégration 2",
                   "60 heures",
                   new Date(2020, 4, 14),
                   new Date(2020, 9, 26),
@@ -118,7 +118,7 @@ function APropos() {
                 ],
                 [
                   "Programmation2",
-                  "Techniques de programmation Web 2",
+                  "Programmation 2",
                   "90 heures",
                   new Date(2020, 4, 14),
                   new Date(2020, 9, 26),
@@ -128,7 +128,7 @@ function APropos() {
                 ],
                 [
                   "Programmation3",
-                  "Techniques de programmation Web 3",
+                  "Programmation 3",
                   "90 heures",
                   new Date(2020, 10, 6),
                   new Date(2021, 3, 4),
@@ -138,7 +138,7 @@ function APropos() {
                 ],
                 [
                   "Utilisateur",
-                  "Intégration d'interface utilisateur",
+                  "Interface utilisateur",
                   "60 heures",
                   new Date(2020, 10, 6),
                   new Date(2021, 3, 4),
@@ -158,7 +158,7 @@ function APropos() {
           </Col>
         </Row>
         <Row>
-          <Col xs={4} className="mb-5 bkgorange">
+          <Col xs={8} sm={4} className="mb-5 bkgorange">
             <h1 className="mb-5 pt-5">Les détails de ma formation</h1>
           </Col>
         </Row>

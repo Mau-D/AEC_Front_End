@@ -5,7 +5,7 @@ import "../styles/projets.sass";
 function DetailsProjet(props) {
   return Number.isInteger(props.id / 2) ? (
     <Row>
-      <Col xs={5} className="pr-5">
+      <Col xs={12} xl={5} className="pr-lg-5">
         <Carousel>
           <Carousel.Item interval={1000}>
             <img className="d-block w-100" src={props.image} alt="Main slide" />
@@ -36,23 +36,19 @@ function DetailsProjet(props) {
       <Col>
         <div className="bkgnoir m-auto"></div>
       </Col>
-      <Col xs={5} className="p-5 font-small">
+      <Col xs={12} xl={5} className="p-5 font-small">
         <p>{props.details}</p>
-        <br></br>
-        <a href={props.lien}>{props.lien}</a>
       </Col>
     </Row>
   ) : (
     <Row>
-      <Col xs={5} className="p-5 font-small">
+      <Col xs={12} xl={5} className="p-5 font-small">
         <p>{props.details}</p>
-        <br></br>
-        <a href={props.lien}>{props.lien}</a>
       </Col>
       <Col>
         <div className="bkgorange m-auto"></div>
       </Col>
-      <Col xs={5} className="pl-5">
+      <Col xs={12} xl={5} className="pl-lg-5">
         <Carousel>
           <Carousel.Item interval={1000}>
             <img className="d-block w-100" src={props.image} alt="Main slide" />

@@ -11,19 +11,19 @@ function Accueil() {
     <>
       <Row id="banniere">
         {/*Texte de présentation*/}
-        <Col xs={9}>
+        <Col xs={12} lg={8}>
           <Container>
             <Row>
               {/*Titre*/}
-              <Col xs={12} className="text-center text-light">
+              <Col lg={12} className="text-center text-light">
                 <h1>MAU-D</h1>
                 <h2>Développeur Web Front-End Junior</h2>
               </Col>
               {/*Texte*/}
-              <Row>
-                <Col xs={8}>
+              <Row className="mt-3">
+                <Col xs={{ span: 11, offset: 1 }} lg={8}>
                   <h3>Bonjour, je me présente Maud</h3>
-                  <p className="text-left font-medium p-4">
+                  <p className="text-left font-medium p-md-4">
                     <span className="pl-5">Présentement étudiante,</span> je
                     suis à la recherche d'un stage ou d'un emploi stimulant. Ce
                     changement de carrière fait suite à ma passion des
@@ -35,7 +35,7 @@ function Accueil() {
             {location.pathname !== "/onepage" && (
               <Row className="mt-1">
                 {/*Lien vers la version une seule page*/}
-                <Col className="text-light">
+                <Col xs={{ span: 11, offset: 1 }} lg={8}>
                   <h5>
                     Vous préférez "scroller", allez directement à la version
                   </h5>
@@ -48,22 +48,30 @@ function Accueil() {
           </Container>
         </Col>
         {/*Photo*/}
-        <Col xs={3} className="p-5 mt-4">
-          <div className="polaroid">
+        <Col xs={12} md={4} className="p-5 mt-4 text-right">
+          {/*<div className="polaroid">
             <p>C'est moi!</p>
             <Image fluid src={IMAGES.photo} id="photoMoi" />
-          </div>
+            </div>*/}
+
+          <Card className="photo mt-3">
+            <Card.Img fluid variant="top" src={IMAGES.photo} className="p-2" />
+            <Card.Body className="pt-0">
+              <Card.Text className="font-small">C'est moi!</Card.Text>
+            </Card.Body>
+          </Card>
         </Col>
       </Row>
-      {location.pathname !== "/onepage/" && (
-        <Row className="p-5 d-flex justify-content-center">
-          <Col
-            xs={12}
-            className="text-center d-flex justify-content-center"
-            id="cardLien"
-          >
-            <Card className="apropos mt-3">
-              <Card.Img variant="top" src={IMAGES.chemin} className="p-2" />
+      {location.pathname !== "/onepage" && (
+        <Row className="p-5 text-center" id="cardLien">
+          <Col xs={12} sm={4}>
+            <Card className="apropos mt-3 p-2">
+              <Card.Img
+                fluid
+                variant="top"
+                src={IMAGES.chemin}
+                className="p-2"
+              />
               <Card.Body className="pt-0">
                 <Link to={"apropos/"}>
                   <Card.Title className="m-0">
@@ -73,8 +81,9 @@ function Accueil() {
                 <Card.Text className="font-small">Pour me connaître</Card.Text>
               </Card.Body>
             </Card>
-
-            <Card className="projets mt-5">
+          </Col>
+          <Col xs={12} sm={4}>
+            <Card className="projets mt-1 p-2">
               <Card.Img variant="top" src={IMAGES.ordi} className="p-2" />
               <Card.Body className="pt-0">
                 <Link to={"projets/"}>
@@ -83,12 +92,13 @@ function Accueil() {
                   </Card.Title>
                 </Link>
                 <Card.Text className="font-small">
-                  Explorer mes projets Web
+                  Explorer mes travaux
                 </Card.Text>
               </Card.Body>
             </Card>
-
-            <Card className="contact mt-1">
+          </Col>
+          <Col xs={12} sm={4}>
+            <Card className="contact mt-5 p-2">
               <Card.Img variant="top" src={IMAGES.contact} className="p-2" />
               <Card.Body className="pt-0">
                 <Link to={"contact/"}>

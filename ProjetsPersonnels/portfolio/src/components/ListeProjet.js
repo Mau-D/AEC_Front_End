@@ -13,11 +13,11 @@ function ListeProjet(props) {
         </Col>
       </Row>
       <Row className="mb-5 mt-5">
-        <Col xs={{ span: 6, offset: 3 }} className="pl-5 text-center">
+        <Col xs={12} sm={{ span: 6, offset: 3 }} className="pl-5 text-center">
           <h1>{props.titre}</h1>
           <h3>{props.sousTitre}</h3>
           <p>{props.date}</p>
-          <a href={props.lien}>{props.lien}</a>
+          <a href={props.lien}>Lien GitHub</a>
           <h5>{props.description}</h5>
         </Col>
       </Row>

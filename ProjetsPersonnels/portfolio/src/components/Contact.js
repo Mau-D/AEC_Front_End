@@ -12,7 +12,7 @@ function Contact() {
   return (
     <>
       <Row className="mt-5">
-        <Col xs={{ span: 6, offset: 3 }} className="m-auto text-center">
+        <Col xs={12} sm={{ span: 6, offset: 3 }} className="m-auto text-center">
           <h3>Il me fera plaisir de vous rencontrer </h3>
           <h3>Pour me joindre:</h3>
           <h1>Maud Harvey</h1>
@@ -25,7 +25,11 @@ function Contact() {
         </Col>
       </Row>
       <Row>
-        <Col xs={{ span: 6, offset: 3 }} className="mx-auto text-center">
+        <Col
+          xs={12}
+          sm={{ span: 6, offset: 3 }}
+          className="mx-auto text-center buttoncontact"
+        >
           <Button onClick={handleClick}></Button>
           {/* Affichage de la section des détails de la formation lors du clic*/}
           {show ? <CV /> : null}
