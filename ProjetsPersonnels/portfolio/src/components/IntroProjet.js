@@ -1,39 +1,27 @@
-import React from "react";
-import { Image, Row, Col } from "react-bootstrap";
-
+import React, { useState } from "react";
+import { PROJETS } from "../constantes";
+import Projets from "./Projets";
+import { Row, Col, Container, Button } from "react-bootstrap";
+import TriProjet from "./TriProjet";
 function IntroProjet(props) {
-  return Number.isInteger(props.id / 2) ? (
-    <Row>
-      <Col xs={6} className="pl-5">
-        <a href="#">
-          <h1>{props.titre}</h1>
-        </a>
-        <h3>{props.sousTitre}</h3>
-        <p>{props.date}</p>
-        <a href={props.lien}>{props.lien}</a>
-        <p>{props.description}</p>
-      </Col>
-      <Col xs={2}></Col>
-      <Col xs={4}>
-        <Image fluid className="imgProjets" src={props.image} />
-      </Col>
-    </Row>
-  ) : (
-    <Row>
-      <Col xs={4}>
-        <Image fluid className="imgProjets" src={props.image} />
-      </Col>
-      <Col xs={2}></Col>
-      <Col xs={6} className="pl-5">
-        <a href="#">
-          <h1>{props.titre}</h1>
-        </a>
-        <h3>{props.sousTitre}</h3>
-        <p>{props.date}</p>
-        <a href={props.lien}>{props.lien}</a>
-        <p>{props.description}</p>
-      </Col>
-    </Row>
+  const [tri, setTri] = useState(false);
+  const [techno, setTechno] = useState("");
+  function handleClick(techno) {
+    setTri(true);
+    setTechno(techno);
+  }
+  function handleRetour() {
+    setTri(false);
+  }
+  return (
+    <>
+      <Button onClick={handleRetour}>Tous les projets</Button>
+      <Button onClick={() => handleClick("Integration")}>Integration</Button>
+      <Button onClick={() => handleClick("JQuery")}>JQuery</Button>
+      <Button onClick={() => handleClick("PHP")}>PHP</Button>
+      <Button onClick={() => handleClick("React")}>React</Button>
+      {!tri ? <Projets /> : <TriProjet techno={techno} />}
+    </>
   );
 }
 

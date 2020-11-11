@@ -9,6 +9,7 @@ import Contact from "./Contact";
 import { Container } from "react-bootstrap";
 import { Route, Switch, useLocation } from "react-router-dom";
 import "../styles/principal.sass";
+import IntroProjet from "./IntroProjet";
 
 function App() {
   let location = useLocation(); /*variable de la page où je me trouve */
@@ -24,7 +25,7 @@ function App() {
             <Route path="/" exact component={Accueil} />
             <Route path="/onepage" component={OnePager} />
             <Route path="/apropos" component={Apropos} />
-            <Route path="/projets" component={Projets} />
+            <Route path="/projets" component={IntroProjet} />
             <Route path="/contact" component={Contact} />
           </Switch>
         </Container>

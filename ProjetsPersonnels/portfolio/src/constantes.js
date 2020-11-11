@@ -117,6 +117,7 @@ export const FORMATIONS = [
 export const PROJETS = [
   {
     id: 1,
+    techno: "Integration",
     titre: "Premier site",
     sousTitre: "Intégration d'un site en bootstrap responsive",
     description: "Évaluation finale du cours de techniques d'intégration Web 1",
@@ -134,6 +135,7 @@ export const PROJETS = [
   },
   {
     id: 2,
+    techno: "JQuery",
     titre: "Photociti",
     sousTitre: "Projet Programmation 1 en JQuery",
     description:
@@ -152,6 +154,7 @@ export const PROJETS = [
   },
   {
     id: 3,
+    techno: "React",
     titre: "Spotify québécois",
     sousTitre: "Projet de Programmation 2",
     description: "Premier travail en REACT",
@@ -169,6 +172,7 @@ export const PROJETS = [
   },
   {
     id: 4,
+    techno: "PHP",
     titre: "Gestionnaire de nouvelles",
     sousTitre: "Projet Infrastructure Web en PHP",
     description: "Évaluation finale du cours d'infrastructure Web 1 en PHP",
@@ -186,6 +190,7 @@ export const PROJETS = [
 
   {
     id: 5,
+    techno: "React",
     titre: "La trotteuse",
     sousTitre: "Projet final Programmation 2 et Intégration 2",
     description:
