@@ -3,7 +3,7 @@ import React from "react";
 //import Contact from "./Contact";
 import { IMAGES } from "../constantes";
 import { Link, useLocation } from "react-router-dom";
-import { Container, Row, Col, Image, Card } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 function Accueil() {
   let location = useLocation(); /*variable de la page où je me trouve */

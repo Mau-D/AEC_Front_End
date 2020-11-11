@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap";
 function Footer() {
   return (
     <Row id="footer" className="text-center">
-      <Col xs={{ span: 6, offset: 3 }}>
+      <Col xs={12}>
         <h1>MAU-D</h1>
         <a href="mailto:harveymaud@gmail.com">
           <h3>harveymaud@gmail.com </h3>

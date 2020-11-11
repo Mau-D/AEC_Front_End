@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import React from "react";
+import { Container, Row } from "react-bootstrap";
 import ListeProjet from "./ListeProjet";
-import { PROJETS } from "../constantes";
-import TriProjet from "./TriProjet";
-import BoutonTri from "./BoutonTri";
+import { AUTRES, PROJETS } from "../constantes";
+import AutreProjet from "./AutreProjet";
 
-function Projets(props) {
+/*Fonction pour afficher tous les projets de la constante PROJETS, props de toutes les propriétés */
+function Projets() {
   return (
     <>
       {PROJETS.map((key, i) => (
@@ -26,6 +26,22 @@ function Projets(props) {
           />
         </>
       ))}
+      {/*Les autres projets sous forme de polaroid */}
+      <Container>
+        <Row>
+          {AUTRES.map((key, i) => (
+            <>
+              <AutreProjet
+                key={"autre" + key}
+                id={AUTRES[i].id}
+                image={AUTRES[i].image}
+                titre={AUTRES[i].titre}
+                lien={AUTRES[i].lien}
+              />
+            </>
+          ))}
+        </Row>
+      </Container>
     </>
   );
 }

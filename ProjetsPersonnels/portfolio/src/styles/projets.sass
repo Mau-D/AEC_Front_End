@@ -25,4 +25,16 @@
     img
         box-shadow: 3px 3px 3px 3px #62B6C0
 
+/*Style des boutons*/
+@mixin boutons($bouton: "")
+  border-radius: 100px
+  padding: 6px 15px
+  @if $bouton == "tri"
+    border: 1px solid #e6e6e6
+    @include couleursBkg($couleurBkg: "vert")
+    @include couleursTexte($couleurTexte: "noir")
+
+#boutonsTri
+    button
+        @include boutons($bouton: "tri")
 

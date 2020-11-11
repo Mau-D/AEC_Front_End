@@ -208,3 +208,20 @@ export const PROJETS = [
       "Ce projet, en sujet libre, est un site qui comporte les exigences d'une PWA. L'intégration est fait en SASS et comporte des animations de librairies JavaScript. Une API web est utilisé avec le service << cruccrud.com >>, car des formulaires d'ajout et d'édition sont accessibles par un bouton ou de lien sur les titres. Ce projet est programmé avec des composants utilisant soit des classes ou des hooks. À voir!!!, c'est mon meilleur travail...pour l'instant.",
   },
 ];
+//Variables pour téléverser les autres projets
+export const AUTRES = [
+  {
+    id: 1,
+    techno: "PHP",
+    image: require("./img/prog2_final.jpg"),
+    titre: "Autre projet PHP",
+    lien: "LienGithub",
+  },
+  {
+    id: 2,
+    techno: "JQuery",
+    image: require("./img/prog2_final.jpg"),
+    titre: "Autre projet JQuery",
+    lien: "LienGithub",
+  },
+];

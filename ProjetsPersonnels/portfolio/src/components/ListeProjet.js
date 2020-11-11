@@ -1,9 +1,8 @@
 import React from "react";
 import { Row, Col, Image, Container } from "react-bootstrap";
 import DetailsProjet from "./DetailsProjet";
-import "../styles/projets.sass";
 
-//Fonction qui affiche la liste des projets principaux
+//Fonction qui affiche les projets
 function ListeProjet(props) {
   return (
     <>

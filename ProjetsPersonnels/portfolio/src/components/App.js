@@ -1,6 +1,5 @@
 import React from "react";
 import Accueil from "./Accueil";
-import Projets from "./Projets";
 import OnePager from "./OnePager";
 import Header from "./Header";
 import Footer from "./Footer";
