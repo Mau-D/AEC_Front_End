@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Image, Container } from "react-bootstrap";
 import DetailsProjet from "./DetailsProjet";
+import { GoMarkGithub } from "react-icons/go";
 
 //Fonction qui affiche les projets
 function ListeProjet(props) {
@@ -17,7 +18,11 @@ function ListeProjet(props) {
             <h1>{props.titre}</h1>
             <h3>{props.sousTitre}</h3>
             <p>{props.date}</p>
-            <a href={props.lien}>Lien GitHub</a>
+            <a href={props.lien}>
+              <h1>
+                <GoMarkGithub />
+              </h1>
+            </a>
             <h5>{props.description}</h5>
           </Col>
         </Row>
