@@ -28,7 +28,6 @@ function Projets() {
       ))}
       {/*Les autres projets sous forme de polaroid */}
       <Container>
-        <p>Projets</p>
         <Row>
           {Object.keys(AUTRES).map((key, i) => (
             <>

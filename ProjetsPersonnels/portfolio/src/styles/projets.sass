@@ -7,13 +7,16 @@
     transform: rotate(-20deg)
     height: 150px
     width: 150px
-#projet
-    .bkgorange
-        @include couleursBkg($couleurBkg: "orange")
-        transform: rotate(20deg)
-        box-shadow: 3px 3px 3px #62B6C0
-        height: 150px
-        width: 150px
+
+.titre
+    @include couleursBkg($couleurBkg: "orange")
+    transform: rotate(-15deg)
+.titre
+    h1
+        @include families($family: "styleEfface")
+        @include couleursTexte($couleurTexte: "vert")
+        transform: rotate(15deg)
+
 .listeprojet
     transform: rotate(-20deg)
 
@@ -40,3 +43,6 @@
 
 #autres
     transform: rotate(-15deg)
+    height: 80%
+#autres
+    card

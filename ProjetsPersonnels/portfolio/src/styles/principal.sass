@@ -26,14 +26,15 @@
 
 /*Bannière, image*/
 $bg-img: '../img/banniere.jpg'
-$bg-button: '../img/open.jpg'
+$bg-open: '../img/open.jpg'
+$bg-contact: '../img/polaroid-image.jpg'
 
 /*Background*/
 @mixin bkgcover
   background-color: black    
   background-size: cover
   background-repeat: no-repeat
-  height: 100%
+  
 
 /*Couleur de texte*/
 @mixin couleursTexte($couleurTexte: "")
@@ -60,9 +61,17 @@ $fontSizes: ("small": 1.1, "medium": 1.8, "large": 2.5)
     font-size: $valeur + rem
 /*************/
 
+
 #banniere
   background-image: url($bg-img) 
   background-color: #3E3E40
+  @include bkgcover
+  height: 100%
+
+.bkgPolaroid
+  background-image: url($bg-contact) 
+  background-color: white
+  min-height: 100vh
   @include bkgcover
 
 h1, h2, .card-text
@@ -78,15 +87,18 @@ h1, h2
   .card-title
     @include families($family: "styleTitre")
 
+/*Boutons dans contact*/
 .buttoncontact
-  button
-    background-image: url($bg-button)
+  .open
+    background-image: url($bg-open)
     background-size: cover
     background-position: center
     background-repeat: no-repeat
     height: 16vh
     width: 25vw
     box-shadow: 3px 3px 3px #62B6C0
+
+
 
 /*Menu de navigation*/
 .navbar
@@ -129,7 +141,7 @@ h1, h2
 
 .photo
   height: 90%
-  width: 100%
+  width: 90%
   transform: rotate(16deg)
   border: 20px solid #fff
   border-bottom: 100px solid #fff

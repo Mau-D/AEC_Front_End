@@ -8,18 +8,10 @@ import "../styles/projets.sass";
 function IntroProjet() {
   const [techno, setTechno] = useState("tout");
   /*Lors du clic, la techno est envoyé au state et l'état de tri*/
-  function reactClick() {
-    setTechno("rct");
+  function handleClick(techno) {
+    setTechno(techno);
   }
-  function PHPClick() {
-    setTechno("PHP");
-  }
-  function JQueryClick() {
-    setTechno("JQuery");
-  }
-  function IntegrationClick() {
-    setTechno("Integration");
-  }
+
   /*clic sur tous les projets remet l'état de tri à faux*/
   function handleRetour() {
     setTechno("tout");
@@ -27,35 +19,50 @@ function IntroProjet() {
 
   return (
     <>
-      <Row id="boutonsTri" className="mt-3">
-        <p>{techno}</p>
-        <Col xs={2} className="text-center">
-          <Button type="button" onClick={handleRetour} className="mx-2 mb-2">
-            Tous les projets
-          </Button>
+      <Row>
+        <Col xs={4} sm={2} className="mb-5 mt-5 titre">
+          <h1 className="p-5">Mes Projets</h1>
         </Col>
-        <Col xs={2} className="text-center">
+      </Row>
+      <Row id="boutonsTri" className="mt-3 mx-auto">
+        <Col xs={12} className="text-center">
           <Button
             type="button"
-            onClick={IntegrationClick}
+            onClick={() => handleClick("tout")}
+            className="mx-2 mb-2"
+          >
+            Tous les projets
+          </Button>
+
+          <Button
+            type="button"
+            onClick={() => handleClick("Integration")}
             className="mx-2 mb-2"
           >
             Integration
           </Button>
-        </Col>
 
-        <Col xs={2} className="text-center">
-          <Button type="button" onClick={JQueryClick} className="mx-2 mb-2">
+          <Button
+            type="button"
+            onClick={() => handleClick("JQuery")}
+            className="mx-2 mb-2"
+          >
             JQuery
           </Button>
-        </Col>
-        <Col xs={2} className="text-center">
-          <Button type="button" onClick={PHPClick} className="mx-2 mb-2">
+
+          <Button
+            type="button"
+            onClick={() => handleClick("PHP")}
+            className="mx-2 mb-2"
+          >
             PHP
           </Button>
-        </Col>
-        <Col xs={2} className="text-center">
-          <Button type="button" onClick={reactClick} className="mx-2 mb-2">
+
+          <Button
+            type="button"
+            onClick={() => handleClick("rct")}
+            className="mx-2 mb-2"
+          >
             React
           </Button>
         </Col>

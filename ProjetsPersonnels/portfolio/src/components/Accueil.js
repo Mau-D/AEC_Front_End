@@ -32,7 +32,7 @@ function Accueil() {
                 </Col>
               </Row>
             </Row>
-            {location.pathname !== "/onepage" && (
+            {location.pathname !== "/onepage/" && (
               <Row className="mt-1">
                 {/*Lien vers la version une seule page*/}
                 <Col xs={{ span: 11, offset: 1 }} lg={8}>
@@ -57,7 +57,7 @@ function Accueil() {
           </Card>
         </Col>
       </Row>
-      {location.pathname !== "/onepage" && (
+      {location.pathname !== "/onepage/" && (
         <Row className="p-5 text-center" id="cardLien">
           <Col xs={12} sm={4}>
             <Card className="apropos mt-3 p-2">

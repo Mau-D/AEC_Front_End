@@ -1,7 +1,7 @@
 import React from "react";
 import Accueil from "./Accueil";
 import APropos from "./APropos";
-import Projets from "./Projets";
+import IntroProjet from "./IntroProjet";
 import CV from "./CV";
 
 function OnePager() {
@@ -9,7 +9,7 @@ function OnePager() {
     <>
       <Accueil />
       <APropos></APropos>
-      <Projets></Projets>
+      <IntroProjet></IntroProjet>
       <CV></CV>
     </>
   );

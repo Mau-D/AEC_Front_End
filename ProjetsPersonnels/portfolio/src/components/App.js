@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       {/*Contenu de l'app*/}
-      <Container fluid className="p-0 .min100">
+      <Container fluid className="p-0 .min100 m-0">
         <Header />
         <Container fluid>
           <Switch>
