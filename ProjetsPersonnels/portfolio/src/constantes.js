@@ -154,7 +154,7 @@ export const PROJETS = [
   },
   {
     id: 3,
-    techno: "React",
+    techno: "rct",
     titre: "Spotify québécois",
     sousTitre: "Projet de Programmation 2",
     description: "Premier travail en REACT",
@@ -190,7 +190,7 @@ export const PROJETS = [
 
   {
     id: 5,
-    techno: "React",
+    techno: "rct",
     titre: "La trotteuse",
     sousTitre: "Projet final Programmation 2 et Intégration 2",
     description:
@@ -212,16 +212,66 @@ export const PROJETS = [
 export const AUTRES = [
   {
     id: 1,
-    techno: "PHP",
-    image: require("./img/prog2_final.jpg"),
-    titre: "Autre projet PHP",
-    lien: "LienGithub",
+    techno: "Integration",
+    image: require("./img/bootstrap.jpg"),
+    titre: "Bootstrap Responsive",
+    lien:
+      "https://mau-d.github.io/AEC_Front_End/Integration1/bootstrapResponsive/",
   },
   {
     id: 2,
+    techno: "Integration",
+    image: require("./img/parallaxe.jpg"),
+    titre: "Parallaxe",
+    lien:
+      "https://mau-d.github.io/AEC_Front_End/Integration1/exerciceParallaxe/",
+  },
+  {
+    id: 3,
     techno: "JQuery",
-    image: require("./img/prog2_final.jpg"),
-    titre: "Autre projet JQuery",
-    lien: "LienGithub",
+    image: require("./img/casseTete.jpg"),
+    titre: "Casse-tête",
+    lien:
+      "https://mau-d.github.io/AEC_Front_End/Programmation1/Casse-Tete/casse-tete",
+  },
+  {
+    id: 4,
+    techno: "JQuery",
+    image: require("./img/shawicon.jpg"),
+    titre: "Personnages",
+    lien:
+      "https://mau-d.github.io/AEC_Front_End/Programmation1/Comicon%202019/",
+  },
+  {
+    id: 5,
+    techno: "JQuery",
+    image: require("./img/flash.jpg"),
+    titre: "Flash",
+    lien:
+      "https://mau-d.github.io/AEC_Front_End/Programmation1/Flash%20Version%202020/Flash%20Version%202020/",
+  },
+  {
+    id: 6,
+    techno: "Integration",
+    image: require("./img/mars.jpg"),
+    titre: "Mission sur Mars",
+    lien:
+      "https://mau-d.github.io/AEC_Front_End/Integration2/VivreSurMars_Examen1/",
+  },
+  {
+    id: 7,
+    techno: "Integration",
+    image: require("./img/zelda.jpg"),
+    titre: "Zelda",
+    lien:
+      "https://mau-d.github.io/AEC_Front_End/Integration2/Examen2ZeldaMaudHarvey/Examen2ZeldaEnonce/",
+  },
+  {
+    id: 8,
+    techno: "rct",
+    image: require("./img/bottin.jpg"),
+    titre: "Bottin de clients",
+    lien:
+      "https://mau-d.github.io/AEC_Front_End/Programmation2/bottindeclients/build/",
   },
 ];

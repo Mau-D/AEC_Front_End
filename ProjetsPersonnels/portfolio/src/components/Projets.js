@@ -8,7 +8,7 @@ import AutreProjet from "./AutreProjet";
 function Projets() {
   return (
     <>
-      {PROJETS.map((key, i) => (
+      {Object.keys(PROJETS).map((key, i) => (
         <>
           <ListeProjet
             key={"projet" + key}
@@ -28,8 +28,9 @@ function Projets() {
       ))}
       {/*Les autres projets sous forme de polaroid */}
       <Container>
+        <p>Projets</p>
         <Row>
-          {AUTRES.map((key, i) => (
+          {Object.keys(AUTRES).map((key, i) => (
             <>
               <AutreProjet
                 key={"autre" + key}
