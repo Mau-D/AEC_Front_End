@@ -10,7 +10,9 @@ function ListeProjet(props) {
       <Container fluid id="projet">
         <Row className="mt-5">
           <Col xs={12} sm={{ span: 6, offset: 3 }}>
-            <Image fluid src={props.image} />
+            <a href={props.lienWeb} target="_blank" rel="noopener noreferrer">
+              <Image fluid src={props.image} />
+            </a>
           </Col>
         </Row>
         <Row className="mb-5 mt-5">
@@ -18,7 +20,7 @@ function ListeProjet(props) {
             <h1>{props.titre}</h1>
             <h3>{props.sousTitre}</h3>
             <p>{props.date}</p>
-            <a href={props.lien}>
+            <a href={props.lien} target="_blank" rel="noopener noreferrer">
               <h1>
                 <GoMarkGithub />
               </h1>

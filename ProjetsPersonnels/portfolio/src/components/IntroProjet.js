@@ -3,6 +3,8 @@ import Projets from "./Projets";
 import { Button, Row, Col } from "react-bootstrap";
 import TriProjet from "./TriProjet";
 import "../styles/projets.sass";
+//animations react reveal
+import Swing from "react-reveal/Swing";
 
 /*Fonction  pour l'affichage des projets, tous les projets sont affichés et les boutons offrent un tri selon la techno*/
 function IntroProjet() {
@@ -12,17 +14,14 @@ function IntroProjet() {
     setTechno(techno);
   }
 
-  /*clic sur tous les projets remet l'état de tri à faux*/
-  function handleRetour() {
-    setTechno("tout");
-  }
-
   return (
     <>
       <Row>
-        <Col xs={4} sm={2} className="mb-5 mt-5 titre">
-          <h1 className="p-5">Mes Projets</h1>
-        </Col>
+        <Swing>
+          <Col xs={8} className="mb-5 mt-5 titre">
+            <h1 className="p-5">Mes Projets</h1>
+          </Col>
+        </Swing>
       </Row>
       <Row id="boutonsTri" className="mt-3 mx-auto">
         <Col xs={12} className="text-center">

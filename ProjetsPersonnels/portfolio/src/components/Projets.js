@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import ListeProjet from "./ListeProjet";
 import { AUTRES, PROJETS } from "../constantes";
 import AutreProjet from "./AutreProjet";
+//animations react reveal
+import Swing from "react-reveal/Swing";
 
 /*Fonction pour afficher tous les projets de la constante PROJETS, props de toutes les propriétés */
 function Projets() {
@@ -17,6 +19,7 @@ function Projets() {
             sousTitre={PROJETS[i].sousTitre}
             date={PROJETS[i].date}
             lien={PROJETS[i].liengithub}
+            lienWeb={PROJETS[i].lienWeb}
             description={PROJETS[i].description}
             image={PROJETS[i].imagePrincipale}
             carousel1={PROJETS[i].carousel[0]}
@@ -29,9 +32,11 @@ function Projets() {
       {/*Les autres projets sous forme de polaroid */}
       <Container>
         <Row>
-          <Col xs={4} sm={2} className="mb-5 mt-5 titre">
-            <h1 className="p-5">Autres Projets</h1>
-          </Col>
+          <Swing>
+            <Col xs={8} className="mb-5 mt-5 titre">
+              <h1 className="p-5">Autres Projets</h1>
+            </Col>
+          </Swing>
         </Row>
         <Row>
           {Object.keys(AUTRES).map((key, i) => (
@@ -42,6 +47,7 @@ function Projets() {
                 image={AUTRES[i].image}
                 titre={AUTRES[i].titre}
                 lien={AUTRES[i].lien}
+                lienWeb={AUTRES[i].lienWeb}
               />
             </>
           ))}

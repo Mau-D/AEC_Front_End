@@ -4,6 +4,8 @@ import Chart from "react-google-charts";
 import Logos from "./Logos";
 import DetailsFormation from "./DetailsFormation";
 import "../styles/apropos.sass";
+//animations react reveal
+import Swing from "react-reveal/Swing";
 
 //import CV from "./CV";
 //import Projets from "./Projets";
@@ -14,9 +16,12 @@ function APropos() {
       <Container fluid id="apropos">
         {/* Texte de présentation */}
         <Row>
-          <Col xs={4} sm={2} className="mb-5 mt-5 bkgorange">
-            <h1 className="p-5">À propos</h1>
-          </Col>
+          <Swing>
+            <Col xs={8} className="mb-5 mt-5 bkgorange">
+              <h1 className="p-5 ">À propos</h1>
+            </Col>
+          </Swing>
+
           <Col xs={10}></Col>
         </Row>
         <Row>
@@ -158,9 +163,11 @@ function APropos() {
           </Col>
         </Row>
         <Row>
-          <Col xs={8} sm={4} className="mb-5 bkgorange">
-            <h1 className="mb-5 pt-5">Les détails de ma formation</h1>
-          </Col>
+          <Swing>
+            <Col xs={8} className="mb-5 bkgorange">
+              <h1 className="mb-5 pt-5">Les détails de ma formation</h1>
+            </Col>
+          </Swing>
         </Row>
         <Row className="mt-5">
           <Col xs={12}>

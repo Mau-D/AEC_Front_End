@@ -5,10 +5,45 @@ import { IMAGES } from "../constantes";
 import { Link, useLocation } from "react-router-dom";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
+//Animations react-reveal
+import Rotate from "react-reveal/Rotate";
+//Animation hover-effect
+import hoverEffect from "hover-effect";
+
 function Accueil() {
+  const rue = require("../img/rue.jpg");
+  const voiture = require("../img/voiture_orange.jpg");
+  const transition = require("../img/10.jpg");
   let location = useLocation(); /*variable de la page où je me trouve */
+
+  //animation
+  new hoverEffect({
+    parent: document.querySelector(".my-div"),
+    intensity1: 0.1,
+    intensity2: 0.1,
+    angle2: Math.PI / 2,
+    image1: rue,
+    image2: voiture,
+    displacementImage: transition,
+  });
   return (
     <>
+      <Container>
+        <Row className="mb-5">
+          <Col xs={12}>
+            <div className="my-div">
+              <h1 className="animText m-5 font-xlarge">
+                Vous êtes enfin prêt!
+              </h1>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12}>
+            <div className="my-div h-100"></div>
+          </Col>
+        </Row>
+      </Container>
       <Row id="banniere">
         {/*Texte de présentation*/}
         <Col xs={12} lg={8}>
@@ -49,64 +84,79 @@ function Accueil() {
         </Col>
         {/*Photo*/}
         <Col xs={10} md={4} className="p-5 mt-4 text-right">
-          <Card className="photo mt-3">
-            <Card.Img fluid variant="top" src={IMAGES.photo} className="p-2" />
-            <Card.Body className="pt-0">
-              <Card.Text className="font-small">C'est moi!</Card.Text>
-            </Card.Body>
-          </Card>
+          <Rotate top right>
+            <Card className="photo mt-3">
+              <Card.Img
+                fluid
+                variant="top"
+                src={IMAGES.photo}
+                className="p-2"
+              />
+              <Card.Body className="pt-0">
+                <Card.Text className="font-small">C'est moi!</Card.Text>
+              </Card.Body>
+            </Card>
+          </Rotate>
         </Col>
       </Row>
       {location.pathname !== "/onepage/" && (
         <Row className="p-5 text-center" id="cardLien">
           <Col xs={12} sm={4}>
-            <Card className="apropos mt-3 p-2">
-              <Card.Img
-                fluid
-                variant="top"
-                src={IMAGES.chemin}
-                className="p-2"
-              />
-              <Card.Body className="p-0">
-                <Link to={"apropos/"}>
-                  <Card.Title className="m-0">
-                    <span className="font-medium">À propos</span>
-                  </Card.Title>
-                </Link>
-                <Card.Text className="font-small">Pour me connaître</Card.Text>
-              </Card.Body>
-            </Card>
+            <Rotate top left>
+              <Card className="apropos mt-3 p-2">
+                <Card.Img
+                  fluid
+                  variant="top"
+                  src={IMAGES.chemin}
+                  className="p-2"
+                />
+                <Card.Body className="p-0">
+                  <Link to={"apropos/"}>
+                    <Card.Title className="m-0">
+                      <span className="font-medium">À propos</span>
+                    </Card.Title>
+                  </Link>
+                  <Card.Text className="font-small">
+                    Pour me connaître
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Rotate>
           </Col>
           <Col xs={12} sm={4}>
-            <Card className="projets mt-1 p-2">
-              <Card.Img
-                variant="top"
-                src={IMAGES.ordi}
-                className="pb-0 p-2 p-md-2 "
-              />
-              <Card.Body className="p-0">
-                <Link to={"projets/"}>
-                  <Card.Title className="m-0 font-medium">
-                    <span className="font-medium">Projets</span>
-                  </Card.Title>
-                </Link>
-                <Card.Text className="font-small">
-                  Explorer mes travaux
-                </Card.Text>
-              </Card.Body>
-            </Card>
+            <Rotate bottom right>
+              <Card className="projets mt-1 p-2">
+                <Card.Img
+                  variant="top"
+                  src={IMAGES.ordi}
+                  className="pb-0 p-2 p-md-2 "
+                />
+                <Card.Body className="p-0">
+                  <Link to={"projets/"}>
+                    <Card.Title className="m-0 font-medium">
+                      <span className="font-medium">Projets</span>
+                    </Card.Title>
+                  </Link>
+                  <Card.Text className="font-small">
+                    Explorer mes travaux
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Rotate>
           </Col>
           <Col xs={12} sm={4}>
-            <Card className="contact mt-5 p-2">
-              <Card.Img variant="top" src={IMAGES.contact} className="p-2" />
-              <Card.Body className="pt-0">
-                <Link to={"contact/"}>
-                  <Card.Title className="m-0">
-                    <span className="font-medium">Contact</span>
-                  </Card.Title>
-                </Link>
-              </Card.Body>
-            </Card>
+            <Rotate top right>
+              <Card className="contact mt-5 p-2">
+                <Card.Img variant="top" src={IMAGES.contact} className="p-2" />
+                <Card.Body className="pt-0">
+                  <Link to={"contact/"}>
+                    <Card.Title className="m-0">
+                      <span className="font-medium">Contact</span>
+                    </Card.Title>
+                  </Link>
+                </Card.Body>
+              </Card>
+            </Rotate>
           </Col>
         </Row>
       )}

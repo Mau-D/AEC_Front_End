@@ -50,6 +50,8 @@ function Header() {
           <Nav className="ml-auto text-center">
             <a
               href="https://github.com/Mau-D/AEC_Front_End"
+              target="_blank"
+              rel="noopener noreferrer"
               className="ml-5 mr-sm-5 my-4"
             >
               <h1>
@@ -58,6 +60,8 @@ function Header() {
             </a>
             <a
               href="https://www.linkedin.com/in/maud-harvey-70569159"
+              target="_blank"
+              rel="noopener noreferrer"
               className="ml-5 mr-sm-5 my-4"
             >
               <h1>

@@ -27,7 +27,7 @@
 /*Bannière, image*/
 $bg-img: '../img/banniere.jpg'
 $bg-open: '../img/open.jpg'
-$bg-contact: '../img/polaroid-image.jpg'
+$bg-contact: '../img/ampoule.jpg'
 
 /*Background*/
 @mixin bkgcover
@@ -68,7 +68,7 @@ $fontSizes: ("small": 1.1, "medium": 1.8, "large": 2.5)
   @include bkgcover
   height: 100%
 
-.bkgPolaroid
+.bkgContact
   background-image: url($bg-contact) 
   background-color: white
   min-height: 100vh
@@ -137,7 +137,7 @@ h1, h2
     box-shadow: 3px 3px 3px #777 
 .card 
   img
-    height: 70%
+    height: 75%
 
 .photo
   height: 90%
@@ -163,10 +163,37 @@ h1, h2
 .apropos, .contact
     transform: rotate(15deg)
 .projets
-    transform: rotate(-12deg)
+  transform: rotate(-12deg)
+ 
 
-  
+#autres
+  .card
+    height: 100%
+    width: 95%
+#autres    
+  .autreImg
+    height: 140%
+#autres
+  .card-body
+    height: 50%
 
+/*animation*/
+.my-div
+  position: relative
+  height: 50vh
+  width: 100%
+  background: black
+  display: flex
+  box-shadow: 0px 10px 40px rgba(0,0,0,.4)
+
+canvas
+  position: absolute
+  border-radius: 6px
+  z-index: 0
+
+.animText
+   z-index: 99
+/*fin*/
 
 
   

@@ -123,7 +123,8 @@ export const PROJETS = [
     description: "Évaluation finale du cours de techniques d'intégration Web 1",
     date: "Mars 2020",
     liengithub:
-      "https://mau-d.github.io/AEC_Front_End/Integration1/ProjetFinal/",
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Integration1/ProjetFinal",
+    lienWeb: "https://mau-d.github.io/AEC_Front_End/Integration1/ProjetFinal/",
     imagePrincipale: require("./img/Integration1_final.jpg"),
     carousel: [
       require("./img/Integration1_final_1.jpg"),
@@ -142,6 +143,8 @@ export const PROJETS = [
       "Évaluation finale du cours de techniques de programmation Web 1",
     date: "Mars 2020",
     liengithub:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Programmation1/ProjetFinalPhotociti",
+    lienWeb:
       "https://mau-d.github.io/AEC_Front_End/Programmation1/ProjetFinalPhotociti/",
     imagePrincipale: require("./img/prog1_final.jpg"),
     carousel: [
@@ -160,6 +163,8 @@ export const PROJETS = [
     description: "Premier travail en REACT",
     date: "Juin 2020",
     liengithub:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Programmation2/spotifyTP1",
+    lienWeb:
       "https://mau-d.github.io/AEC_Front_End/Programmation2/spotifyTP1/build/",
     imagePrincipale: require("./img/prog2_tp1.jpg"),
     carousel: [
@@ -177,7 +182,9 @@ export const PROJETS = [
     sousTitre: "Projet Infrastructure Web en PHP",
     description: "Évaluation finale du cours d'infrastructure Web 1 en PHP",
     date: "Septembre 2020",
-    liengithub: "http://final.mau-d.com/",
+    liengithub:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Infrastructure/infrastructure_web_projet_finalv2",
+    lienWeb: "http://final.mau-d.com/",
     imagePrincipale: require("./img/infrastructure_final.jpg"),
     carousel: [
       require("./img/infrastructure_final_1.jpg"),
@@ -197,6 +204,8 @@ export const PROJETS = [
       "Évaluation finale combinant intégration et programmation en REACT",
     date: "Septembre 2020",
     liengithub:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Programmation2/projetfinalreact",
+    lienWeb:
       "https://mau-d.github.io/AEC_Front_End/Programmation2/projetfinalreact/build/",
     imagePrincipale: require("./img/prog2_final.jpg"),
     carousel: [
@@ -216,6 +225,8 @@ export const AUTRES = [
     image: require("./img/bootstrap.jpg"),
     titre: "Bootstrap Responsive",
     lien:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Integration1/bootstrapResponsive",
+    lienWeb:
       "https://mau-d.github.io/AEC_Front_End/Integration1/bootstrapResponsive/",
   },
   {
@@ -224,6 +235,8 @@ export const AUTRES = [
     image: require("./img/parallaxe.jpg"),
     titre: "Parallaxe",
     lien:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Integration1/exerciceParallaxe",
+    lienWeb:
       "https://mau-d.github.io/AEC_Front_End/Integration1/exerciceParallaxe/",
   },
   {
@@ -232,6 +245,8 @@ export const AUTRES = [
     image: require("./img/casseTete.jpg"),
     titre: "Casse-tête",
     lien:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Programmation1/Casse-Tete",
+    lienWeb:
       "https://mau-d.github.io/AEC_Front_End/Programmation1/Casse-Tete/casse-tete",
   },
   {
@@ -240,6 +255,8 @@ export const AUTRES = [
     image: require("./img/shawicon.jpg"),
     titre: "Personnages",
     lien:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Programmation1/Comicon%202019",
+    lienWeb:
       "https://mau-d.github.io/AEC_Front_End/Programmation1/Comicon%202019/",
   },
   {
@@ -248,6 +265,8 @@ export const AUTRES = [
     image: require("./img/flash.jpg"),
     titre: "Flash",
     lien:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Programmation1/Flash%20Version%202020",
+    lienWeb:
       "https://mau-d.github.io/AEC_Front_End/Programmation1/Flash%20Version%202020/Flash%20Version%202020/",
   },
   {
@@ -256,6 +275,8 @@ export const AUTRES = [
     image: require("./img/mars.jpg"),
     titre: "Mission sur Mars",
     lien:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Integration2/VivreSurMars_Examen1",
+    lienWeb:
       "https://mau-d.github.io/AEC_Front_End/Integration2/VivreSurMars_Examen1/",
   },
   {
@@ -264,6 +285,8 @@ export const AUTRES = [
     image: require("./img/zelda.jpg"),
     titre: "Zelda",
     lien:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Integration2/Examen2ZeldaMaudHarvey",
+    lienWeb:
       "https://mau-d.github.io/AEC_Front_End/Integration2/Examen2ZeldaMaudHarvey/Examen2ZeldaEnonce/",
   },
   {
@@ -272,6 +295,8 @@ export const AUTRES = [
     image: require("./img/bottin.jpg"),
     titre: "Bottin de clients",
     lien:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Programmation2/bottindeclients",
+    lienWeb:
       "https://mau-d.github.io/AEC_Front_End/Programmation2/bottindeclients/build/",
   },
 ];

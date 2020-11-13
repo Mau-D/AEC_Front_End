@@ -8,13 +8,11 @@ function Contact() {
   const [show, setShow] = useState(false);
 
   function handleClick() {
-    {
-      show ? setShow(false) : setShow(true);
-    }
+    show ? setShow(false) : setShow(true);
   }
 
   return (
-    <Container fluid className="mt-5 bkgPolaroid">
+    <Container fluid className="mt-5 bkgContact">
       <Row>
         <Col
           xs={12}
@@ -29,6 +27,8 @@ function Contact() {
           </h2>
           <a
             href="https://www.linkedin.com/in/maud-harvey-70569159"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ml-5 mr-sm-5 my-4"
           >
             <h1>
