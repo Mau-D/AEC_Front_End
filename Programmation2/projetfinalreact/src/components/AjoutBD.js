@@ -220,7 +220,7 @@ function AjoutBD() {
           image1:
             "https://www.bonjourquebec.com/fiche/images/800x600/151a2f8f-3d8a-4f9d-b64e-baf0186c1d4e/baie-saint-paul-train-de-charlevoix.jpg",
           image2:
-            "https://lh3.googleusercontent.com/proxy/ERj6JWZL_N68uYugolm1J0xKsvWj8bwEg4PqzsnzyGKGcpG_ILKrwkIxDh3OQySWevMfpieILx8O579iHYf7GzUPO8tY_E1PVXPsWEo",
+            "https://lh3.googleusercontent.com/proxy/61GgUiARm7FOLdlEBFQqwkAN90jdIxIQYn5RsODYtkON4uB--FeKKF7ckKlzdLE4cuOB0cqls7cs9jZWFDZb1Sl4PUM7ZzLLi5EhmPrRSrbbMgWEpufLQoEweu6Po62Tq4znSOqG_kyZbfwy-XhDkQ",
           description:
             "Cette route panoramique ne compte qu’une cinquantaine de kilomètres. Les paysages sont si majestueux que Tourisme Québec l’a nommé officiellement Route du fleuve. Chemin faisant, vous croiserez de magnifiques villages, comme Les Éboulements, Saint-Joseph-de-la-Rive et Sainte-Irénée, qui font tous partie de l’association des plus beaux villages du Québec. Profitez-en pour faire plusieurs arrêts, admirer le charme de chaque village, consommer et acheter local. Rendu au village de La Malbaie, vous pourrez visiter le Casino de Charlevoix et tenter votre chance aux nombreux jeux de hasard qui s’offrent à vous… Soyez sage!",
           region: "Capitale-Nationale",
@@ -267,7 +267,7 @@ function AjoutBD() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          nom: "Sillonner les routes de Kamourask",
+          nom: "Sillonner les routes de Kamouraska",
           image1:
             "https://lh3.googleusercontent.com/proxy/gdrp8x45S4nuWfShF9238UvEC0CSp5l2RU1dQAnRtCDqoEHPeH47LC65L5dhFm4YnKmIJUvwzxg3X9CMTZOfdTx_",
           image2:

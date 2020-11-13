@@ -1,6 +1,6 @@
 //Pour l'API crudcrud
 export const API =
-  "https://crudcrud.com/api/45c29e3186a54550a55f8ee8b9a551b7/roadtrips/";
+  "https://crudcrud.com/api/68a112a1d5f249dc9741114ff68a7c8a/roadtrips/";
 
 //Pour les différentes régions du Qc
 export const regions = [

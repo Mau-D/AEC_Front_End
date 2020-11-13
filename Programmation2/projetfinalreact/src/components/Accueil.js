@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import AffichageImageAttraits from "./AffichageImageAttraits";
 import sr from "./ScrollReveal";
 import Fade from "react-reveal/Fade";
-//import { API } from "../constantes";
-//import AjoutBD from "./AjoutBD";
+import { API } from "../constantes";
+import AjoutBD from "./AjoutBD";
 
 import "../style/accueil.sass"; /*Modifier ce fichier pour le style en sass*/
 
@@ -215,11 +215,11 @@ export class Accueil extends React.Component {
         <Row>
           <AffichageImageAttraits />
         </Row>
-        {/*Bouton pour la suppression par l'id
+        {/*Bouton pour la suppression par l'id*/}
         <Button variant="primary" type="submit" onClick={this.remove}>
           supprimer
         </Button>
-        <AjoutBD />*/}
+        <AjoutBD />
       </Container>
     );
   }
