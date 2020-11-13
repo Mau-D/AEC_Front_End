@@ -215,11 +215,11 @@ export class Accueil extends React.Component {
         <Row>
           <AffichageImageAttraits />
         </Row>
-        {/*Bouton pour la suppression par l'id*/}
+        {/*Bouton pour la suppression par l'id
         <Button variant="primary" type="submit" onClick={this.remove}>
           supprimer
         </Button>
-        <AjoutBD />
+        <AjoutBD />*/}
       </Container>
     );
   }
