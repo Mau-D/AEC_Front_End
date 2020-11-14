@@ -33,19 +33,18 @@ function APropos() {
                 d’expérience comme technicienne. Tout au long de mon parcours,
                 j’ai été reconnue pour être une personne qui s’implique dans son
                 milieu et qui cherche toujours à proposer de nouvelles idées.
-                L’innovation, la recherche et le développement sont donc des
-                éléments importants pour moi qui ont guidé mes choix de
-                carrière.
+                L’innovation, la recherche et le développement sont des éléments
+                importants pour moi qui ont guidé mes choix de carrière.
               </p>
               <p>
-                Le développement Web était donc une évidence dans mon choix de
+                Le développement Web était donc, une évidence dans mon choix de
                 vie. Ce changement de carrière fait suite à ma passion des
                 technologies et mon désir constant d'apprendre. J'adore la
                 résolution de problème et je suis attirée vers ce nouveau style
                 de vie combinant création et techniques.
               </p>
               <p>
-                Donc, je suis enthousiaste de connaître ce milieu où ma capacité
+                Je suis enthousiaste de connaître ce milieu où ma capacité
                 d’analyse, ma créativité et mon esprit de collaboration pourront
                 être mis à projet.
               </p>
@@ -83,7 +82,7 @@ function APropos() {
                 ],
                 [
                   "Integration1",
-                  "Intégration 1",
+                  "Intégration",
                   "60 heures",
                   new Date(2019, 10, 15),
                   new Date(2020, 4, 4),
@@ -93,7 +92,7 @@ function APropos() {
                 ],
                 [
                   "Programmation1",
-                  "Programmation 1",
+                  "JavaScript",
                   "90 heures",
                   new Date(2019, 10, 15),
                   new Date(2020, 4, 4),
@@ -102,8 +101,8 @@ function APropos() {
                   null,
                 ],
                 [
-                  "PHP",
                   "Infrastructure",
+                  "PHP",
                   "60 heures",
                   new Date(2020, 4, 14),
                   new Date(2020, 9, 26),
@@ -113,7 +112,7 @@ function APropos() {
                 ],
                 [
                   "Intégration2",
-                  "Intégration 2",
+                  "Intégration",
                   "60 heures",
                   new Date(2020, 4, 14),
                   new Date(2020, 9, 26),
@@ -123,7 +122,7 @@ function APropos() {
                 ],
                 [
                   "Programmation2",
-                  "Programmation 2",
+                  "React",
                   "90 heures",
                   new Date(2020, 4, 14),
                   new Date(2020, 9, 26),
@@ -133,7 +132,7 @@ function APropos() {
                 ],
                 [
                   "Programmation3",
-                  "Programmation 3",
+                  "Angular",
                   "90 heures",
                   new Date(2020, 10, 6),
                   new Date(2021, 3, 4),
@@ -143,7 +142,7 @@ function APropos() {
                 ],
                 [
                   "Utilisateur",
-                  "Interface utilisateur",
+                  "Vue",
                   "60 heures",
                   new Date(2020, 10, 6),
                   new Date(2021, 3, 4),

@@ -15,7 +15,7 @@ function Accueil() {
     <>
       <Row id="banniere">
         {/*Texte de présentation*/}
-        <Col xs={12} lg={8}>
+        <Col xs={12} xl={6}>
           <Container>
             <Row>
               {/*Titre*/}
@@ -25,7 +25,7 @@ function Accueil() {
               </Col>
               {/*Texte*/}
               <Row className="mt-3">
-                <Col xs={{ span: 11, offset: 1 }} lg={8}>
+                <Col xs={{ span: 11, offset: 1 }} xl={8}>
                   <h3>Bonjour, je me présente Maud</h3>
                   <p className="text-left font-medium p-md-4">
                     <span className="pl-5">Présentement étudiante,</span> je
@@ -53,7 +53,13 @@ function Accueil() {
         </Col>
         {/*Photo*/}
 
-        <Col xs={10} md={4} className="p-5 mt-5 text-right">
+        <Col
+          xs={12}
+          sm={{ span: 10, offset: 1 }}
+          lg={{ span: 8, offset: 2 }}
+          xl={4}
+          className="p-5 mt-5 text-right"
+        >
           <Rotate top right>
             <Card className="photo mt-5">
               <AnimationHover />
@@ -66,7 +72,7 @@ function Accueil() {
       </Row>
       {location.pathname !== "/onepage/" && (
         <Row className="p-5 text-center" id="cardLien">
-          <Col xs={12} sm={4}>
+          <Col xs={12} lg={4}>
             <Rotate top left>
               <Card className="apropos mt-3 p-2">
                 <Card.Img
@@ -88,7 +94,7 @@ function Accueil() {
               </Card>
             </Rotate>
           </Col>
-          <Col xs={12} sm={4}>
+          <Col xs={12} lg={4}>
             <Rotate bottom right>
               <Card className="projets mt-1 p-2">
                 <Card.Img
@@ -109,7 +115,7 @@ function Accueil() {
               </Card>
             </Rotate>
           </Col>
-          <Col xs={12} sm={4}>
+          <Col xs={12} lg={4}>
             <Rotate top right>
               <Card className="contact mt-5 p-2">
                 <Card.Img variant="top" src={IMAGES.contact} className="p-2" />

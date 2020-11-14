@@ -5,7 +5,11 @@ import "../styles/projets.sass";
 function DetailsProjet(props) {
   return Number.isInteger(props.id / 2) ? (
     <Row>
-      <Col xs={12} xl={5} className="pr-lg-5">
+      <Col
+        xs={{ span: 12, order: 2 }}
+        xl={{ span: 5, order: 1 }}
+        className="pr-lg-5"
+      >
         <Carousel>
           <Carousel.Item interval={1000}>
             <img className="d-block w-100" src={props.image} alt="Main slide" />
@@ -33,22 +37,34 @@ function DetailsProjet(props) {
           </Carousel.Item>
         </Carousel>
       </Col>
-      <Col>
+      <Col xs={{ span: 12, order: 3 }} xl={{ span: 2, order: 2 }}>
         <div className="bkgnoir m-auto"></div>
       </Col>
-      <Col xs={12} xl={5} className="pt-5 p-sm-5 font-small">
+      <Col
+        xs={{ span: 12, order: 1 }}
+        xl={{ span: 5, order: 3 }}
+        className="pt-5  font-small"
+      >
         <p>{props.details}</p>
       </Col>
     </Row>
   ) : (
     <Row>
-      <Col xs={12} xl={5} className="p-5 font-small">
+      <Col
+        xs={{ span: 12, order: 1 }}
+        xl={{ span: 5, order: 1 }}
+        className="pt-5font-small"
+      >
         <p>{props.details}</p>
       </Col>
-      <Col>
+      <Col xs={{ span: 12, order: 3 }} xl={{ span: 2, order: 2 }}>
         <div className="bkgorange m-auto"></div>
       </Col>
-      <Col xs={12} xl={5} className="pl-lg-5">
+      <Col
+        xs={{ span: 12, order: 2 }}
+        xl={{ span: 5, order: 3 }}
+        className="pl-lg-5"
+      >
         <Carousel>
           <Carousel.Item interval={1000}>
             <img className="d-block w-100" src={props.image} alt="Main slide" />

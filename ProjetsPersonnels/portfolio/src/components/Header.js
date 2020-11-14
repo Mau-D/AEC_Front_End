@@ -9,18 +9,18 @@ function Header() {
   const activeStyle = { color: "#FEAE4B" };
   return (
     <>
-      <Navbar expand="sm">
+      <Navbar expand="md">
         <Navbar.Brand>
           <Image src={IMAGES.logo} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto text-center">
+          <Nav className="mr-auto text-center px-3">
             <NavLink
               exact
               to="/"
               activeStyle={activeStyle}
-              className="my-4 pl-5"
+              className="my-4 p-2"
             >
               Accueil
             </NavLink>
@@ -28,21 +28,21 @@ function Header() {
             <NavLink
               to="/apropos"
               activeStyle={activeStyle}
-              className="ml-5 my-4"
+              className="p-2 my-4"
             >
               À propos
             </NavLink>
             <NavLink
               to="/projets"
               activeStyle={activeStyle}
-              className="ml-5 my-4"
+              className="p-2 my-4"
             >
               Projets
             </NavLink>
             <NavLink
               to="/contact"
               activeStyle={activeStyle}
-              className="ml-5 mr-sm-5 my-4"
+              className="p-2 my-4"
             >
               Contact
             </NavLink>

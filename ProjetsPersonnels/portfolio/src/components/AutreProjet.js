@@ -6,13 +6,6 @@ import Flip from "react-reveal/Flip";
 
 function AutreProjet(props) {
   const rotation = Math.floor(Math.random() * 120 - 60);
-  /*var direction = anim();
-  function anim() {
-    const flip = ["left", "right", "top", "bottom"];
-    var n = Math.floor(Math.random() * (flip.length - 1)) + 0;
-    var result = flip[n];
-    return result;
-  }*/
 
   return (
     <>
