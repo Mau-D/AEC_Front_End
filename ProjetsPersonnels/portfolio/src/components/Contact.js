@@ -15,7 +15,7 @@ function Contact() {
     <>
       <Row className="pt-5 pb-5"></Row>
 
-      <Container fluid className="mt-5 bkgContact">
+      <Container fluid className="mt-5 bkgContact mx-auto">
         <Row>
           <Col
             xs={12}

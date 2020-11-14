@@ -33,7 +33,7 @@ function APropos() {
                 je possède un diplôme en technologie physique avec quinze ans
                 d’expérience comme technicienne. Tout au long de mon parcours,
                 j’ai été reconnue pour être une personne qui s’implique dans son
-                milieu et qui cherche toujours à proposer de nouvelles idées.
+                milieu et qui recherche toujours de nouvelles idées.
                 L’innovation, la recherche et le développement sont des éléments
                 importants pour moi qui ont guidé mes choix de carrière.
               </p>

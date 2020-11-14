@@ -11,14 +11,14 @@ export class AnimationHover extends React.Component {
     /*animation */
     new hoverEffect({
       parent: document.querySelector(".ticket"),
-      intensity1: 0.5,
-      intensity2: 0.1,
+      intensity1: 0.01,
+      intensity2: 0.01,
       speedIn: 7,
       speedOut: 2,
       angle2: Math.PI / 2,
       image1: require("../img/noir.jpg"),
       image2: require("../img/photo.jpg"),
-      displacementImage: require("../img/flou.jpg"),
+      displacementImage: require("../img/transition.jpg"),
     });
   };
 

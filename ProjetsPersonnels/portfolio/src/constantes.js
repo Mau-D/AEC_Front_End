@@ -153,7 +153,7 @@ export const PROJETS = [
       require("./img/prog1_final_3.jpg"),
     ],
     detailsProjet:
-      "Ce projet reproduit le site <<http://www.photociti.ca/>> en utilisant JQuery, il comprend trois parties: le choix du mot, Le choix des lettres et le choix du fond. Pour le choix du mot, les erreurs de longueur, les accents et les caractères spéciaux sont gérés. Pour le choix des lettres, un carousel Bootstrap permet de changer l'image. Pour le choix du fond, l'usager sélectionne la couleur et l'étape 4 offre l'impression du cadre seulement.",
+      "Ce projet reproduit le site ''http://www.photociti.ca/'' en utilisant JQuery, il comprend trois parties: le choix du mot, le choix des lettres et le choix du fond. Pour le choix du mot, les erreurs de longueur, les accents et les caractères spéciaux sont gérés. Pour le choix des lettres, un carousel Bootstrap permet de changer l'image. Pour le choix du fond, l'usager sélectionne la couleur et l'étape 4 offre l'impression du cadre seulement.",
   },
   {
     id: 3,
@@ -192,7 +192,7 @@ export const PROJETS = [
       require("./img/infrastructure_final_3.jpg"),
     ],
     detailsProjet:
-      "Ce projet par la gestion de nouvelles démontre la capacité à manipuler une base de données avec le langage PHP. Les categories sont affichés dans le menu, les nouvelles récentes sont affichées sur la page d'accueil. Un affichage par catégorie est accessible par le menu et l'affichage d'une nouvelle détaillée par un lien. Les opérations CRUD sont diponibles par la connexion qui donne accès au menu d'administration. Des ajouts pour la sécurité sont ajoutés et le déploiement est effectué.",
+      "Ce projet par la gestion de nouvelles démontre la capacité à manipuler une base de données avec le langage PHP. Les categories sont affichés dans le menu, les nouvelles récentes sont affichées sur la page d'accueil. L'affichage par catégorie des nouvelles est accessible par le menu et l'affichage d'une nouvelle détaillée par un lien. Les opérations CRUD sont diponibles par la connexion qui donne accès au menu d'administration. Des ajouts pour la sécurité sont ajoutés et le déploiement est effectué.",
   },
 
   {
@@ -214,7 +214,7 @@ export const PROJETS = [
       require("./img/prog2_final_3.jpg"),
     ],
     detailsProjet:
-      "Ce projet, en sujet libre, est un site qui comporte les exigences d'une PWA. L'intégration est fait en SASS et comporte des animations de librairies JavaScript. Une API web est utilisé avec le service << cruccrud.com >>, car des formulaires d'ajout et d'édition sont accessibles par un bouton ou de lien sur les titres. Ce projet est programmé avec des composants utilisant soit des classes ou des hooks. À voir!!!, c'est mon meilleur travail...pour l'instant.",
+      "Ce projet, en sujet libre, est un site qui comporte les exigences d'une PWA. L'intégration est fait en SASS et comporte des animations de librairies JavaScript. Une API web est utilisé avec le service ''https://crudcrud.com/'', car des formulaires d'ajout et d'édition sont accessibles par un bouton ou de lien sur les titres. Ce projet est programmé avec des composants utilisant soit des classes ou des hooks.",
   },
 ];
 //Variables pour téléverser les autres projets
