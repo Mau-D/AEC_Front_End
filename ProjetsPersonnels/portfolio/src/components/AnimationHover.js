@@ -1,7 +1,6 @@
 import React from "react";
 import hoverEffect from "hover-effect"; /*animation images hover */
 import { Container } from "react-bootstrap";
-import { AUTRES, IMAGES } from "../constantes";
 
 import "../styles/principal.sass"; /*Modifier ce fichier pour le style en sass*/
 

@@ -13,6 +13,7 @@ import Swing from "react-reveal/Swing";
 function APropos() {
   return (
     <>
+      <Row className="pt-5 pb-5"></Row>
       <Container fluid id="apropos">
         {/* Texte de présentation */}
         <Row>

@@ -9,11 +9,11 @@ function Header() {
   const activeStyle = { color: "#FEAE4B" };
   return (
     <>
-      <Navbar expand="md">
+      <Navbar className="fixed-top mb-5" expand="md">
         <Navbar.Brand>
           <Image src={IMAGES.logo} />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle className="mr-5" aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto text-center px-3">
             <NavLink
@@ -52,7 +52,7 @@ function Header() {
               href="https://github.com/Mau-D/AEC_Front_End"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-5 mr-sm-5 my-4"
+              className="ml-5 mr-sm-5 my-3 p-0"
             >
               <h1>
                 <GoMarkGithub />
@@ -62,7 +62,7 @@ function Header() {
               href="https://www.linkedin.com/in/maud-harvey-70569159"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-5 mr-sm-5 my-4"
+              className="ml-5 mr-sm-5 my-3 p-0"
             >
               <h1>
                 <GrLinkedin />

@@ -16,6 +16,7 @@ function IntroProjet() {
 
   return (
     <>
+      <Row className="pt-5 pb-5"></Row>
       <Row>
         <Swing>
           <Col xs={8} className="mb-5 mt-5 titre">

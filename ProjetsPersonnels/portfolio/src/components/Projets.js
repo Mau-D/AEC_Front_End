@@ -33,7 +33,7 @@ function Projets() {
       <Container>
         <Row>
           <Swing>
-            <Col xs={12} sm={8} className="mb-5 mt-5 titre">
+            <Col xs={12} sm={10} className="mb-5 mt-5 titre">
               <h1 className="p-5">Autres Projets</h1>
             </Col>
           </Swing>

@@ -13,9 +13,10 @@ function Accueil() {
 
   return (
     <>
-      <Row id="banniere">
+      <Row className="pt-5 pb-5"></Row>
+      <Row className="pt-5" id="banniere">
         {/*Texte de présentation*/}
-        <Col xs={12} xl={6}>
+        <Col xs={12} lg={6} xl={6}>
           <Container>
             <Row>
               {/*Titre*/}
@@ -27,7 +28,7 @@ function Accueil() {
               <Row className="mt-3">
                 <Col xs={{ span: 11, offset: 1 }} xl={8}>
                   <h3>Bonjour, je me présente Maud</h3>
-                  <p className="text-left font-medium p-md-4">
+                  <p className="text-md-left text-center font-medium p-md-4 p-lg-0">
                     <span className="pl-5">Présentement étudiante,</span> je
                     suis à la recherche d'un stage ou d'un emploi stimulant. Ce
                     changement de carrière fait suite à ma passion des
@@ -55,10 +56,10 @@ function Accueil() {
 
         <Col
           xs={12}
-          sm={{ span: 10, offset: 1 }}
-          lg={{ span: 8, offset: 2 }}
-          xl={4}
-          className="p-5 mt-5 text-right"
+          sm={9}
+          md={6}
+          lg={{ span: 4, offset: 2 }}
+          className="p-0 mt-5 text-right"
         >
           <Rotate top right>
             <Card className="photo mt-5">
