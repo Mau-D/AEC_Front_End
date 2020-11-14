@@ -14,9 +14,6 @@ function Formation(props) {
             ))}
           </ul>
         </Card.Text>
-        <Card.Link href="#" className="pl-2">
-          Lien vers les projets
-        </Card.Link>
       </Card.Body>
     </Card>
   );

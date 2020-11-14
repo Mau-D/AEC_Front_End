@@ -4,46 +4,15 @@ import React from "react";
 import { IMAGES } from "../constantes";
 import { Link, useLocation } from "react-router-dom";
 import { Container, Row, Col, Card } from "react-bootstrap";
-
+import { AnimationHover } from "./AnimationHover";
 //Animations react-reveal
 import Rotate from "react-reveal/Rotate";
-//Animation hover-effect
-import hoverEffect from "hover-effect";
 
 function Accueil() {
-  const rue = require("../img/rue.jpg");
-  const voiture = require("../img/voiture_orange.jpg");
-  const transition = require("../img/10.jpg");
   let location = useLocation(); /*variable de la page où je me trouve */
 
-  //animation
-  new hoverEffect({
-    parent: document.querySelector(".my-div"),
-    intensity1: 0.1,
-    intensity2: 0.1,
-    angle2: Math.PI / 2,
-    image1: rue,
-    image2: voiture,
-    displacementImage: transition,
-  });
   return (
     <>
-      <Container>
-        <Row className="mb-5">
-          <Col xs={12}>
-            <div className="my-div">
-              <h1 className="animText m-5 font-xlarge">
-                Vous êtes enfin prêt!
-              </h1>
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12}>
-            <div className="my-div h-100"></div>
-          </Col>
-        </Row>
-      </Container>
       <Row id="banniere">
         {/*Texte de présentation*/}
         <Col xs={12} lg={8}>
@@ -83,15 +52,11 @@ function Accueil() {
           </Container>
         </Col>
         {/*Photo*/}
-        <Col xs={10} md={4} className="p-5 mt-4 text-right">
+
+        <Col xs={10} md={4} className="p-5 mt-5 text-right">
           <Rotate top right>
-            <Card className="photo mt-3">
-              <Card.Img
-                fluid
-                variant="top"
-                src={IMAGES.photo}
-                className="p-2"
-              />
+            <Card className="photo mt-5">
+              <AnimationHover />
               <Card.Body className="pt-0">
                 <Card.Text className="font-small">C'est moi!</Card.Text>
               </Card.Body>

@@ -66,7 +66,8 @@ $fontSizes: ("small": 1.1, "medium": 1.8, "large": 2.5)
   background-image: url($bg-img) 
   background-color: #3E3E40
   @include bkgcover
-  height: 100%
+  border: 20px solid #3E3E40;
+  height: 90vh
 
 .bkgContact
   background-image: url($bg-contact) 
@@ -83,6 +84,8 @@ p, h3, h5
   @include families($family: "LettreAttachée")
 h1, h2
   @include families($family: "styleTitre")
+#cardLien
+  background-image: linear-gradient(black, white)
 #cardLien
   .card-title
     @include families($family: "styleTitre")
@@ -151,6 +154,7 @@ h1, h2
   img
     height: 80%
    
+   
 .photo
   .card-text
     color: #11A3D9
@@ -178,29 +182,20 @@ h1, h2
     height: 50%
 
 /*animation*/
-.my-div
-  position: relative
-  height: 50vh
+.ticket
+  
+  height: 45vh
   width: 100%
   background: black
   display: flex
   box-shadow: 0px 10px 40px rgba(0,0,0,.4)
 
 canvas
+  height: 100%
   position: absolute
-  border-radius: 6px
   z-index: 0
 
-.animText
-   z-index: 99
+
 /*fin*/
 
-
-  
-   
-
-
-
-    
-
-
+ 
