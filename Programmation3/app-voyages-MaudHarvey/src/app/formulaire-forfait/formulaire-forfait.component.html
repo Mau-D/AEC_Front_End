@@ -1,0 +1,61 @@
+<!-- Formulaire pour ajouter des forfaits -->
+<!--  -->
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <input type="text" placeholder="Destination" aria-label="Destination" matInput [formControl]="myControl"
+            [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+            <!-- Boucle pour afficher tous les éléments du tableau transformés en tableau de string -->
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input type="text" placeholder="Ville de départ" aria-label="Ville de départ" matInput [formControl]="myControl2"
+            [matAutocomplete]="auto2">
+        <mat-autocomplete autoActiveFirstOption #auto2="matAutocomplete">
+            <mat-option *ngFor="let ville of filteredVilles | async" [value]="ville">
+                {{ville}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field class="example-form">
+        <mat-label>Nom de l'hôtel</mat-label>
+        <input matInput placeholder="(ex : The Fives Beach Hotel & Residences Playa Del Carmen)" value="">
+    </mat-form-field>
+    <mat-form-field class="example-form">
+        <mat-label>Coordonnées</mat-label>
+        <input matInput placeholder="Entrez l'adresse de l'hôtel" value="">
+    </mat-form-field>
+    <div>
+        <mat-label>Nombre d'étoiles</mat-label>
+        <div>
+            <mat-slider min="1" max="5" step="1" value="1" thumbLabel tickInterval="1"></mat-slider>
+        </div>
+    </div>
+    <mat-form-field >
+        <mat-label>Nombre de chambre</mat-label>
+        <input matInput type="number" placeholder="0" min="1" >
+    </mat-form-field>
+   
+    <div>
+        <h2>Caractéristiques de l'hôtel</h2>   
+        <section class="example-section">
+            <mat-checkbox *ngFor="let item of caractHotel" class="example-margin">{{item}}</mat-checkbox>
+        </section>
+    </div>
+    <mat-form-field class="example-half-width example-padding" appearance="fill">
+        <mat-label>Date de départ</mat-label>
+        <input matInput [matDatepicker]="dp">
+        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+        <mat-datepicker #dp></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field  class="example-half-width example-padding" appearance="fill">
+        <mat-label>Date de retour</mat-label>
+        <input matInput [matDatepicker]="dp1">
+        <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+        <mat-datepicker #dp1></mat-datepicker>
+    </mat-form-field>
+   
+</form>

@@ -1,6 +1,6 @@
 
 <!-- Forfait complet comprend toutes les informations,   -->
-<mat-grid-list cols="5" rowHeight="14:2">
+<mat-grid-list cols="5" rowHeight="4rem">
     <mat-grid-tile class="image"
         [rowspan]="12">
         <img src="../../assets/img/voyage.jpg"/>
@@ -16,15 +16,28 @@
     <mat-grid-tile class="description" [colspan]="2">
         <h1>{{proprietesForfait.hotel.nomDeLHotel}}</h1>
     </mat-grid-tile>
-    <mat-grid-tile class="prix">
-        <h1>Prix</h1>
+    <!-- appliquer un rabais sur le prix des forfaits -->
+    <!-- Barrer le prix afficher le rabais et le nouveau prix -->
+    <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0">
+        <h1>Rabais de {{proprietesForfait.rabais}}, 00$</h1>
     </mat-grid-tile>
+    <ng-template  #elseRabais>
+        <mat-grid-tile [rowspan]="3" class="prix">
+            <h1>{{proprietesForfait.prix}}, 00$</h1>
+        </mat-grid-tile>
+    </ng-template>
     <mat-grid-tile class="description" [colspan]="2">
-        <h2>{{proprietesForfait.hotel.nombresDEtoiles}}<app-etoile></app-etoile></h2>
+        <app-etoile *ngFor="let item of [].constructor(proprietesForfait.hotel.nombresDEtoiles)"></app-etoile>
     </mat-grid-tile>
-    <mat-grid-tile class="espace" [rowspan]="11"></mat-grid-tile><!-- espace -->
+    <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0; else elseRabais">
+        <h1 [ngStyle]="{'text-decoration' : 'line-through'}">{{proprietesForfait.prix}}, 00$</h1>
+    </mat-grid-tile>
+   
     <mat-grid-tile class="description" [colspan]="2">
         <h4>{{proprietesForfait.hotel.nombreDeChambres}} chambres</h4>
+    </mat-grid-tile>
+    <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0">
+        <h1>{{proprietesForfait.prix - proprietesForfait.rabais}},00$</h1>
     </mat-grid-tile>
     <mat-grid-tile class="caracteristiques" [colspan]="2" [rowspan]="2">
         <div>
@@ -34,6 +47,7 @@
             </ul>
         </div>
     </mat-grid-tile>
+    <mat-grid-tile class="espace" [rowspan]="9"></mat-grid-tile><!-- espace -->
     <mat-grid-tile class="espace" [colspan]="2"></mat-grid-tile>
     <mat-grid-tile class="adresse" [colspan]="2">
         <h5>{{proprietesForfait.hotel.coordonnees}}</h5>
@@ -43,9 +57,10 @@
         <h4>{{proprietesForfait.villeDeDepart}}</h4>
     </mat-grid-tile>
     <mat-grid-tile class="depart">
-        <h4>{{proprietesForfait.dateDeDepart}}</h4>
+        <h4>{{proprietesForfait.dateDeDepart | date: 'fullDate'}}</h4>
+        
     </mat-grid-tile>
     <mat-grid-tile class="retour">
-        <h4>{{proprietesForfait.dateDeRetour}}</h4>
+        <h4>{{proprietesForfait.dateDeRetour | date: 'fullDate'}}</h4>
     </mat-grid-tile>
 </mat-grid-list>

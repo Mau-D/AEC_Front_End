@@ -1,19 +1,32 @@
 <!-- Sous forme de card simple, placer quelques informations à l'aide d'un grid-list -->
+
+<!--  Condition remplacé par un filtre dans liste-forfait<mat-card *ngIf="proprietesForfait.forfaitVedette">-->
 <mat-card>
-    <mat-grid-list cols="2" rowHeight="6:1">
+    <mat-grid-list cols="2" rowHeight="3rem">
         <mat-grid-tile>
             <h3>{{proprietesForfait.destination}}  De {{proprietesForfait.villeDeDepart}}</h3>
         </mat-grid-tile>
-        <mat-grid-tile></mat-grid-tile>
-        <mat-grid-tile>
+        <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0; else elseRabais">
+            <h1>Rabais de {{proprietesForfait.rabais}}, 00$</h1>
+        </mat-grid-tile>
+        <ng-template #elseRabais>
+            <mat-grid-tile [rowspan]="4" class="prix">
+                <h1>{{proprietesForfait.prix}}, 00$</h1>
+            </mat-grid-tile>
+        </ng-template>
+        <mat-grid-tile [rowspan]="2">
             <h1>{{proprietesForfait.hotel.nomDeLHotel}}</h1>
         </mat-grid-tile>
-        <mat-grid-tile>
-            <h1>Prix</h1>
+        <mat-grid-tile  [rowspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0">
+            <h1 [ngStyle]="{'text-decoration' : 'line-through'}">{{proprietesForfait.prix}}, 00$</h1>
         </mat-grid-tile>
         <mat-grid-tile>
-            <h2>{{proprietesForfait.hotel.nombresDEtoiles}}<app-etoile></app-etoile></h2>
+            <app-etoile *ngFor="let item of [].constructor(proprietesForfait.hotel.nombresDEtoiles)"></app-etoile>
         </mat-grid-tile>
-        <mat-grid-tile><h4>{{proprietesForfait.dateDeDepart}}, 14 jours</h4></mat-grid-tile>
+        <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0">
+            <h1>{{proprietesForfait.prix - proprietesForfait.rabais}}, 00$</h1>
+        </mat-grid-tile>
+        <mat-grid-tile></mat-grid-tile>
+        <mat-grid-tile [rowspan]="2"><h4>{{proprietesForfait.dateDeDepart | date: 'fullDate'}}, 14 jours</h4></mat-grid-tile>
     </mat-grid-list>
 </mat-card>

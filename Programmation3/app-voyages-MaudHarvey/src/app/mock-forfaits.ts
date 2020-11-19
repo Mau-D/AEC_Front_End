@@ -9,13 +9,15 @@ export const FORFAITS: Forfait[] = [
         hotel: {
             nomDeLHotel:'Dos Amigos',
             coordonnees: '5 rue de la plage',
-            nombresDEtoiles: 5,
+            nombresDEtoiles: 3,
             nombreDeChambres: 2,
             caracteristiques: ['plage','allo'],
 
         },
-        dateDeDepart: '1er novembre 2020',
-        dateDeRetour: '14 novembre 2020',
+        dateDeDepart:  new Date(2020, 11, 1),
+        dateDeRetour: new Date(2020, 11, 14),
+        prix: 2000,
+        forfaitVedette: true,
     },
     { 
          id: '2',
@@ -28,8 +30,10 @@ export const FORFAITS: Forfait[] = [
             nombreDeChambres: 2,
             caracteristiques: ['plage','allo'],
         },
-        dateDeDepart: '14 novembre 2020',
-        dateDeRetour: '28 novembre 2020',
+        dateDeDepart: new Date(2020, 11, 14),
+        dateDeRetour: new Date(2020, 11, 28),
+        prix: 2000,
+        forfaitVedette: false,
     },
     { 
          id: '3',
@@ -38,11 +42,14 @@ export const FORFAITS: Forfait[] = [
         hotel: {
             nomDeLHotel: 'Les Champs Élysées',
             coordonnees: '5 rue de la plage',
-            nombresDEtoiles: 5,
+            nombresDEtoiles: 4,
             nombreDeChambres: 2,
             caracteristiques: ['plage','allo'],
         },
-        dateDeDepart: '1er Décembre 2020',
-        dateDeRetour: '14 Décembre 2020',
+        dateDeDepart: new Date(2020, 12, 1),
+        dateDeRetour: new Date(2020, 12, 14),
+        prix: 2000,
+        forfaitVedette: true,
+        rabais: 999,
     } 
 ]

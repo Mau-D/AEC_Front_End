@@ -9,7 +9,8 @@ import { Forfait } from '../forfait';
 })
 export class ForfaitMiniComponent implements OnInit {
   @Input() proprietesForfait: Forfait;
-
+  @Input() prix: number = 0;
+  @Input() rabais: number = 0;
   constructor() { }
 
   ngOnInit(): void {
