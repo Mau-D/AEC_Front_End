@@ -7,3 +7,6 @@ div {
   margin-bottom: 1%;
   height: 20%;
 }
+.example-half-width {
+  width: 50%;
+}

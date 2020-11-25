@@ -6,7 +6,12 @@
                 <mat-card-title>{{nom}}</mat-card-title>
                 <mat-card-subtitle *ngIf="[nom]=='Mewtwo'; else elseBlock">Le meilleur Pokémon</mat-card-subtitle>
                 <ng-template #elseBlock><mat-card-subtitle>Pokémon ordinaire</mat-card-subtitle></ng-template>
+                <!-- Input pour changer le nom du hero -->               
             </mat-card-header>
+            <mat-form-field class="example-half-width">
+                <!--  Two-way binding -->
+                <input [(ngModel)]='nom' matInput placeholder="Nom du héro" value={{nom}}>
+            </mat-form-field>
             <img mat-card-image src="../../assets/img/superHero.jpg" alt="Photo of a Shiba Inu">
             <mat-card-content>
                 <p>

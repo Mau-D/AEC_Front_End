@@ -1,25 +1,36 @@
 <div class="main">
     <h2>Page 1</h2>
+    
     <div class="container">
-        <app-en-tete></app-en-tete>
-        <div class="contenu">
-            <div class="sectionGauche">
-                <!-- recherche -->
-                <app-recherche></app-recherche>
-            </div>
-            <div class="sectionDroite">
-                <!-- caroussel et hero -->
-                
-                <mat-grid-list cols="3" rowHeight="50%">
-                    <mat-grid-tile colspan="3">
-                        <app-carousel class="sectionCaroussel"></app-carousel>
-                    </mat-grid-tile>
-                    <mat-grid-tile *ngFor="let maValeur of monTableau">
-                        <app-hero class="sectionHero" [nom]=maValeur></app-hero>
-                    </mat-grid-tile>
-                </mat-grid-list>
-            </div>
-        </div>
+    <app-en-tete></app-en-tete>       
+            <mat-drawer-container class="example-container">
+                <mat-drawer #sidenav mode="over">
+                    <div>
+                    <!-- recherche -->
+                    <app-recherche></app-recherche>
+                    </div>
+                </mat-drawer>               
+                <mat-drawer-content> 
+                    <div class="sectionDroite">
+                        <!-- caroussel et hero  -->
+                        <mat-grid-list cols="4" rowHeight="50%">
+                            <mat-grid-tile class="boutonsidenav">
+                                <button mat-button (click)="sidenav.toggle()">Rechercher un forfait  <i class="material-icons">double_arrow</i></button>
+                            </mat-grid-tile>
+                          
+                            <mat-grid-tile colspan="3">
+                                <app-carousel class="sectionCaroussel"></app-carousel>
+                            </mat-grid-tile>
+                            <mat-grid-tile>
+                                <!-- espace -->
+                            </mat-grid-tile>
+                            <mat-grid-tile  *ngFor="let maValeur of monTableau">
+                                <app-hero class="sectionHero" [nom]=maValeur></app-hero>
+                            </mat-grid-tile>
+                        </mat-grid-list>
+                    </div>
+                </mat-drawer-content>
+            </mat-drawer-container>     
         <app-pied-page></app-pied-page>
     </div>
 </div>

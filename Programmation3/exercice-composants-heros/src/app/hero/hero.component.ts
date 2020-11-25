@@ -7,9 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
  @Input() nom:string;
-
+ 
   constructor() { }
-
+  
   ngOnInit(): void {
   }
 

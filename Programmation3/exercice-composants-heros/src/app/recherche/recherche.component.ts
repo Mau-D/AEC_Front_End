@@ -5,10 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './recherche.component.html',
   styleUrls: ['./recherche.component.css']
 })
+
 export class RechercheComponent implements OnInit {
-
+ 
   constructor() { }
-
+ opened: boolean;
   ngOnInit(): void {
   }
 

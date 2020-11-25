@@ -35,3 +35,7 @@ h2 {
   width: 100%;
   height: 60%;
 }
+.boutonsidenav {
+  min-height: 100%;
+  position: fixed;
+}

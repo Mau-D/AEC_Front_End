@@ -1,0 +1,26 @@
+<!-- Composant liste-forfaits, faire une boucle pour afficher tous les forfaits -->
+<mat-grid-list cols="9" rowHeight="7rem">
+    <!-- Sidenav pour la recherche de forfait -->
+    <mat-grid-tile [colspan]="3" [rowspan]="9">
+        <p>sidenav</p>
+    </mat-grid-tile>
+    <!-- Filtre pour afficher seulement les forfait vedette en mini avec ForfaitVedettePipe -->
+    <mat-grid-tile [colspan]="3" [rowspan]="3" *ngFor="let item of forfaits | forfaitVedette">
+        <app-forfait-mini class="child-css" [proprietesForfait]=item></app-forfait-mini>
+    </mat-grid-tile>
+   
+    
+    <mat-grid-tile [colspan]="9" [rowspan]="8" *ngFor="let item of forfaits">
+        <app-forfait-complet class="child-css" [proprietesForfait]=item></app-forfait-complet>
+    </mat-grid-tile>
+</mat-grid-list>
+<!--
+<div *ngFor="let item of forfaits">
+    <app-forfait-mini [proprietesForfait]=item></app-forfait-mini> 
+</div>
+<div *ngFor="let item of forfaits">
+    <app-forfait-complet  [proprietesForfait]=item></app-forfait-complet>
+</div>  
+<div *ngFor="let item of forfaits">
+    <app-forfait [proprietesForfait]=item></app-forfait>
+</div>-->

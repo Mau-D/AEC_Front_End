@@ -8,13 +8,13 @@
                 <app-recherche></app-recherche>
             </div>
             <div class="sectionDroite">
-                    <!-- Faire le ngFor sur l'élément bouclé et non le conteneur-->
-                    <mat-list>
-                        <mat-list-item *ngFor="let maValeur of monTableau">                  
-                            {{maValeur}}                                                      
-                            <mat-divider></mat-divider>
-                        </mat-list-item>
-                    </mat-list>
+            <!-- Faire le ngFor sur l'élément bouclé et non le conteneur-->
+                <mat-list>
+                    <mat-list-item *ngFor="let maValeur of monTableau">                  
+                        {{maValeur}}                                                      
+                        <mat-divider></mat-divider>
+                    </mat-list-item>
+                </mat-list>
             </div>
         </div>
         <app-pied-page></app-pied-page>

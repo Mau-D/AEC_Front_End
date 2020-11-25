@@ -1,8 +1,31 @@
 .example-container {
+  background-color: #ff0080;
+  height: 100%;
+  width: 100%;
+}
+.example-sidenav {
   background-color: #ffff00;
   height: 100%;
+  width: 90%;
+}
+.example-content {
+  background-color: #00b7ff;
+  height: 100%;
+  width: 100%;
 }
 p {
   padding: 10px 10px;
   margin: 0;
+}
+.textGauche {
+  display: inline-block;
+  width: 84%;
+  height: 80%;
+  vertical-align: middle;
+}
+.textDroite {
+  display: inline-block;
+  text-align: right;
+  width: 10%;
+  height: 50%;
 }
