@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListeForfaitsComponent } from './liste-forfaits.component';
+import { ComposantRacineComponent } from './composant-racine.component';
 
-describe('ListeForfaitsComponent', () => {
-  let component: ListeForfaitsComponent;
-  let fixture: ComponentFixture<ListeForfaitsComponent>;
+describe('ComposantRacineComponent', () => {
+  let component: ComposantRacineComponent;
+  let fixture: ComponentFixture<ComposantRacineComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListeForfaitsComponent ]
+      declarations: [ ComposantRacineComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListeForfaitsComponent);
+    fixture = TestBed.createComponent(ComposantRacineComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

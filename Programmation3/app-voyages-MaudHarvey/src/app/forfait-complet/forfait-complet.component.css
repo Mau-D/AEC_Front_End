@@ -1,3 +1,4 @@
+/*Différentes couleurs de fond pour observer le gridList*/
 .image {
   background-color: aqua;
 }
@@ -31,4 +32,7 @@
 }
 h1 {
   width: 100%;
+}
+.couleurVedette {
+  border: blue solid 2px;
 }

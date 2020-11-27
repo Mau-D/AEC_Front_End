@@ -1,10 +1,23 @@
-div {
-  background-color: #e7e6e6;
+/*Affichage de la liste des forfaits, mini et complet*/
+.child-css {
   width: 98%;
-  border: solid black 1px;
-  padding: 1%;
 }
-h2 {
-  padding: 10px 10px;
-  margin: 0;
+
+.mat-drawer-content {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.couleurVedette {
+  border: blue solid 2px;
+}
+.espaceBouton {
+  background-color: crimson;
+  margin-top: 3%;
+  min-height: 90%;
+  position: fixed;
+  z-index: 99;
+}
+.espaceMini {
+  background-color: cyan;
 }

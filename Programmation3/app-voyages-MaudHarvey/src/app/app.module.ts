@@ -1,19 +1,24 @@
+//Importations de modules angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+
+
+//Importations des composants
 import { AppComponent } from './app.component';
-import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
-import { ForfaitComponent } from './forfait/forfait.component';
 import { ForfaitCompletComponent } from './forfait-complet/forfait-complet.component';
 import { ForfaitMiniComponent } from './forfait-mini/forfait-mini.component';
 import { EtoileComponent } from './etoile/etoile.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
+import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
+//Importations des pipes
+import { ForfaitVedettePipe } from './forfait-vedette.pipe';
 
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
-import {ReactiveFormsModule} from '@angular/forms';
+
 
 //Importations de Angular Material
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -25,22 +30,27 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
-import { ForfaitVedettePipe } from './forfait-vedette.pipe';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSelectModule} from '@angular/material/select';
 
+import { ComposantRacineComponent } from './composant-racine/composant-racine.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListeForfaitsComponent,
-    ForfaitComponent,
     ForfaitCompletComponent,
     ForfaitMiniComponent,
     EtoileComponent,
     FormulaireForfaitComponent,
-    ForfaitVedettePipe
+    ForfaitVedettePipe,
+    FormulaireRechercheComponent,
+    ComposantRacineComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +67,12 @@ import { ForfaitVedettePipe } from './forfait-vedette.pipe';
     MatSliderModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatNativeDateModule   
+    MatNativeDateModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatListModule,
+    MatSelectModule   
   ],
   providers: [],
   bootstrap: [AppComponent]

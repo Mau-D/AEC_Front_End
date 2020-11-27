@@ -1,13 +1,15 @@
+<!-- Composant pour afficher les forfaits vedettes en haut de page -->
 <!-- Sous forme de card simple, placer quelques informations à l'aide d'un grid-list -->
 
-<!--  Condition remplacé par un filtre dans liste-forfait<mat-card *ngIf="proprietesForfait.forfaitVedette">-->
+<!--  Condition remplacé par un filtre dans app, <mat-card *ngIf="proprietesForfait.forfaitVedette">-->
 <mat-card>
-    <mat-grid-list cols="2" rowHeight="3rem">
+    <mat-grid-list cols="2" rowHeight="2rem">
         <mat-grid-tile>
-            <h3>{{proprietesForfait.destination}}  De {{proprietesForfait.villeDeDepart}}</h3>
+            <h3>{{proprietesForfait.destination}},  De {{proprietesForfait.villeDeDepart}}</h3>
         </mat-grid-tile>
+        <!-- Affichage des rabais sur trois rangées, rabais, prix barré et nouveau prix -->
         <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0; else elseRabais">
-            <h1>Rabais de {{proprietesForfait.rabais}}, 00$</h1>
+            <h1>Rabais de {{proprietesForfait.rabais}}, 00$</h1><!-- Rabais -->
         </mat-grid-tile>
         <ng-template #elseRabais>
             <mat-grid-tile [rowspan]="4" class="prix">
@@ -18,15 +20,17 @@
             <h1>{{proprietesForfait.hotel.nomDeLHotel}}</h1>
         </mat-grid-tile>
         <mat-grid-tile  [rowspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0">
-            <h1 [ngStyle]="{'text-decoration' : 'line-through'}">{{proprietesForfait.prix}}, 00$</h1>
+            <h1 [ngStyle]="{'text-decoration' : 'line-through'}">{{proprietesForfait.prix}}, 00$</h1><!-- Ancien prix -->
         </mat-grid-tile>
         <mat-grid-tile>
             <app-etoile *ngFor="let item of [].constructor(proprietesForfait.hotel.nombresDEtoiles)"></app-etoile>
         </mat-grid-tile>
+        <!-- Calcul du nouveau prix -->
         <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0">
-            <h1>{{proprietesForfait.prix - proprietesForfait.rabais}}, 00$</h1>
+            <h1>{{proprietesForfait.prix - proprietesForfait.rabais}}, 00$</h1><!-- Nouveau prix -->
         </mat-grid-tile>
         <mat-grid-tile></mat-grid-tile>
+        <!-- **************************************Modifier le format de date et la durée -->
         <mat-grid-tile [rowspan]="2"><h4>{{proprietesForfait.dateDeDepart | date: 'fullDate'}}, 14 jours</h4></mat-grid-tile>
     </mat-grid-list>
 </mat-card>

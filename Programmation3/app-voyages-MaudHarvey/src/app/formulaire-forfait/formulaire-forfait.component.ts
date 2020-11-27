@@ -4,7 +4,6 @@ import { FormControl } from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 
-//erreur à la compilation
 @Component({
   selector: 'app-formulaire-forfait',
   templateUrl: './formulaire-forfait.component.html',
@@ -12,6 +11,13 @@ import {map, startWith} from 'rxjs/operators';
 })
 
 export class FormulaireForfaitComponent implements OnInit {
+  //Variables des ngModel pour la validation de formulaire
+  nomHotel: string;
+  adresse: string;
+  nbrChambre: number;
+  dateDepart: Date;
+  dateRetour: Date;
+  prix: number;
   //Variables associés au input en autocomplete
   myControl = new FormControl();
   myControl2 = new FormControl();

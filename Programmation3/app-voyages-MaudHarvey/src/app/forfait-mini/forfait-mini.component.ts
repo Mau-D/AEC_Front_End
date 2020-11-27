@@ -8,9 +8,9 @@ import { Forfait } from '../forfait';
   styleUrls: ['./forfait-mini.component.css']
 })
 export class ForfaitMiniComponent implements OnInit {
+  //Inclure la propriété, déclaré dans app pour les valeurs du mock-forfait
   @Input() proprietesForfait: Forfait;
-  @Input() prix: number = 0;
-  @Input() rabais: number = 0;
+  
   constructor() { }
 
   ngOnInit(): void {

@@ -3,12 +3,11 @@ import { Forfait } from './forfait';
 
 //Pipe our le tri des forfaits vedette afficher dans le composant forfait-mini
 @Pipe({
-  name: 'forfaitVedette'
+  name: 'PipeForfaitVedette'
 })
-export class ForfaitVedettePipe implements PipeTransform {
-
-  transform(forfaits: Forfait[]): Forfait[] {
-    return forfaits.filter(forfait=>forfait.forfaitVedette);
+export class ForfaitVedettePipe implements PipeTransform { 
+ 
+  transform(forfaits: Forfait[]): Forfait[] {   
+    return forfaits.filter(forfait=>forfait.forfaitVedette); 
   }
-
 }

@@ -52,4 +52,5 @@ export const FORFAITS: Forfait[] = [
         forfaitVedette: true,
         rabais: 999,
     } 
+
 ]

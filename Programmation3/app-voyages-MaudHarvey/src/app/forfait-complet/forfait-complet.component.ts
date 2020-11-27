@@ -1,7 +1,5 @@
-import { PrefixNot } from '@angular/compiler';
 import { Component, OnInit, Input } from '@angular/core';
 import { Forfait } from '../forfait';
-import { FORFAITS } from '../mock-forfaits';
 
 
 @Component({
@@ -12,7 +10,7 @@ import { FORFAITS } from '../mock-forfaits';
 
 export class ForfaitCompletComponent implements OnInit {
 
-//Input des proprietes des forfaits
+  //Inclure la propriété, déclaré dans app pour les valeurs du mock-forfait
 @Input() proprietesForfait: Forfait;
 
   constructor() { }
