@@ -1,0 +1,85 @@
+<!-- Exercice Initiation à VueJS 1 -->
+<!-- Maud Harvey -->
+<!-- 24 novembre 2020 -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Manipulation de Vue</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- npm install vue  ça n'a pas fonctionné-->
+    <script src="https://unpkg.com/vue"></script>
+
+    <link rel="stylesheet" href="style/style.css" type="text/css" media="screen" />
+</head>
+<body>
+    <div id="app">
+        <h1>{{titre}}</h1>
+        <h3>Exercice 1</h3>
+        <h2>{{bienvenue()}}</h2>
+        <h3>Exercice 2</h3>
+        <p>sans directive</p>
+        <h2>{{message}}</h2>
+        <p>avec directive v-show</p>
+        <h2 v-show="displayed">{{message}}</h2>
+        <h3>Exercice 3</h3>
+        <h2>{{anneeEnCours()}}</h2>
+        <p>Cet exercice à été fait durant l'année {{anneeEnCours()}}!</p>
+        <h3>Exercice 4</h3>
+        <h2>Conversion de température avec v-model</h2>
+      
+        <!-- Condition d'affichage  -->
+        <!-- Si checked, afficher le résultat du calcul -->
+        <input  v-model="temperature"  type="number" id="degre" name="temperature" placeholder="0">
+            
+        <!-- Si !checked, afficher la température entré dans le input -->
+        <label for="degre">° Celsius</label><br>
+       
+        <!-- Propriété booléenne si le checkbox est coché ou pas -->
+        <input v-model="checked" type="checkbox" id="checkConv" name="checkConv">
+        <label for="degreF">Convertir en Fahrenheit</label><br>
+        <p>{{convertirDegre}} ° Fahrenheit</p>
+        
+
+        <h3>Exercice 5</h3>
+        <h2>Changement de couleur avec v-model</h2>
+        <input type="radio" id="bleu" value="bleu" v-model="picked">
+        <label for="bleu">Bleu</label>
+        <br>
+        <input type="radio" id="rouge" value="rouge" v-model="picked">
+        <label for="two">Rouge</label>
+        <br>
+        <input v-model="checkshow" type="checkbox" id="checkShow" name="checkShow">
+        <label for="checkShow">Voulez-vous afficher le paragraphe?</label><br>
+        <br>
+        <span v-bind:class= "picked" v-show="checkshow" >Je change de couleur</span>
+
+        <h3>Exercice 6</h3>
+        <h2>Changement de l'attribut title</h2>
+       
+        <p v-on:click="changeTitle" v-bind:title="title">
+            À partir du code ci-dessus, créez un paragraphe contenant un texte quelconque. Au chargement de la page, via Vue, faites
+            en sorte que son attribut title vaille "title initial". Au click sur ce paragraphe, le title devient "title modifié".
+        </p>
+
+    <h3>Exercice 7</h3>
+    <h2>v-if et v-show </h2>
+    <p>??????????????</p>
+
+    <h3>Exercice 8 et extra</h3>
+    <h2>to-do list avec v-for</h2>
+    <ul>
+        <li v-for="(item, active) in todo" :key="item" :class="{complete: completed}">
+            <input v-model="completed"  type="checkbox">
+            {{item}}
+        </li>
+    </ul>
+    <p>L'extra n'est pas terminé!</p>
+        
+    </div>
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

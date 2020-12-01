@@ -1,0 +1,11 @@
+/*Class, selon le bouton radio de l'exercice 5*/
+.rouge {
+  color: red;
+}
+.bleu {
+  color: blue;
+}
+/*Class pour barré une tâche complétée*/
+.complete {
+  text-decoration: line-through;
+}
