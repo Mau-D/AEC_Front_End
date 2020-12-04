@@ -1,36 +1,39 @@
 <!-- Composant pour afficher les forfaits vedettes en haut de page -->
 <!-- Sous forme de card simple, placer quelques informations à l'aide d'un grid-list -->
-
 <!--  Condition remplacé par un filtre dans app, <mat-card *ngIf="proprietesForfait.forfaitVedette">-->
+{{description}}
 <mat-card>
     <mat-grid-list cols="2" rowHeight="2rem">
         <mat-grid-tile>
             <h3>{{proprietesForfait.destination}},  De {{proprietesForfait.villeDeDepart}}</h3>
         </mat-grid-tile>
         <!-- Affichage des rabais sur trois rangées, rabais, prix barré et nouveau prix -->
+        <!-- Barrer le prix, afficher le rabais et le nouveau prix, affichage sur trois rangées -->
+        <!-- Rabais, est une propriété optionnelle, ajouter la condition >0 pour l'affichage  -->
         <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0; else elseRabais">
-            <h1>Rabais de {{proprietesForfait.rabais}}, 00$</h1><!-- Rabais -->
+            <h4>Rabais de {{proprietesForfait.rabais}}, 00$</h4><!-- Rabais -->
         </mat-grid-tile>
         <ng-template #elseRabais>
             <mat-grid-tile [rowspan]="4" class="prix">
-                <h1>{{proprietesForfait.prix}}, 00$</h1>
+                <h4>{{proprietesForfait.prix}}, 00$</h4>
             </mat-grid-tile>
         </ng-template>
         <mat-grid-tile [rowspan]="2">
-            <h1>{{proprietesForfait.hotel.nomDeLHotel}}</h1>
+            <h4>{{proprietesForfait.hotel.nomDeLHotel}}</h4>
         </mat-grid-tile>
+        <!-- Si le rabais s'applique, afficher avec un style pour barrer le prix -->
         <mat-grid-tile  [rowspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0">
-            <h1 [ngStyle]="{'text-decoration' : 'line-through'}">{{proprietesForfait.prix}}, 00$</h1><!-- Ancien prix -->
+            <h4 [ngStyle]="{'text-decoration' : 'line-through'}">{{proprietesForfait.prix}}, 00$</h4><!-- Ancien prix -->
         </mat-grid-tile>
+        <!-- Nombre d'étoiles de l'hôtel, boucle sppelé avec le nombre inscrit dans le mock-forfaits -->
         <mat-grid-tile>
             <app-etoile *ngFor="let item of [].constructor(proprietesForfait.hotel.nombresDEtoiles)"></app-etoile>
         </mat-grid-tile>
         <!-- Calcul du nouveau prix -->
         <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0">
-            <h1>{{proprietesForfait.prix - proprietesForfait.rabais}}, 00$</h1><!-- Nouveau prix -->
+            <h4>{{proprietesForfait.prix - proprietesForfait.rabais}}, 00$</h4><!-- Nouveau prix -->
         </mat-grid-tile>
-        <mat-grid-tile></mat-grid-tile>
         <!-- **************************************Modifier le format de date et la durée -->
-        <mat-grid-tile [rowspan]="2"><h4>{{proprietesForfait.dateDeDepart | date: 'fullDate'}}, 14 jours</h4></mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="2"><h4>{{proprietesForfait.dateDeDepart | date : 'fullDate' : undefined : 'fr'}}, {{proprietesForfait.duree}} jours</h4></mat-grid-tile>
     </mat-grid-list>
 </mat-card>

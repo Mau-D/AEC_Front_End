@@ -17,6 +17,13 @@ import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-
 //Importations des pipes
 import { ForfaitVedettePipe } from './forfait-vedette.pipe';
 
+//Importations pour les dates en français
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+registerLocaleData(localeFr, 'fr');
+
+
+
 
 
 
@@ -37,8 +44,6 @@ import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSelectModule} from '@angular/material/select';
 
-import { ComposantRacineComponent } from './composant-racine/composant-racine.component';
-
 
 
 @NgModule({
@@ -49,9 +54,9 @@ import { ComposantRacineComponent } from './composant-racine/composant-racine.co
     EtoileComponent,
     FormulaireForfaitComponent,
     ForfaitVedettePipe,
-    FormulaireRechercheComponent,
-    ComposantRacineComponent
+    FormulaireRechercheComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -72,7 +77,7 @@ import { ComposantRacineComponent } from './composant-racine/composant-racine.co
     MatButtonModule,
     MatDividerModule,
     MatListModule,
-    MatSelectModule   
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

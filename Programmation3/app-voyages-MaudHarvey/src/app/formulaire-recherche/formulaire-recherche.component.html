@@ -1,7 +1,13 @@
 <!-- Formulaire pour ajouter des forfaits -->
 <h1>Formulaire de recherche de forfait</h1>
-<form class="example-form">
-    <!-- Datepicker pour la date de départ -->
+
+<div>
+    <p>Je suis la section recherche {{description}}</p>
+    <mat-form-field>
+        <input matInput type="text" [(ngModel)]="description" (ngModelChange)="change($event)">
+    </mat-form-field>
+    
+    <!-- Datepicker pour la date de départ, avec validation, avec validation du required -->
     <mat-form-field class="example-half-width example-padding" appearance="fill">
         <mat-label>Date de départ</mat-label>
         <input matInput [matDatepicker]="dp" required [ngModel]="dateDepart" name="inputDateDepart"
@@ -12,19 +18,11 @@
             La date de départ est <strong>obligatoire</strong>
         </mat-error>
     </mat-form-field>
-        <!-- Datepicker pour la date de retour -->
-    <mat-form-field class="example-half-width example-padding" appearance="fill">
-        <mat-label>Date de retour</mat-label>
-        <input matInput [matDatepicker]="dp1" required [ngModel]="dateRetour" name="inputDateRetour" #inputDateRetour="ngModel">
-        <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
-        <mat-datepicker #dp1></mat-datepicker>
-        <mat-error *ngIf="inputDateRetour.hasError('required')">
-            La date de retour est <strong>obligatoire</strong>
-        </mat-error>
-    </mat-form-field>
+      
 
     <!-- Select pour la durée de 7, 10 ou 14 jours -->
-    <!--*********************error-->
+    <!-- Validation du required, l'option 180 jours est désactivée -->
+    <!-- Exemple pour le input output -->
     <div>
         <mat-form-field appearance="fill">
             <mat-label>Choisir la durée</mat-label>
@@ -54,4 +52,4 @@
             <mat-checkbox *ngFor="let item of caractHotel" class="example-margin">{{item}}</mat-checkbox>
         </section>
     </div>
-</form>
+</div>

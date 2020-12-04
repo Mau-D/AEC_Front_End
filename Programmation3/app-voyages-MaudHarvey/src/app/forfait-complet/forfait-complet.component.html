@@ -14,24 +14,28 @@
     <mat-grid-tile class="espace" [rowspan]="13"></mat-grid-tile><!-- espace -->
     <!-- ************************Modifier avec un mock duree 7, 10 ou 14 -->
     <mat-grid-tile class="duree">
-        <h1>14 jours</h1>
+        <h1>{{proprietesForfait.duree}} jours</h1>
     </mat-grid-tile>
     <mat-grid-tile class="description" [colspan]="2">
         <h1>{{proprietesForfait.hotel.nomDeLHotel}}</h1>
     </mat-grid-tile>
     <!-- Appliquer un rabais sur le prix des forfaits -->
     <!-- Barrer le prix, afficher le rabais et le nouveau prix, affichage sur trois rangées -->
+    <!-- Rabais, est une propriété optionnelle, ajouter la condition >0 pour l'affichage  -->
     <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0">
         <h1>Rabais de {{proprietesForfait.rabais}}, 00$</h1><!-- Rabais -->
     </mat-grid-tile>
+    <!-- Si il n'y a pas de rabais, afficher seulement le prix -->
     <ng-template  #elseRabais>
         <mat-grid-tile [rowspan]="3" class="prix">
             <h1>{{proprietesForfait.prix}}, 00$</h1>
         </mat-grid-tile>
     </ng-template>
+    <!-- Nombre d'étoiles de l'hôtel, boucle sppelé avec le nombre inscrit dans le mock-forfaits -->
     <mat-grid-tile class="description" [colspan]="2">
         <app-etoile *ngFor="let item of [].constructor(proprietesForfait.hotel.nombresDEtoiles)"></app-etoile>
     </mat-grid-tile>
+    <!-- Si le rabais s'applique, afficher avec un style pour barrer le prix -->
     <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0; else elseRabais">
         <h1 [ngStyle]="{'text-decoration' : 'line-through'}">{{proprietesForfait.prix}}, 00$</h1><!-- Ancien prix -->
     </mat-grid-tile>
@@ -62,11 +66,11 @@
             <!-- **************************************Modifier le format de date -->
 
     <mat-grid-tile class="depart">
-        <h4>{{proprietesForfait.dateDeDepart | date: 'fullDate'}}</h4>
+        <h4>{{proprietesForfait.dateDeDepart | date : 'fullDate' : undefined : 'fr'}}</h4>
     </mat-grid-tile>
                 <!-- **************************************Modifier le format de date -->
 
     <mat-grid-tile class="retour">
-        <h4>{{proprietesForfait.dateDeRetour | date: 'fullDate'}}</h4>
+        <h4>{{proprietesForfait.dateDeRetour | date : 'fullDate' : undefined : 'fr'}}</h4>
     </mat-grid-tile>
 </mat-grid-list>

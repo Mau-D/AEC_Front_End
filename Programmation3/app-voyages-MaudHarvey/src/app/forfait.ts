@@ -11,6 +11,7 @@ export interface Forfait {
     hotel: Hotel,
     dateDeDepart: Date;
     dateDeRetour: Date,
+    duree: number,
     prix: number,
     forfaitVedette: boolean,
     rabais?: number;

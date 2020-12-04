@@ -11,14 +11,8 @@ import { FORFAITS } from './mock-forfaits';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  description = '';
   title = 'app-voyages-MaudHarvey';
-  //test de méthode
-   nomDeLaMethode() {
-
-console.log('Ce texte s’affiche dans la console de votre navigateur! Le titre change aussi!!');
-}
-  
-  //variable pour le forfait entier contenant le tableau mock
+   //variable pour le forfait entier contenant le tableau mock
   forfaits: Forfait[] = FORFAITS;
-
 }
