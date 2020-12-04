@@ -1,0 +1,10 @@
+.gridRecherche {
+  min-width: 100vh;
+}
+.sectionCheck {
+  display: flex;
+  flex-direction: column;
+}
+.checkCaract {
+  align-self: auto;
+}

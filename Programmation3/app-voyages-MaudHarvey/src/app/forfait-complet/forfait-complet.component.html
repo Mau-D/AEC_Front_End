@@ -2,6 +2,9 @@
 <!-- Forfait complet comprend toutes les informations -->
 <!-- Utilisation d'un gridList à 5 colonnes -->
 <!-- Une classe est appliquée pour identifier les forfaits vedettes -->
+<h3>La date de départ est {{formulaire.dateDepart}}</h3>
+<h3>Le forfait est d'une durée de {{formulaire.duree}} jours</h3>
+<h3>L'hôtel est {{formulaire.nbrEtoiles}} étoiles</h3>
 <mat-grid-list cols="5" rowHeight="4.1rem" [ngClass]="{'couleurVedette' : proprietesForfait.forfaitVedette}">
     <mat-grid-tile class="image"
         [rowspan]="12">

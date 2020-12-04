@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Formulaire } from '../formulaire';
 
 
 @Component({
@@ -8,26 +9,55 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 })
 export class FormulaireRechercheComponent implements OnInit {
 //Input et output pour l'échange d'informations
-    @Input() description : string;
-      @Output() descriptionChange = new EventEmitter();
-
-
+  @Input() formulaire: Formulaire;
+  @Output() formulaireChange = new EventEmitter();
 
 //Variables des ngModel pour la validation de formulaire
   dateDepart: Date;
   duree: number;
- 
+  nbrEtoiles: number;
   
-  //Variables pour les caractéristiques
-  caractHotel: string[]=['Face à la plage', 'Miniclub', 'Près d\'un parc ou milieu naturel', 'Ascenseur', 'Mariage', 'Plage', 'Piscine', 'Restaurants', 'Golf', 'Spa', 'Salle de réunion'];
+//Variable pour la date minimum de la date de départ, aujourd'hui
+  minDateDepart: Date= new Date;
  
+//Variables pour les caractéristiques
+  caractHotel: string[]=['Face à la plage', 'Miniclub', 'Près d\'un parc ou milieu naturel', 'Ascenseur', 'Mariage', 'Plage', 'Piscine', 'Restaurants', 'Golf', 'Spa', 'Salle de réunion'];
+
 
   ngOnInit() {
   
    
   }
-  change(nouvelleValeur) {
-    this.descriptionChange.emit(nouvelleValeur);
+ 
+  //Pour la date de départ
+  changeDateDepart(nouvelleValeur) {
+    let nouveauFormulaire : Formulaire =  {dateDepart: nouvelleValeur, 
+                                            duree : this.formulaire.duree, 
+                                            nbrEtoiles:this.formulaire.nbrEtoiles,
+                                            caracHotel:this.formulaire.caracHotel,
+                                          };
+    this.formulaire = nouveauFormulaire;
+    this.formulaireChange.emit(nouveauFormulaire);
   }
-
+  //Pour la durée
+  changeDuree(nouvelleValeur) {
+    let nouveauFormulaire : Formulaire =  {dateDepart: this.formulaire.dateDepart, 
+                                            duree : nouvelleValeur, 
+                                            nbrEtoiles:this.formulaire.nbrEtoiles,
+                                            caracHotel:this.formulaire.caracHotel,
+                                          };
+    this.formulaire = nouveauFormulaire;
+    this.formulaireChange.emit(nouveauFormulaire);
+  }
+  //Pour le nombre d'étoiles
+  changeNbrEtoiles(nouvelleValeur) {
+    let nouveauFormulaire : Formulaire =  {dateDepart: this.formulaire.dateDepart, 
+                                            duree : this.formulaire.duree, 
+                                            nbrEtoiles:nouvelleValeur,
+                                            caracHotel:this.formulaire.caracHotel,
+                                          };
+    this.formulaire = nouveauFormulaire;
+    this.formulaireChange.emit(nouveauFormulaire);
+  }
+ 
 }

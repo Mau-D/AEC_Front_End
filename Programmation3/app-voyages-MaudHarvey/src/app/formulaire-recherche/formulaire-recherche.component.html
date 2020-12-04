@@ -1,55 +1,78 @@
 <!-- Formulaire pour ajouter des forfaits -->
-<h1>Formulaire de recherche de forfait</h1>
+<div  class="gridRecherche">
+    <mat-grid-list cols="2" rowHeight="6rem">
+        <!-- Titre -->
+        <mat-grid-tile [colspan]="2" >
+            <h1>Formulaire de recherche de forfait</h1>
+        </mat-grid-tile>
+       
+        <mat-grid-tile>
+        <!-- Datepicker pour la date de départ, avec validation, avec validation du required, min à la date d'aujourd'hui -->
+            <mat-form-field class="example-half-width example-padding" appearance="fill">
+                <mat-label>Date de départ</mat-label>
+                <input matInput [min]="minDateDepart" [matDatepicker]="dp" required [ngModel]="dateDepart" (ngModelChange)="changeDateDepart($event)" name="inputDateDepart"
+                    #inputDateDepart="ngModel">
+                <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                <mat-datepicker #dp></mat-datepicker>
+                <mat-error *ngIf="inputDateDepart.hasError('required')">
+                    La date de départ est <strong>obligatoire</strong>
+                </mat-error>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <!-- Select pour la durée de 7, 10 ou 14 jours -->
+            <!-- Validation du required, l'option 180 jours est désactivée -->
+            <!-- Exemple pour le input output -->
+                <mat-form-field appearance="fill">
+                    <mat-label>Choisir la durée</mat-label>
+                    <mat-select required [ngModel]="duree" (ngModelChange)="changeDuree($event)" name="inputDuree"
+                        #inputDuree="ngModel">
+                        <mat-option value="7">7 jours</mat-option>
+                        <mat-option value="10">10 jours</mat-option>
+                        <mat-option value="14">14 jours</mat-option>
+                        <mat-option value="180" disabled>180 jours</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="inputDuree.hasError('required')">
+                        La durée du forfait est <strong>obligatoire</strong>
+                    </mat-error>
+                </mat-form-field>
+        </mat-grid-tile>
+        <!-- Slider pour le nombre d'étoiles -->
+        <mat-grid-tile>
+            <div>
+                <mat-label>Nombre d'étoiles</mat-label>
+                <div>
+                    <mat-slider [ngModel]="nbrEtoiles" (ngModelChange)="changeNbrEtoiles($event)" min="1" max="5" step="1" thumbLabel tickInterval="1" value="1"></mat-slider> 
+                </div>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile><!-- espace --></mat-grid-tile>
+        <!-- Checkbox pour les caractéristiques -->
+        <mat-grid-tile>
+                <h2>Caractéristiques de l'hôtel</h2>
+        </mat-grid-tile>
+            <mat-grid-tile>
+                <!-- espace -->
+            </mat-grid-tile>
+        <mat-grid-tile [rowspan]="4">
+            <section class="sectionCheck">
+                <mat-checkbox class="checkCaract" *ngFor="let item of caractHotel">{{item}} </mat-checkbox>
+            </section>
+        </mat-grid-tile>
 
-<div>
-    <p>Je suis la section recherche {{description}}</p>
-    <mat-form-field>
-        <input matInput type="text" [(ngModel)]="description" (ngModelChange)="change($event)">
-    </mat-form-field>
+    </mat-grid-list>
+</div>
+
     
-    <!-- Datepicker pour la date de départ, avec validation, avec validation du required -->
-    <mat-form-field class="example-half-width example-padding" appearance="fill">
-        <mat-label>Date de départ</mat-label>
-        <input matInput [matDatepicker]="dp" required [ngModel]="dateDepart" name="inputDateDepart"
-            #inputDateDepart="ngModel">
-        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
-        <mat-datepicker #dp></mat-datepicker>
-        <mat-error *ngIf="inputDateDepart.hasError('required')">
-            La date de départ est <strong>obligatoire</strong>
-        </mat-error>
-    </mat-form-field>
+  
+    
+   
       
 
-    <!-- Select pour la durée de 7, 10 ou 14 jours -->
-    <!-- Validation du required, l'option 180 jours est désactivée -->
-    <!-- Exemple pour le input output -->
-    <div>
-        <mat-form-field appearance="fill">
-            <mat-label>Choisir la durée</mat-label>
-            <mat-select required [ngModel]="duree" name="inputDuree" #inputDuree="ngModel">
-                <mat-option value="7">7 jours</mat-option>
-                <mat-option value="10">10 jours</mat-option>
-                <mat-option value="14">14 jours</mat-option>
-                <mat-option value="180" disabled>180 jours</mat-option>
-            </mat-select>
-            <mat-error *ngIf="inputDuree.hasError('required')">
-                La durée du forfait est <strong>obligatoire</strong>
-            </mat-error>
-        </mat-form-field>
-    </div>
     
-    <!-- Slider pour le nombre d'étoiles -->
-    <div class="margeHaut">
-        <mat-label>Nombre d'étoiles</mat-label>
-        <div>
-            <mat-slider min="1" max="5" step="1" thumbLabel tickInterval="1" value="1"></mat-slider>
-        </div>
-    </div>
-    <!-- Checkbox pour les caractéristiques -->
-    <div class="margeHaut">
-        <h2>Caractéristiques de l'hôtel</h2>
-        <section class="example-section">
-            <mat-checkbox *ngFor="let item of caractHotel" class="example-margin">{{item}}</mat-checkbox>
-        </section>
-    </div>
-</div>
+  
+    
+    
+   
+  
+    

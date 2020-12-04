@@ -2,7 +2,10 @@
 <!-- **************L'affichage fonctionne seulement avec trois forfaits vedettes *************************-->
 <!-- Changer le titre pour un composant en-tête  -->
 <h2>Nom de l'agence de voyage</h2>
-<h1>Test Input output : {{description}}</h1>
+<h1>Test Input output sur un dateDepart : {{formulaire.dateDepart}}</h1>
+<h1>Test Input output sur un duree : {{formulaire.duree}}</h1>
+<h1>Test Input output sur un nbrEtoiles : {{formulaire.nbrEtoiles}}</h1>
+<h1>Test Input output sur un caracHotel : {{formulaire.caracHotel}}</h1>
 <!-- Contenu de la page, 100% de la largeur, contenant la section recherche et page -->
 <div id="contenuPage">
   <div id="sectionRecherche">
@@ -17,17 +20,17 @@
   <!-- Pour la section pour le bouton de recherche -->
   <div id="sectionPage">
       <mat-drawer-container>
-        <mat-drawer #sidenav mode="over">
+        <mat-drawer #sidenav mode="push">
           <button mat-button (click)="sidenav.toggle()">Fermer <i class="material-icons">arrow_back</i></button>
-          <app-formulaire-recherche  [(description)]="description"></app-formulaire-recherche>
+          <app-formulaire-recherche [(formulaire)]="formulaire"></app-formulaire-recherche>
         </mat-drawer>
         <mat-drawer-content>
           <div id="sectionMini">
 
           <!-- Filtre pour afficher seulement les forfaits vedettes en mini avec ForfaitVedettePipe, dans le haut -->
-            <mat-grid-list cols="9" rowHeight="7rem" class="espaceMini">             
+            <mat-grid-list cols="9" rowHeight="7rem" class="espaceMini"> 
               <mat-grid-tile [colspan]="3" [rowspan]="3" *ngFor="let forfait of forfaits | PipeForfaitVedette">
-                <app-forfait-mini [description]="description" class="child-css couleurVedette" [proprietesForfait]=forfait></app-forfait-mini>
+                <app-forfait-mini class="child-css couleurVedette" [proprietesForfait]=forfait></app-forfait-mini>
               </mat-grid-tile>
             </mat-grid-list>
           </div>
@@ -37,7 +40,7 @@
               <mat-list id="listeFComp">
                 <mat-list-item *ngFor="let item of forfaits">
                   <mat-grid-tile [colspan]="9" [rowspan]="9">
-                    <app-forfait-complet class="child-css" [proprietesForfait]=item></app-forfait-complet>
+                    <app-forfait-complet class="child-css" [proprietesForfait]=item  [formulaire]="formulaire"></app-forfait-complet>
                     <mat-divider></mat-divider><!-- Placer à l'intérieur du grid-tile -->
                   </mat-grid-tile>
                 </mat-list-item>
@@ -49,10 +52,10 @@
   </div>
  
 </div>
-  <!-- Affichage pour travailler sur le formulaire de gestion de forfaits--> 
+  <!-- Affichage pour travailler sur le formulaire de gestion de forfaits
   <div>
     <app-formulaire-forfait></app-formulaire-forfait>
-  </div>
+  </div>-->
 
 <router-outlet></router-outlet>
 

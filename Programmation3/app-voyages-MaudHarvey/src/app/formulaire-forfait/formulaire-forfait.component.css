@@ -1,25 +1,10 @@
-.example-form {
-  margin-top: auto;
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-}
-
-.example-full-width {
-  width: 100%;
-}
 .example-half-width {
   width: 48%;
 }
-.example-section {
-  margin: 12px 0;
+.sectionCheck {
+  display: flex;
+  flex-direction: column;
 }
-.example-margin {
-  margin: 1%;
-}
-.example-padding {
-  padding: 1%;
-}
-.margeHaut {
-  margin-top: 5%;
+.checkCaract {
+  align-self: auto;
 }
