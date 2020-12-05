@@ -27,10 +27,9 @@
                     <mat-label>Choisir la durée</mat-label>
                     <mat-select required [ngModel]="duree" (ngModelChange)="changeDuree($event)" name="inputDuree"
                         #inputDuree="ngModel">
-                        <mat-option value="7">7 jours</mat-option>
-                        <mat-option value="10">10 jours</mat-option>
-                        <mat-option value="14">14 jours</mat-option>
-                        <mat-option value="180" disabled>180 jours</mat-option>
+                        <!-- Les valeurs de durée sont dans le mock-durees -->
+                        <mat-option *ngFor="let val of dureeTableau" value={{val}}>{{val}} jours</mat-option>
+                        <mat-option value="180" disabled>180 jours</mat-option><!-- option désactivée -->
                     </mat-select>
                     <mat-error *ngIf="inputDuree.hasError('required')">
                         La durée du forfait est <strong>obligatoire</strong>
@@ -56,7 +55,7 @@
             </mat-grid-tile>
         <mat-grid-tile [rowspan]="4">
             <section class="sectionCheck">
-                <mat-checkbox class="checkCaract" *ngFor="let item of caractHotel">{{item}} </mat-checkbox>
+                <mat-checkbox class="checkCaract" *ngFor="let item of caracHotel">{{item}} </mat-checkbox>
             </section>
         </mat-grid-tile>
 

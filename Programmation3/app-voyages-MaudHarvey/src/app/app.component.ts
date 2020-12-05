@@ -13,6 +13,7 @@ export class AppComponent {
   
    //variable pour le forfait entier contenant le tableau mock
   forfaits: Forfait[] = FORFAITS;
+
   
   //Objet contenant les informations entrées dans le formulaire de recherche
   formulaire :Formulaire = {
@@ -21,4 +22,7 @@ export class AppComponent {
     nbrEtoiles: 1,
     caracHotel: [''],
   }
+  
+    
+  
 }

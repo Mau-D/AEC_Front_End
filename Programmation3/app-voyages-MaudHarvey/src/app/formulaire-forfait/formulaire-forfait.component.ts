@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import { caracTableau } from '../mock-caracHotel';
 
 
 @Component({
@@ -29,7 +30,7 @@ export class FormulaireForfaitComponent implements OnInit {
   filteredDestinations: Observable<string[]>;
   filteredVilles: Observable<string[]>;
   //Variables pour les caractéristiques de l'hôtel
-  caractHotel: string[]=['Face à la plage', 'Miniclub', 'Près d\'un parc ou milieu naturel', 'Ascenseur', 'Mariage', 'Plage', 'Piscine', 'Restaurants', 'Golf', 'Spa', 'Salle de réunion']
+  caracHotel: string[]= caracTableau;
   //Variable pour la date minimum de la date de départ, aujourd'hui
   minDateDepart: Date= new Date;
   minDateRetour: Date= new Date;
@@ -56,7 +57,7 @@ export class FormulaireForfaitComponent implements OnInit {
     return this.destinations.filter(option => option.toLowerCase().includes(filterValue));
   }
   //Pour la ville de départ
-   private _filter2(value: string): string[] {
+  private _filter2(value: string): string[] {
     const filterValue2 = value.toLowerCase();
 
     return this.villes.filter(

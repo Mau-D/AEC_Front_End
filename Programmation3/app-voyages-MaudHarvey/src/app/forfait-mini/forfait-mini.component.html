@@ -33,7 +33,8 @@
         <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0">
             <h4>{{proprietesForfait.prix - proprietesForfait.rabais}}, 00$</h4><!-- Nouveau prix -->
         </mat-grid-tile>
-        <!-- **************************************Modifier le format de date et la durée -->
-        <mat-grid-tile [colspan]="2" [rowspan]="2"><h4>{{proprietesForfait.dateDeDepart | date : 'fullDate' : undefined : 'fr'}}, {{proprietesForfait.duree}} jours</h4></mat-grid-tile>
+        <!-- Le format de la date est complète, local: Greenwich  et en français-->
+        <!-- Calcul de la durée du forfait à partir de la date de départ et de retour -->
+        <mat-grid-tile [colspan]="2" [rowspan]="2"><h4>{{proprietesForfait.dateDeDepart | date : 'fullDate' : 'UTC-0' : 'fr'}}, {{(proprietesForfait.dateDeRetour.valueOf()-proprietesForfait.dateDeDepart.valueOf())/(1000*3600*24)}} jours</h4></mat-grid-tile>
     </mat-grid-list>
 </mat-card>

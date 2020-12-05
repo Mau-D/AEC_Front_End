@@ -1,5 +1,9 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Formulaire } from '../formulaire';
+import { dureeTableau } from '../mock-durees';
+import { caracTableau } from '../mock-caracHotel';
+
+
 
 
 @Component({
@@ -12,6 +16,10 @@ export class FormulaireRechercheComponent implements OnInit {
   @Input() formulaire: Formulaire;
   @Output() formulaireChange = new EventEmitter();
 
+  //Variable pour le mock tableau des durées
+ dureeTableau: Array<number> = dureeTableau;
+
+
 //Variables des ngModel pour la validation de formulaire
   dateDepart: Date;
   duree: number;
@@ -21,7 +29,7 @@ export class FormulaireRechercheComponent implements OnInit {
   minDateDepart: Date= new Date;
  
 //Variables pour les caractéristiques
-  caractHotel: string[]=['Face à la plage', 'Miniclub', 'Près d\'un parc ou milieu naturel', 'Ascenseur', 'Mariage', 'Plage', 'Piscine', 'Restaurants', 'Golf', 'Spa', 'Salle de réunion'];
+  caracHotel: string[] = caracTableau;
 
 
   ngOnInit() {

@@ -15,9 +15,9 @@
         <h3>{{proprietesForfait.destination}}</h3>
     </mat-grid-tile>
     <mat-grid-tile class="espace" [rowspan]="13"></mat-grid-tile><!-- espace -->
-    <!-- ************************Modifier avec un mock duree 7, 10 ou 14 -->
+   <!-- Calcul de la durée du forfait à partir de la date de départ et de retour -->
     <mat-grid-tile class="duree">
-        <h1>{{proprietesForfait.duree}} jours</h1>
+        <h1>{{(proprietesForfait.dateDeRetour.valueOf()-proprietesForfait.dateDeDepart.valueOf())/(1000*3600*24)}} jours</h1>
     </mat-grid-tile>
     <mat-grid-tile class="description" [colspan]="2">
         <h1>{{proprietesForfait.hotel.nomDeLHotel}}</h1>
@@ -49,7 +49,7 @@
     <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0">
         <h1>{{proprietesForfait.prix - proprietesForfait.rabais}},00$</h1><!-- Nouveau prix -->
     </mat-grid-tile>
-    <mat-grid-tile class="caracteristiques" [colspan]="2" [rowspan]="2">
+    <mat-grid-tile class="caracteristiques" [colspan]="2" [rowspan]="4">
         <div>
             <h3>Caractéristiques de l'hotel</h3>
             <ul>
@@ -62,18 +62,16 @@
     <mat-grid-tile class="adresse" [colspan]="2">
         <h5>{{proprietesForfait.hotel.coordonnees}}</h5>
     </mat-grid-tile>
-    <mat-grid-tile class="espace" [colspan]="2" [rowspan]="4"></mat-grid-tile><!-- espace -->
+    <mat-grid-tile class="espace" [colspan]="2" [rowspan]="2"></mat-grid-tile><!-- espace -->
     <mat-grid-tile class="villeDepart">
         <h4>{{proprietesForfait.villeDeDepart}}</h4>
     </mat-grid-tile>
-            <!-- **************************************Modifier le format de date -->
-
+    <!-- Format de date, fullDate, local: Greenwich et en français, voir importations app.module-->
     <mat-grid-tile class="depart">
-        <h4>{{proprietesForfait.dateDeDepart | date : 'fullDate' : undefined : 'fr'}}</h4>
-    </mat-grid-tile>
-                <!-- **************************************Modifier le format de date -->
+        <h4>{{proprietesForfait.dateDeDepart | date : 'fullDate' : 'UTC-0' : 'fr'}}</h4>
+    </mat-grid-tile>   
 
     <mat-grid-tile class="retour">
-        <h4>{{proprietesForfait.dateDeRetour | date : 'fullDate' : undefined : 'fr'}}</h4>
+        <h4>{{proprietesForfait.dateDeRetour | date : 'fullDate' : 'UTC-0' : 'fr'}}</h4>
     </mat-grid-tile>
 </mat-grid-list>
