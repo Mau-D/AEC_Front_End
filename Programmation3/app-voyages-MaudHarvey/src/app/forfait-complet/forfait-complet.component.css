@@ -1,36 +1,12 @@
 /*Différentes couleurs de fond pour observer le gridList*/
-.image {
-  background-color: aqua;
-}
-.description {
-  background-color: chartreuse;
-}
-
-.prix {
-  background-color: thistle;
-}
-.caracteristiques {
-  background-color: green;
-}
-.adresse {
-  background-color: khaki;
-}
-.villeDepart {
-  background-color: blueviolet;
-}
-.depart {
-  background-color: salmon;
-}
-.retour {
-  background-color: gold;
-}
-.espace {
-  background-color: lightblue;
-}
-.duree {
-  background-color: sienna;
-}
 
 .couleurVedette {
-  border: blue solid 2px;
+  border: solid 2px black;
+  box-shadow: 8px 8px 40px 10px rgba(255, 229, 112, 0.8);
+}
+.criteres {
+  border: solid grey 2px;
+}
+.fComplet {
+  min-height: 100%;
 }

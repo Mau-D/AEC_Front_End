@@ -1,0 +1,7 @@
+.mat-card {
+  margin: 2%;
+}
+/*Mise en forme ajoutée pour les forfaits vedettes, appliquer au mini-forfait et aux forfaits complets en vedette*/
+.couleurVedette {
+  box-shadow: 4px 4px 20px 5px rgba(255, 229, 112, 0.8);
+}

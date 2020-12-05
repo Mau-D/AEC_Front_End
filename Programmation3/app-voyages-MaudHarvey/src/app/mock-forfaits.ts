@@ -50,7 +50,7 @@ export const FORFAITS: Forfait[] = [
         dateDeDepart: new Date("2021-02-03"),
         dateDeRetour: new Date("2021-02-17"),
         prix: 3000,
-        forfaitVedette: true,
+        forfaitVedette: false,
         rabais: 999,
     },
     { 
@@ -87,4 +87,5 @@ export const FORFAITS: Forfait[] = [
         forfaitVedette: true,
         rabais: 999,
     },
+    
 ]

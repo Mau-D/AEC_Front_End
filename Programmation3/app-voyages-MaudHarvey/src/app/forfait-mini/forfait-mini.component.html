@@ -1,8 +1,8 @@
 <!-- Composant pour afficher les forfaits vedettes en haut de page -->
 <!-- Sous forme de card simple, placer quelques informations à l'aide d'un grid-list -->
 <!--  Condition remplacé par un filtre dans app, <mat-card *ngIf="proprietesForfait.forfaitVedette">-->
-{{description}}
-<mat-card>
+
+<mat-card class="couleurVedette">
     <mat-grid-list cols="2" rowHeight="2rem">
         <mat-grid-tile>
             <h3>{{proprietesForfait.destination}},  De {{proprietesForfait.villeDeDepart}}</h3>

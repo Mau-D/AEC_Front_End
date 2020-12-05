@@ -4,7 +4,7 @@
 /*Affichage de la liste des forfaits, mini et complet*/
 
 /*Affichage complet de la page*/
-/*display-flex pour afficher un à côté de l'autre les sections recherche et page-*/
+/*display-flex pour afficher un à côté de l'autre les sections recherche et page*/
 #contenuPage {
   width: 100%;
   min-height: 100%;
@@ -15,41 +15,45 @@
 .child-css {
   width: 98%;
 }
-/*Contenu principal du sidenav*/
-.mat-drawer-content {
-  min-height: 100%;
-  /**overflow: hidden; ******Problème avec overflow qui coupe le contenu*************/
-}
-/*Mise en forme ajoutée pour les forfaits vedettes, appliquer au mini-forfait et aux forfaits complets en vedette*/
-.couleurVedette {
-  border: blue solid 2px;
-}
+
 /*grid-list des forfaits vedettes en mini*/
 .espaceMini {
-  background-color: cyan;
+  background-image: url(../assets/img/star.jpg);
+}
+/*grid-list des forfaits complets*/
+.espaceGrand {
   min-height: 100%;
 }
 /*Section contenant le bouton de recherche donnant accès au contenu secondaire du sidenav*/
 /*élément d-flex de la section contenuPage*/
 #sectionRecherche {
   align-self: auto;
-  width: 10%;
-  min-height: 100%;
-  background-color: crimson;
+  width: 7%;
+  background-color: #fbf8f9;
+  background-image: url(../assets/img/ocean.jpg);
+  opacity: 0.9;
 }
 /*section */
 /*élément d-flex de la section contenuPage*/
 #sectionPage {
   align-self: auto;
-  width: 90%;
-  min-height: 100%;
+  width: 93%;
 }
 #boutonRecherche {
+  width: 100%;
+  color: white;
+  box-shadow: 0px 0px 10px 5px #888888 inset;
   position: fixed;
-  margin-top: 50vh;
 }
 
-#sectionMini,
-#sectionComplet {
-  min-height: 100%;
+.criteres {
+  border: solid grey 2px;
+}
+/*Bannière*/
+.banniere {
+  min-height: 80vh;
+  background-image: url("../assets/img/polynesia.jpg");
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+  background-color: #cccccc;
 }
