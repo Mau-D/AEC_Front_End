@@ -40,7 +40,8 @@
   width: 93%;
 }
 #boutonRecherche {
-  width: 100%;
+  padding: 1%;
+  width: auto;
   color: white;
   box-shadow: 0px 0px 10px 5px #888888 inset;
   position: fixed;
@@ -56,4 +57,8 @@
   background-size: cover; /* Resize the background image to cover the entire container */
   background-position: center;
   background-color: #cccccc;
+}
+/*L'emplacement du formulaire de recherche est en position fixed, pour être toujours accessible*/
+.mat-drawer {
+  position: fixed;
 }

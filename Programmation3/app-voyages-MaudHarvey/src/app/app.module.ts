@@ -43,6 +43,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSelectModule} from '@angular/material/select';
+import {MAT_DATE_LOCALE} from '@angular/material/core';
 
 
 
@@ -79,7 +80,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatListModule,
     MatSelectModule,
   ],
-  providers: [],
+  //Calendrier en français
+  providers: [ {provide: MAT_DATE_LOCALE, useValue: 'fr-CA'},],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

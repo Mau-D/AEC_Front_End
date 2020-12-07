@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Formulaire } from '../formulaire';
 import { dureeTableau } from '../mock-durees';
 import { caracTableau } from '../mock-caracHotel';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 
 
 
@@ -11,6 +12,7 @@ import { caracTableau } from '../mock-caracHotel';
   templateUrl: './formulaire-recherche.component.html',
   styleUrls: ['./formulaire-recherche.component.css']
 })
+
 export class FormulaireRechercheComponent implements OnInit {
 //Input et output pour l'échange d'informations
   @Input() formulaire: Formulaire;

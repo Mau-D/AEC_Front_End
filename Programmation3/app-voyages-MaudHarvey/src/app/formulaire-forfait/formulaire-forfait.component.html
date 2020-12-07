@@ -131,12 +131,12 @@
         <mat-form-field>
             <mat-label>Prix du forfait</mat-label>
             <input matInput required [ngModel]="prix" name="prixForfait" #inputPrix="ngModel" type="number" placeholder="0.00"
-                min="0.00" max="1000000.00" step="0.01" ng-model="prixForfait | number : '1.2-2'"
-                ng-pattern="/^[0-9]+(.[0-9]{1,2})?$/">
+                min="0.00" max="1000000.00" step="0.01" ng-model="prixForfait">
             <!-- Validation du nombre de chambre -->
             <mat-error *ngIf="inputPrix.hasError('required')">
                 Le prix du forfait est <strong>obligatoire</strong>
             </mat-error>
+            
         </mat-form-field>
     </mat-grid-tile>
     <mat-grid-tile  [colspan]="2" [rowspan]="3">

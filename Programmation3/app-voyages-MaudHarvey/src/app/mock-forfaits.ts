@@ -82,10 +82,27 @@ export const FORFAITS: Forfait[] = [
             caracteristiques: ['Face à la plage', 'Mariage', 'Plage', 'Piscine'],
         },
         dateDeDepart: new Date("2021-03-15"),
-        dateDeRetour: new Date("2021-03-30"),
+        dateDeRetour: new Date("2021-03-29"),
         prix: 2000,
         forfaitVedette: true,
         rabais: 999,
+    },
+    { 
+         id: '6',
+        destination: 'Cuba',
+        villeDeDepart: 'Québec',
+        hotel: {
+            nomDeLHotel: 'La Casa',
+            coordonnees: '15 route du cocotier, La Havane',
+            nombresDEtoiles: 2,
+            nombreDeChambres: 155,
+            caracteristiques: ['Face à la plage', 'Plage', 'Piscine'],
+        },
+        dateDeDepart: new Date("2021-03-15"),
+        dateDeRetour: new Date("2021-03-29"),
+        prix: 1100,
+        forfaitVedette: true,
+        rabais: 99,
     },
     
 ]
