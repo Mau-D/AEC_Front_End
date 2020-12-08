@@ -1,0 +1,74 @@
+<!-- Exercice 2 -->
+<!-- Afficher l'élément sélectionné dans un select, avec un événement-->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Manipulation de vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Affiche un select avec des héros, afficher l'élément sélectionné -->
+        <h1>Choix des super héros Marvel</h1>
+        <!-- Événement change, envoie à une méthode avec la valeur de l'option choisi en paramètre -->
+        <select v-on:change="choosen($event.target.value)">
+            <option v-for="hero in heros">{{hero.nom}}</option>
+        </select>
+        <!-- Affichage du héro sélectionné -->
+        <h1>{{selectedHero}}</h1>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                //propriétés tableau d'objet des superhéros
+              
+                heros: [
+                    {
+                        id: 1,
+                        nom: "Phoenix",
+                    },
+                    {
+                        id:2,
+                        nom:"Wolverine",
+                    },
+                    {
+                        id: 3,
+                        nom:"Black Widow",
+                    },
+                    {
+                        id: 4,
+                        nom:"Thor",
+                    },
+                    {
+                        id: 5,
+                        nom: "Daredevil",
+                    },
+                    {
+                        id: 6,
+                        nom: "Deadpool",
+                    },
+                     {
+                        id: 7,
+                        nom: "Spiderman",
+                    },
+                ],
+                //propriété pour la valeur du héro sélectionné
+                selectedHero:"Héro sélectionné",
+            },
+            //Méthode qui envoie la valeur de l'élément sélectionné dans la propriété selectedHero
+            methods:{
+                choosen: function(event){
+                    this.selectedHero= event;
+                   
+                }
+            },
+        });
+        
+    </script>
+</body>
+
+</html>

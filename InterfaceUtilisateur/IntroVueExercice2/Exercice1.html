@@ -1,0 +1,52 @@
+<!-- Exercice 1 -->
+<!-- Déclarer une date ajouter un filtre pour l'afficher dans le format: MM/DD/YYYY hh:mm-->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Manipulation de vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Affiche la date dans le format demandée, à l'aide d'un filtre -->
+        <h1>Date d'aujourd'hui</h1>
+        <h1>{{date | formatDate}}</h1>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                //Propriétés pour la date d'aujourd'hui
+                date: new Date(),
+            },
+            filters:{
+                formatDate: function(value){  
+                    //Les mois commence à 0
+                        let mois = value.getMonth()+1;
+                        let jours = value.getDate();
+                        let annee = value.getFullYear();
+                        let heure = value.getHours()
+                        let minute = value.getMinutes()
+                        if(mois < 10){
+                            mois = "0" + parseInt(mois);
+                        }  
+                        if (jours < 10) {
+                        jours = "0" + parseInt(jours);
+                        }  
+                        if (jours < 10) {
+                        heure = "0" + parseInt(heure);
+                        }               
+                        if (minute < 10) {
+                            minute = "0" + parseInt(minute);
+                        }               
+                   return mois + "/" + jours + "/" + annee + "  " + heure + ":" + minute;
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>

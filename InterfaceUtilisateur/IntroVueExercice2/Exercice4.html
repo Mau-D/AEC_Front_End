@@ -1,0 +1,58 @@
+<!-- Exercice 4, Composant Parent-Enfant-->
+<!-- Créer une vue pour afficher une liste d'utilisateurs, avec les valeurs nom et prénom-->
+<!-- sous-composant detail-contact, avec le numéro de téléphone et e-mail -->
+<!-- sous-composant adresses-contact, avec la liste des adresses -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Manipulation de vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="detailsContact.js"></script> <!-- Charger -->
+    <script src="listeAdresses.js"></script> <!-- Charger -->
+
+
+</head>
+
+<body>
+    <div id="app">
+        <div v-for="utilisateur in utilisateurs">
+            <h1>{{utilisateur.prenom}} {{utilisateur.nom}}</h1>
+            <details-contact v-bind:telephone="utilisateur.telephone" v-bind:courriel="utilisateur.courriel"></details-contact>
+            <ul> 
+                <liste-adresses v-for="adresse in utilisateur.adresses" v-bind:adresses="adresse"></liste-adresses>
+            </ul>
+        </div>
+      
+    </div>
+    <!-- Instance de Vue, données des utilisateurs-->
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data:{
+                utilisateurs:[
+                {
+                    id:1,
+                    nom: 'Harvey',
+                    prenom: 'Maud',
+                    telephone: '678-233-3939',
+                    courriel: 'sadgjashjad@ksdjhfksd.com',
+                    adresses:['adresse1', 'adresse2']
+                },
+                {
+                    id: 1,
+                    nom: 'Frigon',
+                    prenom: 'Joël',
+                    telephone: '544-453-3333',
+                    courriel: 'dfgf@rrrrrrrrrrrrfsd.com',
+                    adresses: ['adresseA', 'adresseB']
+                },
+                ]
+            }
+        });
+    </script>
+</body>
+
+</html>

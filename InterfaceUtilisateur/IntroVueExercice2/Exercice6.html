@@ -1,0 +1,42 @@
+<!-- Exercice 6, Composant dynamique-->
+<!-- Deux boutons radio contrôlent l'affichage de deux composants-->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Manipulation de vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="composantVelo.js"></script> <!-- Charger -->
+    <script src="composantVoiture.js"></script> <!-- Charger -->
+    
+</head>
+
+<body>
+    <div id="app">
+       <!-- Boutons radio voiture et velo -->
+    <input type="radio" id="voiture" value="composant-voiture" v-model="choice">
+    <label for="voiture">Voiture</label>
+    <br>
+    <input type="radio" id="velo" value="composant-velo" v-model="choice">
+    <label for="velo">Vélo</label>
+    <!-- Composant dynamique utiliser le is -->
+    <component v-bind:is="currentComponent"></component>
+    </div>
+    <!-- Instance de Vue-->
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data:{
+                choice:"",
+            },
+            computed:{
+                currentComponent: function(){
+                    return this.choice;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

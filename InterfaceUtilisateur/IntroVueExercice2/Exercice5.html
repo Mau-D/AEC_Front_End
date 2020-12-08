@@ -1,0 +1,37 @@
+<!-- Exercice 5, Événement personnalisé-->
+<!-- Composant qui permet d'afficher la valeur saisi dans un input text-->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Manipulation de vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="affichageSaisi.js"></script> <!-- Charger -->
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- Composant écouter l'événement émis par le composant, envoyé à la méthode-->
+       <affichage-saisi v-on:saisi-text="display"></affichage-saisi>
+      <h1>{{saisi}}</h1>
+    </div>
+    <!-- Instance de Vue, sur la div contenant le composant -->
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data:{
+                saisi:"hello",
+            },
+            //La méthode prend le payload défini dans le composant en paramètre
+            methods:{
+                display(payload) {
+                    this.saisi= payload;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

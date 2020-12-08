@@ -1,0 +1,28 @@
+<!-- Exercice 3, Composant -->
+<!-- Composant pour compter le nombre de clic de deux boutons-->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Manipulation de vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="boutonsThumb.js"></script> <!-- Charger -->
+    
+</head>
+
+<body>
+    <div id="app">
+        <p>Boutons avec compte de clic</p>
+        <!-- Composant contenant deux boutons et la méthode pour le compte des clics -->
+     <boutons-thumb></boutons-thumb>
+    </div>
+    <!-- Instance de Vue, sur la div contenant le composant -->
+    <script>
+        let vm = new Vue({
+            el: "#app",
+        });
+    </script>    
+</body>
+
+</html>
