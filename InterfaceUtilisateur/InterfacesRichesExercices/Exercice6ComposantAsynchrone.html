@@ -1,0 +1,49 @@
+<!-- Exercice6, composant asynchrone dans cours d'interface utilisateur -->
+<!-- Faire un composant qui affiche le contenu d'une page d'accueil que vous changerez de façon asynchrone au bout de 10 secondes -->
+<!-- On affichera le message "Chargement en cours" -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Composant Asynchrone</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue"></script>
+    <!-- Version développement. Celle-ci donne des avertissements utiles sur la console 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+    <!-- Version production. celle-ci est optimisée pour la taille et la vitesse
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+   
+</head>
+
+
+<body>
+    <div id="app2">
+        
+        <!-- Appel du composant -->
+       <async></async>
+
+    </div>
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script>
+        
+        Vue.component("async", function (resolve) {
+            
+            setTimeout(function () {
+                    
+                // Passe la définition du composant à la fonction de rappel `resolve`
+                resolve({
+                    template: "<div><h1>Page d'accueil</h1></div>",
+                })                   
+            }, 1000);
+                
+        });
+            
+        var app = new Vue({
+            el: "#app2",
+           
+        });
+    </script>
+</body>
+
+</html>
