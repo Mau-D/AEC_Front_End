@@ -44,6 +44,17 @@ import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSelectModule} from '@angular/material/select';
 import {MAT_DATE_LOCALE} from '@angular/material/core';
+import { AccueilComponent } from './accueil/accueil.component';
+import { EnteteComponent } from './entete/entete.component';
+import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
+import { AproposComponent } from './apropos/apropos.component';
+import { AdministrationComponent } from './administration/administration.component';
+import { ForfaitsToutSudComponent } from './forfaits-tout-sud/forfaits-tout-sud.component';
+import { ForfaitsExplorateurComponent } from './forfaits-explorateur/forfaits-explorateur.component';
+
+
 
 
 
@@ -55,7 +66,14 @@ import {MAT_DATE_LOCALE} from '@angular/material/core';
     EtoileComponent,
     FormulaireForfaitComponent,
     ForfaitVedettePipe,
-    FormulaireRechercheComponent
+    FormulaireRechercheComponent,
+    AccueilComponent,
+    EnteteComponent,
+    PiedDePageComponent,
+    AproposComponent,
+    AdministrationComponent,
+    ForfaitsToutSudComponent,
+    ForfaitsExplorateurComponent
   ],
   
   imports: [
@@ -79,6 +97,8 @@ import {MAT_DATE_LOCALE} from '@angular/material/core';
     MatDividerModule,
     MatListModule,
     MatSelectModule,
+    MatToolbarModule,
+    MatMenuModule
   ],
   //Calendrier en français
   providers: [ {provide: MAT_DATE_LOCALE, useValue: 'fr-CA'},],

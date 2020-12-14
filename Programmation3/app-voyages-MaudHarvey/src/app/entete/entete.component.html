@@ -1,0 +1,16 @@
+<!-- Composant pour le menu de navigation, le logo de l'agence de voyage et les onglets de navigation des différentes pages-->
+<!-- Utilisation du toolbar de Angular Material -->
+<mat-toolbar color='warn' class="navbar">
+    <!-- Nom et logo de l'agence, retour à l'accueil-->
+    <div><a routerLink="">Logo Agence de voyage</a></div>
+    <!-- Menu de navigation -->
+    <div>
+        <a routerLink="/apropos">À propos</a>
+        <button mat-button [matMenuTriggerFor]="menu">Forfaits</button>
+        <mat-menu #menu="matMenu">
+            <a routerLink="/toutsud" mat-menu-item>Tout Sud</a>
+            <a routerLink="/explorateur" mat-menu-item>Explorateur</a>
+        </mat-menu>
+        <a routerLink="/administration">Administration</a>
+    </div>
+</mat-toolbar>

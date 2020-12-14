@@ -1,0 +1,16 @@
+<!-- Afficher tous les forfaits avec toutes le informations séparés d'un diviseur, les forfaits complets sont placés sous les forfaits vedettes -->
+<h1>Forfaits Tout-sud</h1>
+
+   
+<mat-grid-list cols="9" rowHeight="8rem">
+    <mat-list>
+        <mat-list-item *ngFor="let item of forfaits">
+            <mat-grid-tile [colspan]="9" [rowspan]="9">
+                <app-forfait-complet class="child-css" [proprietesForfait]=item [formulaire]="formulaire">
+                </app-forfait-complet>
+                <mat-divider></mat-divider><!-- Placer à l'intérieur du grid-tile -->
+            </mat-grid-tile>
+        </mat-list-item>
+    </mat-list>
+</mat-grid-list>
+   

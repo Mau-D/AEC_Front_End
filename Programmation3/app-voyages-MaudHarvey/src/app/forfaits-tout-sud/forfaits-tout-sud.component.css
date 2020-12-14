@@ -1,0 +1,13 @@
+/*forfaits-tout-sud.component.css*/
+/*Maud Harvey*/
+/*14 décembre 2020*/
+/*Affichage de la liste des forfaits-complet de la catégorie tout-sud*/
+
+/*div du grid-list des forfaits complets*/
+.child-css {
+  width: 98%;
+}
+
+.criteres {
+  border: solid grey 2px;
+}

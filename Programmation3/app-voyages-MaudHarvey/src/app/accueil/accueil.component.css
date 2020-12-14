@@ -1,0 +1,62 @@
+/*accueil.component.css*/
+/*Maud Harvey*/
+/*2 décembre 2020*/
+/*Affichage de la liste des forfaits, mini et complet*/
+
+/*Affichage complet de la page*/
+/*display-flex pour afficher un à côté de l'autre les sections recherche et page*/
+.contenuPage {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+/*div des card pour le mini-forfait et les grid-list des forfaits complets*/
+.child-css {
+  width: 98%;
+}
+
+/*grid-list des forfaits vedettes en mini*/
+.espaceMini {
+  background-image: url(../../assets/img/star.jpg);
+}
+/*grid-list des forfaits complets*/
+.espaceGrand {
+  min-height: 100%;
+}
+/*Section contenant le bouton de recherche donnant accès au contenu secondaire du sidenav*/
+/*élément d-flex de la section contenuPage*/
+#sectionRecherche {
+  align-self: auto;
+  width: 7%;
+  background-color: #fbf8f9;
+  opacity: 0.9;
+}
+/*section */
+/*élément d-flex de la section contenuPage*/
+.sectionPage {
+  align-self: auto;
+  width: 93%;
+}
+#boutonRecherche {
+  padding: 1%;
+  width: auto;
+
+  position: fixed;
+}
+
+.criteres {
+  border: solid grey 2px;
+}
+/*Bannière*/
+.banniere {
+  min-height: 80vh;
+  background-image: url("../../assets/img/polynesia.jpg");
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+  background-color: #cccccc;
+}
+/*L'emplacement du formulaire de recherche est en position fixed, pour être toujours accessible*/
+.mat-drawer {
+  position: fixed;
+}
