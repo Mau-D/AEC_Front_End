@@ -1,0 +1,46 @@
+<!-- Exercice1, props dans cours d'interface utilisateur -->
+<!-- Créer un composant qui prends une props en valeur qui permet d'afficher un titre entre des balises h1 'Nouveau titre' -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PROPS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue"></script>
+    <!-- Version développement. Celle-ci donne des avertissements utiles sur la console 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+    <!-- Version production. celle-ci est optimisée pour la taille et la vitesse
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="style/style.css" type="text/css" media="screen" />
+</head>
+
+
+<body>
+    <div id="app2">
+        <!-- Appel du composant -->
+        <titre titre="Nouveau titre"></titre>
+
+    </div>
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script>
+         Vue.component("titre", {
+                props: ["titre"],
+                template:
+                    `
+                        <h1>{{titre}}</h1>
+                    `
+                ,
+            });
+        var app = new Vue({
+            el: "#app2",
+            data: {
+              
+            },
+           
+        });
+    </script>
+</body>
+
+</html>

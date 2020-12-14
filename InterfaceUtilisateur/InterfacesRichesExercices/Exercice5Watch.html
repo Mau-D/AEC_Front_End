@@ -1,0 +1,58 @@
+<!-- Exercice5, watch dans cours d'interface utilisateur -->
+<!-- Faire 3 inputs, un pour kilomètre un pour mètre et un pour centimètre -->
+<!-- Lorsque l'on change la valeur de l'un des input , la conversion s'Affiche dans les autres input, grâce à l'attribut watch  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Watch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue"></script>
+    <!-- Version développement. Celle-ci donne des avertissements utiles sur la console 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+    <!-- Version production. celle-ci est optimisée pour la taille et la vitesse
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    
+</head>
+
+
+<body>
+    <div id="app2">
+        
+        <input id="kilometre" type="number" v-model="kilometres" ><label for="kilometre">km</label><br><br>
+        <input id="metre" type="number" v-model="metres"><label for="metre">m</label><br><br>
+        <input id="centimetre" type="number" v-model="centimetres"><label for="centimetre">cm</label><br><br>
+
+
+    </div>
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script>
+      
+        var app = new Vue({
+            el: "#app2",
+            data: {
+                //Propriété de la valeur inscrit dans un input text
+               kilometres: 0.1,
+               metres: 100,
+               centimetres: 10000, 
+            },
+            watch: {
+                kilometres: function (val) {
+                    this.metres = val * 1000
+                    this.centimetres = val * 100000
+                },
+                metres: function (val) {
+                    this.kilometres = val / 1000
+                    this.centimetres = val * 100
+                },
+                centimetres: function (val) {
+                    this.kilometres = val / 100000
+                    this.metres = val / 100
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>

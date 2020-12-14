@@ -1,0 +1,73 @@
+<!-- Exercice4, slot dans cours d'interface utilisateur -->
+<!-- Faire un composant que vous remplirez avec 4 slot nommés de votre choix -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SLOT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue"></script>
+    <!-- Version développement. Celle-ci donne des avertissements utiles sur la console 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+    <!-- Version production. celle-ci est optimisée pour la taille et la vitesse
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="style/style.css" type="text/css" media="screen" />
+</head>
+
+
+<body>
+    <div id="app2">
+        <!-- Appel du composant -->
+        <!-- Pour appeler les slots placer une balise template avec v-slot:nom du slot dans le composant -->
+       <component-slot>
+            <template v-slot:titre>
+               <h1>Le titre de ma page</h1>
+            </template>
+            <template v-slot:sous-titre>
+                <h2>Le sous-titre de ma page</h2>
+            </template>
+            <template v-slot:paragraphe>
+                <p>Le paragraphe de ma page</p>
+            </template>
+            <template v-slot:lien>
+                <a href="#">Le lien de ma page</a>
+            </template>
+       </component-slot>
+
+    </div>
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script>
+        Vue.component("component-slot", {
+            
+            template:
+                    `
+                    <div>
+                        <div>
+                            <slot name="titre"></slot>
+                        </div>
+                        <div>
+                            <slot name="sous-titre"></slot>
+                        </div>
+                       <div>
+                            <slot name="paragraphe"></slot>
+                        </div>
+                       <div>
+                            <slot name="lien"></slot>
+                        </div>
+                    </div>
+                    `
+            ,
+        });
+        var app = new Vue({
+            el: "#app2",
+            data: {
+
+            },
+
+        });
+    </script>
+</body>
+
+</html>

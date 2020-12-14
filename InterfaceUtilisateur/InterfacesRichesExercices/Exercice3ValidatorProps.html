@@ -1,0 +1,58 @@
+<!-- Exercice3, validator Props dans cours d'interface utilisateur -->
+<!-- Reprendre l'exercice précédent et ajouter un validateur de la propriété qui s'assure que le
+champs ne prend que des lettres. Vous pouvez utiliser l'instruction suivante: 
+/^[a-zA-Z]+$/.exec(valeur) -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Validator Props</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue"></script>
+    <!-- Version développement. Celle-ci donne des avertissements utiles sur la console 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+    <!-- Version production. celle-ci est optimisée pour la taille et la vitesse
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="style/style.css" type="text/css" media="screen" />
+</head>
+
+
+<body>
+    <div id="app2">
+        <!-- Input text -->
+        <input type="text" v-model="titreEntre" placeholder="Entrer un titre" />
+        <!-- Appel du composant -->
+        <titre v-bind:titre="titreEntre"></titre>
+
+    </div>
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script>
+        Vue.component("titre", {
+            props: {
+                titre: {
+                 type: String,
+                },
+
+            },
+            template:
+                `
+                    <h1>{{titre}}</h1>
+               
+                `
+            ,
+        });
+        var app = new Vue({
+            el: "#app2",
+            data: {
+                //Propriété de la valeur inscrit dans un input text
+                titreEntre: "",
+
+            },
+
+        });
+    </script>
+</body>
+
+</html>
