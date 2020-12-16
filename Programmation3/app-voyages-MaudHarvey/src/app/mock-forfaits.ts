@@ -1,5 +1,5 @@
 //Tableau Mock pour les différents forfaits
-//importer l'interface de l'objet
+//Importer l'interface de l'objet
 
 import {Forfait} from './forfait';
 export const FORFAITS: Forfait[] = [
@@ -99,7 +99,7 @@ export const FORFAITS: Forfait[] = [
             caracteristiques: ['Face à la plage', 'Plage', 'Piscine'],
         },
         dateDeDepart: new Date("2021-03-15"),
-        dateDeRetour: new Date("2021-03-29"),
+        dateDeRetour: new Date("2021-03-25"),
         prix: 1100,
         forfaitVedette: true,
         rabais: 99,

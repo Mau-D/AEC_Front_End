@@ -24,8 +24,8 @@ export class FormulaireForfaitComponent implements OnInit {
   destinationControl = new FormControl();
   departControl = new FormControl();
   //Variables des options de l'autocomplete
-  destinations: string[] = ['Cuba', 'Mexique', 'Europe']
-  villes: string[] = ['Québec', 'Montréal', 'Toronto']
+  destinations: string[] = ['Cuba', "Islande", 'Jamaïque', 'Mexique', 'Paris',  ]
+  villes: string[] = ['Montréal', 'Québec', 'Toronto']
   //Variables des filtres utilisées pour l'autocomplete, la valeur est changée en tableau de string
   filteredDestinations: Observable<string[]>;
   filteredVilles: Observable<string[]>;

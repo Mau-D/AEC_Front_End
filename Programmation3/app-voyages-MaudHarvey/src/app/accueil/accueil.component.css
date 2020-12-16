@@ -7,22 +7,25 @@
 /*display-flex pour afficher un à côté de l'autre les sections recherche et page*/
 .contenuPage {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
 }
 /*div des card pour le mini-forfait et les grid-list des forfaits complets*/
 .child-css {
+  height: 100%;
+
   width: 98%;
 }
 
 /*grid-list des forfaits vedettes en mini*/
 .espaceMini {
   background-image: url(../../assets/img/star.jpg);
+  height: 100%;
 }
 /*grid-list des forfaits complets*/
 .espaceGrand {
-  min-height: 100%;
+  height: 100%;
 }
 /*Section contenant le bouton de recherche donnant accès au contenu secondaire du sidenav*/
 /*élément d-flex de la section contenuPage*/
@@ -39,9 +42,8 @@
   width: 93%;
 }
 #boutonRecherche {
-  padding: 1%;
+  align-self: start;
   width: auto;
-
   position: fixed;
 }
 
@@ -50,13 +52,29 @@
 }
 /*Bannière*/
 .banniere {
-  min-height: 80vh;
+  height: 60vh;
   background-image: url("../../assets/img/polynesia.jpg");
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-size: cover;
   background-position: center;
   background-color: #cccccc;
 }
-/*L'emplacement du formulaire de recherche est en position fixed, pour être toujours accessible*/
+/*L'emplacement du formulaire de recherche est en position fixed pour être toujours accessible*/
 .mat-drawer {
   position: fixed;
+}
+/*Centrer la section dans la bannière*/
+.texteBanniere {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+}
+/*Centrer le texte de la bannière*/
+.texteBanniere h2 {
+  text-align: center;
+}
+/*Enlever la barre de défilement verticale de la section mat-drawer-cointent*/
+.mat-drawer-content {
+  height: 100%;
 }

@@ -19,7 +19,7 @@
         <h3>{{proprietesForfait.destination}}</h3>
     </mat-grid-tile>
     <mat-grid-tile class="espace" [rowspan]="13"></mat-grid-tile><!-- espace -->
-   <!-- Calcul de la durée du forfait à partir de la date de départ et de retour -->
+   <!-- Calcul de la durée du forfait à partir de la date de départ et de retour dans le mock-forfaits -->
     <mat-grid-tile class="duree">
         <h1>{{(proprietesForfait.dateDeRetour.valueOf()-proprietesForfait.dateDeDepart.valueOf())/(1000*3600*24)}} jours</h1>
     </mat-grid-tile>
@@ -38,7 +38,7 @@
             <h1>{{proprietesForfait.prix}}, 00$</h1>
         </mat-grid-tile>
     </ng-template>
-    <!-- Nombre d'étoiles de l'hôtel, boucle sppelé avec le nombre inscrit dans le mock-forfaits -->
+    <!-- Nombre d'étoiles de l'hôtel, boucle appelée avec le nombre inscrit dans le mock-forfaits -->
     <mat-grid-tile class="description" [colspan]="2">
         <app-etoile *ngFor="let item of [].constructor(proprietesForfait.hotel.nombresDEtoiles)"></app-etoile>
     </mat-grid-tile>
