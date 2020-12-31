@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css" type="text/css" media="screen" />
     <!-- Chargement des composants -->
-    <script src="accueil.js"></script> <!-- Charger -->
-    <script src="aPropos.js"></script> <!-- Charger -->
+   
+
 
     
 </head>
@@ -25,26 +25,32 @@
 <body>
     <div  id="vm">
             <!-- Appel du composant -->
-        <h1 class="ml-5">{{titre}}</h1>
         <accueil></accueil>
-        <button @click="showModal = true" >À propos</button>
-        <a-propos  v-if="showModal" @close="showModal = false"></a-propos>
-      
-      
-       
-        
-    </div>
-    
-    <!--Instance de vue -->
-    <script>
-        new Vue({
-            el: "#vm",
-            data: {
-                titre: 'hello',
-                showModal: false,
-            },
 
-        });
+        <button @click="showModal = true">À propos</button>
+        <a-propos v-if="showModal" @close="showModal = false"></a-propos>
+        <contact v-bind:courrielprop="courriel"></contact>
+        <inscription></inscription>
+
+    </div>
+   
+    
+    <script src="accueil.js"></script> <!-- Charger -->
+    <script src="aPropos.js"></script> <!-- Charger -->
+    <script src="contact.js"></script> <!-- Charger -->
+    <script src="inscription.js"></script> <!-- Charger -->
+
+    <script>
+    //Instance Vue pour le composant accueil
+    var vm = new Vue({
+        el: "#vm",
+         data: {
+            showModal: false,
+            sujet: "",
+            ville:"",
+            courriel:""
+        },
+    });
     </script>
 </body>
 

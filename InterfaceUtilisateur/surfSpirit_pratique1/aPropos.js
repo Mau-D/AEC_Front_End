@@ -7,10 +7,10 @@ Vue.component("a-propos", {
   template: `
 
   <div>
-            <transition name="modal"">
+            <transition name="modal">
                 <div class="modal-mask">
                     <div class="modal-wrapper">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog modal-xl" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title">Surf Spirit</h5>
@@ -53,6 +53,7 @@ Vue.component("a-propos", {
                     </div>
                 </div>
             </transition>
+            
         </div>
     
         `,
