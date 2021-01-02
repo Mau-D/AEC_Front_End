@@ -29,16 +29,19 @@
 
         <button @click="showModal = true">À propos</button>
         <a-propos v-if="showModal" @close="showModal = false"></a-propos>
-        <contact v-bind:courrielprop="courriel"></contact>
+        <login></login>
+        <contact></contact>
         <inscription></inscription>
 
     </div>
    
-    
-    <script src="accueil.js"></script> <!-- Charger -->
-    <script src="aPropos.js"></script> <!-- Charger -->
-    <script src="contact.js"></script> <!-- Charger -->
-    <script src="inscription.js"></script> <!-- Charger -->
+    <!-- Chargement des composants -->
+    <script src="accueil.js"></script> 
+    <script src="aPropos.js"></script>
+    <script src="contact.js"></script>
+    <script src="inscription.js"></script>
+    <script src="login.js"></script>
+
 
     <script>
     //Instance Vue pour le composant accueil
@@ -46,11 +49,10 @@
         el: "#vm",
          data: {
             showModal: false,
-            sujet: "",
-            ville:"",
-            courriel:""
+           
         },
     });
+    
     </script>
 </body>
 

@@ -42,13 +42,11 @@ Vue.component("accueil", {
             <h1>Nos points forts</h1>
             <ul>
                 <li>Grand choix d'inventaire</li>
-                <li>Service personnalisée</li>
+                <li>Service personnalisé</li>
                 <li>Tester nos produits</li>
                 <li>Tester nos produits</li>
             </ul>
-        </div>
-                
+        </div>           
     </div>
-
 </div>`,
 });
