@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Forfait } from '../forfait';
 import { FORFAITS } from '../mock-forfaits';
 import { Formulaire } from '../formulaire';
+import { VoyagesService } from '../voyages.service'; // service pour API
+
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',
@@ -9,7 +11,8 @@ import { Formulaire } from '../formulaire';
 })
 export class AccueilComponent implements OnInit {
  //variable pour le forfait entier contenant le tableau mock
-  forfaits: Forfait[] = FORFAITS;
+ //Avec l'utilisation du service la variable est initialisé en tableau vide.
+  forfaits: Forfait[];
 
   
   //Objet contenant les informations entrées dans le formulaire de recherche
@@ -19,9 +22,19 @@ export class AccueilComponent implements OnInit {
     nbrEtoiles: 1,
     caracHotel: [''],
   }
-  constructor() { }
+  //Ajouter le service dans l'argument du constructeur
+  constructor(private voyagesService: VoyagesService) { }
 
   ngOnInit(): void {
+    //Appelle de la fonction à l'ouverture de la page
+    this.getVoyages();
+
   }
+//Fonction qui récupère les données de l'API
+  getVoyages(): void {
+    this.voyagesService.getVoyages()
+        .subscribe(resultat => this.forfaits = resultat);
+  }
+  //Le void définit une fonction sans return en TS
 
 }

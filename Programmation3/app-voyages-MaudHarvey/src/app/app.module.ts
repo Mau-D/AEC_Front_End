@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';//Module pour le service
+
+//Routage pour la navigation
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -14,6 +17,18 @@ import { ForfaitMiniComponent } from './forfait-mini/forfait-mini.component';
 import { EtoileComponent } from './etoile/etoile.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
 import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
+import { EnteteComponent } from './entete/entete.component';
+import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { AproposComponent } from './apropos/apropos.component';
+import { AdministrationComponent } from './administration/administration.component';
+import { ForfaitsToutSudComponent } from './forfaits-tout-sud/forfaits-tout-sud.component';
+import { ForfaitsExplorateurComponent } from './forfaits-explorateur/forfaits-explorateur.component';
+import { TableForfaitsComponent } from './table-forfaits/table-forfaits.component';
+
+//Importations des services
+import { VoyagesService } from './voyages.service';//Fichier pour le service
+
 //Importations des pipes
 import { ForfaitVedettePipe } from './forfait-vedette.pipe';
 
@@ -44,18 +59,9 @@ import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSelectModule} from '@angular/material/select';
 import {MAT_DATE_LOCALE} from '@angular/material/core';
-import { AccueilComponent } from './accueil/accueil.component';
-import { EnteteComponent } from './entete/entete.component';
-import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
-import { AproposComponent } from './apropos/apropos.component';
-import { AdministrationComponent } from './administration/administration.component';
-import { ForfaitsToutSudComponent } from './forfaits-tout-sud/forfaits-tout-sud.component';
-import { ForfaitsExplorateurComponent } from './forfaits-explorateur/forfaits-explorateur.component';
-
-
-
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -73,7 +79,8 @@ import { ForfaitsExplorateurComponent } from './forfaits-explorateur/forfaits-ex
     AproposComponent,
     AdministrationComponent,
     ForfaitsToutSudComponent,
-    ForfaitsExplorateurComponent
+    ForfaitsExplorateurComponent,
+    TableForfaitsComponent
   ],
   
   imports: [
@@ -98,10 +105,12 @@ import { ForfaitsExplorateurComponent } from './forfaits-explorateur/forfaits-ex
     MatListModule,
     MatSelectModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+    MatTableModule
   ],
   //Calendrier en français
-  providers: [ {provide: MAT_DATE_LOCALE, useValue: 'fr-CA'},],
+  providers: [ {provide: MAT_DATE_LOCALE, useValue: 'fr-CA'}, VoyagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

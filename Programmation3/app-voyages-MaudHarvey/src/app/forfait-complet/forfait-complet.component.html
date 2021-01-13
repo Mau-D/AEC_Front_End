@@ -9,7 +9,7 @@
     <p>Durée: {{formulaire.duree}}</p>
     <p>Nombre d'étoiles : {{formulaire.nbrEtoiles}}</p>
 </div>
-<mat-grid-list cols="5" rowHeight="4.1rem" [ngClass]="{'couleurVedette' : proprietesForfait.forfaitVedette}">
+<mat-grid-list cols="5" rowHeight="4.1rem" [ngClass]="{'couleurVedette' : proprietesForfait.vedette}">
     <mat-grid-tile class="image"
         [rowspan]="12">
         <img src="../../assets/img/voyage.jpg"/>
@@ -21,10 +21,10 @@
     <mat-grid-tile class="espace" [rowspan]="13"></mat-grid-tile><!-- espace -->
    <!-- Calcul de la durée du forfait à partir de la date de départ et de retour dans le mock-forfaits -->
     <mat-grid-tile class="duree">
-        <h1>{{(proprietesForfait.dateDeRetour.valueOf()-proprietesForfait.dateDeDepart.valueOf())/(1000*3600*24)}} jours</h1>
+        <h1>{{(proprietesForfait.dateRetourD.valueOf()-proprietesForfait.dateDepartD.valueOf())/(1000*3600*24)}} jours</h1>
     </mat-grid-tile>
     <mat-grid-tile class="description" [colspan]="2">
-        <h1>{{proprietesForfait.hotel.nomDeLHotel}}</h1>
+        <h1>{{proprietesForfait.hotel.nom}}</h1>
     </mat-grid-tile>
     <!-- Appliquer un rabais sur le prix des forfaits -->
     <!-- Barrer le prix, afficher le rabais et le nouveau prix, affichage sur trois rangées -->
@@ -40,7 +40,7 @@
     </ng-template>
     <!-- Nombre d'étoiles de l'hôtel, boucle appelée avec le nombre inscrit dans le mock-forfaits -->
     <mat-grid-tile class="description" [colspan]="2">
-        <app-etoile *ngFor="let item of [].constructor(proprietesForfait.hotel.nombresDEtoiles)"></app-etoile>
+        <app-etoile *ngFor="let item of [].constructor(proprietesForfait.hotel.nombreEtoiles)"></app-etoile>
     </mat-grid-tile>
     <!-- Si le rabais s'applique, afficher avec un style pour barrer le prix -->
     <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0; else elseRabais">
@@ -48,7 +48,7 @@
     </mat-grid-tile>
    
     <mat-grid-tile class="description" [colspan]="2">
-        <h4>{{proprietesForfait.hotel.nombreDeChambres}} chambres</h4>
+        <h4>{{proprietesForfait.hotel.nombreChambres}} chambres</h4>
     </mat-grid-tile>
     <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0">
         <h1>{{proprietesForfait.prix - proprietesForfait.rabais}},00$</h1><!-- Nouveau prix -->
@@ -68,15 +68,15 @@
     </mat-grid-tile>
     <mat-grid-tile class="espace" [colspan]="2" [rowspan]="2"></mat-grid-tile><!-- espace -->
     <mat-grid-tile class="villeDepart">
-        <h4>{{proprietesForfait.villeDeDepart}}</h4>
+        <h4>{{proprietesForfait.villeDepart}}</h4>
     </mat-grid-tile>
     <!-- Format de date, fullDate, local: Greenwich et en français, voir importations app.module-->
     <mat-grid-tile class="depart">
-        <h4>{{proprietesForfait.dateDeDepart | date : 'fullDate' : 'UTC-0' : 'fr'}}</h4>
+        <h4>{{proprietesForfait.dateDepartD | date : 'fullDate' : 'UTC-0' : 'fr'}}</h4>
     </mat-grid-tile>   
 
     <mat-grid-tile class="retour">
-        <h4>{{proprietesForfait.dateDeRetour | date : 'fullDate' : 'UTC-0' : 'fr'}}</h4>
+        <h4>{{proprietesForfait.dateRetourD | date : 'fullDate' : 'UTC-0' : 'fr'}}</h4>
     </mat-grid-tile>
 </mat-grid-list>
 </div>

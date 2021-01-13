@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+}
+
+/*#heroFormAjout {
+  padding-left: 24px;
+  padding-right: 24px;
+}*/
+
+.input-full-width {
+  width: 100%;
+}
+
+.mat-column {
+  width: 20%;
+}
+
+.boutonsAction {
+  padding: 0;
+}
+.boutonsAction form {
+  display: inline-block;
+}

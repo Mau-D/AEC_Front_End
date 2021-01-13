@@ -1,17 +1,18 @@
-import { DatePipe } from '@angular/common';
 import { Hotel } from './hotel';
 
 //Interface Forfait, pour la propriété hotel utiliser l'interface Hotel
 //Importer l'interface Hotel
 
 export interface Forfait {
-    id: string,
+    _id: string,
     destination: string,
-    villeDeDepart: string,
+    villeDepart: string,
     hotel: Hotel,
-    dateDeDepart: Date;
-    dateDeRetour: Date,
+    dateDepart: string,
+    dateRetour: string,
+    dateDepartD: Date;
+    dateRetourD: Date,
     prix: number,
-    forfaitVedette: boolean,
-    rabais?: number;
+    rabais: number,
+    vedette: boolean, 
 }

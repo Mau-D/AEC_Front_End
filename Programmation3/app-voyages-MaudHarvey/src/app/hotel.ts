@@ -2,9 +2,9 @@
 //Les caractéristiques de l'hôtel sont de type string placés dans un tableau Array<string>
 
 export interface Hotel {
-    nomDeLHotel: string;
+    nom: string;
     coordonnees: string;
-    nombresDEtoiles: number;
-    nombreDeChambres: number;
+    nombreEtoiles: number;
+    nombreChambres: number;
     caracteristiques: Array<string>;
 }
