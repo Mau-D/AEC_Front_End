@@ -7,11 +7,6 @@ import { AdministrationComponent } from './administration/administration.compone
 import { ForfaitsToutSudComponent } from './forfaits-tout-sud/forfaits-tout-sud.component';
 import { ForfaitsExplorateurComponent } from './forfaits-explorateur/forfaits-explorateur.component';
 
-
-
-
-
-
 const routes: Routes = [
   //Définir les chemins pour accéder au composant ici
   //exemple:{ path: 'produits', component: ListeProduitsComponent }, 
@@ -21,6 +16,8 @@ const routes: Routes = [
   { path: 'administration', component: AdministrationComponent },
   { path: 'toutsud', component: ForfaitsToutSudComponent },
   { path: 'explorateur', component: ForfaitsExplorateurComponent }
+
+
 ];
 
 @NgModule({
