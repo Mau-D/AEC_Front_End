@@ -1,0 +1,45 @@
+<!-- InteractiviteExercice, exercice2urldynamique.html -->
+<!-- Ajouter dans l’exercice précédent un composant
+     catégorie d’article qui prendra une url dynamique pour spécifier la catégorie.
+Créer les catégorie suivantes:
+Meubles
+Electro-menagers
+Jouets
+Vetements
+ -->
+<!-- Maud Harvey, 12 janvier 2021 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>URL dynamique</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- Vue Routeur -->
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Bonjour l'application!</h1>
+        <p>
+            <router-link to="/accueil">Accueil</router-link>
+            <router-link to="/listearticle">Liste d'article</router-link>
+            <router-link to="/plansite">Plan du site</router-link>
+            <router-link to="/apropos">À propos</router-link>
+            <router-link to="/categorie/meubles">Meubles</router-link>
+            <router-link to="/categorie/electro">Électro-ménagers</router-link>
+            <router-link to="/categorie/jouets">Jouets</router-link>
+            <router-link to="/categorie/vetements">Vêtements</router-link>
+        </p>
+        <router-view></router-view>
+    </div>
+
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script src="exercice2.js"></script>
+</body>
+
+</html>

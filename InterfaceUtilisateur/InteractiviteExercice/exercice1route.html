@@ -1,0 +1,44 @@
+<!-- InteractiviteExercice, exercice1route.html -->
+<!-- Créer des routes pour les composants suivants:
+Accueil
+Liste d’article
+Plan du site
+A Propos
+ -->
+ <!-- Maud Harvey, 12 janvier 2021 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Création de routes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- Vue Routeur -->
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Bonjour l'application!</h1>
+        <p>
+            <!-- utilisez le composant router-link pour la navigation. -->
+            <!-- spécifiez le lien en le passant à la prop `to` -->
+            <!-- `<router-link>` sera rendu en tag `<a>` par défaut -->
+            <router-link to="/accueil">Accueil</router-link>
+            <router-link to="/listearticle">Liste d'article</router-link>
+            <router-link to="/plansite">Plan du site</router-link>
+            <router-link to="/apropos">À propos</router-link>
+       </p>
+    <!-- balise pour le composant router-view -->
+    <!-- le composant correspondant à la route sera rendu ici -->
+        <router-view></router-view>
+    </div>
+
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script src="exercice1.js"></script>
+</body>
+
+</html>
