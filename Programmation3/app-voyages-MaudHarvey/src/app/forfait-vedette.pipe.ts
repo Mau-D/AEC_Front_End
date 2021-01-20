@@ -6,8 +6,10 @@ import { Forfait } from './forfait';
   name: 'PipeForfaitVedette'
 })
 export class ForfaitVedettePipe implements PipeTransform { 
- 
+ //La condition est ajoutée pour enlever l'erreur dans le cas d'une valeur null
   transform(forfaits: Forfait[]): Forfait[] {   
-    return forfaits.filter(forfait => forfait.vedette === true); 
+     if(!forfaits)
+        return forfaits;
+    return forfaits.filter(forfait => forfait.vedette); 
   }
 }

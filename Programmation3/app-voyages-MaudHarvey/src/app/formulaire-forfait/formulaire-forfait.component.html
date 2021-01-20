@@ -1,16 +1,18 @@
+<!-- Celui-ci sera placé dans un dialog -->
 <!-- Formulaire pour la gestion des forfaits -->
 <mat-grid-list cols="4" rowHeight="7rem">
     <!-- titre -->
     <mat-grid-tile [colspan]="4">
         <h1>Formulaire pour la gestions des forfaits</h1>
     </mat-grid-tile>
+    <form #forfaitFormAjout="ngForm" id="forfaitFormAjout" >
     <mat-grid-tile [colspan]="2">
         <!-- Choix de la destination avec un autocomplete, les destinations sont dans un tableau de constantes-->
         <!-- La validation d'un input réactif, n'a pas besoin du ngModel, utiliser le formControl  -->
         <mat-form-field class="example-half-width">
             <mat-label>Destination</mat-label>
-            <input required type="text" placeholder="ex.: Cuba" aria-label="Destination" matInput
-                [formControl]="destinationControl" [matAutocomplete]="auto">
+            <input required type="text" name="destination" placeholder="ex.: Cuba" aria-label="Destination" matInput
+                [formControl]="destinationControl" [matAutocomplete]="auto" [(ngModel)]="newForfait.destination">
             <mat-autocomplete #auto="matAutocomplete">
                 <!-- Boucle pour afficher tous les éléments du tableau transformés en tableau de string -->
                 <mat-option *ngFor="let option of filteredDestinations | async" [value]="option">
@@ -28,8 +30,8 @@
         <!-- Choix de la ville de départ avec un autocomplete, les noms des villes sont dans un tableau de constantes-->
         <!-- La validation d'un input réactif, n'a pas besoin du ngModel, utiliser le formControl  -->
         <mat-form-field class="example-half-width">
-            <input required type="text" placeholder="Ville de départ" aria-label="Ville de départ" matInput
-                [formControl]="departControl" [matAutocomplete]="auto2">
+            <input required type="text" name="villeDepart" placeholder="Ville de départ" aria-label="Ville de départ" matInput
+                [formControl]="departControl" [matAutocomplete]="auto2"  [(ngModel)]="newForfait.villeDepart">
             <mat-autocomplete autoActiveFirstOption #auto2="matAutocomplete">
                 <mat-option *ngFor="let ville of filteredVilles | async" [value]="ville">
                     {{ville}}
@@ -46,8 +48,8 @@
         <!-- Date de départ, obligatoire, min à la date d'aujourd'hui -->
         <mat-form-field class="example-half-width example-padding" appearance="fill">
             <mat-label>Date de départ</mat-label>
-            <input matInput [min]="minDateDepart" [matDatepicker]="dp" required [ngModel]="dateDepart"
-                name="inputDateDepart" #inputDateDepart="ngModel">
+            <input matInput name="dateDepartD" [min]="minDateDepart" [matDatepicker]="dp" required [ngModel]="dateDepart"
+                name="inputDateDepart" #inputDateDepart="ngModel"  [(ngModel)]="newForfait.dateDepartD">
             <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
             <mat-datepicker #dp></mat-datepicker>
             <!-- Validation de la date de départ -->
@@ -60,8 +62,8 @@
         <!-- Date de retour, obligatoire, min à la date d'aujourd'hui -->
         <mat-form-field class="example-half-width example-padding" appearance="fill">
             <mat-label>Date de retour</mat-label>
-            <input matInput [min]="minDateRetour" [matDatepicker]="dp1" required [ngModel]="dateRetour"
-                name="inputDateRetour" #inputDateRetour="ngModel">
+            <input matInput name="dateRetourD" [min]="minDateRetour" [matDatepicker]="dp1" required [ngModel]="dateRetour"
+                name="inputDateRetour" #inputDateRetour="ngModel"  [(ngModel)]="newForfait.dateRetourD">
             <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
             <mat-datepicker #dp1></mat-datepicker>
             <!-- Validation de la date de départ -->
@@ -74,8 +76,8 @@
         <mat-form-field class="example-half-width">
             <mat-label>Nom de l'hôtel</mat-label>
             <!-- Le nom de l'hôtel doit comporter 2 caractères minimum -->
-            <input matInput required minlength="2" [ngModel]="nomHotel" name="inputNomHotel" #inputNomHotel="ngModel"
-                type="text" placeholder="ex : The Fives Beach Hotel & Residences Playa Del Carmen">
+            <input matInput required minlength="2" name="inputNomHotel" [ngModel]="nomHotel" #inputNomHotel="ngModel" [(ngModel)]="nomHotel"
+                type="text" placeholder="ex : The Fives Beach Hotel & Residences Playa Del Carmen" >
             <mat-hint>Entrer le nom complet de l'hôtel</mat-hint>
             <!-- Validation du nom de l'hôtel -->
             <mat-error *ngIf="inputNomHotel.hasError('required')">
@@ -90,8 +92,8 @@
         <!-- Les coordonnées sont obligatoire -->
         <mat-form-field class="example-half-width">
             <mat-label>Coordonnées</mat-label>
-            <input matInput required [ngModel]="adresse" name="inputAdresse" #inputAdresse="ngModel" type="text"
-                placeholder="ex. 3 rue de la Plage, Varadero">
+            <input matInput type="text" required  name="inputAdresse" [ngModel]="adresse" #inputAdresse="ngModel" [(ngModel)]="newForfait.hotel"
+                placeholder="ex. 3 rue de la Plage, Varadero"  >
             <mat-hint>Entrer l'adresse et la ville de l'hôtel</mat-hint>
             <!-- Validation des coordonnées -->
             <mat-error *ngIf="inputAdresse.hasError('required')">
@@ -105,7 +107,7 @@
         <div class="margeHaut">
             <mat-label>Nombre d'étoiles</mat-label>
             <div>
-                <mat-slider required min="1" max="5" step="1" thumbLabel tickInterval="1" value="1"></mat-slider>
+                <mat-slider required name="etoiles" min="1" max="5" step="1" thumbLabel tickInterval="1" value="1" [(ngModel)]="newForfait.hotel"></mat-slider>
             </div>
         </div>
     </mat-grid-tile>
@@ -114,8 +116,8 @@
         <!-- Un minimum à 1 empêche d'inscrire un nombre négatif -->
         <mat-form-field>
             <mat-label>Nombre de chambre</mat-label>
-            <input matInput required [ngModel]="nbrChambre" name="inputNbrChambre" #inputNbrChambre="ngModel" type="number"
-                step="100" placeholder="0" min="0">
+            <input matInput  type="number" required name="inputNbrChambre" [ngModel]="nbrChambre"  #inputNbrChambre="ngModel" [(ngModel)]="newForfait.hotel"
+                step="100" placeholder="0" min="0"  >
             <!-- Validation du nombre de chambre -->
             <mat-error *ngIf="inputNbrChambre.hasError('required')">
                 Le nombre de chambre est <strong>obligatoire</strong>
@@ -125,25 +127,51 @@
     <mat-grid-tile [colspan]="2">
         <h2>Caractéristiques de l'hôtel</h2>
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="3">
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
         <!-- Prix du forfait, obligatoire et ne doit pas être négatif -->
         <!-- Un minimum à 1 empêche d'inscrire un nombre négatif -->
         <mat-form-field>
             <mat-label>Prix du forfait</mat-label>
-            <input matInput required [ngModel]="prix" name="prixForfait" #inputPrix="ngModel" type="number" placeholder="0.00"
-                min="0.00" max="1000000.00" step="0.01" ng-model="prixForfait">
-            <!-- Validation du nombre de chambre -->
+            <input matInput required [ngModel]="prix" name="inputPrix" #inputPrix="ngModel" type="number" placeholder="0.00"
+                min="0.00" max="1000000.00" step="0.01" [(ngModel)]="newForfait.prix">
+            <!-- Validation du prix du forfait -->
             <mat-error *ngIf="inputPrix.hasError('required')">
                 Le prix du forfait est <strong>obligatoire</strong>
             </mat-error>
-            
         </mat-form-field>
     </mat-grid-tile>
-    <mat-grid-tile  [colspan]="2" [rowspan]="3">
+    <!-- Caractéristiques de l'hôtel -->
+    <mat-grid-tile [colspan]="2" [rowspan]="3">
         <section class="sectionCheck">
-            <mat-checkbox class="checkCaract" *ngFor="let item of caracHotel" class="example-margin">{{item}} </mat-checkbox>
+            <mat-checkbox class="checkCaract" name="caracteristiques" *ngFor="let item of caracHotel" class="example-margin" [(ngModel)]="newForfait.hotel">{{item}}
+            </mat-checkbox>
         </section>
     </mat-grid-tile>
+    <!-- Rabais -->
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <mat-form-field>
+            <mat-label>Rabais applicable</mat-label>
+            <input matInput  [ngModel]="rabais" name="inputRabais" #inputRabais="ngModel" type="number" placeholder="0.00"
+                min="0.00" max="1000000.00" value="0" step="0.01" [(ngModel)]="newForfait.rabais">
+            <!-- Validation du rabais -->
+           <!-- ********************** Ajouter une validation pour que le rabais ne dépasse pas un pourcentage du prix du forfait -->
+        </mat-form-field>
+    </mat-grid-tile>
+    <!-- Option forfait vedette -->
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <section>
+            <mat-checkbox name="vedette" class="checkVedette" [(ngModel)]="newForfait.vedette">Forfait Vedette</mat-checkbox>
+        </section>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <div mat-dialog-actions>
+            <button mat-button (click)="onAnnulerClick()">Annuler</button>
+            <button mat-button [mat-dialog-close]="newForfait" cdkFocusInitial>Ok</button>
+        </div>
+    </mat-grid-tile>
+    
+    </form>
+    
 </mat-grid-list>
 
 

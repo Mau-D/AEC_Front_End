@@ -1,9 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Inject } from '@angular/core';
 //Importations pour le input avec autocomplete
 import { FormControl } from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import { caracTableau } from '../mock-caracHotel';
+//Importations pour le dialog
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Forfait } from '../forfait';
+import { Hotel } from '../hotel';
+import { ForfaitCompletComponent } from '../forfait-complet/forfait-complet.component';
+
+
+
 
 
 @Component({
@@ -13,6 +21,7 @@ import { caracTableau } from '../mock-caracHotel';
 })
 
 export class FormulaireForfaitComponent implements OnInit {
+  
   //Variables des ngModel pour la validation de formulaire
   nomHotel: string;
   adresse: string;
@@ -20,20 +29,38 @@ export class FormulaireForfaitComponent implements OnInit {
   dateDepart: Date;
   dateRetour: Date;
   prix: number;
-  //Variables associés au input en autocomplete
-  destinationControl = new FormControl();
-  departControl = new FormControl();
-  //Variables des options de l'autocomplete
-  destinations: string[] = ['Cuba', "Islande", 'Jamaïque', 'Mexique', 'Paris',  ]
-  villes: string[] = ['Montréal', 'Québec', 'Toronto']
-  //Variables des filtres utilisées pour l'autocomplete, la valeur est changée en tableau de string
-  filteredDestinations: Observable<string[]>;
-  filteredVilles: Observable<string[]>;
+  rabais: number;
+ 
   //Variables pour les caractéristiques de l'hôtel
   caracHotel: string[]= caracTableau;
   //Variable pour la date minimum de la date de départ, aujourd'hui
   minDateDepart: Date= new Date;
   minDateRetour: Date= new Date;
+
+  //Variables associés au input en autocomplete, le formControlest utilisé au lieu du ngModel
+  destinationControl:FormControl = new FormControl();
+  departControl:FormControl = new FormControl();
+  
+  //Variables des options de l'autocomplete
+  destinations: string[] = ['Cuba', "Islande", 'Jamaïque', 'Mexique', 'Paris',  ]
+  villes: string[] = ['Montréal', 'Québec', 'Toronto']
+
+  //Variables des filtres utilisées pour l'autocomplete, la valeur est changée en tableau de string
+  filteredDestinations: Observable<string[]>;
+  filteredVilles: Observable<string[]>;
+  
+  
+ //Fonction pour annuler l'ajout, le dialog ferme
+  onAnnulerClick(): void {
+    this.dialogRef.close();
+  }
+  constructor(
+    public dialogRef: MatDialogRef<FormulaireForfaitComponent>,
+    //Rend accessible la valeur du nouveau héro
+    @Inject(MAT_DIALOG_DATA) public newForfait: Forfait) {
+      
+     
+     }
 
   ngOnInit() {
   //Ces variables prend la valeur entrée dans le champ et fait un map sur le tableau 
@@ -46,9 +73,11 @@ export class FormulaireForfaitComponent implements OnInit {
     this.filteredVilles = this.departControl.valueChanges.pipe(
       startWith(""),
       map(value => this._filter2(value))
+     
     );
    
   }
+
   //Pour la destination
 //Prend la valeur d'entrée, en minuscule
   private _filter(value: string): string[] {
@@ -64,4 +93,5 @@ export class FormulaireForfaitComponent implements OnInit {
       ville => ville.toLowerCase().indexOf(filterValue2) === 0
     );
   }
+  
 }

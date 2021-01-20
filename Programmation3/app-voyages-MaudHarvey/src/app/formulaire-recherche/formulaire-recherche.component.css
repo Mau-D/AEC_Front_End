@@ -1,5 +1,6 @@
 .gridRecherche {
   min-width: 80vh;
+  left: 0;
 }
 .sectionCheck {
   display: flex;

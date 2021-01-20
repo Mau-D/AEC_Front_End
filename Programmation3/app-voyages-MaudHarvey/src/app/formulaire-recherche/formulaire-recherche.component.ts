@@ -2,8 +2,9 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Formulaire } from '../formulaire';
 import { dureeTableau } from '../mock-durees';
 import { caracTableau } from '../mock-caracHotel';
-import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 
 
 
@@ -14,11 +15,23 @@ import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/
 })
 
 export class FormulaireRechercheComponent implements OnInit {
+  //Valeurs du tableau des caractéristiques pour les checkbox
+  
+  
+  //Inject the FormBuilder API in the constructor and create the main form object and bind it to FormBuilder.
+
+//The checkArray is the form control that is created using FormArray API, and It will hold the multiple checkboxes values in an array form.
+  constructor() {
+  
+ 
+    
+  }
 //Input et output pour l'échange d'informations
+  
   @Input() formulaire: Formulaire;
   @Output() formulaireChange = new EventEmitter();
 
-  //Variable pour le mock tableau des durées
+  //Variable pour le mock tableau des durées à afficher dans le select
  dureeTableau: Array<number> = dureeTableau;
 
 
@@ -26,12 +39,14 @@ export class FormulaireRechercheComponent implements OnInit {
   dateDepart: Date;
   duree: number;
   nbrEtoiles: number;
+  caracteristiques: string;
+  
   
 //Variable pour la date minimum de la date de départ, aujourd'hui
   minDateDepart: Date= new Date;
  
-//Variables pour les caractéristiques
-  caracHotel: string[] = caracTableau;
+//Variables pour les caractéristiques du mock tableau pour les checkbox
+  caracHotel: Array<string> = caracTableau;
 
 
   ngOnInit() {
@@ -41,6 +56,8 @@ export class FormulaireRechercheComponent implements OnInit {
  
   //Pour la date de départ
   changeDateDepart(nouvelleValeur) {
+      
+
     let nouveauFormulaire : Formulaire =  {dateDepart: nouvelleValeur, 
                                             duree : this.formulaire.duree, 
                                             nbrEtoiles:this.formulaire.nbrEtoiles,
@@ -69,5 +86,28 @@ export class FormulaireRechercheComponent implements OnInit {
     this.formulaire = nouveauFormulaire;
     this.formulaireChange.emit(nouveauFormulaire);
   }
- 
+  tableauCarac: Array<string> = [];
+  //Pour les caractéristiques de l'hotel
+    changeCaracteristiques(e, valeur) {
+      console.log('valeur:' + valeur + 'état: ' + e)
+      if(e){
+         this.tableauCarac.push(valeur);
+      }
+      else if(!e){
+        const index: number =  this.tableauCarac.indexOf(valeur);
+        if (index !== -1) {
+          this.tableauCarac.splice(index, 1);
+        }   
+      }
+      
+      console.log(this.tableauCarac)
+     let nouveauFormulaire : Formulaire =  {dateDepart: this.formulaire.dateDepart, 
+                                            duree : this.formulaire.duree, 
+                                            nbrEtoiles:this.formulaire.nbrEtoiles,
+                                            caracHotel:this.tableauCarac,
+                                          };
+    this.formulaire = nouveauFormulaire;
+    this.formulaireChange.emit(nouveauFormulaire);
+    }
+      
 }

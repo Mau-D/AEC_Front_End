@@ -8,6 +8,7 @@
     <p>Date de Départ: {{formulaire.dateDepart}}</p>
     <p>Durée: {{formulaire.duree}}</p>
     <p>Nombre d'étoiles : {{formulaire.nbrEtoiles}}</p>
+    <p>Caractéristiques de l'hôtel: <span *ngFor="let item of formulaire.caracHotel">{{item}}, </span></p>
 </div>
 <mat-grid-list cols="5" rowHeight="4.1rem" [ngClass]="{'couleurVedette' : proprietesForfait.vedette}">
     <mat-grid-tile class="image"

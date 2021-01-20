@@ -2,8 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
-import {ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';//Module pour le service
 
 //Routage pour la navigation
@@ -62,6 +61,7 @@ import {MAT_DATE_LOCALE} from '@angular/material/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -107,7 +107,8 @@ import {MatTableModule} from '@angular/material/table';
     MatToolbarModule,
     MatMenuModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
   ],
   //Calendrier en français
   providers: [ {provide: MAT_DATE_LOCALE, useValue: 'fr-CA'}, VoyagesService],

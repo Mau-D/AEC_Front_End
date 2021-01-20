@@ -1,5 +1,5 @@
 //Création de service pour échanger de l'information avec l'API
-//https://forfaits-voyages.herokuapp.com/api/forfaits
+//https://forfaits-voyages.herokuapp.com/api/forfaits/da/1996416
 import { Injectable } from '@angular/core';
 //Pour le service
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -24,7 +24,11 @@ export class VoyagesService {
   getVoyages(): Observable<Forfait[]> {
     return this.http.get<Forfait[]>(this.voyagesUrl);  
   }
-  /** DELETE: suppression du héros */
+  //Ajout d'un forfait
+  addForfait(forfait: Forfait): Observable<Forfait> {
+    return this.http.post<Forfait>(this.voyagesUrl , forfait, httpOptions);
+}
+  /** DELETE: suppression du forfait */
   deleteVoyage(id: string): Observable<Forfait> {
     return this.http.delete<Forfait>(this.voyagesUrl + id, httpOptions);
   }

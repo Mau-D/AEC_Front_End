@@ -8,6 +8,8 @@
             <p>Date de Départ: {{formulaire.dateDepart}}</p>
             <p>Durée: {{formulaire.duree}}</p>
             <p>Nombre d'étoiles : {{formulaire.nbrEtoiles}}</p>
+            <p>Caractéristiques de l'hôtel: <span *ngFor="let item of formulaire.caracHotel">{{item}}, </span></p>
+
         </div>
     </div>
 </div>

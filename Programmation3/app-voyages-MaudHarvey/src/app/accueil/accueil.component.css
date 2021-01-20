@@ -61,6 +61,7 @@
 /*L'emplacement du formulaire de recherche est en position fixed pour être toujours accessible*/
 .mat-drawer {
   position: fixed;
+  left: 0;
 }
 /*Centrer la section dans la bannière*/
 .texteBanniere {
