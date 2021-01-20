@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 import { Forfait } from './forfait';
 
 const httpOptions = {
-headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+headers: new HttpHeaders({ 'Content-Type': 'application/json'})
 };
 
 @Injectable({
@@ -16,13 +16,13 @@ headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 })
 export class VoyagesService {
   //Variable de l'url de l'API
-  voyagesUrl = 'https://forfaits-voyages.herokuapp.com/api/forfaits/da/1996416/';
+  voyagesUrl = 'https://forfaits-voyages.herokuapp.com/api/forfaits/';
 
 //Ajouter une variable privée dans l'argument du constructeur  pour le module HttpClient
   constructor(private http: HttpClient) { }
   //Fonction pour appeler l'API
   getVoyages(): Observable<Forfait[]> {
-    return this.http.get<Forfait[]>(this.voyagesUrl);  
+    return this.http.get<Forfait[]>(this.voyagesUrl + 'da/1996416');  
   }
   //Ajout d'un forfait
   addForfait(forfait: Forfait): Observable<Forfait> {
