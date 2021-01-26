@@ -1,28 +1,21 @@
+
 <template>
   <div id="app">
-    <accueil></accueil>    
-    <contact></contact>    
-    <inscription></inscription>    
+    <Header></Header>
+    <router-view/>
   </div>
 </template>
-
 <script>
-  import accueil from './components/Accueil.vue'
-  import contact from './components/Contact.vue'
-  import inscription from './components/Inscription.vue'
-
-
+  import Header from "./components/Header.vue";
 
   export default {
-    name: 'App',
+    name: "App",
     components: {
-            accueil,
-            contact,
-            inscription
-    }
-  }
+      Header,
+    
+    },
+  };
 </script>
-
 <style>
 
 </style>

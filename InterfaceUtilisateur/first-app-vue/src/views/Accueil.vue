@@ -1,6 +1,9 @@
+<!--Accueil.vue
+Composant accueil, page principale
+Maud Harvey
+26 janvier 2021-->
 <template>
-
-  <div class="container-fluid vh-100">
+  <div id="accueil" class="container-fluid vh-100">
     <div class="row h-50">
       <div class="col-sm-6 h-100">
           <img class="img-fluid ombre z1g mx-1 mx-sm-5 my-5 h-100 w-75" src="../assets/img/accueil-image.jpg"  alt="surf">                                       
@@ -23,9 +26,10 @@
           <img class="img-fluid ombre pt-3 z2d transparency" src="../assets/img/accueil-wave.jpg"  alt="vague">                   
       </div> 
     </div>
+    
     <div class="row" id="logo">
-        <div class="offset-sm-4 col-sm-4 h-100 text-center">
-            <img @click="update(true)" class="img-fluid h-100" src="../assets/img/logo-surf.png" title="Cliquez" alt="surf">                        
+        <div class="offset-sm-4 col-sm-4 h-100 text-center rotation">
+            <img @click="update(true)" class="img-fluid h-100 rotationY" src="../assets/img/logo-surf.png" title="Cliquez" alt="surf">                        
         </div>
         <div class="col-sm-4">                
         </div>
@@ -53,7 +57,7 @@
 </template>
 
 <script>
-  import apropos from './APropos'
+  import apropos from '../components/APropos'
 
   export default {
     name: 'accueil',
@@ -75,6 +79,9 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   /*****Page d'accueil*****/
+  #accueil{
+    min-height: 100vh;
+  }
   #textSlogan {
     background-color: rgba(201, 76, 76, 0.3);
   }
@@ -111,6 +118,19 @@
     opacity: 0.4;
   }
   #logo {
-    height: 30%;
+    height: 40%;
+   
   }
+  #logo:hover{
+    height: 60%;
+  }
+  /*Pivoter l'image */
+  .rotation {
+  -ms-transform: rotate(85deg); /* IE 9 */
+  transform: rotate(85deg);  
+ }
+  .rotationY {
+  -ms-transform: skewY(20deg); /* IE 9 */
+  transform: skewY(20deg);
+ }
 </style>
