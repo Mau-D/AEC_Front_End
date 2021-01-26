@@ -1,6 +1,8 @@
 //Tableau Mock pour les différents forfaits
 //Importer l'interface de l'objet
 
+//**********Ce fichier n'est plus utilisé, car les données proviennet d'une API, conservé au besoin */
+
 import {Forfait} from './forfait';
 export const FORFAITS: Forfait[] = [
     { 
@@ -20,6 +22,7 @@ export const FORFAITS: Forfait[] = [
         prix: 1909,
         rabais: 0,
         vedette: true,
+        da:"1996416"
     },
     { 
         _id: '2',
@@ -37,6 +40,7 @@ export const FORFAITS: Forfait[] = [
         prix: 3000,
         rabais: 0,
         vedette: false,
+        da:"1996416"
     },
     { 
         _id: '3',
@@ -54,6 +58,7 @@ export const FORFAITS: Forfait[] = [
         prix: 3000,
         rabais: 999,
         vedette: false,
+        da:"1996416"
     },
     { 
         _id: '4',
@@ -71,6 +76,8 @@ export const FORFAITS: Forfait[] = [
         prix: 979,
         rabais: 50,
         vedette: true,
+        da:"1996416"
+
     },
     { 
         _id: '5',
@@ -88,6 +95,8 @@ export const FORFAITS: Forfait[] = [
         prix: 2000,
         rabais: 999,
         vedette: true,
+        da:"1996416"
+
     },
     { 
         _id: '6',
@@ -105,6 +114,7 @@ export const FORFAITS: Forfait[] = [
         prix: 1100,
         rabais: 99,
         vedette: true,
+        da:"1996416"
     },
     
 ]

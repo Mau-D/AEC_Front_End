@@ -12,5 +12,7 @@ export interface Forfait {
     dateRetourD: Date,
     prix: number,
     rabais: number,
-    vedette: boolean, 
+    vedette: boolean,
+    da: string
+   
 }

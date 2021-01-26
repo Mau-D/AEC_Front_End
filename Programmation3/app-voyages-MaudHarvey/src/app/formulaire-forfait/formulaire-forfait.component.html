@@ -62,7 +62,7 @@
         <!-- Date de retour, obligatoire, min à la date d'aujourd'hui -->
         <mat-form-field class="example-half-width example-padding" appearance="fill">
             <mat-label>Date de retour</mat-label>
-            <input matInput name="dateRetourD" [min]="minDateRetour" [matDatepicker]="dp1" required [ngModel]="dateRetour"
+            <input matInput [min]="minDateRetour" [matDatepicker]="dp1" required [ngModel]="dateRetour"
                 name="inputDateRetour" #inputDateRetour="ngModel"  [(ngModel)]="newForfait.dateRetourD">
             <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
             <mat-datepicker #dp1></mat-datepicker>
@@ -76,7 +76,7 @@
         <mat-form-field class="example-half-width">
             <mat-label>Nom de l'hôtel</mat-label>
             <!-- Le nom de l'hôtel doit comporter 2 caractères minimum -->
-            <input matInput required minlength="2" name="inputNomHotel" [ngModel]="nomHotel" #inputNomHotel="ngModel" [(ngModel)]="nomHotel"
+            <input matInput required minlength="2" name="inputNomHotel" [ngModel]="nomHotel" #inputNomHotel="ngModel"  [(ngModel)]="newForfait.hotel.nom"
                 type="text" placeholder="ex : The Fives Beach Hotel & Residences Playa Del Carmen" >
             <mat-hint>Entrer le nom complet de l'hôtel</mat-hint>
             <!-- Validation du nom de l'hôtel -->
@@ -92,7 +92,7 @@
         <!-- Les coordonnées sont obligatoire -->
         <mat-form-field class="example-half-width">
             <mat-label>Coordonnées</mat-label>
-            <input matInput type="text" required  name="inputAdresse" [ngModel]="adresse" #inputAdresse="ngModel" [(ngModel)]="newForfait.hotel"
+            <input matInput type="text" required  name="inputAdresse" [ngModel]="adresse" #inputAdresse="ngModel" [(ngModel)]="newForfait.hotel.coordonnees"
                 placeholder="ex. 3 rue de la Plage, Varadero"  >
             <mat-hint>Entrer l'adresse et la ville de l'hôtel</mat-hint>
             <!-- Validation des coordonnées -->
@@ -107,7 +107,7 @@
         <div class="margeHaut">
             <mat-label>Nombre d'étoiles</mat-label>
             <div>
-                <mat-slider required name="etoiles" min="1" max="5" step="1" thumbLabel tickInterval="1" value="1" [(ngModel)]="newForfait.hotel"></mat-slider>
+                <mat-slider required name="etoiles" min="1" max="5" step="1" thumbLabel tickInterval="1" value="1" [(ngModel)]="newForfait.hotel.nombreEtoiles"></mat-slider>
             </div>
         </div>
     </mat-grid-tile>
@@ -116,7 +116,7 @@
         <!-- Un minimum à 1 empêche d'inscrire un nombre négatif -->
         <mat-form-field>
             <mat-label>Nombre de chambre</mat-label>
-            <input matInput  type="number" required name="inputNbrChambre" [ngModel]="nbrChambre"  #inputNbrChambre="ngModel" [(ngModel)]="newForfait.hotel"
+            <input matInput  type="number" required name="inputNbrChambre" [ngModel]="nbrChambre"  #inputNbrChambre="ngModel" [(ngModel)]="newForfait.hotel.nombreChambres"
                 step="100" placeholder="0" min="0"  >
             <!-- Validation du nombre de chambre -->
             <mat-error *ngIf="inputNbrChambre.hasError('required')">
@@ -143,7 +143,7 @@
     <!-- Caractéristiques de l'hôtel -->
     <mat-grid-tile [colspan]="2" [rowspan]="3">
         <section class="sectionCheck">
-            <mat-checkbox class="checkCaract" name="caracteristiques" *ngFor="let item of caracHotel" class="example-margin" [(ngModel)]="newForfait.hotel">{{item}}
+            <mat-checkbox class="checkCaract example-margin" name="caracteristiques" *ngFor="let item of caracHotel" value={{item}} [ngModel]="caracteristiques" (ngModelChange)="changeCaracteristiques($event, item)">{{item}}
             </mat-checkbox>
         </section>
     </mat-grid-tile>

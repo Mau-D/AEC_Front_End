@@ -2,11 +2,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Formulaire } from '../formulaire';
 import { dureeTableau } from '../mock-durees';
 import { caracTableau } from '../mock-caracHotel';
-
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
-import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
-
-
 
 @Component({
   selector: 'app-formulaire-recherche',
@@ -15,16 +11,8 @@ import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@ang
 })
 
 export class FormulaireRechercheComponent implements OnInit {
-  //Valeurs du tableau des caractéristiques pour les checkbox
-  
-  
-  //Inject the FormBuilder API in the constructor and create the main form object and bind it to FormBuilder.
-
-//The checkArray is the form control that is created using FormArray API, and It will hold the multiple checkboxes values in an array form.
   constructor() {
   
- 
-    
   }
 //Input et output pour l'échange d'informations
   

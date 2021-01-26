@@ -6,6 +6,7 @@ import {MatTable} from '@angular/material/table';  // Permet de mettre à jour l
 import { NgForm } from '@angular/forms';  // Permet de vérifier si le formulaire est valide
 import { FormulaireForfaitComponent } from '../formulaire-forfait/formulaire-forfait.component';
 import { Hotel } from '../hotel';
+import { caracTableau } from '../mock-caracHotel';
 
 @Component({
   selector: 'app-table-forfaits',
@@ -22,21 +23,20 @@ export class TableForfaitsComponent implements OnInit {
   columnsToDisplay = ['dateDepart','dateRetour','nomHotel','prix', 'actions'];
   //Variable pour l'ajout d'un nouveau forfait
   newForfait: Forfait;
-  
+  newCarac: Array<string>;
  //Variable de l'élément sélectionné
   selectedForfait: Forfait;
  //Ajouter le service dans l'argument du constructeur
   constructor(private voyagesService: VoyagesService, public dialog: MatDialog) { 
-    
+  
   }
 
   ngOnInit(): void {
-    //Appelle de la fonction à l'ouverture de la page, importe les infos
-    this.getVoyages();
     //Initialise l'objet newForfait
-    this.newForfait = {_id: null, destination:'', villeDepart:'', hotel:{nom:'', coordonnees:'', nombreEtoiles:null, nombreChambres:null, caracteristiques:[]}, dateDepartD: null, dateRetourD: null, prix: null, rabais: null, vedette: false};
+    this.newForfait = {_id: null, destination:'', villeDepart:'', hotel: {nom:'', coordonnees:'', nombreEtoiles:0, nombreChambres:0, caracteristiques: []}, dateDepartD: null, dateRetourD: null, prix: 0, rabais: 0, vedette: false, da:'1996416'};
+   //Appelle de la fonction à l'ouverture de la page, importe les infos
+    this.getVoyages();
   }
-
 //Fonction qui récupère les données de l'API
   getVoyages(): void {
     this.voyagesService.getVoyages()
@@ -47,12 +47,7 @@ export class TableForfaitsComponent implements OnInit {
   onSelect(forfait: Forfait): void {
     this.selectedForfait = forfait;
   }
-  onAdd(tableForfaits: MatTable<Forfait>, forfaitFormAjout: NgForm) {
-    if(forfaitFormAjout.valid) {
-      this.voyagesService.addForfait(this.newForfait)
-      .subscribe(forfait => { this.forfaits.push(forfait); forfaitFormAjout.resetForm(); tableForfaits.renderRows();});
-    }
-  }
+
   //Fonction pour supprimer l'élément
    onDelete(forfait: Forfait): void {
     this.voyagesService.deleteVoyage(forfait._id)
@@ -60,22 +55,20 @@ export class TableForfaitsComponent implements OnInit {
    }
   //Fonction pour l'ouverture du dialog
     //Fonction pour l'ajout lors de la fermeture du dialog, en appuyant sur le crochet
-
+   
   openDialogNewForfait(): void {
     const dialogRef = this.dialog.open(FormulaireForfaitComponent, {
       width: '80%',
       height: '80%',
-      data: {forfait: this.newForfait}
+      data: this.newForfait
     });
-
+    
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       if(result) {
         this.newForfait = result;
-        console.log(this.newForfait);
-        console.log('hotel=' + this.newForfait.hotel);
         this.voyagesService.addForfait(this.newForfait)
-            .subscribe(forfait  => { this.forfaits.push(forfait); this.newForfait._id = null; this.newForfait.destination=''; this.newForfait.hotel.nom='';this.newForfait.hotel.coordonnees=''; this.newForfait.hotel.nombreEtoiles=null; this.newForfait.hotel.nombreChambres=null; this.newForfait.hotel.caracteristiques=[]; this.newForfait.villeDepart='';  this.newForfait.dateDepartD= null; this.newForfait.dateRetourD= null; this.newForfait.prix= null; this.newForfait.rabais= null; this.newForfait.vedette= false; this.table.renderRows()});
+            .subscribe(forfait  => { this.forfaits.push(forfait); this.newForfait._id = null; this.newForfait.destination=''; this.newForfait.hotel.nom='';this.newForfait.hotel.coordonnees=''; this.newForfait.hotel.nombreEtoiles=0; this.newForfait.hotel.nombreChambres=null; this.newForfait.hotel.caracteristiques=caracTableau; this.newForfait.villeDepart='';  this.newForfait.dateDepartD= null; this.newForfait.dateRetourD= null; this.newForfait.prix= null; this.newForfait.rabais= null; this.newForfait.vedette= false; this.table.renderRows()});
       }
     });
   }

@@ -30,9 +30,13 @@ export class FormulaireForfaitComponent implements OnInit {
   dateRetour: Date;
   prix: number;
   rabais: number;
- 
+  caracteristiques: string;
   //Variables pour les caractéristiques de l'hôtel
   caracHotel: string[]= caracTableau;
+  tableauCarac: string[] =[];
+  
+
+  
   //Variable pour la date minimum de la date de départ, aujourd'hui
   minDateDepart: Date= new Date;
   minDateRetour: Date= new Date;
@@ -42,7 +46,7 @@ export class FormulaireForfaitComponent implements OnInit {
   departControl:FormControl = new FormControl();
   
   //Variables des options de l'autocomplete
-  destinations: string[] = ['Cuba', "Islande", 'Jamaïque', 'Mexique', 'Paris',  ]
+  destinations: string[] = ['Cuba', "Islande", 'Jamaïque', 'Mexique', 'Paris', 'Thaïlande'  ]
   villes: string[] = ['Montréal', 'Québec', 'Toronto']
 
   //Variables des filtres utilisées pour l'autocomplete, la valeur est changée en tableau de string
@@ -54,14 +58,29 @@ export class FormulaireForfaitComponent implements OnInit {
   onAnnulerClick(): void {
     this.dialogRef.close();
   }
+//Pour les caractéristiques de l'hotel
+  changeCaracteristiques(e, valeur) {
+    console.log('valeur:' + valeur + 'état: ' + e)
+    if(e){
+      this.tableauCarac.push(valeur);
+    }
+    else if(!e){
+      const index: number =  this.tableauCarac.indexOf(valeur);
+      if (index !== -1) {
+        this.tableauCarac.splice(index, 1);
+      }   
+    }
+    console.log(this.tableauCarac)
+    return this.newForfait.hotel.caracteristiques = this.tableauCarac;
+    
+  }
   constructor(
     public dialogRef: MatDialogRef<FormulaireForfaitComponent>,
-    //Rend accessible la valeur du nouveau héro
+    //Rend accessible la valeur du nouveau forfait
     @Inject(MAT_DIALOG_DATA) public newForfait: Forfait) {
       
-     
      }
-
+   
   ngOnInit() {
   //Ces variables prend la valeur entrée dans le champ et fait un map sur le tableau 
   //Pour les destinations
@@ -77,7 +96,7 @@ export class FormulaireForfaitComponent implements OnInit {
     );
    
   }
-
+  
   //Pour la destination
 //Prend la valeur d'entrée, en minuscule
   private _filter(value: string): string[] {
