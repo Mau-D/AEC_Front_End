@@ -34,6 +34,10 @@
             <form (ngSubmit)="onDelete(forfait)">
                 <button mat-button><i class="material-icons">delete</i></button>
             </form>
+            <form (ngSubmit)="openDialogEditForfait(forfait)">
+                <button matSuffix mat-icon-button type="submit">
+                    <i class="material-icons">edit</i></button>
+            </form>
         </td>
     </ng-container>
 

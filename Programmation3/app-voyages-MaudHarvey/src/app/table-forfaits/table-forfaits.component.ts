@@ -3,9 +3,7 @@ import { Forfait } from '../forfait';//Interface
 import { VoyagesService } from '../voyages.service';//Service
 import{ MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {MatTable} from '@angular/material/table';  // Permet de mettre à jour les données du tableau pour l'ajout
-import { NgForm } from '@angular/forms';  // Permet de vérifier si le formulaire est valide
 import { FormulaireForfaitComponent } from '../formulaire-forfait/formulaire-forfait.component';
-import { Hotel } from '../hotel';
 import { caracTableau } from '../mock-caracHotel';
 
 @Component({
@@ -13,6 +11,7 @@ import { caracTableau } from '../mock-caracHotel';
   templateUrl: './table-forfaits.component.html',
   styleUrls: ['./table-forfaits.component.css']
 })
+
 export class TableForfaitsComponent implements OnInit {
   @ViewChild(MatTable) table:MatTable<any>;
 
@@ -34,7 +33,7 @@ export class TableForfaitsComponent implements OnInit {
   ngOnInit(): void {
     //Initialise l'objet newForfait
     this.newForfait = {_id: null, destination:'', villeDepart:'', hotel: {nom:'', coordonnees:'', nombreEtoiles:0, nombreChambres:0, caracteristiques: []}, dateDepartD: null, dateRetourD: null, prix: 0, rabais: 0, vedette: false, da:'1996416'};
-   //Appelle de la fonction à l'ouverture de la page, importe les infos
+    //Appelle de la fonction à l'ouverture de la page, importe les infos
     this.getVoyages();
   }
 //Fonction qui récupère les données de l'API
@@ -44,9 +43,10 @@ export class TableForfaitsComponent implements OnInit {
   }
   //Le void définit une fonction sans return en TS
   //Fonction pour sélectionner l'élément
-  onSelect(forfait: Forfait): void {
-    this.selectedForfait = forfait;
-  }
+  //onSelect(forfait: Forfait): void {
+    //this.selectedForfait = forfait;
+    //console.log('je suis dans le onSelect')
+  //}
 
   //Fonction pour supprimer l'élément
    onDelete(forfait: Forfait): void {
@@ -54,13 +54,14 @@ export class TableForfaitsComponent implements OnInit {
         .subscribe(result => this.forfaits = this.forfaits.filter(f => f !== forfait));
    }
   //Fonction pour l'ouverture du dialog
-    //Fonction pour l'ajout lors de la fermeture du dialog, en appuyant sur le crochet
-   
+    //Fonction pour l'ajout lors de l'ouverture et la fermeture du dialog
   openDialogNewForfait(): void {
-    const dialogRef = this.dialog.open(FormulaireForfaitComponent, {
+     
+      const dialogRef = this.dialog.open(FormulaireForfaitComponent, {
       width: '80%',
       height: '80%',
-      data: this.newForfait
+      data: this.newForfait,
+      
     });
     
     dialogRef.afterClosed().subscribe(result => {
@@ -71,5 +72,24 @@ export class TableForfaitsComponent implements OnInit {
             .subscribe(forfait  => { this.forfaits.push(forfait); this.newForfait._id = null; this.newForfait.destination=''; this.newForfait.hotel.nom='';this.newForfait.hotel.coordonnees=''; this.newForfait.hotel.nombreEtoiles=0; this.newForfait.hotel.nombreChambres=null; this.newForfait.hotel.caracteristiques=caracTableau; this.newForfait.villeDepart='';  this.newForfait.dateDepartD= null; this.newForfait.dateRetourD= null; this.newForfait.prix= null; this.newForfait.rabais= null; this.newForfait.vedette= false; this.table.renderRows()});
       }
     });
+  }
+  //Pour l'édition
+  openDialogEditForfait(forfait: Forfait): void {
+      this.selectedForfait = forfait;
+      const dialogRef = this.dialog.open(FormulaireForfaitComponent, {
+      width: '80%',
+      height: '80%',
+      data: this.selectedForfait, 
+      
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      if(result) {
+        this.selectedForfait = result;
+        this.voyagesService.updateVoyage(this.selectedForfait)
+            .subscribe(() => this.selectedForfait = null);
+      }
+    });
+    console.log(this.selectedForfait)
   }
 }

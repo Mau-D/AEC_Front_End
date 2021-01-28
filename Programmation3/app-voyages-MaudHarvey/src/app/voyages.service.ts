@@ -28,11 +28,15 @@ export class VoyagesService {
   addForfait(forfait: Forfait): Observable<Forfait> {
     console.log(forfait);
     return this.http.post<Forfait>(this.voyagesUrl, forfait, httpOptions);
-}
+  }
   /** DELETE: suppression du forfait */
   deleteVoyage(id: string): Observable<Forfait> {
     return this.http.delete<Forfait>(this.voyagesUrl + id, httpOptions);
   }
+  /** PUT: mise à jour du forfait */
+  updateVoyage(forfait: Forfait): Observable<any> {
+    const id = forfait._id;
+    return this.http.put<Forfait>(this.voyagesUrl + id, forfait, httpOptions);
+  }
 
 }
-//{"_id":"600a1ec7d51ad50017236874","forfait":{"_id":null,"destination":"Hawai","villeDepart":"Bagotville","hotel":{"nom":"Hotel Léo","coordonnees":"123 Go","nombreEtoiles":null,"nombreChambres":null,"caracteristiques":[]},"dateDepartD":null,"dateRetourD":null,"prix":null,"rabais":null,"vedette":true,"da":"1996416"}}

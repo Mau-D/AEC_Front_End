@@ -7,8 +7,6 @@ import { caracTableau } from '../mock-caracHotel';
 //Importations pour le dialog
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Forfait } from '../forfait';
-import { Hotel } from '../hotel';
-import { ForfaitCompletComponent } from '../forfait-complet/forfait-complet.component';
 
 
 
@@ -21,7 +19,6 @@ import { ForfaitCompletComponent } from '../forfait-complet/forfait-complet.comp
 })
 
 export class FormulaireForfaitComponent implements OnInit {
-  
   //Variables des ngModel pour la validation de formulaire
   nomHotel: string;
   adresse: string;
@@ -31,11 +28,9 @@ export class FormulaireForfaitComponent implements OnInit {
   prix: number;
   rabais: number;
   caracteristiques: string;
-  //Variables pour les caractéristiques de l'hôtel
-  caracHotel: string[]= caracTableau;
   tableauCarac: string[] =[];
-  
-
+  //Variables pour afficher les caractéristiques de l'hôtel
+  caracHotel: string[]= caracTableau;
   
   //Variable pour la date minimum de la date de départ, aujourd'hui
   minDateDepart: Date= new Date;
@@ -74,12 +69,16 @@ export class FormulaireForfaitComponent implements OnInit {
     return this.newForfait.hotel.caracteristiques = this.tableauCarac;
     
   }
+  
   constructor(
-    public dialogRef: MatDialogRef<FormulaireForfaitComponent>,
+    public dialogRef: MatDialogRef<FormulaireForfaitComponent>, 
     //Rend accessible la valeur du nouveau forfait
     @Inject(MAT_DIALOG_DATA) public newForfait: Forfait) {
       
      }
+    
+     
+  
    
   ngOnInit() {
   //Ces variables prend la valeur entrée dans le champ et fait un map sur le tableau 

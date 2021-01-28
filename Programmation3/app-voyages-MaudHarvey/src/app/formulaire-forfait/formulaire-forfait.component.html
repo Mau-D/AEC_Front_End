@@ -1,8 +1,12 @@
 <!-- Celui-ci sera placé dans un dialog -->
 <!-- Formulaire pour la gestion des forfaits -->
+
 <mat-grid-list cols="4" rowHeight="7rem">
+    
     <!-- titre -->
     <mat-grid-tile [colspan]="4">
+        <!-- <p *ngIf="!modeEdition ;else editNom;">Affichage pour l'ajout</p>
+        <p #editNom> Affichage pour l'édition</p>-->
         <h1>Formulaire pour la gestions des forfaits</h1>
     </mat-grid-tile>
     <form #forfaitFormAjout="ngForm" id="forfaitFormAjout" >
@@ -143,7 +147,7 @@
     <!-- Caractéristiques de l'hôtel -->
     <mat-grid-tile [colspan]="2" [rowspan]="3">
         <section class="sectionCheck">
-            <mat-checkbox class="checkCaract example-margin" name="caracteristiques" *ngFor="let item of caracHotel" value={{item}} [ngModel]="caracteristiques" (ngModelChange)="changeCaracteristiques($event, item)">{{item}}
+            <mat-checkbox class="checkCaract example-margin"  name="caracteristiques"  *ngFor="let item of caracHotel" value={{item}} [ngModel]="caracteristiques" (ngModelChange)="changeCaracteristiques($event, item)">{{item}}
             </mat-checkbox>
         </section>
     </mat-grid-tile>
@@ -166,10 +170,9 @@
     <mat-grid-tile [colspan]="2" [rowspan]="1">
         <div mat-dialog-actions>
             <button mat-button (click)="onAnnulerClick()">Annuler</button>
-            <button mat-button [mat-dialog-close]="newForfait" cdkFocusInitial>Ok</button>
+            <button  mat-button [mat-dialog-close]="newForfait" cdkFocusInitial>Ok</button>
         </div>
     </mat-grid-tile>
-    
     </form>
     
 </mat-grid-list>
