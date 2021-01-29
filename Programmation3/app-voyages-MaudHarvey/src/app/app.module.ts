@@ -30,15 +30,13 @@ import { VoyagesService } from './voyages.service';//Fichier pour le service
 
 //Importations des pipes
 import { ForfaitVedettePipe } from './forfait-vedette.pipe';
+import { ForfaitsToutSudPipe } from './forfaits-tout-sud.pipe';
+
 
 //Importations pour les dates en français
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 registerLocaleData(localeFr, 'fr');
-
-
-
-
 
 
 //Importations de Angular Material
@@ -80,7 +78,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     AdministrationComponent,
     ForfaitsToutSudComponent,
     ForfaitsExplorateurComponent,
-    TableForfaitsComponent
+    TableForfaitsComponent,
+    ForfaitsToutSudPipe
   ],
   
   imports: [

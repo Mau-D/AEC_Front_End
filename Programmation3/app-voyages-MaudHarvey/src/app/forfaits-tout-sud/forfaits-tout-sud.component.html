@@ -4,7 +4,7 @@
    
 <mat-grid-list cols="9" rowHeight="8rem">
     <mat-list>
-        <mat-list-item *ngFor="let item of forfaits">
+        <mat-list-item *ngFor="let item of forfaits | PipeForfaitsToutSud">
             <mat-grid-tile [colspan]="9" [rowspan]="9">
                 <app-forfait-complet class="child-css" [proprietesForfait]=item [formulaire]="formulaire">
                 </app-forfait-complet>
