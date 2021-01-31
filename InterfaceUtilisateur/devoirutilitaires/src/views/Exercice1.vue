@@ -2,7 +2,7 @@
 <!--On déclarera deux composants qui utilisent un mixin-->
 <template>
   <div>
-    <h1>Exercice 1, Utilitaire dans votre application VueJS</h1>
+    <h1>Exercice 1, Utilisation de mixin dans deux composants</h1>
     <component-1></component-1>
     <component-2></component-2>
 

@@ -15,6 +15,7 @@ import { Mixin } from '../mixin'
 export default {
     mixins: [Mixin],
     name: 'composant1',
+    
 }
 </script>
 <style scoped>
