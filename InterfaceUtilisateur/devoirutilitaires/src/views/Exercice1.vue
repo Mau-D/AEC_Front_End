@@ -1,6 +1,6 @@
 <!--Exercice 1, Utilitaire dans votre application VueJS-->
 <!--On déclarera deux composants qui utilisent un mixin-->
-<template>
+<template id="ex1">
   <div>
     <h1>Exercice 1, Utilisation de mixin dans deux composants</h1>
     <component-1></component-1>
@@ -23,4 +23,7 @@ export default {
   div{
     text-align: center;  
     }
+  #ex1{
+    height: 100vh;
+  }
 </style>

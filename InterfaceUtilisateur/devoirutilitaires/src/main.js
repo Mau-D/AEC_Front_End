@@ -4,6 +4,8 @@ import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
+import SkeletonCards from "vue-ultimate-skeleton-cards";
+Vue.use(SkeletonCards);
 //Dans ce devoir je n'ai pas utilisé le BootstrapVue
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue);
