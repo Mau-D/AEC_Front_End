@@ -24,6 +24,8 @@ import { AdministrationComponent } from './administration/administration.compone
 import { ForfaitsToutSudComponent } from './forfaits-tout-sud/forfaits-tout-sud.component';
 import { ForfaitsExplorateurComponent } from './forfaits-explorateur/forfaits-explorateur.component';
 import { TableForfaitsComponent } from './table-forfaits/table-forfaits.component';
+import { ChartLineComponent } from './chart-line/chart-line.component';
+
 
 //Importations des services
 import { VoyagesService } from './voyages.service';//Fichier pour le service
@@ -38,6 +40,8 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 registerLocaleData(localeFr, 'fr');
 
+//Graphiques
+import { ChartsModule } from 'ng2-charts';
 
 //Importations de Angular Material
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -79,7 +83,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     ForfaitsToutSudComponent,
     ForfaitsExplorateurComponent,
     TableForfaitsComponent,
-    ForfaitsToutSudPipe
+    ForfaitsToutSudPipe,
+    ChartLineComponent
   ],
   
   imports: [
@@ -107,7 +112,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatMenuModule,
     HttpClientModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    ChartsModule
   ],
   //Calendrier en français
   providers: [ {provide: MAT_DATE_LOCALE, useValue: 'fr-CA'}, VoyagesService],
