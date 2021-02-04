@@ -14,7 +14,7 @@ export class FormulaireRechercheComponent implements OnInit {
   constructor() {
   
   }
-//Input et output pour l'échange d'informations
+//Input et output pour l'échange d'informations entre le formulaire de recherche et le composant 
   
   @Input() formulaire: Formulaire;
   @Output() formulaireChange = new EventEmitter();

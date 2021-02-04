@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-administration',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./administration.component.css']
 })
 export class AdministrationComponent implements OnInit {
-
+  @Output() nombre: number = 300 ;
   constructor() { }
 
   ngOnInit(): void {
