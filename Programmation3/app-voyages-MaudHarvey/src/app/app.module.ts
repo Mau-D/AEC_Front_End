@@ -65,6 +65,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import { RecherchePipe } from './recherche.pipe';
+import { ForfaitExplorateurPipePipe } from './forfait-explorateur-pipe.pipe';
 
 
 @NgModule({
@@ -86,7 +87,8 @@ import { RecherchePipe } from './recherche.pipe';
     TableForfaitsComponent,
     ForfaitsToutSudPipe,
     ChartLineComponent,
-    RecherchePipe
+    RecherchePipe,
+    ForfaitExplorateurPipePipe
   ],
   
   imports: [

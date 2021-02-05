@@ -14,8 +14,7 @@ export class AccueilComponent implements OnInit {
  //Avec l'utilisation du service la variable est initialisé en tableau vide.
   forfaits: Forfait[];
 
-  dureeForfait: number = 7;
-
+  
   
   //Objet contenant les informations entrées dans le formulaire de recherche
   formulaire :Formulaire = {

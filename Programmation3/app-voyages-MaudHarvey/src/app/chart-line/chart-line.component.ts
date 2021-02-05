@@ -3,6 +3,10 @@ import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 import { Reservation } from '../reservation';//Interface
 import { VoyagesService } from '../voyages.service';//Service
+import { FORFAITS } from '../mock-forfaits';//Service
+import { Forfait } from '../forfait';//Service
+
+
 
 
 
@@ -14,12 +18,12 @@ import { VoyagesService } from '../voyages.service';//Service
 })
 
 export class ChartLineComponent implements OnInit {
-//variable des données de l'API
-  reservations: Reservation[];
- 
+//variable des données de l'API des réservations
+  
+  reservations: Forfait[] = FORFAITS;
   //variable pour les dates
   dec1: number = 100;
-  decembre: Array<number>=this.decembreTable();
+  decembre: Array<number>=[45,45,45];
 
   public lineChartData: ChartDataSets[] = [
     { data: this.decembre, label: 'Décembre' },{ data: [this.dec1, 2, 10, 33, 67, 200, 40], label: 'Janvier' }
@@ -42,25 +46,13 @@ export class ChartLineComponent implements OnInit {
   
   decembreTable() {
     console.log('fonction decembre Table')
-   let resultDecembre = [45,60,45,45];
-   this.decembre = resultDecembre;
+   let tableauRes = this.reservations;
  
     
-   for(let item of this.reservations){
-      let r = item.dateReservation;
-      let mois = r.getMonth();
-      let jour = r.getDate();
-      if(mois = 12){
-        if (jour = 1){
-          this.dec1 = this.dec1 +1;
-          
-        }
-        resultDecembre = [45, 0, 0]
-        console.log(resultDecembre);
-       
-      }
-        return resultDecembre
-    }
+   tableauRes.forEach(element => {
+   console.log(element._id)
+  });
+    
     
   };
  
@@ -72,13 +64,10 @@ export class ChartLineComponent implements OnInit {
  
    }
   ngOnInit(): void {
-    this.getReservations();
+   
     this.decembreTable();
   }
  //Fonction qui récupère les données de l'API
-  getReservations(): void {
-    this.voyagesService.getReservations()
-        .subscribe(resultat => this.reservations = resultat);
-  }
+ 
   
 }
