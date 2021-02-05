@@ -14,12 +14,13 @@ export class ForfaitCompletComponent implements OnInit {
 
   //Inclure la propriété, déclaré dans app pour les valeurs du mock-forfait
   @Input() proprietesForfait: Forfait;
-
+ 
   //Propriété pour les infos inscrites dans le formulaire de recherche
   @Input() formulaire: Formulaire;
   //Pour le calcul de la durée du forfait
   @Input() date1: Date = new Date;
   @Input() date2: Date  = new Date;
+  
   //Fonction our le calcul de la durée du forfait
 
   calculateDiff(depart, retour){
