@@ -15,11 +15,12 @@ export class ChartLineComponent implements OnInit {
   
   reservations: Reservation[];
   //variable pour les dates
-  dec1: number = 100;
-  decembre: Array<number>=[45,45,45];
+  janvier: Array<number>=[];
+
+  decembre: Array<number>=[];
 
   public lineChartData: ChartDataSets[] = [
-    { data: this.decembre, label: 'Décembre' },{ data: [this.dec1, 2, 10, 33, 67, 200, 40], label: 'Janvier' }
+    { data: this.decembre, label: 'Décembre' },{ data: this.janvier, label: 'Janvier' }
   ];
   public lineChartLabels: Label[] = ['1er', '2', '3', '4', '5', '6', '7','8', '9', '10'];
   
@@ -39,18 +40,106 @@ export class ChartLineComponent implements OnInit {
 
   decembreTable() {
     
-   // this.reservations.map(res =>{
- //   let date:Date = res.dateReservation;
- //   console.log(date);
- //  })
    console.log('fonction decembre Table');
-   
+   //Mois de janvier
+    let janv1: number =0;
+    let janv2: number =0;
+    let janv3: number =0;
+    let janv4: number =0;
+    //Mois de décembre
+      let dec1: number =0;
+    let dec2: number =0;
+    let dec3: number =0;
+    let dec4: number =0;
+    let dec5: number =0;
+    let dec6: number =0;
+    let dec7: number =0;
+    let dec8: number =0;
+    let dec9: number =0;
+    let dec10: number =0;
+  
+
    let tableauRes = this.reservations;
     tableauRes.forEach(element => {
+      let dateForfait: Date = new Date(element.dateReservation);
+      //Mois de janvier
+      if( dateForfait.getMonth() === 0){
+        
+        if(dateForfait.getDate() === 1){
+          janv1++;
+        }
+        else if(dateForfait.getDate() === 2){
+          janv2++;
+        }
+        else if(dateForfait.getDate() === 3){
+          janv3++;
+        }
+        else if(dateForfait.getDate() === 4){
+          janv4++;
+        }
+      }
+      //Mois de décembre
+      else if( dateForfait.getMonth() === 11){
+     
+        if(dateForfait.getDate() === 1){
+          dec1++;
+        }
+        else if(dateForfait.getDate() === 2){
+          dec2++;
+        }
+        else if(dateForfait.getDate() === 3){
+          dec3++;
+        }
+        else if(dateForfait.getDate() === 4){
+          dec4++;
+        }
+        else if(dateForfait.getDate() === 5){
+          dec5++;
+        }
+        else if(dateForfait.getDate() === 6){
+          dec6++;
+        }
+        else if(dateForfait.getDate() === 7){
+          dec7++;
+        }
+        else if(dateForfait.getDate() === 8){
+          dec8++;
+        }
+        else if(dateForfait.getDate() === 9){
+          dec9++;
+        }
+        else if(dateForfait.getDate() === 10){
+          dec10++;
+        }
+       
+        
+      }
+
+      
     //J'ai réussi à récupérer les données de l'API
     });
+   
+    //Entrer les données dans le tableau mois de janvier
+      this.janvier.push(janv1);
+      this.janvier.push(janv2);
+      this.janvier.push(janv3);
+      this.janvier.push(janv4);
+      //Entrer les données dans le tableau mois de décembre
+
+      this.decembre.push(dec1);
+      this.decembre.push(dec2);
+      this.decembre.push(dec3);
+      this.decembre.push(dec4);
+      this.decembre.push(dec5);
+      this.decembre.push(dec6);
+      this.decembre.push(dec7);
+      this.decembre.push(dec8);
+      this.decembre.push(dec9);
+      this.decembre.push(dec10);
+
       
-    
+      console.log(this.decembre);
+      return this.decembre;
   };
  
      

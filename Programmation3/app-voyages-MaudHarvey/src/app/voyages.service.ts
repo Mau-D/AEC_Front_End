@@ -20,7 +20,7 @@ headers: new HttpHeaders({ 'Content-Type': 'application/json'})
 export class VoyagesService {
   //Variable de l'url de l'API
   voyagesUrl = 'https://forfaits-voyages.herokuapp.com/api/forfaits/';
-  reservationsUrl= 'https://forfaits-voyages.herokuapp.com/api/reservations/';
+  reservationsUrl= 'https://forfaits-voyages.herokuapp.com/api/reservations';
 
 //Ajouter une variable privée dans l'argument du constructeur  pour le module HttpClient
   constructor(private http: HttpClient) { }
