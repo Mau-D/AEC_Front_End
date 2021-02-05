@@ -3,13 +3,6 @@ import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 import { Reservation } from '../reservation';//Interface
 import { VoyagesService } from '../voyages.service';//Service
-import { FORFAITS } from '../mock-forfaits';//Service
-import { Forfait } from '../forfait';//Service
-
-
-
-
-
 
 @Component({
   selector: 'app-chart-line',
@@ -20,7 +13,7 @@ import { Forfait } from '../forfait';//Service
 export class ChartLineComponent implements OnInit {
 //variable des données de l'API des réservations
   
-  reservations: Forfait[] = FORFAITS;
+  reservations: Reservation[];
   //variable pour les dates
   dec1: number = 100;
   decembre: Array<number>=[45,45,45];
@@ -43,16 +36,20 @@ export class ChartLineComponent implements OnInit {
   public lineChartLegend = true;
   public lineChartType = 'line';
   public lineChartPlugins = [];
-  
+
   decembreTable() {
-    console.log('fonction decembre Table')
+    
+   // this.reservations.map(res =>{
+ //   let date:Date = res.dateReservation;
+ //   console.log(date);
+ //  })
+   console.log('fonction decembre Table');
+   
    let tableauRes = this.reservations;
- 
-    
-   tableauRes.forEach(element => {
-   console.log(element._id)
-  });
-    
+    tableauRes.forEach(element => {
+    //J'ai réussi à récupérer les données de l'API
+    });
+      
     
   };
  
@@ -64,10 +61,15 @@ export class ChartLineComponent implements OnInit {
  
    }
   ngOnInit(): void {
+    this.getReservations();
    
-    this.decembreTable();
   }
  //Fonction qui récupère les données de l'API
- 
+ //Le code est modifié pour permettre l'attente des de la réponse de l'API avant de continuer les autres lignes de code en dessous
+  getReservations(): void {
+    this.voyagesService.getReservations()
+        .subscribe((resultat) => {this.reservations = resultat;
+     this.decembreTable();});
+  }
   
 }

@@ -68,6 +68,7 @@ import { RecherchePipe } from './recherche.pipe';
 import { ForfaitExplorateurPipePipe } from './forfait-explorateur-pipe.pipe';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -7,7 +7,7 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./administration.component.css']
 })
 export class AdministrationComponent implements OnInit {
-  @Output() nombre: number = 300 ;
+  
   constructor() { }
 
   ngOnInit(): void {

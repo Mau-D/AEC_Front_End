@@ -9,6 +9,7 @@ import { Forfait } from './forfait';
 import { Reservation } from './reservation';
 
 
+
 const httpOptions = {
 headers: new HttpHeaders({ 'Content-Type': 'application/json'})
 };
@@ -29,7 +30,7 @@ export class VoyagesService {
   }
   //Fonction pour appeler l'API pour les réservations
   getReservations(): Observable<Reservation[]> {
-    return this.http.get<Reservation[]>(this.reservationsUrl);  
+    return this.http.get<Reservation[]>(this.reservationsUrl);
   }
   //Ajout d'un forfait
   addForfait(forfait: Forfait): Observable<Forfait> {
