@@ -20,7 +20,7 @@ export class RecherchePipe implements PipeTransform {
       if(!forfaits)
         return forfaits;
       if(dureeForfait === 0)
-        return forfaits;
+        return forfaits.filter(forfait => this.calculateDiff(forfait.dateDepartD, forfait.dateRetourD) == 7 || this.calculateDiff(forfait.dateDepartD, forfait.dateRetourD) == 10 || this.calculateDiff(forfait.dateDepartD, forfait.dateRetourD) == 14)
     return forfaits.filter(forfait => forfait.hotel.nombreEtoiles >= etoile && this.calculateDiff(forfait.dateDepartD, forfait.dateRetourD) == dureeForfait ); 
   }
 }
