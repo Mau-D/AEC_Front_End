@@ -37,8 +37,8 @@ export class ChartLineComponent implements OnInit {
   public lineChartLegend = true;
   public lineChartType = 'line';
   public lineChartPlugins = [];
-
-  decembreTable() {
+//Fonction pour le calcul de réservations par date, enté ensuite dans les tableaux pour le graphiques
+  calculReservationsTable() {
     
    console.log('fonction decembre Table');
    //Mois de janvier
@@ -124,6 +124,7 @@ export class ChartLineComponent implements OnInit {
       this.janvier.push(janv2);
       this.janvier.push(janv3);
       this.janvier.push(janv4);
+
       //Entrer les données dans le tableau mois de décembre
 
       this.decembre.push(dec1);
@@ -158,7 +159,7 @@ export class ChartLineComponent implements OnInit {
   getReservations(): void {
     this.voyagesService.getReservations()
         .subscribe((resultat) => {this.reservations = resultat;
-     this.decembreTable();});
+     this.calculReservationsTable();});
   }
   
 }

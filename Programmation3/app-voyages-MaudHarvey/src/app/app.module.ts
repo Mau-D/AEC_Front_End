@@ -25,6 +25,7 @@ import { ForfaitsToutSudComponent } from './forfaits-tout-sud/forfaits-tout-sud.
 import { ForfaitsExplorateurComponent } from './forfaits-explorateur/forfaits-explorateur.component';
 import { TableForfaitsComponent } from './table-forfaits/table-forfaits.component';
 import { ChartLineComponent } from './chart-line/chart-line.component';
+import { ChartPieComponent } from './chart-pie/chart-pie.component';
 
 
 //Importations des services
@@ -89,7 +90,8 @@ import { ForfaitExplorateurPipePipe } from './forfait-explorateur-pipe.pipe';
     ForfaitsToutSudPipe,
     ChartLineComponent,
     RecherchePipe,
-    ForfaitExplorateurPipePipe
+    ForfaitExplorateurPipePipe,
+    ChartPieComponent
   ],
   
   imports: [
