@@ -34,6 +34,11 @@ import { VoyagesService } from './voyages.service';//Fichier pour le service
 //Importations des pipes
 import { ForfaitVedettePipe } from './forfait-vedette.pipe';
 import { ForfaitsToutSudPipe } from './forfaits-tout-sud.pipe';
+import { RecherchePipe } from './recherche.pipe';
+import { ForfaitExplorateurPipePipe } from './forfait-explorateur-pipe.pipe';
+import { RechercheEtoilesPipe } from './recherche-etoiles.pipe';
+import { RechercheDureePipe } from './recherche-duree.pipe';
+
 
 
 //Importations pour les dates en français
@@ -65,8 +70,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
-import { RecherchePipe } from './recherche.pipe';
-import { ForfaitExplorateurPipePipe } from './forfait-explorateur-pipe.pipe';
 
 
 
@@ -91,7 +94,9 @@ import { ForfaitExplorateurPipePipe } from './forfait-explorateur-pipe.pipe';
     ChartLineComponent,
     RecherchePipe,
     ForfaitExplorateurPipePipe,
-    ChartPieComponent
+    ChartPieComponent,
+    RechercheEtoilesPipe,
+    RechercheDureePipe
   ],
   
   imports: [
