@@ -1,0 +1,176 @@
+<!-- exercice5.html -->
+<!-- Maud Harvey -->
+<!-- 5 janvier 2021 -->
+<!-- Faire un composant pour le formulaire et un composant pour le modal
+    Attention pour la propriété d’affichage du modal (le booléen),
+    il faudra renvoyer la valeur au composant parent.
+    On utilisera alors un emit pour redonner la valeur au composant parent sinon on rencontrera une erreur. 
+ -->
+<!DOCTYPE html>
+<html lang="fr-ca">
+
+
+<head>
+    <title>Exercice 5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+          /*Style de la page*/
+        .cadre{
+            width: 50%;
+            background-color: whitesmoke;
+            padding: 5%;
+            margin: auto;
+            margin-top: 1%;
+        }
+        /*Appliquer une couleur au modal*/
+        .couleurModal {
+            background-color: aqua !important;
+        }
+
+        /*Transition pour le modal*/
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 98;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 25px;
+        }
+
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity 0.5s;
+        }
+
+        .fade-enter,
+        .fade-leave-to {
+            opacity: 0;
+        }
+
+        .slide-enter-active,
+        .slide-leave-active {
+            transition: transform 0.5s;
+        }
+
+        .slide-enter,
+        .slide-leave-to {
+            transform: translateY(-50%) translateX(100vw);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="exercice5">
+        <component-form></component-form>    
+    </div>
+
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script>
+        //Composant du formulaire
+        Vue.component("component-form", {
+            data: function () {
+                return {
+                    showModal: false,
+                    firstname: "Maud",
+                    lastname: "Harvey",
+                    genres: ['homme', 'femme'],
+                    sexe: '',
+                }
+            },
+            template:
+                `
+                <div class="cadre">
+                    <label for="prenom">Prénom:</label><br>
+                    <input v-model="firstname" type="text" id="prenom"><br><br>
+                    <label for="nom">Nom:</label><br>
+                    <input v-model="lastname" type="text" id="nom"><br><br>
+                    <div v-for="genre in genres" :key="genre">
+                        <input v-model="sexe" type="radio" :value="genre" id="genre">
+                        <label for="genre">{{genre}}</label>
+                    </div><br>
+                    <component-modal 
+                        v-on:update-show-modal="update" 
+                        v-bind:showModal="showModal"
+                        v-bind:firstname="firstname"
+                        v-bind:lastname="lastname"
+                        v-bind:sexe="sexe"
+                        ></component-modal>
+                </div>    
+                
+                `,
+            methods: {
+                //Fonction qui associé à l'événement personnalisé du composant-enfant
+                update(showModal) {
+                    this.showModal = showModal;
+                    console.log("méthode update du composant parent" + showModal)
+                }
+            },  
+            
+        }),
+        //Composant du modal
+        Vue.component("component-modal", {
+            data: function () {
+                return {
+                    checked: false,
+                }
+            },
+            props: ["showModal", "firstname", "lastname", "sexe"],    
+            template:
+                `
+                <div >
+                    <button type="submit" @click="showThisModal(true)">Envoyer</button>
+                    <transition name="fade"  appear>
+                        <div class="modal-overlay" v-if="showModal" @click="showThisModal(false)"></div>
+                    </transition>
+                    <transition name="slide" appear >
+                        <div :class=" {couleurModal : checked } " class="modal" v-if="showModal">
+                            <!-- Checkbox pour appliquer une couleur au modal -->
+                            <input v-model="checked" type="checkbox" id="check">
+                            <label for="check">Couleur</label>
+                            <h3>Nom complet: </h3>
+                            <h1>
+                                <span v-if="sexe === 'homme'">Mr</span>
+                                <span v-else-if="sexe === 'femme'">Ms</span>
+                                {{firstname}} {{lastname}}
+                            </h1>
+                            <button class="button" @click="showThisModal(false)">
+                                Fermer
+                            </button>
+                        </div>
+                    </transition>
+                </div>            
+                `,
+            methods: {
+            //Fonction qui défini un événement personnalisé, la valeur true ou false est passé
+            //Selon l'ouverture ou la fermeture du modal
+                showThisModal(value) {
+                    showModal = value;
+                    this.$emit("update-show-modal", showModal)
+                },
+            },  
+          
+
+        });
+        var exercice5 = new Vue({
+            el: "#exercice5",
+        });
+    </script>
+</body>
+
+</html>

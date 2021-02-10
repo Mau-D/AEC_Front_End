@@ -1,0 +1,83 @@
+<!-- exercice3.html -->
+<!-- Maud Harvey -->
+<!-- 5 janvier 2021 -->
+<!-- Reprendre la même structure que l’exercice précédent. 
+    Ajouter dans notre formulaire des radio boutons pour que l’utilisateur puisse sélectionner son genre.
+Pour cela, on définira dans nos data un tableau contenant les 2 valeurs:
+Homme
+Femme
+Si l’utilisateur sélectionne homme, Mr s’affichera devant le nom dans la balise h1
+sinon Ms s’affichera devant le nom dans la balise h1
+
+ -->
+<!DOCTYPE html>
+<html lang="fr-ca">
+
+<head>
+    <title>Exercice 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .surligne {
+            background-color: black;
+        }
+        /*Style de la page*/
+        .cadre{
+            width: 50%;
+            background-color: whitesmoke;
+            padding: 5%;
+            margin: auto;
+            margin-top: 1%;
+        }
+        h3, h1{
+            display: inline;
+            padding: 1%;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div id="exercice3">
+        <div class="cadre">
+            <label for="prenom">Prénom:</label><br>
+            <input v-model="firstname" type="text" id="prenom"><br><br>
+            <label for="nom">Nom:</label><br>
+            <input v-model="lastname" type="text" id="nom"><br><br>
+            <div v-for="genre in genres" :key="genre">
+                <input v-model="sexe" type="radio" :value="genre" id="genre">
+                <label for="genre">{{genre}}</label>
+            </div><br>
+            <!-- Checkbox pour le surlignement de la balise  -->
+            <input v-model="checked" type="checkbox" id="check">
+            <label for="check">Surlignement</label>
+        </div>
+        <div class="cadre">
+            <!-- Affichage -->
+            <h2>Surligner le nom pour le cacher</h2>
+            <h3>Bonjour, </h3>
+            <h1 :class=" {surligne : checked } ">
+                <span v-if="sexe ==='homme'">Mr</span>
+                <span v-else-if="sexe ==='femme'">Ms </span>
+                 {{firstname}} {{lastname}}
+            </h1>
+            <!-- Lorsque la propriété checked est vrai la class surligne est appliquée -->
+        </div>
+    </div>
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script>
+        var exercice3 = new Vue({
+            el: "#exercice3",
+             data: {
+                firstname: "Maud",
+                lastname: "Harvey",
+                checked: false,
+                genres: ['homme', 'femme'],
+                sexe:''
+            },
+        });
+    </script>
+</body>
+
+</html>

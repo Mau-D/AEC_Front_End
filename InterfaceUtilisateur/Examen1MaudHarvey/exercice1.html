@@ -1,0 +1,55 @@
+<!-- exercice1.html -->
+<!-- Maud Harvey -->
+<!-- 5 janvier 2021 -->
+<!-- Créer une instance d’application VueJS qui contiendra les propriétés
+firstname et lastname
+Vous leur donnerez la valeur de vos nom et prénom
+Vous afficherez ces propriétés dans la page entre des balises <h1>
+Quels sont les deux moyens d’afficher le contenu des propriétés dans la page html
+ -->
+<!DOCTYPE html>
+<html lang="fr-ca">
+
+<head>
+    <title>Exercice 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        /*Style de la page*/
+        .cadre{
+            width: 50%;
+            background-color: whitesmoke;
+            padding: 5%;
+            margin: auto;
+        }
+        h1, h3{
+            display: inline;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="exercice1">
+        <div class="cadre">
+            <h2>Nous pouvons afficher les propriétés d'une vue de deux façons:</h2>
+            <!-- Appel des propriétés -->
+            <!-- Utiliser v-pre pour afficher les moustaches en chaîne de caractère -->
+            <h3>1- Avec les moustaches <span v-pre>{{ data }}</span>: </h3><h1>{{firstname}} {{lastname}}</h1><br><br>
+            <h3>2- Avec la directive v-text: </h3><h1 v-text="firstname + ' ' + lastname"></h1>
+        </div>
+    </div>
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script>
+        var exercice1 = new Vue({
+            el: "#exercice1",
+            //Deux propriétés sont créées
+            data:{
+                firstname: "Maud",
+                lastname: "Harvey"
+            }
+        });
+    </script>
+</body>
+
+</html>

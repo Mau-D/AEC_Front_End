@@ -1,0 +1,276 @@
+<!-- exercice6.html -->
+<!-- Maud Harvey -->
+<!-- 5 janvier 2021 -->
+<!-- Créer un composant qui contiendra un slot pour le header
+    et un composant qui contiendra un slot pour le footer de votre site.
+    On pourra utiliser la librairie 
+    https://www.w3schools.com/howto/howto_css_icon_bar.asp
+    https://fontawesome.com/v4.7.0/icons/
+ -->
+<!DOCTYPE html>
+<html lang="fr-ca">
+
+<head>
+    <title>Exercice 6</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    <style>
+        /*Style de la page*/
+        html, body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .cadre{
+            width: 50%;
+            background-color: whitesmoke;
+            padding: 5%;
+            padding-bottom: 0;
+            margin: auto;
+            margin-top: 2%;
+        }
+         .cadreBouton{
+            width: 50%;
+            background-color: whitesmoke;
+            margin: auto;
+            padding: 5%;
+            padding-top: 0;
+        }
+        /* Style pour le header*/
+        .icon-bar {
+            width: 100%;
+            background-color: #555;
+            overflow: auto;
+        }
+       
+        .icon-bar a {
+            float: left;
+            width: 20%;
+            text-align: center;
+            padding: 12px 0 12px 0 ;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 36px;
+        }
+
+        .icon-bar a:hover {
+        background-color: #000;
+        }
+
+        .active {
+        background-color: #4CAF50;
+        }
+
+         /*Appliquer une couleur au modal*/
+        .couleurModal {
+            background-color: aqua !important;
+        }
+
+        /*Pour le footer*/
+        .piedPage {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color: #555;
+            text-align: center;
+            overflow: auto;
+            color: #4CAF50;
+        }
+        
+        /*Transition pour le modal*/
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 98;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 25px;
+        }
+
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity 0.5s;
+        }
+
+        .fade-enter,
+        .fade-leave-to {
+            opacity: 0;
+        }
+
+        .slide-enter-active,
+        .slide-leave-active {
+            transition: transform 0.5s;
+        }
+
+        .slide-enter,
+        .slide-leave-to {
+            transform: translateY(-50%) translateX(100vw);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="exercice6">
+        <en-tete>
+            <template>
+                <div class="icon-bar">
+                    <a class="active" href="#"><i class="fa fa-home"></i></a>
+                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-calculator" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                    <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                </div>
+            </template>
+        </en-tete>
+        <component-form></component-form>
+        <pied-de-page>
+            <template>
+                <div class="piedPage">
+                    <p>Examen #1, Interfaces utilisateur, Maud Harvey</p>
+                </div>
+            </template>
+        </pied-de-page>
+    </div>
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script>
+        //Composant pour le footer
+        Vue.component("pied-de-page", {
+            template:
+                `
+                <footer>
+                    <slot></slot>
+                </footer>
+                `
+        });
+        //Composant pour le header
+        Vue.component("en-tete", {
+               template:
+                    `
+                    <header>
+                        <slot></slot>
+                    </header>
+                   ` 
+        });
+               
+        //Composant du formulaire
+        Vue.component("component-form", {
+            data: function () {
+            return {
+                showModal: false,
+                firstname: "Maud",
+                lastname: "Harvey",
+                genres: ['homme', 'femme'],
+                sexe: '',
+            }
+            },
+            template:
+                `
+                <div>
+                    <div class="cadre">
+                        <label for="prenom">Prénom:</label><br>
+                        <input v-model="firstname" type="text" id="prenom"><br><br>
+                        <label for="nom">Nom:</label><br>
+                        <input v-model="lastname" type="text" id="nom"><br><br>
+                        <div v-for="genre in genres" :key="genre">
+                            <input v-model="sexe" type="radio" :value="genre" id="genre">
+                            <label for="genre">{{ genre }}</label>
+                        </div><br>
+                    </div>
+                    <component-modal
+                        v-on:update-show-modal="update" 
+                        v-bind:showModal="showModal"
+                        v-bind:firstname="firstname"
+                        v-bind:lastname="lastname"
+                        v-bind:sexe="sexe"
+                    ></component-modal>
+                </div>
+
+                `,
+            methods: {
+                //Fonction qui associé à l'événement personnalisé du composant-enfant
+                update(showModal) {
+                    this.showModal = showModal;
+                    console.log("méthode update du composant parent" + showModal)
+                }
+            },
+        });
+        //Composant du modal
+        Vue.component("component-modal", {
+            data: function () {
+                return {
+                    checked: false,
+                }
+            },
+            props: ["showModal", "firstname", "lastname", "sexe"],
+            template:
+                `
+                <div>
+                    <div class="cadreBouton">
+                        <button type="submit" @click="showThisModal">Envoyer</button>
+                    </div>
+                    <transition name="fade" appear>
+                        <div class="modal-overlay" v-if="showModal" @click="closeModal"></div>
+                    </transition>
+                    <transition name="slide" appear>
+                        <div :class=" {couleurModal : checked } " class="modal" v-if="showModal">
+                            <!-- Checkbox pour appliquer une couleur au modal -->
+                            <input v-model="checked" type="checkbox" id="check">
+                            <label for="check">Couleur</label>
+                            <h3>Nom complet: </h3>
+                            <h1>
+                                <span v-if="sexe === 'homme'">Mr</span>
+                                <span v-else-if="sexe === 'femme'">Ms</span>
+                                {{ firstname }} {{ lastname }}
+                            </h1>
+                            <button class="button" @click="closeModal">
+                            Fermer
+                            </button>
+                        </div>
+                    </transition>
+                </div>
+                `,
+            methods: {
+                //Fonction qui défini un événement personnalisé
+                showThisModal(showModal) {
+                    showModal = true;
+                    this.$emit("update-show-modal", showModal)
+                    console.log("méthode show modal du composant enfant" + this.showModal)
+                },
+                closeModal(showModal) {
+                    showModal = false;
+                    this.$emit("update-show-modal", showModal)
+                    console.log("méthode closeModal du composant enfant" + this.showModal)
+                }
+            },
+        });
+        var exercice6 = new Vue({
+            el: "#exercice6",
+
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/a46d75ba7a.js"></script>
+    <!--Provient du site pour le téléchargement icônes-->
+
+</body>
+
+</html>
+
+   
+  

@@ -1,0 +1,129 @@
+<!-- exercice4.html -->
+<!-- Maud Harvey -->
+<!-- 5 janvier 2021 -->
+<!-- Ajouter un bouton Soumission dans le formulaire et mettre les informations du h1 dans un modal.
+    Lorsque l’on cliquera sur le bouton, le modal s’affichera.
+    Utiliser une transition pour faire afficher le modal. 
+    Mettre le checkbox, précédemment déclaré dans le modal afin que celui-ci change de couleur lorsque l'on clique dessus.
+ -->
+<!DOCTYPE html>
+<html lang="fr-ca">
+
+
+<head>
+    <title>Exercice 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+         /*Style de la page*/
+        .cadre{
+            width: 50%;
+            background-color: whitesmoke;
+            padding: 5%;
+            margin: auto;
+            margin-top: 1%;
+        }
+        /*Appliquer une couleur au modal*/
+        .couleurModal {
+            background-color: aqua !important;
+            }
+        /*Transition pour le modal*/
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 98;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 25px;
+        }
+
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity 0.5s;
+        }
+
+        .fade-enter,
+        .fade-leave-to {
+            opacity: 0;
+        }
+
+        .slide-enter-active,
+        .slide-leave-active {
+            transition: transform 0.5s;
+        }
+
+        .slide-enter,
+        .slide-leave-to {
+            transform: translateY(-50%) translateX(100vw);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="exercice4">
+        <div class="cadre">
+            <label for="prenom">Prénom:</label><br>
+            <input v-model="firstname" type="text" id="prenom"><br><br>
+            <label for="nom">Nom:</label><br>
+            <input v-model="lastname" type="text" id="nom"><br><br>
+            <div v-for="genre in genres" :key="genre">
+                <input v-model="sexe" type="radio" :value="genre" id="genre">
+                <label for="genre">{{genre}}</label>
+            </div><br>
+            <button type="submit" @click="showModal = true">Envoyer</button>
+        </div>
+        <!-- Modal avec transition pour l'affichage -->
+        <transition name="fade" appear>
+            <div class="modal-overlay" v-if="showModal" @click="showModal = false"></div>
+        </transition>
+        <transition name="slide" appear>
+            <div :class=" {couleurModal : checked } " class="modal" v-if="showModal">
+                <!-- Checkbox pour appliquer une couleur au modal -->
+                <input v-model="checked" type="checkbox" id="check">
+                <label for="check">Couleur</label>
+                <h3>Nom complet: </h3>
+                    <h1>
+                        <span v-if="sexe ==='homme'">Mr</span>
+                        <span v-else-if="sexe ==='femme'">Ms</span>
+                        {{firstname}} {{lastname}}
+                    </h1>
+                <button class="button" @click="showModal = false">
+                    Fermer
+                </button>
+            </div>
+        </transition>
+    </div>
+   
+    <!-- code pour le Vue, placer à la fin du body -->
+    <script>
+        var exercice4 = new Vue({
+            el: "#exercice4",
+            data: {
+                firstname: "Maud",
+                lastname: "Harvey",
+                checked: false,
+                genres: ['homme', 'femme'],
+                sexe: '',
+                showModal: false
+            },
+        });
+    </script>
+</body>
+
+</html>
