@@ -3,7 +3,15 @@ Composant contact, formulaire
 Maud Harvey
 24 janvier 2021-->
 <template>
-    <div id="pageContact" class="container-fluid">           
+ 
+    <div id="pageContact" class="container-fluid">      
+        <!-- Dropdown pour le choix de la langue -->
+    <div class="dropdown">
+      <button class="dropbtn">Choisir la langue</button>
+      <div class="dropdown-content">
+        <a @click="toggleLanguage(language)" v-for="language in languages" :key="language">{{language}}</a>
+      </div>
+    </div>     
           <div v-if="erreurs.length">
             <b>Corriger les erreurs suivantes:</b>
             <ul>
@@ -12,11 +20,12 @@ Maud Harvey
               </li>
             </ul>
           </div>
+          
           <fieldset>
             <legend class="w-auto px-2"><h1>Demande d'informations</h1></legend>
             <form id="formContact" class="p-5" v-on:submit="checkForm" novalidate=true>       
                 <div class="form-group">
-                    <label for="courriel">Courriel</label>
+                    <label for="courriel" >{{ email | languageFilter(languageChoosen)}}</label>
                     <input v-model="courriel" required type="email" class="form-control" id="courriel" name="courriel" aria-describedby="email">
                     <small id="emailHelp" class="form-text text-muted">Le courriel doit être valide</small>
                 </div>
@@ -26,7 +35,7 @@ Maud Harvey
                         placeholder="Entrer votre courriel de nouveau">
                 </div>
                 <div class="form-group">
-                    <label for="motDePasse">Mot de passe</label>
+                    <label for="motDePasse" >{{ "password" | languageFilter(languageChoosen)}}</label>
                     <input v-model="motDePasse" required type="password" class="form-control" id="motDePasse" aria-describedby="passwordHelp">
                     <small id="passwordHelp" class="form-text text-muted">Ne partager pas votre mot de passe</small>
                 </div>
@@ -47,12 +56,19 @@ Maud Harvey
 </template>
 
 <script>
-  
+    import {TranslateMixin} from "../mixins/TranslateMixin"
+   
   export default {
     name: 'contact',
+    mixins:[TranslateMixin],
+   
     data: function () {
         return {
+       
         erreurs: [],
+        email:"email",
+        password:"",
+       
         sujets: [
             "Achat de planche",
             "Conseils techniques",
@@ -60,11 +76,13 @@ Maud Harvey
             "Cours de yoga sur planche",
             "Autres",
         ],
+        label:"",
         courriel: null,
         confirmCourriel: null,
         motDePasse: null,
         sujetChoisi: null,
         question: null,
+        
     };
   },
   methods: {
@@ -105,6 +123,8 @@ Maud Harvey
         return re.test(email);
         },
     },
+   
+  
   }
 </script>
 
@@ -149,4 +169,46 @@ Maud Harvey
     button:hover {
     background-color: #024257;
     }
+    /*Pour le dropdown, choix de la langue */
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>

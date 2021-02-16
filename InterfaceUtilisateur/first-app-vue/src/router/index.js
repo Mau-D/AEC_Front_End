@@ -4,6 +4,7 @@ import accueil from "../views/Accueil.vue";
 import contact from "../views/Contact.vue";
 import inscription from "../views/Inscription.vue";
 import login from "../views/Login.vue";
+import logged from "../views/Logged.vue";
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: login,
+  },
+  {
+    path: "/logged",
+    name: "logged",
+    component: logged,
   },
 ];
 

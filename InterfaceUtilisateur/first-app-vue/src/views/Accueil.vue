@@ -28,8 +28,9 @@ Maud Harvey
     </div>
     
     <div class="row" id="logo">
-        <div class="offset-sm-4 col-sm-4 h-100 text-center rotation">
-            <img @click="update(true)" class="img-fluid h-100 rotationY" src="../assets/img/logo-surf.png" title="Cliquez" alt="surf">                        
+        
+        <div class="offset-sm-4 col-sm-4 h-100 text-center rotation"  >
+            <img   @click="update(true)" class="img-fluid rotationY" src="../assets/img/logo-surf.png" title="Cliquez" alt="surf">                        
         </div>
         <div class="col-sm-4">                
         </div>
@@ -37,7 +38,7 @@ Maud Harvey
   
 
     <div class="row">
-        <div class="offset-sm-2 col-sm-8">
+        <div class="offset-sm-3 col-sm-6 text-center">
             <h1>Nos points forts</h1>
             <ul>
                 <li>Grand choix d'inventaire</li>
@@ -62,9 +63,10 @@ Maud Harvey
   export default {
     name: 'accueil',
     data: function () {
-                return {
-                    showModal: false,
-                }
+            return {
+                showModal: false,
+                textAPropos: false
+            }
           },
     methods: {
         //Fonction qui associé à l'événement personnalisé du composant-enfant
@@ -118,11 +120,14 @@ Maud Harvey
     opacity: 0.4;
   }
   #logo {
+    margin-top: 5%;
     height: 40%;
-   
   }
-  #logo:hover{
-    height: 60%;
+  #logo img{
+    height: 90%;
+  }
+  #logo img:hover{
+    height: 110%;
   }
   /*Pivoter l'image */
   .rotation {
@@ -132,5 +137,9 @@ Maud Harvey
   .rotationY {
   -ms-transform: skewY(20deg); /* IE 9 */
   transform: skewY(20deg);
+ }
+ /*Enlever les points de la liste */
+ ul{
+   list-style-type: none;
  }
 </style>

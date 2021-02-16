@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "@vue/cli-service-global": "^4.5.10",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.6.0",
     "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "vue": "^2.6.11",

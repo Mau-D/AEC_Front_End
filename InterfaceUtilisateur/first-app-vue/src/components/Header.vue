@@ -8,12 +8,18 @@ Maud Harvey
       <router-link to="/contact">Contact</router-link> |
       <router-link to="/inscription">Inscription</router-link> |
       <router-link to="/login">Connexion</router-link>
+      
     </div>
 </template>
 <script>
+  import {TranslateMixin} from "../mixins/TranslateMixin"
+
     export default {
+    mixins:[TranslateMixin],
     name: "Header",
-    };
+     
+    }
+    
 </script>
 <style scoped>
 #nav {
@@ -23,6 +29,7 @@ Maud Harvey
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  background-color: #D0E0F0;
 }
 
 #nav a {
@@ -33,4 +40,5 @@ Maud Harvey
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
 </style>
