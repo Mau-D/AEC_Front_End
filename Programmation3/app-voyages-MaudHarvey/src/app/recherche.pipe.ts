@@ -15,18 +15,20 @@ export class RecherchePipe implements PipeTransform {
   }
 
 
-   transform(forfaits: Forfait[], etoile: number, dureeForfait: number): Forfait[] {   
-    console.log('recherche' + dureeForfait)
+   transform(forfaits: Forfait[], etoile: number, dureeForfait: number, departForfait: any): Forfait[] {   
+    console.log('recherche' + departForfait)
+
       if(!forfaits)
         return forfaits;
       else if(dureeForfait === 0)
        return forfaits.filter(forfait => 
-          forfait.hotel.nombreEtoiles >= etoile &&
+          forfait.hotel.nombreEtoiles >= etoile && new Date(forfait.dateDepartD) >= new Date(departForfait) &&
           (this.calculateDiff(forfait.dateDepartD, forfait.dateRetourD) == 7 || 
           this.calculateDiff(forfait.dateDepartD, forfait.dateRetourD) == 10 || 
           this.calculateDiff(forfait.dateDepartD, forfait.dateRetourD) == 14 ))
         else        
           return forfaits.filter(forfait =>forfait.hotel.nombreEtoiles >= etoile && 
+            forfait.dateDepartD >= departForfait && 
             this.calculateDiff(forfait.dateDepartD, forfait.dateRetourD) == dureeForfait)
         
     }

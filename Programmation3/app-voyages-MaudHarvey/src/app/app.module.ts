@@ -36,8 +36,7 @@ import { ForfaitVedettePipe } from './forfait-vedette.pipe';
 import { ForfaitsToutSudPipe } from './forfaits-tout-sud.pipe';
 import { RecherchePipe } from './recherche.pipe';
 import { ForfaitExplorateurPipePipe } from './forfait-explorateur-pipe.pipe';
-import { RechercheEtoilesPipe } from './recherche-etoiles.pipe';
-import { RechercheDureePipe } from './recherche-duree.pipe';
+
 
 
 
@@ -95,8 +94,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     RecherchePipe,
     ForfaitExplorateurPipePipe,
     ChartPieComponent,
-    RechercheEtoilesPipe,
-    RechercheDureePipe
+    
   ],
   
   imports: [

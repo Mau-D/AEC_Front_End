@@ -43,7 +43,7 @@
                 <!-- Afficher tous les forfaits avec toutes le informations séparés d'un diviseur, les forfaits complets sont placés sous les forfaits vedettes -->
                 <mat-grid-list cols="9" rowHeight="8rem" class="espaceGrand">
                     <mat-list>
-                        <mat-list-item *ngFor="let item of forfaits | recherche :formulaire.nbrEtoiles :formulaire.duree">
+                        <mat-list-item *ngFor="let item of forfaits | recherche :formulaire.nbrEtoiles :formulaire.duree :formulaire.dateDepart">
                             <mat-grid-tile [colspan]="9" [rowspan]="9">
                                 <app-forfait-complet class="child-css" [proprietesForfait]=item
                                     [formulaire]="formulaire" [date1]=item.dateDepartD [date2]=item.dateRetourD></app-forfait-complet>
