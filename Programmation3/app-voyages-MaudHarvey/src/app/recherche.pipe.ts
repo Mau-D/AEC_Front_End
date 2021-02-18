@@ -28,7 +28,7 @@ export class RecherchePipe implements PipeTransform {
           this.calculateDiff(forfait.dateDepartD, forfait.dateRetourD) == 14 ))
         else        
           return forfaits.filter(forfait =>forfait.hotel.nombreEtoiles >= etoile && 
-            forfait.dateDepartD >= departForfait && 
+            new Date(forfait.dateDepartD) >= new Date(departForfait) && 
             this.calculateDiff(forfait.dateDepartD, forfait.dateRetourD) == dureeForfait)
         
     }

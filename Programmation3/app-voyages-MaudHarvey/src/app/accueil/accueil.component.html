@@ -1,24 +1,27 @@
 <!-- Composant accueil, contenant les forfaits vedettes et la liste des forfaits sous forme de gridList -->
 
 <div class="banniere">
-    <div class="texteBanniere">
-        <h2>Nom de l'agence de voyage</h2>
-        <div class="criteres">
+  
+        
+        <div class="imgAccueil">
+            <!-- image -->
+        </div>
+
+        <!--<div class="criteres">
             <h3>Critères de recherche</h3>
             <p>Date de Départ: {{formulaire.dateDepart}}</p>
             <p>Durée: {{formulaire.duree}}</p>
             <p>Nombre d'étoiles : {{formulaire.nbrEtoiles}}</p>
             <p>Caractéristiques de l'hôtel: <span *ngFor="let item of formulaire.caracHotel">{{item}}, </span></p>
 
-        </div>
-    </div>
+        </div>-->
+   
 </div>
 <!-- Contenu de la page, 100% de la largeur, contenant la section recherche et page -->
 <div class="contenuPage">
     <div id="sectionRecherche">
         <!-- Pour la section pour le bouton de recherche -->
         <div id="boutonRecherche">
-            <h3>Rechercher</h3>
             <button mat-button (click)="sidenav.toggle()">
                 <i class="material-icons">arrow_forward</i>
             </button>

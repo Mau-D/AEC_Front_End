@@ -14,13 +14,12 @@
 /*div des card pour le mini-forfait et les grid-list des forfaits complets*/
 .child-css {
   height: 100%;
-
   width: 98%;
 }
 
 /*grid-list des forfaits vedettes en mini*/
 .espaceMini {
-  background-image: url(../../assets/img/star.jpg);
+  background-color: #50502e;
   height: 100%;
 }
 /*grid-list des forfaits complets*/
@@ -31,32 +30,41 @@
 /*élément d-flex de la section contenuPage*/
 #sectionRecherche {
   align-self: auto;
-  width: 7%;
-  background-color: #fbf8f9;
+  width: 3vw;
+  background-color: #fffcf6;
   opacity: 0.9;
 }
 /*section */
 /*élément d-flex de la section contenuPage*/
 .sectionPage {
   align-self: auto;
-  width: 93%;
+  width: 100%;
 }
-#boutonRecherche {
+#boutonRecherche i {
+  bottom: 0;
+  left: 0;
   align-self: start;
   width: auto;
   position: fixed;
+  padding-bottom: 50vh;
 }
 
-.criteres {
+/*.criteres {
   border: solid grey 2px;
-}
+}*/
 /*Bannière*/
 .banniere {
-  height: 60vh;
+  height: 100vh;
+  padding-left: 3vw;
+  background-color: #fffcf6;
+}
+.banniere .imgAccueil {
   background-image: url("../../assets/img/polynesia.jpg");
   background-size: cover;
   background-position: center;
-  background-color: #cccccc;
+  background-color: #fffcf6;
+  width: 94vw;
+  height: 90vh;
 }
 /*L'emplacement du formulaire de recherche est en position fixed pour être toujours accessible*/
 .mat-drawer {
@@ -65,16 +73,15 @@
 }
 /*Centrer la section dans la bannière*/
 .texteBanniere {
-  color: white;
+  color: black;
+  text-shadow: white 0.1em 0.1em 0.2em;
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%; /* à 50%/50% du parent référent */
   transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
 }
-/*Centrer le texte de la bannière*/
-.texteBanniere h2 {
-  text-align: center;
-}
+
 /*Enlever la barre de défilement verticale de la section mat-drawer-cointent*/
 .mat-drawer-content {
   height: 100%;

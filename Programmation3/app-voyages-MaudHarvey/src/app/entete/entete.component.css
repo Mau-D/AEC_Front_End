@@ -1,7 +1,24 @@
 .navbar {
   justify-content: space-between;
+  height: 20vh;
 }
 a {
   padding-right: 1rem;
   padding-left: 1rem;
+  color: grey;
+  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
+}
+.logo a {
+  color: grey;
+  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
+}
+.logo img {
+  padding-top: 5vh;
+  height: 10vh;
+}
+a:link {
+  text-decoration: none;
+}
+mat-toolbar {
+  background-color: #fffcf6;
 }
