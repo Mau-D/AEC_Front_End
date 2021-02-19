@@ -12,17 +12,16 @@ import { VoyagesService } from '../voyages.service';//Service
 
 export class ChartLineComponent implements OnInit {
 //variable des données de l'API des réservations
-  
   reservations: Reservation[];
   //variable pour les dates
-  janvier: Array<number>=[];
-
+  janvier: Array<number> = [];
   decembre: Array<number>=[];
-
+ 
+  
   public lineChartData: ChartDataSets[] = [
     { data: this.decembre, label: 'Décembre' },{ data: this.janvier, label: 'Janvier' }
   ];
-  public lineChartLabels: Label[] = ['1er', '2', '3', '4', '5', '6', '7','8', '9', '10'];
+  public lineChartLabels: Label[] = ['1er', '2', '3', '4', '5', '6', '7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'];
   
   public lineChartColors: Color[] = [
     {
@@ -39,121 +38,51 @@ export class ChartLineComponent implements OnInit {
   public lineChartPlugins = [];
 //Fonction pour le calcul de réservations par date, enté ensuite dans les tableaux pour le graphiques
   calculReservationsTable() {
-    
-   console.log('fonction decembre Table');
-   //Mois de janvier
-    let janv1: number =0;
-    let janv2: number =0;
-    let janv3: number =0;
-    let janv4: number =0;
-    //Mois de décembre
-      let dec1: number =0;
-    let dec2: number =0;
-    let dec3: number =0;
-    let dec4: number =0;
-    let dec5: number =0;
-    let dec6: number =0;
-    let dec7: number =0;
-    let dec8: number =0;
-    let dec9: number =0;
-    let dec10: number =0;
   
-
+   console.log('fonction date vs reservations');  
    let tableauRes = this.reservations;
+    let tabJanvier: Array<number> = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    let tabDecembre: Array<number> = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     tableauRes.forEach(element => {
       let dateForfait: Date = new Date(element.dateReservation);
-      //Mois de janvier
-      if( dateForfait.getMonth() === 0){
-        
-        if(dateForfait.getDate() === 1){
-          janv1++;
-        }
-        else if(dateForfait.getDate() === 2){
-          janv2++;
-        }
-        else if(dateForfait.getDate() === 3){
-          janv3++;
-        }
-        else if(dateForfait.getDate() === 4){
-          janv4++;
-        }
-      }
-      //Mois de décembre
-      else if( dateForfait.getMonth() === 11){
+   
      
-        if(dateForfait.getDate() === 1){
-          dec1++;
-        }
-        else if(dateForfait.getDate() === 2){
-          dec2++;
-        }
-        else if(dateForfait.getDate() === 3){
-          dec3++;
-        }
-        else if(dateForfait.getDate() === 4){
-          dec4++;
-        }
-        else if(dateForfait.getDate() === 5){
-          dec5++;
-        }
-        else if(dateForfait.getDate() === 6){
-          dec6++;
-        }
-        else if(dateForfait.getDate() === 7){
-          dec7++;
-        }
-        else if(dateForfait.getDate() === 8){
-          dec8++;
-        }
-        else if(dateForfait.getDate() === 9){
-          dec9++;
-        }
-        else if(dateForfait.getDate() === 10){
-          dec10++;
-        }
-       
-        
-      }
-
+     for(let i:number=0; i<31;i++){
+       //Janvier getMonth=0
+       if( dateForfait.getMonth() === 0){
+         if(dateForfait.getDate() === i+1){
+           tabJanvier[i]++
+          this.janvier[i]=tabJanvier[i]
+          console.log('janvier' + i)
+         }
+       }
+       //Décembre getMonth=11
+       else if( dateForfait.getMonth() === 11){
+         if(dateForfait.getDate() === i+1){
+           tabDecembre[i]++
+          this.decembre[i]=tabDecembre[i]
+         }
+       }
       
-    //J'ai réussi à récupérer les données de l'API
+     }
+    
+   
     });
    
-    //Entrer les données dans le tableau mois de janvier
-      this.janvier.push(janv1);
-      this.janvier.push(janv2);
-      this.janvier.push(janv3);
-      this.janvier.push(janv4);
-
-      //Entrer les données dans le tableau mois de décembre
-
-      this.decembre.push(dec1);
-      this.decembre.push(dec2);
-      this.decembre.push(dec3);
-      this.decembre.push(dec4);
-      this.decembre.push(dec5);
-      this.decembre.push(dec6);
-      this.decembre.push(dec7);
-      this.decembre.push(dec8);
-      this.decembre.push(dec9);
-      this.decembre.push(dec10);
-
-      
-      console.log(this.decembre);
-      return this.decembre;
-  };
- 
+      console.log("tableau Janvier" + tabJanvier);
+      console.log("tableau Décembre" + tabDecembre);
      
-   
- 
-  
-  constructor(private voyagesService: VoyagesService) {
- 
-   }
-  ngOnInit(): void {
+  };
+
+    ngOnInit(): void {
     this.getReservations();
+  
+  } 
    
-  }
+  constructor(private voyagesService: VoyagesService) {
+    
+   }
+  
  //Fonction qui récupère les données de l'API
  //Le code est modifié pour permettre l'attente des de la réponse de l'API avant de continuer les autres lignes de code en dessous
   getReservations(): void {

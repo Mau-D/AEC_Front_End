@@ -1,3 +1,7 @@
+
+
+
+  
 import { Component, OnInit, Input, Inject } from '@angular/core';
 //Importations pour le input avec autocomplete
 import { FormControl } from '@angular/forms';
@@ -113,3 +117,4 @@ export class FormulaireForfaitComponent implements OnInit {
   }
   
 }
+

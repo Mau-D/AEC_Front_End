@@ -147,7 +147,8 @@
     <!-- Caractéristiques de l'hôtel -->
     <mat-grid-tile [colspan]="2" [rowspan]="3">
         <section class="sectionCheck">
-            <mat-checkbox class="checkCaract example-margin"  name="caracteristiques"  *ngFor="let item of caracHotel" value={{item}} [ngModel]="caracteristiques" (ngModelChange)="changeCaracteristiques($event, item)">{{item}}
+            <mat-checkbox class="checkCaract example-margin" name="caracteristiques" *ngFor="let item of caracHotel"
+                value={{item}} [ngModel]="caracteristiques" (ngModelChange)="changeCaracteristiques($event, item)">{{item}}
             </mat-checkbox>
         </section>
     </mat-grid-tile>

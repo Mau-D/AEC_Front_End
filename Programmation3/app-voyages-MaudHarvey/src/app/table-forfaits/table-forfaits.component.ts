@@ -22,7 +22,7 @@ export class TableForfaitsComponent implements OnInit {
   columnsToDisplay = ['dateDepart','dateRetour','nomHotel','prix', 'actions'];
   //Variable pour l'ajout d'un nouveau forfait
   newForfait: Forfait;
-  newCarac: Array<string>;
+ 
  //Variable de l'élément sélectionné
   selectedForfait: Forfait;
  //Ajouter le service dans l'argument du constructeur
@@ -33,6 +33,7 @@ export class TableForfaitsComponent implements OnInit {
   ngOnInit(): void {
     //Initialise l'objet newForfait
     this.newForfait = {_id: null, destination:'', villeDepart:'', hotel: {nom:'', coordonnees:'', nombreEtoiles:0, nombreChambres:0, caracteristiques: []}, dateDepartD: null, dateRetourD: null, prix: 0, rabais: 0, vedette: false, da:'1996416'};
+
     //Appelle de la fonction à l'ouverture de la page, importe les infos
     this.getVoyages();
   }
@@ -80,7 +81,6 @@ export class TableForfaitsComponent implements OnInit {
       width: '80%',
       height: '80%',
       data: this.selectedForfait, 
-      
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
