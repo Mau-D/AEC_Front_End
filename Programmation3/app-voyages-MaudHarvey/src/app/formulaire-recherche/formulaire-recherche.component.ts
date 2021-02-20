@@ -2,7 +2,6 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Formulaire } from '../formulaire';
 import { dureeTableau } from '../mock-durees';
 import { caracTableau } from '../mock-caracHotel';
-import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 
 @Component({
   selector: 'app-formulaire-recherche',
@@ -38,7 +37,8 @@ export class FormulaireRechercheComponent implements OnInit {
 
 
   ngOnInit() {
-  
+    //Initialiser la valeur du nombre d'étoiles
+  this.formulaire.nbrEtoiles = 0;
    
   }
  

@@ -34,8 +34,10 @@ import { VoyagesService } from './voyages.service';//Fichier pour le service
 //Importations des pipes
 import { ForfaitVedettePipe } from './forfait-vedette.pipe';
 import { ForfaitsToutSudPipe } from './forfaits-tout-sud.pipe';
-import { RecherchePipe } from './recherche.pipe';
 import { ForfaitExplorateurPipePipe } from './forfait-explorateur-pipe.pipe';
+import { RechercheEtoilePipe } from './recherche-etoile.pipe';
+import { RechercheDepartPipe } from './recherche-depart.pipe';
+import { RechercheDureePipe } from './recherche-duree.pipe';
 
 
 
@@ -72,6 +74,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -91,9 +94,11 @@ import {MatDialogModule} from '@angular/material/dialog';
     TableForfaitsComponent,
     ForfaitsToutSudPipe,
     ChartLineComponent,
-    RecherchePipe,
     ForfaitExplorateurPipePipe,
     ChartPieComponent,
+    RechercheEtoilePipe,
+    RechercheDepartPipe,
+    RechercheDureePipe,
     
   ],
   
