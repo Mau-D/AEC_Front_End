@@ -21,8 +21,8 @@ export class RechercheDepartPipe implements PipeTransform {
         //Date supérieure à aujourd'hui, afficher les forfaits avec une date supérieure
         //Voir pour mettre les dates égales
       if(formDepart > today){
-        //Utiliser .getTime() pour comparer ==  deux dates ensembles
-        return forfaits.filter(forfait => (new Date(forfait.dateDepartD).getTime() == formDepart.getTime()))
+        //Utiliser .getTime() pour comparer ===  deux dates ensembles
+        return forfaits.filter(forfait => (new Date(forfait.dateDepartD).getTime() === formDepart.getTime()))
       }
       //Pour la date d'aujourd'hui, valeur par défaut, retourner tout les forfaits
       else{

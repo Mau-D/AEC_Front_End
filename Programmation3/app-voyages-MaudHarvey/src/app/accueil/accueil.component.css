@@ -6,8 +6,6 @@
 /*Affichage complet de la page*/
 /*display-flex pour afficher un à côté de l'autre les sections recherche et page*/
 .contenuPage {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -20,12 +18,11 @@
 /*grid-list des forfaits vedettes en mini*/
 .espaceMini {
   background-color: #50502e;
-  height: 100%;
 }
 /*grid-list des forfaits complets*/
-.espaceGrand {
-  height: 100%;
-}
+/*.espaceGrand {
+  min-height: 100%;
+}*/
 /*Section contenant le bouton de recherche donnant accès au contenu secondaire du sidenav*/
 /*élément d-flex de la section contenuPage*/
 #sectionRecherche {
@@ -39,6 +36,7 @@
 .sectionPage {
   align-self: auto;
   width: 100%;
+  min-height: 100%;
 }
 #boutonRecherche i {
   bottom: 0;
@@ -83,6 +81,6 @@
 }
 
 /*Enlever la barre de défilement verticale de la section mat-drawer-cointent*/
-.mat-drawer-content {
-  height: 100%;
+.mat-drawer-content::-webkit-scrollbar {
+  display: none;
 }
