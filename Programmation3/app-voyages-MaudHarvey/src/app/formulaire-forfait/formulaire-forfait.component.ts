@@ -11,6 +11,7 @@ import { caracTableau } from '../mock-caracHotel';
 //Importations pour le dialog
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Forfait } from '../forfait';
+import { ForfaitCompletComponent } from '../forfait-complet/forfait-complet.component';
 
 
 
@@ -32,9 +33,10 @@ export class FormulaireForfaitComponent implements OnInit {
   prix: number;
   rabais: number;
   caracteristiques: string;
-  tableauCarac: string[] =[];
+  tableauCarac: string[]=this.selectedForfait.hotel.caracteristiques ;
   //Variables pour afficher les caractéristiques de l'hôtel
   caracHotel: string[]= caracTableau;
+  
   
   //Variable pour la date minimum de la date de départ, aujourd'hui
   minDateDepart: Date= new Date;
@@ -57,6 +59,19 @@ export class FormulaireForfaitComponent implements OnInit {
   onAnnulerClick(): void {
     this.dialogRef.close();
   }
+  //État initial des checkbox, du forfait sélectionné
+  checkState(i){
+    let tab: Array<string> = this.tableauCarac;
+    console.log("fonction checkState" + this.tableauCarac)
+    let index:number = tab.indexOf(i);
+      console.log("index" + index);
+      console.log("i = " + i);
+      if(index != -1){
+        console.log("true")
+        return true;
+    }
+    
+  }
 //Pour les caractéristiques de l'hotel
   changeCaracteristiques(e, valeur) {
     console.log('valeur:' + valeur + 'état: ' + e)
@@ -76,15 +91,16 @@ export class FormulaireForfaitComponent implements OnInit {
   
   constructor(
     public dialogRef: MatDialogRef<FormulaireForfaitComponent>, 
-    //Rend accessible la valeur du nouveau forfait
-    @Inject(MAT_DIALOG_DATA) public newForfait: Forfait) {
-      
-     }
+     public dialogRef2: MatDialogRef<FormulaireForfaitComponent>, 
     
-     
-  
+    //Rend accessible la valeur du nouveau forfait au parent
+    @Inject(MAT_DIALOG_DATA) public newForfait: Forfait,
+     @Inject(MAT_DIALOG_DATA) public selectedForfait: Forfait
+    ) {}
    
+    
   ngOnInit() {
+    
   //Ces variables prend la valeur entrée dans le champ et fait un map sur le tableau 
   //Pour les destinations
     this.filteredDestinations = this.destinationControl.valueChanges.pipe(
@@ -99,12 +115,12 @@ export class FormulaireForfaitComponent implements OnInit {
     );
    
   }
-  
+   
   //Pour la destination
 //Prend la valeur d'entrée, en minuscule
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-//retourne les résultats, modifié en minuscule, qui incluent la valeur d'entrée
+  //retourne les résultats, modifié en minuscule, qui incluent la valeur d'entrée
     return this.destinations.filter(option => option.toLowerCase().includes(filterValue));
   }
   //Pour la ville de départ

@@ -80,7 +80,7 @@ export class TableForfaitsComponent implements OnInit {
       const dialogRef = this.dialog.open(FormulaireForfaitComponent, {
       width: '80%',
       height: '80%',
-      data: this.selectedForfait, 
+      data: this.selectedForfait
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
