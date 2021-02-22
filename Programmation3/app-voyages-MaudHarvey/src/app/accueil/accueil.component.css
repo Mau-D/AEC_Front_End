@@ -17,12 +17,14 @@
 
 /*grid-list des forfaits vedettes en mini*/
 .espaceMini {
-  background-color: #50502e;
+  padding-top: 10%;
+  background-image: url("../../assets/img/polynesia.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
-/*grid-list des forfaits complets*/
-/*.espaceGrand {
-  min-height: 100%;
-}*/
+
 /*Section contenant le bouton de recherche donnant accès au contenu secondaire du sidenav*/
 /*élément d-flex de la section contenuPage*/
 #sectionRecherche {
@@ -53,16 +55,34 @@
 /*Bannière*/
 .banniere {
   height: 100vh;
-  padding-left: 3vw;
+  background: rgba(76, 175, 80, 0);
   background-color: #fffcf6;
 }
-.banniere .imgAccueil {
+.imgAccueil {
   background-image: url("../../assets/img/polynesia.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center;
-  background-color: #fffcf6;
-  width: 94vw;
-  height: 90vh;
+  width: 97vw;
+  height: 100vh;
+  position: relative;
+}
+.vedetteTexte {
+  background-color: black;
+  color: white;
+  width: 30vw;
+  height: 10vw;
+  bottom: 0;
+  position: absolute;
+  margin-left: 2%;
+}
+.forfaitTexte {
+  background-color: black;
+  color: white;
+  width: 30vw;
+  height: 10vw;
+  margin: 2%;
 }
 /*L'emplacement du formulaire de recherche est en position fixed pour être toujours accessible*/
 .mat-drawer {

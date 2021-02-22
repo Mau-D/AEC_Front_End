@@ -1,11 +1,9 @@
 <!-- Composant accueil, contenant les forfaits vedettes et la liste des forfaits sous forme de gridList -->
 
-<div class="banniere">
+
   
         
-        <div class="imgAccueil">
-            <!-- image -->
-        </div>
+      
 
         <!--<div class="criteres">
             <h3>Critères de recherche</h3>
@@ -16,7 +14,7 @@
 
         </div>-->
    
-</div>
+
 <!-- Contenu de la page, 100% de la largeur, contenant la section recherche et page -->
 <div class="contenuPage">
     <div id="sectionRecherche">
@@ -29,22 +27,38 @@
     </div>
     <!-- Pour la section pour le bouton de recherche -->
     <div class="sectionPage">
+        
         <mat-drawer-container>
+            
             <mat-drawer #sidenav mode="side">
                 <button mat-button (click)="sidenav.toggle()">Fermer <i class="material-icons">arrow_back</i></button>
                 <app-formulaire-recherche [(formulaire)]="formulaire"></app-formulaire-recherche>
             </mat-drawer>
 
             <mat-drawer-content>
-                <!-- Filtre pour afficher seulement les forfaits vedettes en mini avec ForfaitVedettePipe, dans le haut -->
-                <mat-grid-list cols="9" rowHeight="7rem" class="espaceMini">
-                    <mat-grid-tile [colspan]="3" [rowspan]="3" *ngFor="let forfait of forfaits | PipeForfaitVedette">
-                        <app-forfait-mini class="child-css" [proprietesForfait]=forfait [date1]=forfait.dateDepartD [date2]=forfait.dateRetourD></app-forfait-mini>
-                    </mat-grid-tile>
-                </mat-grid-list>
-
+                <div class="banniere">
+                    <div class="imgAccueil">
+                    <div class="vedetteTexte">
+                        <p>Nos forfaits vedettes</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="espaceMini">
+                    <!-- Filtre pour afficher seulement les forfaits vedettes en mini avec ForfaitVedettePipe, dans le haut -->
+                    <mat-grid-list cols="9" rowHeight="7rem">
+                        <mat-grid-tile [colspan]="3" [rowspan]="3" *ngFor="let forfait of forfaits | PipeForfaitVedette">
+                            <app-forfait-mini class="child-css" [proprietesForfait]=forfait [date1]=forfait.dateDepartD
+                                [date2]=forfait.dateRetourD></app-forfait-mini>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </div>
+                
+                <div class="forfaitTexte">
+                    <p>Tous nos forfaits vedettes</p>
+                </div>
+              <div class="espaceGrand">
                 <!-- Afficher tous les forfaits avec toutes le informations séparés d'un diviseur, les forfaits complets sont placés sous les forfaits vedettes -->
-                <mat-grid-list cols="9" rowHeight="8rem" class="espaceGrand">
+                <mat-grid-list cols="9" rowHeight="8rem" >
                     <mat-list>
                         <mat-list-item *ngFor="let item of forfaits | rechercheDuree :formulaire.duree| rechercheDepart :formulaire.dateDepart | rechercheEtoile :formulaire.nbrEtoiles">
                             <mat-grid-tile [colspan]="9" [rowspan]="9">
@@ -55,6 +69,7 @@
                         </mat-list-item>
                     </mat-list>
                 </mat-grid-list>
+            </div>
             </mat-drawer-content>
         </mat-drawer-container>
     </div>
