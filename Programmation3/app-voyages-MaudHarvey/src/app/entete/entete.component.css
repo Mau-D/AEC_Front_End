@@ -11,14 +11,21 @@ a {
 .logo a {
   color: grey;
   text-shadow: #fb8b69 0.1em 0.1em 0.1em;
+  font-family: "Prata", serif;
 }
 .logo img {
   padding-left: 5%;
   height: 10vh;
 }
-a:link {
+a:link,
+button {
+  color: grey;
+  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
   text-decoration: none;
+  font-family: "Prata", serif;
+  font-size: 1.5rem;
 }
+
 mat-toolbar {
   background-color: #d4c4b7;
 }

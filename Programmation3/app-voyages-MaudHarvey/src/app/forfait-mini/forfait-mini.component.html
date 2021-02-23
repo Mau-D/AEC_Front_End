@@ -5,22 +5,23 @@
 <!-- Sinon, vous pouvez utiliser, <mat-card *ngIf="proprietesForfait.forfaitVedette">, dans ce composant -->
 
 <mat-card class="couleurVedette">
-    <mat-grid-list cols="2" rowHeight="2rem">
-        <mat-grid-tile>
-            <h3>{{proprietesForfait.destination}},  De {{proprietesForfait.villeDepart}}</h3>
+    <mat-grid-list cols="2" rowHeight="3rem">
+        <mat-grid-tile [colspan]="2">
+            <h3><span class="titre">{{proprietesForfait.destination}}</span>,  de {{proprietesForfait.villeDepart}}</h3>
         </mat-grid-tile>
+        <mat-grid-tile></mat-grid-tile><!-- espace -->
         <!-- Affichage des rabais sur trois rangées, rabais, prix barré et nouveau prix -->
         <!-- Rabais, est une propriété optionnelle, ajouter la condition >0 pour l'affichage  -->
         <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0; else elseRabais">
-            <h4>Rabais de {{proprietesForfait.rabais}}, 00$</h4><!-- Rabais -->
+            <h4 class="accent">Rabais de {{proprietesForfait.rabais}}, 00$</h4><!-- Rabais -->
         </mat-grid-tile>
         <ng-template #elseRabais>
             <mat-grid-tile [rowspan]="4" class="prix">
-                <h4>{{proprietesForfait.prix}}, 00$</h4>
+                <h4 class="accent">{{proprietesForfait.prix}}, 00$</h4>
             </mat-grid-tile>
         </ng-template>
         <mat-grid-tile [rowspan]="2">
-            <h4>{{proprietesForfait.hotel.nom}}</h4>
+            <h4 class="cursive">{{proprietesForfait.hotel.nom}}</h4>
         </mat-grid-tile>
         <!-- Si le rabais s'applique, afficher avec un style pour barrer le prix -->
         <mat-grid-tile  [rowspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0">
@@ -32,7 +33,7 @@
         </mat-grid-tile>
         <!-- Calcul du nouveau prix -->
         <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0">
-            <h4>{{proprietesForfait.prix - proprietesForfait.rabais}}, 00$</h4><!-- Nouveau prix -->
+            <h4 class="accent">{{proprietesForfait.prix - proprietesForfait.rabais}}, 00$</h4><!-- Nouveau prix -->
         </mat-grid-tile>
         <!-- Le format de la date est complète, local: Greenwich  et en français-->
         <!-- Calcul de la durée du forfait à partir de la date de départ et de retour -->

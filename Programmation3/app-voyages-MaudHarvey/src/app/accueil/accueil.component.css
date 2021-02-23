@@ -28,7 +28,7 @@
 
 /*grid-list des forfaits vedettes en mini*/
 .espaceMini {
-  padding-top: 10%;
+  padding: 2%;
   background-image: url("../../assets/img/banniere.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -94,24 +94,22 @@
 }
 .vedetteTexte,
 .forfaitTexte {
-  background-color: black;
   padding: 2%;
   text-align: left;
   color: white;
-  width: 30vw;
-  height: 100%;
   bottom: 0;
   margin-left: 2%;
 }
 .titre {
   font-family: "Oi", cursive;
-  font-size: 2em;
+  font-size: 2.5rem;
   margin: 1%;
   height: 100%;
   line-height: 1.5;
+  text-shadow: grey 0.1em 0.1em 0.1em;
 }
 .vedetteTexte {
-  height: 50vh;
+  height: 20vh;
   position: absolute;
 }
 /*L'emplacement du formulaire de recherche est en position fixed pour être toujours accessible*/

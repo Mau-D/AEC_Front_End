@@ -50,9 +50,6 @@
         <mat-grid-tile>
                 <h2>Caractéristiques de l'hôtel</h2>
         </mat-grid-tile>
-            <mat-grid-tile>
-                <!-- espace -->
-            </mat-grid-tile>
         <mat-grid-tile [rowspan]="4">
             <form class="sectionCheck"  >
                 <mat-checkbox class="checkCaract" name="caracHotel" *ngFor="let item of caracHotel" value={{item}} [ngModel]="caracteristiques" (ngModelChange)="changeCaracteristiques($event, item)">{{item}} </mat-checkbox>

@@ -1,9 +1,34 @@
-.mat-card {
+mat-card {
   margin: 2%;
+}
+mat-grid-list {
+  margin: 2%;
+  height: 100%;
+}
+h3,
+h4 {
+  font-size: 1.2rem;
+  font-family: "Prata", serif;
+}
+.cursive {
+  font-family: "Satisfy", cursive;
+  font-size: 1.5rem;
+}
+.titre {
+  font-family: "Oi", cursive;
+  font-size: 1.5rem;
+  text-shadow: grey 0.1em 0.1em 0.1em;
+}
+
+.accent {
+  color: #077771;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: whitesmoke 0.1em 0.1em 0.1em;
 }
 /*Mise en forme ajoutée pour les forfaits vedettes, appliquer au mini-forfait et aux forfaits complets en vedette*/
 .couleurVedette {
   border: solid 2px black;
-  box-shadow: 4px 4px 20px 5px rgba(7, 119, 113, 0.8);
+  box-shadow: 1px 1px 12px 5px rgba(7, 119, 113, 0.8);
   background: linear-gradient(rgba(255, 255, 255), rgba(158, 182, 158));
 }
