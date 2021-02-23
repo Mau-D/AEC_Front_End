@@ -29,6 +29,6 @@ h4 {
 /*Mise en forme ajoutée pour les forfaits vedettes, appliquer au mini-forfait et aux forfaits complets en vedette*/
 .couleurVedette {
   border: solid 2px black;
-  box-shadow: 1px 1px 12px 5px rgba(7, 119, 113, 0.8);
+  box-shadow: 1px 1px 12px 5px rgba(224, 194, 129, 0.8);
   background: linear-gradient(rgba(255, 255, 255), rgba(158, 182, 158));
 }
