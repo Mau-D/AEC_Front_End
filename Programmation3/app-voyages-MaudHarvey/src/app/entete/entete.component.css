@@ -13,12 +13,12 @@ a {
   text-shadow: #fb8b69 0.1em 0.1em 0.1em;
 }
 .logo img {
-  padding-top: 5vh;
+  padding-left: 5%;
   height: 10vh;
 }
 a:link {
   text-decoration: none;
 }
 mat-toolbar {
-  background-color: #fffcf6;
+  background-color: #d4c4b7;
 }

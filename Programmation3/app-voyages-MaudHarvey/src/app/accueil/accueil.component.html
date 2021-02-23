@@ -1,9 +1,6 @@
 <!-- Composant accueil, contenant les forfaits vedettes et la liste des forfaits sous forme de gridList -->
 
 
-  
-        
-      
 
         <!--<div class="criteres">
             <h3>Critères de recherche</h3>
@@ -30,7 +27,7 @@
         
         <mat-drawer-container>
             
-            <mat-drawer #sidenav mode="side">
+            <mat-drawer #sidenav mode="side" autosize>
                 <button mat-button (click)="sidenav.toggle()">Fermer <i class="material-icons">arrow_back</i></button>
                 <app-formulaire-recherche [(formulaire)]="formulaire"></app-formulaire-recherche>
             </mat-drawer>
@@ -39,7 +36,7 @@
                 <div class="banniere">
                     <div class="imgAccueil">
                     <div class="vedetteTexte">
-                        <p>Nos forfaits vedettes</p>
+                        <h1 class="titre">Nos forfaits vedettes</h1>
                     </div>
                     </div>
                 </div>
@@ -53,12 +50,12 @@
                     </mat-grid-list>
                 </div>
                 
-                <div class="forfaitTexte">
-                    <p>Tous nos forfaits vedettes</p>
+                <div class="forfaitTexte titre">
+                    <h1 class="titre">Tous nos forfaits</h1>
                 </div>
               <div class="espaceGrand">
                 <!-- Afficher tous les forfaits avec toutes le informations séparés d'un diviseur, les forfaits complets sont placés sous les forfaits vedettes -->
-                <mat-grid-list cols="9" rowHeight="8rem" >
+                <mat-grid-list cols="9" rowHeight="9rem" >
                     <mat-list>
                         <mat-list-item *ngFor="let item of forfaits | rechercheDuree :formulaire.duree| rechercheDepart :formulaire.dateDepart | rechercheEtoile :formulaire.nbrEtoiles">
                             <mat-grid-tile [colspan]="9" [rowspan]="9">

@@ -2,12 +2,23 @@
 /*Maud Harvey*/
 /*2 décembre 2020*/
 /*Affichage de la liste des forfaits, mini et complet*/
-
 /*Affichage complet de la page*/
 /*display-flex pour afficher un à côté de l'autre les sections recherche et page*/
 .contenuPage {
   display: flex;
   flex-direction: row;
+  background-color: #d4c4b7;
+}
+.mat-drawer-content {
+  padding-right: 5%;
+}
+.mat-grid-list {
+  min-height: 100%;
+  width: auto;
+}
+.mat-drawer-container {
+  background-color: #d4c4b7;
+  width: auto;
 }
 /*div des card pour le mini-forfait et les grid-list des forfaits complets*/
 .child-css {
@@ -18,19 +29,31 @@
 /*grid-list des forfaits vedettes en mini*/
 .espaceMini {
   padding-top: 10%;
-  background-image: url("../../assets/img/polynesia.jpg");
+  background-image: url("../../assets/img/banniere.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+.espaceGrand {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("../../assets/img/mountain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
 }
 
 /*Section contenant le bouton de recherche donnant accès au contenu secondaire du sidenav*/
 /*élément d-flex de la section contenuPage*/
 #sectionRecherche {
   align-self: auto;
-  width: 3vw;
-  background-color: #fffcf6;
+  width: 5%;
+  background-color: #d4c4b7;
   opacity: 0.9;
 }
 /*section */
@@ -39,6 +62,7 @@
   align-self: auto;
   width: 100%;
   min-height: 100%;
+  background-color: #d4c4b7;
 }
 #boutonRecherche i {
   bottom: 0;
@@ -56,36 +80,43 @@
 .banniere {
   height: 100vh;
   background: rgba(76, 175, 80, 0);
-  background-color: #fffcf6;
+  background-color: #d4c4b7;
 }
 .imgAccueil {
-  background-image: url("../../assets/img/polynesia.jpg");
+  background-image: url("../../assets/img/banniere.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  width: 97vw;
+  padding-right: 5%;
   height: 100vh;
   position: relative;
 }
-.vedetteTexte {
-  background-color: black;
-  color: white;
-  width: 30vw;
-  height: 10vw;
-  bottom: 0;
-  position: absolute;
-  margin-left: 2%;
-}
+.vedetteTexte,
 .forfaitTexte {
   background-color: black;
+  padding: 2%;
+  text-align: left;
   color: white;
   width: 30vw;
-  height: 10vw;
-  margin: 2%;
+  height: 100%;
+  bottom: 0;
+  margin-left: 2%;
+}
+.titre {
+  font-family: "Oi", cursive;
+  font-size: 2em;
+  margin: 1%;
+  height: 100%;
+  line-height: 1.5;
+}
+.vedetteTexte {
+  height: 50vh;
+  position: absolute;
 }
 /*L'emplacement du formulaire de recherche est en position fixed pour être toujours accessible*/
 .mat-drawer {
+  width: 30%;
   position: fixed;
   left: 0;
 }

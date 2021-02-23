@@ -1,7 +1,8 @@
 .gridRecherche {
-  min-width: 80vh;
-  left: 0;
+  width: 100%;
+  left: 2%;
 }
+
 .sectionCheck {
   display: flex;
   flex-direction: column;

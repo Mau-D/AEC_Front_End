@@ -3,5 +3,7 @@
 }
 /*Mise en forme ajoutée pour les forfaits vedettes, appliquer au mini-forfait et aux forfaits complets en vedette*/
 .couleurVedette {
-  box-shadow: 4px 4px 20px 5px rgba(255, 229, 112, 0.8);
+  border: solid 2px black;
+  box-shadow: 4px 4px 20px 5px rgba(7, 119, 113, 0.8);
+  background: linear-gradient(rgba(255, 255, 255), rgba(158, 182, 158));
 }
