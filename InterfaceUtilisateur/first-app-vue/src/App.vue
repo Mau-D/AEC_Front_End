@@ -4,7 +4,7 @@
   
     <div >
       <Header></Header>
-    
+      <foo></foo>
       <router-view/>
    
       <footercomponent></footercomponent>
@@ -14,6 +14,8 @@
 <script>
   import Header from "./components/Header.vue";
   import footercomponent from "./components/FooterComponent.vue";
+  import Foo from "./components/Foo.vue";
+
 
   import {TranslateMixin} from "./mixins/TranslateMixin";
 
@@ -24,7 +26,8 @@
     mixins:[TranslateMixin],
     components: {
       Header,
-      footercomponent
+      footercomponent, 
+      Foo
     },
     
   

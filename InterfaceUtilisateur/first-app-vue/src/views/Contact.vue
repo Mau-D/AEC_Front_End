@@ -7,7 +7,7 @@ Maud Harvey
     <div id="pageContact" class="container-fluid">      
         <!-- Dropdown pour le choix de la langue -->
     <div class="dropdown">
-      <button class="dropbtn">Choisir la langue</button>
+      <button class="dropbtn">{{languageChoosen}}</button>
       <div class="dropdown-content">
         <a @click="toggleLanguage(language)" v-for="language in languages" :key="language">{{language}}</a>
       </div>
