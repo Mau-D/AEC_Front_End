@@ -1,15 +1,9 @@
-/*new Vue({
-  data: {
-    message: "Hello Vue.js!",
-  },
-});
-
 //Foo.spec.js
 import { shallowMount } from "@vue/test-utils";
-import Foo from "./components/Foo.vue";
+import Foo from "../../src/components/Foo";
 
 describe("Foo", () => {
-  it("restitue un message et répond correctement à la saisie de l'utilisateur", () => {
+  it("restitue un message et répond correctement à la saisie de l'utilisateur", async () => {
     const wrapper = shallowMount(Foo, {
       data() {
         return {
@@ -26,7 +20,7 @@ describe("Foo", () => {
     expect(wrapper.find(".error").exists()).toBeTruthy();
 
     // met à jour `username` et vérifie que `error` n'est plus restituée
-    wrapper.setData({ username: "Chosebinouche" });
+    await wrapper.setData({ username: "Chosebinouche" });
     expect(wrapper.find(".error").exists()).toBeFalsy();
   });
-});*/
+});
