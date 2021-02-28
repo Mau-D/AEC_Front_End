@@ -3,6 +3,7 @@ Composant login, Connexion d'un utilisateur déjà enregistré
 Maud Harvey
 24 janvier 2021-->
 <template>
+<div id="login">
     <div class="container mx-auto mt-5 linear-gradient">
       <h1>Connexion</h1>
       <div v-if="erreurs.length">
@@ -26,10 +27,11 @@ Maud Harvey
               <input v-model="motDePasse" required type="password" class="form-control" id="motDePasse" aria-describedby="passwordHelp">
               <small id="passwordHelp" class="form-text text-muted">Ne partager pas votre mot de passe</small>
           </div>
-          <button type="submit" class="btn btn-primary mt-5" >Connexion</button>
-          <button type="submit" class="btn btn-primary mt-5" @click.stop.prevent="handleClick(false)">Annuler</button>
+          <button type="submit" class="btn btn-primary m-5" >Connexion</button>
+          <button type="submit" class="btn btn-primary m-5" @click.stop.prevent="handleClick(false)">Annuler</button>
       </form>
     </div>
+  </div>
 </template>
 
 <script>
@@ -84,7 +86,11 @@ Maud Harvey
 </script>
 
 <style scoped>
+  #login{
+    min-height: 100vh;
+  }
   .linear-gradient {
     background: linear-gradient(white,#E56525, #75CCD2,#273370);
   }
+
 </style>

@@ -3,17 +3,17 @@ Composant accueil, page principale
 Maud Harvey
 26 janvier 2021-->
 <template>
-  <div id="accueil" class="container-fluid vh-100">
-    <div class="row h-50">
-      <div class="col-sm-6 h-100">
-          <img class="img-fluid ombre z1g mx-1 mx-sm-5 my-5 h-100 w-75" src="../assets/img/accueil-image.jpg"  alt="surf">                                       
+  <div id="accueil" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+          <img class="img-fluid ombre z1g mx-1 mx-sm-5 my-5 w-75" src="../assets/img/accueil-image.jpg"  alt="surf">                                       
           <div id="textSlogan" class="text-light z2g text-center pt-3">
               <h1>SURF = mon mode de vie</h1>
           </div>
       </div>
-      <div class="offset-sm-1 col-sm-5 h-100">
+      <div class="offset-sm-1 col-sm-5">
       <!-- Texte de bienvenue -->
-          <div class="z1d text-justify p-1 mx-1 mx-sm-5 my-5 h-100 w-75 p-5">
+          <div class="z1d text-justify p-1 mx-1 mx-sm-5 my-5 w-75 p-5">
               <h1 class="text-center">Surf Spirit</h1>
               <p> Notre mission, vous faire connaître la liberté que nous offre les flots de l'eau.
                   La sensation des vagues qui battent au même rythme de votre coeur.
@@ -27,16 +27,12 @@ Maud Harvey
       </div> 
     </div>
     
-    <div class="row" id="logo">
-        
-        <div class="offset-sm-4 col-sm-4 h-100 text-center rotation"  >
-            <img   @click="update(true)" class="img-fluid rotationY" src="../assets/img/logo-surf.png" title="Cliquez" alt="surf">                        
-        </div>
-        <div class="col-sm-4">                
-        </div>
+    <div class="row" id="logo">   
+      <col class=" col-sm-12">
+            <img @click="update(true)" class="img-fluid mx-auto" src="../assets/img/logo-surf.png" title="Cliquez" alt="surf">                        
+      <col> 
+       
     </div>
-  
-
     <div class="row">
         <div class="offset-sm-3 col-sm-6 text-center">
             <h1>Nos points forts</h1>
@@ -47,14 +43,18 @@ Maud Harvey
                 <li>Tester nos produits</li>
             </ul>
         </div>  
-      
     </div>
-    <apropos 
+  
+     <apropos 
       v-if="showModal" 
       @update-show-modal="update" 
      >
     </apropos>
+   
   </div>
+
+   
+  
 </template>
 
 <script>
@@ -81,15 +81,11 @@ Maud Harvey
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   /*****Page d'accueil*****/
-  #accueil{
-    min-height: 100vh;
-  }
   #textSlogan {
     background-color: rgba(201, 76, 76, 0.3);
   }
   /*Position image vs texte*/
   .z1g {
-    position: absolute;
     left: 0;
     top: 0;
     z-index: 1;
@@ -119,27 +115,21 @@ Maud Harvey
   .transparency {
     opacity: 0.4;
   }
-  #logo {
-    margin-top: 5%;
-    height: 40%;
+  #logo{
+    height: 20vh;
+  }
+  #logo div{
+    height: 20vh;
   }
   #logo img{
-    height: 90%;
+    height: 100%;
   }
   #logo img:hover{
-    height: 110%;
+    height: 120%;
   }
-  /*Pivoter l'image */
-  .rotation {
-  -ms-transform: rotate(85deg); /* IE 9 */
-  transform: rotate(85deg);  
- }
-  .rotationY {
-  -ms-transform: skewY(20deg); /* IE 9 */
-  transform: skewY(20deg);
- }
  /*Enlever les points de la liste */
  ul{
    list-style-type: none;
  }
+
 </style>
