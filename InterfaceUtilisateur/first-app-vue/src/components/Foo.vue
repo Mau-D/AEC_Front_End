@@ -24,7 +24,7 @@ export default {
 
   computed: {
     error() {
-      return this.username.length < 7;
+      return this.username.trim().length < 7;
     },
   },
 };
