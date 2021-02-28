@@ -38,7 +38,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
-  base: process.env.BASE_URL,
+  base: "/AEC_Front_End/InterfaceUtilisateur/first-app-vue/dist",
   routes,
 });
 
