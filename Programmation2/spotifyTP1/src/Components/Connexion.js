@@ -20,7 +20,7 @@ export class Connexion extends React.Component {
     //Récupérer le nom de l'usager
     this.props.nom(userName);
     //vérifier si le nom et le mot de passe, entrer la valeur dans le props onClick
-    if (userName === "shany" && password === "patate") {
+    if (userName === "nom" && password === "mot de passe") {
       etatConnexion = true;
     } else {
       etatConnexion = false;
@@ -37,7 +37,7 @@ export class Connexion extends React.Component {
             <Form.Group>
               <Form.Control
                 type="text"
-                placeholder="Nom d'utilisateur"
+                placeholder="taper nom"
                 id="nomUtilisateur"
                 className="my-5"
               />
@@ -45,7 +45,7 @@ export class Connexion extends React.Component {
             <Form.Group>
               <Form.Control
                 type="password"
-                placeholder="Mot de passe"
+                placeholder="taper mot de passe"
                 id="motDePasse"
                 className="my-5"
               />

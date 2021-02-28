@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "./static/css/main.e7fc97ca.chunk.css",
-    "main.js": "./static/js/main.8dab159a.chunk.js",
-    "main.js.map": "./static/js/main.8dab159a.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.5281adfe.js",
-    "runtime-main.js.map": "./static/js/runtime-main.5281adfe.js.map",
-    "static/css/2.af3c1da9.chunk.css": "./static/css/2.af3c1da9.chunk.css",
-    "static/js/2.32654917.chunk.js": "./static/js/2.32654917.chunk.js",
-    "static/js/2.32654917.chunk.js.map": "./static/js/2.32654917.chunk.js.map",
+    "main.js": "./static/js/main.c15a7550.chunk.js",
+    "main.js.map": "./static/js/main.c15a7550.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.089159bf.js",
+    "runtime-main.js.map": "./static/js/runtime-main.089159bf.js.map",
+    "static/css/2.43079d8c.chunk.css": "./static/css/2.43079d8c.chunk.css",
+    "static/js/2.c6f2530e.chunk.js": "./static/js/2.c6f2530e.chunk.js",
+    "static/js/2.c6f2530e.chunk.js.map": "./static/js/2.c6f2530e.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.f052f3d12f69583c948950ad8d7d8292.js": "./precache-manifest.f052f3d12f69583c948950ad8d7d8292.js",
+    "precache-manifest.763a403e1eb18fffb71fc882f568b092.js": "./precache-manifest.763a403e1eb18fffb71fc882f568b092.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/2.af3c1da9.chunk.css.map": "./static/css/2.af3c1da9.chunk.css.map",
+    "static/css/2.43079d8c.chunk.css.map": "./static/css/2.43079d8c.chunk.css.map",
     "static/css/main.e7fc97ca.chunk.css.map": "./static/css/main.e7fc97ca.chunk.css.map",
-    "static/js/2.32654917.chunk.js.LICENSE.txt": "./static/js/2.32654917.chunk.js.LICENSE.txt",
+    "static/js/2.c6f2530e.chunk.js.LICENSE.txt": "./static/js/2.c6f2530e.chunk.js.LICENSE.txt",
     "static/media/arcadeFire_thesuburbs.jpg": "./static/media/arcadeFire_thesuburbs.9b95ac0e.jpg",
     "static/media/arrow.png": "./static/media/arrow.f6da7c9f.png",
     "static/media/coeur.png": "./static/media/coeur.222c9e4b.png",
@@ -27,10 +27,10 @@
     "static/media/theBlackKeys_brothers.jpg": "./static/media/theBlackKeys_brothers.50135548.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5281adfe.js",
-    "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.32654917.chunk.js",
+    "static/js/runtime-main.089159bf.js",
+    "static/css/2.43079d8c.chunk.css",
+    "static/js/2.c6f2530e.chunk.js",
     "static/css/main.e7fc97ca.chunk.css",
-    "static/js/main.8dab159a.chunk.js"
+    "static/js/main.c15a7550.chunk.js"
   ]
 }
