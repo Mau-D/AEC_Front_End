@@ -2,7 +2,7 @@
   "name": "first-app-vue",
   "version": "0.1.0",
   "private": false,
-  "homepage": "/AEC_Front_End/InterfaceUtilisateur/first-app-vue/dist/",
+  "homepage": "./",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
