@@ -34,7 +34,7 @@ export class Connexion extends React.Component {
             <Form>
               <Form.Group controlId="password">
                 <Form.Label>Mot de passe</Form.Label>
-                <Form.Control type="password" placeholder="Mot de passe" />
+                <Form.Control type="password" placeholder="taper Alibaba" />
                 <Form.Text className="text-muted">
                   Entrer le mot de passe pour vous connecter
                 </Form.Text>
