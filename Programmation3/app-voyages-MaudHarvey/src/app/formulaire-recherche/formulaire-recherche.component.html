@@ -28,6 +28,7 @@
                     <mat-select required [ngModel]="duree" (ngModelChange)="changeDuree($event)" name="inputDuree"
                         #inputDuree="ngModel">
                         <!-- Les valeurs de durée sont dans le mock-durees -->
+                        <mat-option value="0">Toutes les durées</mat-option><!-- option pour toutes les durées -->
                         <mat-option *ngFor="let val of dureeTableau" value={{val}}>{{val}} jours</mat-option>
                         <mat-option value="180" disabled>180 jours</mat-option><!-- option désactivée -->
                     </mat-select>
@@ -41,7 +42,8 @@
             <div>
                 <mat-label>Nombre d'étoiles</mat-label>
                 <div>
-                    <mat-slider name="nbrEtoiles" [ngModel]="nbrEtoiles" (ngModelChange)="changeNbrEtoiles($event)" min="1" max="5" step="1" thumbLabel tickInterval="1" value="0"></mat-slider> 
+                    <mat-slider name="nbrEtoiles" [ngModel]="nbrEtoiles" (ngModelChange)="changeNbrEtoiles($event)" min="0" max="5" step="1" thumbLabel tickInterval="1" value="0"></mat-slider><br>
+                    <h6>Pour afficher tous les nombres d'étoiles, sélectionner 0</h6>
                 </div>
             </div>
         </mat-grid-tile>
