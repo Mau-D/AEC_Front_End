@@ -42,7 +42,7 @@
                 </div>
                 <div class="espaceMini">
                     <!-- Filtre pour afficher seulement les forfaits vedettes en mini avec ForfaitVedettePipe, dans le haut -->
-                    <mat-grid-list cols="9" rowHeight="9rem">
+                    <mat-grid-list cols="9" rowHeight="12rem">
                         <mat-grid-tile [colspan]="3" [rowspan]="3" *ngFor="let forfait of forfaits | PipeForfaitVedette">
                             <app-forfait-mini class="child-css" [proprietesForfait]=forfait [date1]=forfait.dateDepartD
                                 [date2]=forfait.dateRetourD></app-forfait-mini>

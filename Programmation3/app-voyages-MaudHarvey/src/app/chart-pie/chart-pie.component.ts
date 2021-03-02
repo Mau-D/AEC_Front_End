@@ -19,7 +19,7 @@ export class ChartPieComponent implements OnInit  {
   public pieChartOptions: ChartOptions = {
     responsive: true,
   };
-  public pieChartLabels: Label[] = [['Réservations', 'Sud'], ['Réservations', 'Europe'], ['Réservations', 'Asie'], ['Réservations', 'Grand Nord']];
+  public pieChartLabels: Label[] = [['Sud'], ['Europe'], ['Asie'], ['Grand Nord']];
   public pieChartData: SingleDataSet = this.reservationsDestinationTableau;
   public pieChartType: ChartType = 'pie';
   public pieChartLegend = true;

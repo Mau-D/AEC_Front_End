@@ -5,18 +5,18 @@
 <!-- Sinon, vous pouvez utiliser, <mat-card *ngIf="proprietesForfait.forfaitVedette">, dans ce composant -->
 
 <mat-card class="couleurVedette">
-    <mat-grid-list cols="2" rowHeight="3rem">
-        <mat-grid-tile [colspan]="2">
+    <mat-grid-list cols="3" rowHeight="4rem">
+        <mat-grid-tile [colspan]="3">
             <h3><span class="titre">{{proprietesForfait.destination}}</span>,  de {{proprietesForfait.villeDepart}}</h3>
         </mat-grid-tile>
         <mat-grid-tile></mat-grid-tile><!-- espace -->
         <!-- Affichage des rabais sur trois rangées, rabais, prix barré et nouveau prix -->
         <!-- Rabais, est une propriété optionnelle, ajouter la condition >0 pour l'affichage  -->
-        <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0; else elseRabais">
+        <mat-grid-tile [colspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0; else elseRabais">
             <h4 class="accent">Rabais de {{proprietesForfait.rabais}}, 00$</h4><!-- Rabais -->
         </mat-grid-tile>
         <ng-template #elseRabais>
-            <mat-grid-tile [rowspan]="4" class="prix">
+            <mat-grid-tile [colspan]="2" [rowspan]="4" class="prix">
                 <h4 class="accent">{{proprietesForfait.prix}}, 00$</h4>
             </mat-grid-tile>
         </ng-template>
@@ -24,19 +24,20 @@
             <h4 class="cursive">{{proprietesForfait.hotel.nom}}</h4>
         </mat-grid-tile>
         <!-- Si le rabais s'applique, afficher avec un style pour barrer le prix -->
-        <mat-grid-tile  [rowspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0">
+        <mat-grid-tile [colspan]="2" [rowspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0">
             <h4 [ngStyle]="{'text-decoration' : 'line-through'}">{{proprietesForfait.prix}}, 00$</h4><!-- Ancien prix -->
         </mat-grid-tile>
-        <!-- Nombre d'étoiles de l'hôtel, boucle appelé avec le nombre inscrit dans le mock-forfaits -->
-        <mat-grid-tile>
-            <app-etoile [nbrEtoiles]=proprietesForfait.hotel.nombreEtoiles></app-etoile>
-        </mat-grid-tile>
+        <mat-grid-tile></mat-grid-tile><!-- espace -->
         <!-- Calcul du nouveau prix -->
-        <mat-grid-tile class="prix" *ngIf="proprietesForfait.rabais>0">
+        <mat-grid-tile [colspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0">
             <h4 class="accent">{{proprietesForfait.prix - proprietesForfait.rabais}}, 00$</h4><!-- Nouveau prix -->
+        </mat-grid-tile>
+        <!-- Nombre d'étoiles de l'hôtel, boucle appelé avec le nombre inscrit dans le mock-forfaits -->
+        <mat-grid-tile  [colspan]="3" >
+            <app-etoile [nbrEtoiles]=proprietesForfait.hotel.nombreEtoiles></app-etoile>
         </mat-grid-tile>
         <!-- Le format de la date est complète, local: Greenwich  et en français-->
         <!-- Calcul de la durée du forfait à partir de la date de départ et de retour -->
-        <mat-grid-tile [colspan]="2" [rowspan]="2"><h4>{{proprietesForfait.dateDepartD | date : 'fullDate' : 'UTC-0' : 'fr'}}, {{calculateDiff(date1, date2)}} jours</h4></mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [rowspan]="2"><h4>{{proprietesForfait.dateDepartD | date : 'fullDate' : 'UTC-0' : 'fr'}}, {{calculateDiff(date1, date2)}} jours</h4></mat-grid-tile>
     </mat-grid-list>
 </mat-card>

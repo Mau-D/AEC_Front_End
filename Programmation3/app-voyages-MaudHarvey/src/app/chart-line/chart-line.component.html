@@ -1,14 +1,17 @@
-<div class="flex">
-  <div class="flex-item">
-    <div>
-    <canvas baseChart 
-                [datasets]="lineChartData"
-                [labels]="lineChartLabels"
-                [colors]="lineChartColors"
-                [legend]="lineChartLegend"
-                [chartType]="lineChartType"
-                [plugins]="lineChartPlugins"
-               >
-    </canvas>
+<div>
+  <h1>Nombre de forfaits selon la date par mois de l'année</h1>
+  <div class="flex">
+    <div class="flex-item">
+      <div>
+      <canvas baseChart 
+                  [datasets]="lineChartData"
+                  [labels]="lineChartLabels"
+                  [colors]="lineChartColors"
+                  [legend]="lineChartLegend"
+                  [chartType]="lineChartType"
+                  [plugins]="lineChartPlugins"
+                >
+      </canvas>
     </div>
   </div>
+</div>

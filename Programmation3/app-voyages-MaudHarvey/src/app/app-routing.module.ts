@@ -6,6 +6,8 @@ import { AproposComponent } from './apropos/apropos.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { ForfaitsToutSudComponent } from './forfaits-tout-sud/forfaits-tout-sud.component';
 import { ForfaitsExplorateurComponent } from './forfaits-explorateur/forfaits-explorateur.component';
+import { ChartLineComponent } from './chart-line/chart-line.component';
+import { ChartPieComponent } from './chart-pie/chart-pie.component';
 
 const routes: Routes = [
   //Définir les chemins pour accéder au composant ici
@@ -15,7 +17,9 @@ const routes: Routes = [
   { path: 'apropos', component: AproposComponent },
   { path: 'administration', component: AdministrationComponent },
   { path: 'toutsud', component: ForfaitsToutSudComponent },
-  { path: 'explorateur', component: ForfaitsExplorateurComponent }
+  { path: 'explorateur', component: ForfaitsExplorateurComponent },
+  { path: 'chart-line', component: ChartLineComponent },
+  { path: 'chart-pie', component: ChartPieComponent }
 
 
 ];

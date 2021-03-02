@@ -10,7 +10,7 @@
     <p>Nombre d'étoiles : {{formulaire.nbrEtoiles}}</p>
     <p>Caractéristiques de l'hôtel: <span *ngFor="let item of formulaire.caracHotel">{{item}}, </span></p>
 </div>
-<mat-grid-list cols="6" rowHeight="7.1rem" [ngClass]="{'couleurVedette' : proprietesForfait.vedette}">
+<mat-grid-list cols="6" rowHeight="7rem" [ngClass]="{'couleurVedette' : proprietesForfait.vedette}">
     <mat-grid-tile class="image" [colspan]="2" [rowspan]="8">
         <img src="../../assets/img/montagne.jpg"/>
     </mat-grid-tile>
@@ -53,20 +53,17 @@
     <mat-grid-tile  [colspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0">
         <h1 class="accent">{{proprietesForfait.prix - proprietesForfait.rabais}},00$</h1><!-- Nouveau prix -->
     </mat-grid-tile>
-    <mat-grid-tile class="caracteristiques" [colspan]="2" [rowspan]="3">
+    <mat-grid-tile class="caracteristiques" [colspan]="4" [rowspan]="3">
         <div>
-            <h3 class="cursive">Caractéristiques de l'hotel</h3>
+            <h3 class="cursive">Caractéristiques de l'hôtel</h3>
             <ul>
                 <li *ngFor="let item of proprietesForfait.hotel.caracteristiques">{{item}}</li>
             </ul>
         </div>
     </mat-grid-tile>
-    <!--<mat-grid-tile class="espace" [rowspan]="9"></mat-grid-tile> espace -->
-    <mat-grid-tile class="espace" [colspan]="2" [rowspan]="3"></mat-grid-tile><!--espace -->
-    <mat-grid-tile class="adresse" [colspan]="2">
+    <mat-grid-tile class="adresse" [colspan]="4">
         <h4>{{proprietesForfait.hotel.coordonnees}}</h4>
     </mat-grid-tile>
-    <mat-grid-tile class="espace"  [colspan]="2"></mat-grid-tile><!-- espace -->
     <mat-grid-tile class="villeDepart">
         <h4>{{proprietesForfait.villeDepart}}</h4>
     </mat-grid-tile>
@@ -74,7 +71,6 @@
     <mat-grid-tile class="depart" [colspan]="2">
         <h4>{{proprietesForfait.dateDepartD | date : 'fullDate' : 'UTC-0' : 'fr'}}</h4>
     </mat-grid-tile>   
-    <mat-grid-tile class="espace"></mat-grid-tile><!--espace -->
     <mat-grid-tile class="retour" [colspan]="2">
         <h4>{{proprietesForfait.dateRetourD | date : 'fullDate' : 'UTC-0' : 'fr'}}</h4>
     </mat-grid-tile>

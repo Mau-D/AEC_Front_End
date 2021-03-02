@@ -12,17 +12,14 @@ h4 {
 }
 .cursive {
   font-family: "Satisfy", cursive;
-  font-size: 1.5rem;
 }
 .titre {
   font-family: "Oi", cursive;
-  font-size: 1.5rem;
   text-shadow: grey 0.1em 0.1em 0.1em;
 }
 
 .accent {
   color: #077771;
-  font-size: 1.3rem;
   font-weight: bold;
   text-shadow: whitesmoke 0.1em 0.1em 0.1em;
 }

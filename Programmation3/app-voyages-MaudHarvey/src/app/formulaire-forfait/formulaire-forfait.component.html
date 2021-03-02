@@ -81,7 +81,7 @@
             <mat-label>Nom de l'hôtel</mat-label>
             <!-- Le nom de l'hôtel doit comporter 2 caractères minimum -->
             <input matInput required minlength="2" name="inputNomHotel" [ngModel]="nomHotel" #inputNomHotel="ngModel"  [(ngModel)]="newForfait.hotel.nom"
-                type="text" placeholder="ex : The Fives Beach Hotel & Residences Playa Del Carmen" >
+                type="text" placeholder="ex : The Fives Beach Hôtel & Residences Playa Del Carmen" >
             <mat-hint>Entrer le nom complet de l'hôtel</mat-hint>
             <!-- Validation du nom de l'hôtel -->
             <mat-error *ngIf="inputNomHotel.hasError('required')">
