@@ -13,6 +13,7 @@ export interface Forfait {
     prix: number,
     rabais: number,
     vedette: boolean,
+    image:string,
     da: string
    
 }

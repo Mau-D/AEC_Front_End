@@ -148,7 +148,7 @@
     <mat-grid-tile [colspan]="2" [rowspan]="3">
         <section class="sectionCheck">
             <mat-checkbox class="checkCaract example-margin" name="caracteristiques" *ngFor="let item of caracHotel"
-                value={{item}} [checked]="checkState(item)" (ngModelChange)="changeCaracteristiques($event, item)">{{item}}
+                value={{item}} [checked]="checkState(item)" (change)="changeCaracteristiques($event, item)">{{item}}
             </mat-checkbox>
         </section>
     </mat-grid-tile>
@@ -160,6 +160,17 @@
                 min="0.00" max="1000000.00" value="0" step="0.01" [(ngModel)]="newForfait.rabais">
             <!-- Validation du rabais -->
            <!-- ********************** Ajouter une validation pour que le rabais ne dépasse pas un pourcentage du prix du forfait -->
+        </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-form-field>
+            <mat-label>Image</mat-label>
+            <input matInput required [ngModel]="image" name="inputImage" #inputImage="ngModel" type="text" placeholder="url"
+             [(ngModel)]="newForfait.image">
+            <!-- Validation du prix du forfait -->
+            <mat-error *ngIf="inputImage.hasError('required')">
+                L'image du forfait est <strong>obligatoire</strong>
+            </mat-error>
         </mat-form-field>
     </mat-grid-tile>
     <!-- Option forfait vedette -->

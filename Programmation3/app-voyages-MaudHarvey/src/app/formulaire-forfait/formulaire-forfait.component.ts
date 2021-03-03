@@ -25,6 +25,7 @@ import { ForfaitCompletComponent } from '../forfait-complet/forfait-complet.comp
 
 export class FormulaireForfaitComponent implements OnInit {
   //Variables des ngModel pour la validation de formulaire
+  image:string;
   nomHotel: string;
   adresse: string;
   nbrChambre: number;
@@ -62,31 +63,28 @@ export class FormulaireForfaitComponent implements OnInit {
   //État initial des checkbox, du forfait sélectionné
   checkState(i){
     let tab: Array<string> = this.tableauCarac;
-    console.log("fonction checkState" + this.tableauCarac)
+    //console.log("fonction checkState" + this.tableauCarac)
     let index:number = tab.indexOf(i);
-      console.log("index" + index);
-      console.log("i = " + i);
+      //console.log("index" + index);
+      //console.log("i = " + i);
       if(index != -1){
-        console.log("true")
+        //console.log("true")
         return true;
     }
     
   }
 //Pour les caractéristiques de l'hotel
-  changeCaracteristiques(e, valeur) {
-    console.log('valeur:' + valeur + 'état: ' + e)
-    if(e){
+  changeCaracteristiques(objet, valeur) {
+    console.log('valeur:' + valeur + 'état: ' + objet)
+      const index: number =  this.tableauCarac.indexOf(valeur);
+    if(index == -1){
       this.tableauCarac.push(valeur);
     }
-    else if(!e){
-      const index: number =  this.tableauCarac.indexOf(valeur);
-      if (index !== -1) {
-        this.tableauCarac.splice(index, 1);
-      }   
+    else{
+        this.tableauCarac.splice(index, 1); 
     }
     console.log(this.tableauCarac)
     return this.newForfait.hotel.caracteristiques = this.tableauCarac;
-    
   }
   
   constructor(

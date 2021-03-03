@@ -26,13 +26,12 @@ export class TableForfaitsComponent implements OnInit {
  //Variable de l'élément sélectionné
   selectedForfait: Forfait;
  //Ajouter le service dans l'argument du constructeur
-  constructor(private voyagesService: VoyagesService, public dialog: MatDialog) { 
-  
+  constructor(private voyagesService: VoyagesService, public dialog: MatDialog) {
   }
 
   ngOnInit(): void {
     //Initialise l'objet newForfait
-    this.newForfait = {_id: null, destination:'', villeDepart:'', hotel: {nom:'', coordonnees:'', nombreEtoiles:0, nombreChambres:0, caracteristiques: []}, dateDepartD: null, dateRetourD: null, prix: 0, rabais: 0, vedette: false, da:'1996416'};
+    this.newForfait = {_id: null, destination:'', villeDepart:'', hotel: {nom:'', coordonnees:'', nombreEtoiles:0, nombreChambres:0, caracteristiques: []}, dateDepartD: null, dateRetourD: null, prix: 0, rabais: 0, vedette: false, image: "", da:'1996416'};
 
     //Appelle de la fonction à l'ouverture de la page, importe les infos
     this.getVoyages();
@@ -57,7 +56,6 @@ export class TableForfaitsComponent implements OnInit {
   //Fonction pour l'ouverture du dialog
     //Fonction pour l'ajout lors de l'ouverture et la fermeture du dialog
   openDialogNewForfait(): void {
-     
       const dialogRef = this.dialog.open(FormulaireForfaitComponent, {
       width: '80%',
       height: '80%',
@@ -70,7 +68,7 @@ export class TableForfaitsComponent implements OnInit {
       if(result) {
         this.newForfait = result;
         this.voyagesService.addForfait(this.newForfait)
-            .subscribe(forfait  => { this.forfaits.push(forfait); this.newForfait._id = null; this.newForfait.destination=''; this.newForfait.hotel.nom='';this.newForfait.hotel.coordonnees=''; this.newForfait.hotel.nombreEtoiles=0; this.newForfait.hotel.nombreChambres=null; this.newForfait.hotel.caracteristiques=caracTableau; this.newForfait.villeDepart='';  this.newForfait.dateDepartD= null; this.newForfait.dateRetourD= null; this.newForfait.prix= null; this.newForfait.rabais= null; this.newForfait.vedette= false; this.table.renderRows()});
+            .subscribe(forfait  => { this.forfaits.push(forfait); this.newForfait._id = null; this.newForfait.destination=''; this.newForfait.hotel.nom='';this.newForfait.hotel.coordonnees=''; this.newForfait.hotel.nombreEtoiles=0; this.newForfait.hotel.nombreChambres=null; this.newForfait.hotel.caracteristiques=caracTableau; this.newForfait.villeDepart='';  this.newForfait.dateDepartD= null; this.newForfait.dateRetourD= null; this.newForfait.prix= null; this.newForfait.rabais= null; this.newForfait.vedette= false; this.newForfait.image= ""; this.table.renderRows()});
       }
     });
   }
