@@ -11,3 +11,107 @@
 .criteres {
   border: solid grey 2px;
 }
+.page {
+  background-image: url("../../assets/img/banniere.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-right: 5%;
+  height: 100%;
+  min-height: 70vh;
+}
+.box h3 {
+  text-align: center;
+  position: relative;
+  top: 80px;
+}
+.box {
+  bottom: 20vh;
+  padding: 5%;
+  width: 80%;
+  height: 50%;
+  background: #e0c281;
+  margin: 20px auto;
+}
+
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2 {
+  position: relative;
+}
+.effect2:before,
+.effect2:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #dc7b58;
+  -webkit-box-shadow: 0 15px 10px #dc7b58;
+  -moz-box-shadow: 0 15px 10px #dc7b58;
+  box-shadow: 0 15px 10px #dc7b58;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+p {
+  font-size: 1.2rem;
+  font-family: "Prata", serif;
+  line-height: 1.5;
+}
+h1,
+h5 {
+  text-align: center;
+  font-family: "Oi", cursive;
+  font-size: 3rem;
+  text-shadow: grey 0.1em 0.1em 0.1em;
+  line-height: 1.5;
+}
+h5 {
+  padding: 2%;
+  text-align: left;
+  font-size: 1.5rem;
+  padding-bottom: 20%;
+}
+h1 {
+  padding-top: 2%;
+}
+.espaceGrand {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("../../assets/img/mountain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+}
+.lienHaut {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 0.8rem;
+  margin-right: 1%;
+}
+.lienHaut span {
+  font-size: 3rem;
+  color: grey;
+  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
+}

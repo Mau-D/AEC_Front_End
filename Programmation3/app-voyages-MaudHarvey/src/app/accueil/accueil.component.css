@@ -72,6 +72,9 @@
   width: auto;
   position: fixed;
   padding-bottom: 50vh;
+  font-size: 3rem;
+  color: grey;
+  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
 }
 
 /*.criteres {
@@ -133,4 +136,16 @@
 /*Enlever la barre de défilement verticale de la section mat-drawer-content*/
 .mat-drawer-content::-webkit-scrollbar {
   display: none;
+}
+.lienHaut {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 0.8rem;
+  margin-right: 1%;
+}
+.lienHaut span {
+  font-size: 3rem;
+  color: grey;
+  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
 }

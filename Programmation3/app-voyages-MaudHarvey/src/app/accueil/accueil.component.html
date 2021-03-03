@@ -18,15 +18,15 @@
         <!-- Pour la section pour le bouton de recherche -->
         <div id="boutonRecherche">
             <button mat-button (click)="sidenav.toggle()">
-                <i class="material-icons">arrow_forward</i>
+                <i class="material-icons">double_arrow</i>
             </button>
         </div>
     </div>
     <!-- Pour la section pour le bouton de recherche -->
-    <div class="sectionPage">
+    <div class="sectionPage" id="hautDePage">
         <mat-drawer-container>
             <mat-drawer #sidenav mode="side" autosize>
-                <button mat-button (click)="sidenav.toggle()">Fermer <i class="material-icons">arrow_back</i></button>
+                <button mat-button (click)="sidenav.toggle()">Fermer <i class="material-icons">double_arrow</i></button>
                 <app-formulaire-recherche [(formulaire)]="formulaire"></app-formulaire-recherche>
             </mat-drawer>
             <mat-drawer-content>
@@ -39,14 +39,18 @@
                 </div>
                 <div class="espaceMini">
                     <!-- Filtre pour afficher seulement les forfaits vedettes en mini avec ForfaitVedettePipe, dans le haut -->
-                    <mat-grid-list cols="9" rowHeight="12rem">
+                    <mat-grid-list cols="9" rowHeight="15rem">
                         <mat-grid-tile [colspan]="3" [rowspan]="3" *ngFor="let forfait of forfaits | PipeForfaitVedette">
                             <app-forfait-mini class="child-css" [proprietesForfait]=forfait [date1]=forfait.dateDepartD
                                 [date2]=forfait.dateRetourD></app-forfait-mini>
                         </mat-grid-tile>
                     </mat-grid-list>
                 </div>
-                
+                <a href="#hautDePage" class="lienHaut">
+                    <span class="material-icons">
+                        arrow_circle_up
+                    </span>
+                </a>
                 <div class="forfaitTexte titre">
                     <h1 class="titre">Tous nos forfaits</h1>
                 </div>
@@ -67,7 +71,6 @@
             </mat-drawer-content>
         </mat-drawer-container>
     </div>
-    
 </div>
 <!-- Affichage pour travailler sur le formulaire de gestion des forfaits
   <div>

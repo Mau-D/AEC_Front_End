@@ -11,7 +11,11 @@
         <p>Caractéristiques de l'hôtel: <span *ngFor="let item of formulaire.caracHotel">{{item}}, </span></p>
     </div>
     <mat-grid-list cols="6" rowHeight="5rem" [ngClass]="{'couleurVedette' : proprietesForfait.vedette}">
-        <mat-grid-tile class="image" [colspan]="2" [rowspan]="8">
+        <!-- Si c'est un forfait vedette un titre est ajouté en haut du forfait -->
+        <mat-grid-tile class="titreVedette"  [colspan]="6" *ngIf="proprietesForfait.vedette">
+            <h1>Forfait Vedette</h1>
+        </mat-grid-tile>
+        <mat-grid-tile class="image" [colspan]="2" [rowspan]="9">
             <img src="../../assets/img/montagne.jpg"/>
         </mat-grid-tile>
         <!-- destination-->
@@ -23,37 +27,39 @@
         <mat-grid-tile class="duree" [colspan]="2">
             <h3>{{calculateDiff(date1, date2)}} jours</h3>
         </mat-grid-tile>
-        <mat-grid-tile class="description" [colspan]="2">
-            <h1 class="cursive">{{proprietesForfait.hotel.nom}}</h1>
-        </mat-grid-tile>
         <!-- Appliquer un rabais sur le prix des forfaits -->
         <!-- Barrer le prix, afficher le rabais et le nouveau prix, affichage sur trois rangées -->
         <!-- Rabais, est une propriété optionnelle, ajouter la condition >0 pour l'affichage  -->
-        <mat-grid-tile class="prix" [colspan]="2" *ngIf="proprietesForfait.rabais>0" >
-            <span class="accent">Rabais de</span>
-            <h1 class="accent"> {{proprietesForfait.rabais}}, 00$</h1><!-- Rabais -->
+        <mat-grid-tile class="prix" [colspan]="4" *ngIf="proprietesForfait.rabais>0;else elseEspace">
+            <h1 class="accent">Rabais de {{proprietesForfait.rabais}}, 00$</h1><!-- Rabais -->
+        </mat-grid-tile>
+        <mat-grid-tile class="description" [colspan]="2">
+            <h1 class="cursive">{{proprietesForfait.hotel.nom}}</h1>
         </mat-grid-tile>
         <!-- Si il n'y a pas de rabais, afficher seulement le prix -->
-        <ng-template  #elseRabais>
-            <mat-grid-tile [rowspan]="3" [colspan]="2" class="prix" >
+        <ng-template #elseRabais>
+            <mat-grid-tile [rowspan]="3" [colspan]="2" class="prix">
                 <h1 class="accent">{{proprietesForfait.prix}}, 00$</h1>
             </mat-grid-tile>
         </ng-template>
+       
+        <!-- Si le rabais s'applique, afficher avec un style pour barrer le prix -->
+        <mat-grid-tile [colspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0; else elseRabais">
+            <h1 [ngStyle]="{'text-decoration' : 'line-through'}">{{proprietesForfait.prix}}, 00$</h1><!-- Ancien prix -->
+        </mat-grid-tile>
+       
         <!-- Nombre d'étoiles de l'hôtel, boucle appelée avec le nombre inscrit dans le mock-forfaits -->
         <mat-grid-tile class="description" [colspan]="2">
             <app-etoile [nbrEtoiles]=proprietesForfait.hotel.nombreEtoiles></app-etoile>
         </mat-grid-tile>
-        <!-- Si le rabais s'applique, afficher avec un style pour barrer le prix -->
-        <mat-grid-tile [colspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0; else elseRabais" >
-            <h1 [ngStyle]="{'text-decoration' : 'line-through'}">{{proprietesForfait.prix}}, 00$</h1><!-- Ancien prix -->
+        <mat-grid-tile [colspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0">
+            <h1 class="accent">{{proprietesForfait.prix - proprietesForfait.rabais}},00$</h1><!-- Nouveau prix -->
         </mat-grid-tile>
     
         <mat-grid-tile class="description" [colspan]="2">
             <h4>{{proprietesForfait.hotel.nombreChambres}} chambres</h4>
         </mat-grid-tile>
-        <mat-grid-tile  [colspan]="2" class="prix" *ngIf="proprietesForfait.rabais>0">
-            <h1 class="accent">{{proprietesForfait.prix - proprietesForfait.rabais}},00$</h1><!-- Nouveau prix -->
-        </mat-grid-tile>
+       
         <mat-grid-tile class="caracteristiques" [colspan]="4" [rowspan]="3">
             <div>
                 <h3 class="cursive">Caractéristiques de l'hôtel</h3>
@@ -65,7 +71,13 @@
         <mat-grid-tile class="adresse" [colspan]="4">
             <h4>{{proprietesForfait.hotel.coordonnees}}</h4>
         </mat-grid-tile>
-        <mat-grid-tile class="villeDepart">
+        <!-- Si il n'y a pas de rabais, espace-->
+        <ng-template #elseEspace>
+            <mat-grid-tile [colspan]="4">
+            </mat-grid-tile>
+        </ng-template>
+
+        <mat-grid-tile class="villeDepart" [colspan]="2">
             <h4>{{proprietesForfait.villeDepart}}</h4>
         </mat-grid-tile>
         <!-- Format de date, fullDate, local: Greenwich et en français, voir importations app.module-->

@@ -31,7 +31,7 @@ h3,
 h4,
 li,
 h1 {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-family: "Prata", serif;
 }
 .cursive {
@@ -40,7 +40,7 @@ h1 {
 }
 .titre {
   font-family: "Oi", cursive;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-shadow: grey 0.1em 0.1em 0.1em;
 }
 .accent {
@@ -48,4 +48,13 @@ h1 {
   font-size: 1.3rem;
   font-weight: bold;
   text-shadow: whitesmoke 0.1em 0.1em 0.1em;
+}
+.titreVedette {
+  width: auto;
+}
+.titreVedette h1 {
+  color: #077771;
+  font-family: "Satisfy", cursive;
+  font-size: 3rem;
+  text-shadow: rgba(224, 194, 129, 0.8) 0.1em 0.1em 0.1em;
 }
