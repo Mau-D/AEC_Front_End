@@ -1,0 +1,21 @@
+div {
+  width: 100%;
+  min-height: 10vh;
+  background-color: #d4c4b7;
+}
+.logo p {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 1%;
+  color: grey;
+  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
+  font-family: "Prata", serif;
+}
+.logo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5vh;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}

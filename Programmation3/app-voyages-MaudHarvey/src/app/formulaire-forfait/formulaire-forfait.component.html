@@ -137,7 +137,7 @@
         <mat-form-field>
             <mat-label>Prix du forfait</mat-label>
             <input matInput required [ngModel]="prix" name="inputPrix" #inputPrix="ngModel" type="number" placeholder="0.00"
-                min="0.00" max="1000000.00" step="0.01" [(ngModel)]="newForfait.prix">
+                min="0.00" max="1000000.00" step="100" [(ngModel)]="newForfait.prix">
             <!-- Validation du prix du forfait -->
             <mat-error *ngIf="inputPrix.hasError('required')">
                 Le prix du forfait est <strong>obligatoire</strong>

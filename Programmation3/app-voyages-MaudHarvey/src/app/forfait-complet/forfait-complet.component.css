@@ -3,7 +3,11 @@
   border: solid 2px black;
   background-color: white;
   width: 80%;
+  height: 100%;
   margin: auto;
+}
+.mat-grid-tile {
+  height: 100%;
 }
 .couleurVedette {
   border: solid 2px black;
@@ -32,7 +36,7 @@ h1 {
 }
 .cursive {
   font-family: "Satisfy", cursive;
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 .titre {
   font-family: "Oi", cursive;
@@ -41,7 +45,7 @@ h1 {
 }
 .accent {
   color: #077771;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-shadow: whitesmoke 0.1em 0.1em 0.1em;
 }

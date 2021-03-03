@@ -1,0 +1,20 @@
+h1 {
+  text-align: center;
+  margin: 5%;
+  font-family: "Oi", cursive;
+  font-size: 1.3rem;
+  margin: 1%;
+  height: 100%;
+  line-height: 1.5;
+  text-shadow: grey 0.1em 0.1em 0.1em;
+}
+a {
+  display: block;
+  font-size: 1.5rem;
+  margin-left: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: grey;
+  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
+  font-family: "Prata", serif;
+}

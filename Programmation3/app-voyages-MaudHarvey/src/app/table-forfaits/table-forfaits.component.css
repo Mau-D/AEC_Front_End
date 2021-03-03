@@ -1,7 +1,28 @@
+#tableau {
+  margin: auto;
+  width: 70%;
+}
 table {
   width: 100%;
 }
-
+h1 {
+  text-align: center;
+  margin: 5%;
+  font-family: "Oi", cursive;
+  font-size: 2rem;
+  margin: 1%;
+  height: 100%;
+  line-height: 1.5;
+  text-shadow: grey 0.1em 0.1em 0.1em;
+}
+h2,
+th {
+  margin-top: 5%;
+  font-size: 1rem;
+  color: grey;
+  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
+  font-family: "Prata", serif;
+}
 /*#heroFormAjout {
   padding-left: 24px;
   padding-right: 24px;
@@ -12,7 +33,7 @@ table {
 }
 
 .mat-column {
-  width: 20%;
+  width: 10%;
 }
 
 .boutonsAction {

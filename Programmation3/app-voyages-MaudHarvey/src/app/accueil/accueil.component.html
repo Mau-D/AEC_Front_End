@@ -24,20 +24,17 @@
     </div>
     <!-- Pour la section pour le bouton de recherche -->
     <div class="sectionPage">
-        
         <mat-drawer-container>
-            
             <mat-drawer #sidenav mode="side" autosize>
                 <button mat-button (click)="sidenav.toggle()">Fermer <i class="material-icons">arrow_back</i></button>
                 <app-formulaire-recherche [(formulaire)]="formulaire"></app-formulaire-recherche>
             </mat-drawer>
-
             <mat-drawer-content>
                 <div class="banniere">
                     <div class="imgAccueil">
-                    <div class="vedetteTexte">
-                        <h1 class="titre">Nos forfaits vedettes</h1>
-                    </div>
+                        <div class="vedetteTexte">
+                            <h1 class="titre">Nos forfaits vedettes</h1>
+                        </div>
                     </div>
                 </div>
                 <div class="espaceMini">
