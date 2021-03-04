@@ -3,7 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./Programmation3/exercice-composants-heros/dist/",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./dist",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
