@@ -1,2 +1,4 @@
-//Tableau Mock contenat un tableau de string de différents héros
-export const tableauHeros: string[]=['Pikachu', 'Amphinobi', 'Mewtwo'];
+//Importer l'interface hero
+import {Hero} from './hero'
+//Tableau Mock contenant un tableau d'objets de différents héros avec leurs identifiants
+export const tableauHeros: Hero[]=[{_id:'1', nom:'Pikachu'},{_id:'1', nom:'Amphinobi'}, {_id:'1', nom:'Mewtwo'}];

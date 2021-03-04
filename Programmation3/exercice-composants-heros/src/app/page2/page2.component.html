@@ -10,11 +10,17 @@
             <div class="sectionDroite">
             <!-- Faire le ngFor sur l'élément bouclé et non le conteneur-->
                 <mat-list>
-                    <mat-list-item *ngFor="let maValeur of monTableau">                  
-                        {{maValeur}}                                                      
+                    <mat-list-item *ngFor="let item of heros">                  
+                        {{item.nom}}                                                      
                         <mat-divider></mat-divider>
                     </mat-list-item>
                 </mat-list>
+            </div>
+           
+           
+            <div>
+                <!-- Composant avec le tableau des héros -->
+                <app-table-heros></app-table-heros>
             </div>
         </div>
         <app-pied-page></app-pied-page>

@@ -1,7 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';//Module pour le service
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import { HeroService } from './hero.service';
 import { AppComponent } from './app.component';
 import { ComposantRacineComponent } from './composant-racine/composant-racine.component';
 import { EnTeteComponent } from './en-tete/en-tete.component';
@@ -12,11 +16,11 @@ import { PiedPageComponent } from './pied-page/pied-page.component';
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { Hero2Component } from './hero2/hero2.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableHerosComponent } from './table-heros/table-heros.component';
+import { DialogNewHeroComponent } from './dialog-new-hero/dialog-new-hero.component';
+
 
 import { FormsModule } from '@angular/forms';
-
-
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -27,6 +31,11 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+
+
+
 
 
 
@@ -44,7 +53,10 @@ import {MatButtonModule} from '@angular/material/button';
     PiedPageComponent,
     Page1Component,
     Page2Component,
-    Hero2Component
+    Hero2Component,
+    TableHerosComponent,
+    DialogNewHeroComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -60,9 +72,12 @@ import {MatButtonModule} from '@angular/material/button';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    MatTableModule,
+    MatDialogModule
   ],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

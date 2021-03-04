@@ -4,8 +4,8 @@
             <mat-card-header>
                 <!-- Ajouter une mention à un héro selon son nom -->
                 <mat-card-title>{{nom}}</mat-card-title>
-                <mat-card-subtitle *ngIf="[nom]=='Mewtwo'; else elseBlock">Le meilleur Pokémon</mat-card-subtitle>
-                <ng-template #elseBlock><mat-card-subtitle>Pokémon ordinaire</mat-card-subtitle></ng-template>
+                <mat-card-subtitle *ngIf="[nom]=='Batman'; else elseBlock">Le meilleur Héro</mat-card-subtitle>
+                <ng-template #elseBlock><mat-card-subtitle>Héro ordinaire</mat-card-subtitle></ng-template>
                 <!-- Input pour changer le nom du hero -->               
             </mat-card-header>
             <mat-form-field class="example-half-width">

@@ -16,18 +16,13 @@ h2 {
   padding: 10px 10px;
   margin: 0;
 }
-.sectionGauche {
-  width: 40%;
-  border: none;
-  height: 115vh;
-  float: left;
-}
+
 .sectionDroite {
   display: inline-block;
   width: 59%;
   margin-left: 1%;
   border: none;
-  height: 115vh;
+  height: 100%;
 }
 .sectionCaroussel {
   background-color: #a4c2f4;
@@ -37,5 +32,11 @@ h2 {
 }
 .boutonsidenav {
   min-height: 100%;
-  position: fixed;
+}
+.list {
+  min-height: 50%;
+  padding-bottom: 2%;
+}
+.mat-drawer-container {
+  background-color: seagreen;
 }
