@@ -11,7 +11,9 @@ import { caracTableau } from '../mock-caracHotel';
 //Importations pour le dialog
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Forfait } from '../forfait';
-import { ForfaitCompletComponent } from '../forfait-complet/forfait-complet.component';
+import { destinationsTableau } from '../mock-destinations';
+import { villesDepartTableau } from '../mock-villesDepart';
+
 
 
 
@@ -48,8 +50,8 @@ export class FormulaireForfaitComponent implements OnInit {
   departControl:FormControl = new FormControl();
   
   //Variables des options de l'autocomplete
-  destinations: string[] = ['Cuba', "Islande", 'Jamaïque', 'Mexique', 'Paris', 'Thaïlande'  ]
-  villes: string[] = ['Montréal', 'Québec', 'Toronto']
+  destinations: string[] = destinationsTableau
+  villes: string[] = villesDepartTableau
 
   //Variables des filtres utilisées pour l'autocomplete, la valeur est changée en tableau de string
   filteredDestinations: Observable<string[]>;

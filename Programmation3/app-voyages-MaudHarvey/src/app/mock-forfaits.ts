@@ -1,7 +1,7 @@
 //Tableau Mock pour les différents forfaits
 //Importer l'interface de l'objet
 
-//**********Ce fichier n'est plus utilisé, car les données proviennet d'une API, conservé au besoin */
+//**********Ce fichier n'est plus utilisé, car les données proviennent d'une API, conservé au besoin */
 
 import {Forfait} from './forfait';
 export const FORFAITS: Forfait[] = [
