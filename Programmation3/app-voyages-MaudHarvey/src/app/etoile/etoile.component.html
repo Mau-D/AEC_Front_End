@@ -1,6 +1,9 @@
 <!-- Composant pour l'affichage de l'évaluation avec un nombre d'étoile -->
 <!-- Utiliser le materials-icons, le nombre d'étoiles est défini dans le mock-forfait -->
 <!-- Cet icône est appelé le nombre de fois que le nombre d'étoiles de l'hôtel -->
-<span *ngFor="let item of [].constructor(nbrEtoiles)" class="material-icons">
+<span *ngFor="let item of [].constructor(nbrEtoiles)" class="material-icons couleur" >
+    star_rate
+</span>
+<span *ngFor="let item of [].constructor(5-nbrEtoiles)"class="material-icons">
     star_border
 </span>

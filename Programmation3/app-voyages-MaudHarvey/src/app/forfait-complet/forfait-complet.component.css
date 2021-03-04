@@ -23,14 +23,13 @@
 .fComplet {
   height: 100%;
 }
-.image {
+
+img {
   border: white solid 5px;
   box-shadow: 1px 1px 12px grey;
-}
-img {
   display: block;
-  max-width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -41,12 +40,12 @@ h3,
 h4,
 li,
 h1 {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-family: "Prata", serif;
 }
 .cursive {
   font-family: "Satisfy", cursive;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 .titre {
   font-family: "Oi", cursive;
@@ -57,7 +56,7 @@ h1 {
   color: #077771;
   font-size: 1.3rem;
   font-weight: bold;
-  text-shadow: whitesmoke 0.1em 0.1em 0.1em;
+  text-shadow: rgba(224, 194, 129, 0.8) 0.1em 0.1em 0.1em;
 }
 .titreVedette {
   width: auto;

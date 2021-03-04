@@ -14,7 +14,8 @@ export class ForfaitMiniComponent implements OnInit {
   //Pour le calcul de la durée du forfait
   @Input() date1: Date = new Date;
   @Input() date2: Date  = new Date;
- 
+  //Pour fermer le card collapsible
+   collapsed: boolean=true;
   //Fonction pour le calcul de la durée du forfait
   calculateDiff(depart, retour){
   var depart: any = new Date(this.date1);

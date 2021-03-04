@@ -7,7 +7,7 @@ mat-grid-list {
 }
 h3,
 h4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: "Prata", serif;
 }
 .cursive {
@@ -19,13 +19,34 @@ h4 {
 }
 
 .accent {
+  font-size: 1.1rem;
   color: #077771;
   font-weight: bold;
-  text-shadow: whitesmoke 0.1em 0.1em 0.1em;
+  text-shadow: rgba(224, 194, 129, 0.8) 0.1em 0.1em 0.1em;
 }
 /*Mise en forme ajoutée pour les forfaits vedettes, appliquer au mini-forfait et aux forfaits complets en vedette*/
 .couleurVedette {
   border: solid 2px black;
   box-shadow: 1px 1px 12px 5px rgba(224, 194, 129, 0.8);
   background: linear-gradient(rgba(255, 255, 255), rgba(158, 182, 158));
+}
+.buttonCollapse button {
+  background-color: rgba(158, 182, 158);
+  border: none;
+}
+.buttonCollapse span {
+  font-size: 2rem;
+  color: grey;
+  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
+}
+img {
+  border: white solid 5px;
+  box-shadow: 1px 1px 12px grey;
+  display: block;
+  width: 50%;
+  height: 90%;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 0;
 }

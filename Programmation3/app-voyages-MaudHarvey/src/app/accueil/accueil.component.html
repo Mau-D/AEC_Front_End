@@ -2,14 +2,7 @@
 
 
 
-        <!--<div class="criteres">
-            <h3>Critères de recherche</h3>
-            <p>Date de Départ: {{formulaire.dateDepart}}</p>
-            <p>Durée: {{formulaire.duree}}</p>
-            <p>Nombre d'étoiles : {{formulaire.nbrEtoiles}}</p>
-            <p>Caractéristiques de l'hôtel: <span *ngFor="let item of formulaire.caracHotel">{{item}}, </span></p>
-
-        </div>-->
+        
    
 
 <!-- Contenu de la page, 100% de la largeur, contenant la section recherche et page -->
@@ -39,12 +32,19 @@
                 </div>
                 <div class="espaceMini">
                     <!-- Filtre pour afficher seulement les forfaits vedettes en mini avec ForfaitVedettePipe, dans le haut -->
-                    <mat-grid-list cols="9" rowHeight="15rem">
+                    <mat-grid-list cols="9" rowHeight="14rem">
                         <mat-grid-tile [colspan]="3" [rowspan]="3" *ngFor="let forfait of forfaits | PipeForfaitVedette">
                             <app-forfait-mini class="child-css" [proprietesForfait]=forfait [date1]=forfait.dateDepartD
                                 [date2]=forfait.dateRetourD></app-forfait-mini>
                         </mat-grid-tile>
                     </mat-grid-list>
+                </div>
+                <div class="criteres">
+                    <h3>Critères de recherche</h3>
+                    <p>Date de Départ: {{formulaire.dateDepart | date : 'fullDate' : 'UTC-0' : 'fr'}}</p>
+                    <p>Durée: {{formulaire.duree}}</p>
+                    <p>Nombre d'étoiles : {{formulaire.nbrEtoiles}}</p>
+                    <p>Caractéristiques de l'hôtel: <span *ngFor="let item of formulaire.caracHotel">{{item}}, </span></p>
                 </div>
                 <a href="#hautDePage" class="lienHaut">
                     <span class="material-icons">
