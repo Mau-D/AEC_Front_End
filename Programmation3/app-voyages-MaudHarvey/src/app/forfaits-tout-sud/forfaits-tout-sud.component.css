@@ -7,10 +7,38 @@
 .child-css {
   width: 98%;
 }
-
+#hautPage {
+  height: 100%;
+}
 .criteres {
   border: solid grey 2px;
 }
+
+.espaceGrand {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("../../assets/img/mountain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+}
+.lienHaut {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 0.8rem;
+  margin-right: 1%;
+}
+.lienHaut span {
+  font-size: 3rem;
+  color: grey;
+  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
+}
+
 .page {
   background-image: url("../../assets/img/banniere.jpg");
   background-size: cover;
@@ -18,15 +46,10 @@
   background-position: center;
   padding-right: 5%;
   height: 100%;
-  min-height: 70vh;
-}
-.box h3 {
-  text-align: center;
-  position: relative;
-  top: 80px;
+  min-height: 50vh;
 }
 .box {
-  bottom: 20vh;
+  bottom: 10vh;
   padding: 5%;
   width: 80%;
   height: 50%;
@@ -69,16 +92,12 @@
   right: 10px;
   left: auto;
 }
-p {
-  font-size: 1.2rem;
-  font-family: "Prata", serif;
-  line-height: 1.5;
-}
+
 h1,
 h5 {
   text-align: center;
   font-family: "Oi", cursive;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-shadow: grey 0.1em 0.1em 0.1em;
   line-height: 1.5;
 }
@@ -90,28 +109,4 @@ h5 {
 }
 h1 {
   padding-top: 2%;
-}
-.espaceGrand {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9)
-    ),
-    url("../../assets/img/mountain.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  height: 100%;
-}
-.lienHaut {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  font-size: 0.8rem;
-  margin-right: 1%;
-}
-.lienHaut span {
-  font-size: 3rem;
-  color: grey;
-  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
 }

@@ -14,16 +14,16 @@
   padding-right: 5%;
 }
 .mat-grid-list {
-  height: 100%;
+  min-height: 100%;
   width: auto;
 }
+
 .mat-drawer-container {
   background-color: #d4c4b7;
   width: auto;
 }
 /*div des card pour le mini-forfait et les grid-list des forfaits complets*/
 .child-css {
-  height: 100%;
   width: 98%;
 }
 
@@ -82,7 +82,7 @@
 }*/
 /*Bannière*/
 .banniere {
-  height: 100vh;
+  height: 80vh;
   background: rgba(76, 175, 80, 0);
   background-color: #d4c4b7;
 }
@@ -93,7 +93,7 @@
   background-attachment: fixed;
   background-position: center;
   padding-right: 5%;
-  height: 100vh;
+  height: 80vh;
   position: relative;
 }
 .vedetteTexte,
@@ -121,6 +121,9 @@
   width: 30%;
   position: fixed;
   left: 0;
+}
+.mat-drawer-content {
+  height: 100%;
 }
 /*Centrer la section dans la bannière*/
 .texteBanniere {

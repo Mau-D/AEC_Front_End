@@ -56,7 +56,7 @@
                 </div>
               <div class="espaceGrand">
                 <!-- Afficher tous les forfaits avec toutes le informations séparés d'un diviseur, les forfaits complets sont placés sous les forfaits vedettes -->
-                <mat-grid-list cols="9" rowHeight="9rem" >
+                <mat-grid-list cols="9" rowHeight="7rem" >
                     <mat-list>
                         <mat-list-item *ngFor="let item of forfaits | rechercheDuree :formulaire.duree| rechercheDepart :formulaire.dateDepart | rechercheEtoile :formulaire.nbrEtoiles">
                             <mat-grid-tile [colspan]="9" [rowspan]="9">

@@ -3,13 +3,13 @@
 <!-- Utilisation d'un gridList à 5 colonnes -->
 <!-- Une classe est appliquée pour identifier les forfaits vedettes -->
 <div class="fComplet">
-    <div class="criteres">
+    <!-- <div class="criteres">
         <h3>Critères de recherche</h3>
         <p>Date de Départ: {{formulaire.dateDepart}}</p>
         <p>Durée: {{formulaire.duree}}</p>
         <p>Nombre d'étoiles : {{formulaire.nbrEtoiles}}</p>
         <p>Caractéristiques de l'hôtel: <span *ngFor="let item of formulaire.caracHotel">{{item}}, </span></p>
-    </div>
+    </div> -->
     <mat-grid-list cols="6" rowHeight="5rem" [ngClass]="{'couleurVedette' : proprietesForfait.vedette}">
         <!-- Si c'est un forfait vedette un titre est ajouté en haut du forfait -->
         <mat-grid-tile class="titreVedette"  [colspan]="6" *ngIf="proprietesForfait.vedette">

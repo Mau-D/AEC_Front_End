@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Forfait } from '../forfait';
-import { Formulaire } from '../formulaire';
 import { VoyagesService } from '../voyages.service'; // service pour API
 
 
@@ -14,13 +13,7 @@ export class ForfaitsExplorateurComponent implements OnInit {
   //variable pour le forfait entier contenant le tableau mock
   forfaits: Forfait[];
 
-  //Objet contenant les informations entrées dans le formulaire de recherche
-  formulaire :Formulaire = {
-    dateDepart: new Date,
-    duree: 0,
-    nbrEtoiles: 1,
-    caracHotel: [''],
-  }
+  
   constructor(private voyagesService: VoyagesService) { }
 
   ngOnInit(): void {

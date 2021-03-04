@@ -12,7 +12,7 @@ import { Formulaire } from '../formulaire';
 
 export class ForfaitCompletComponent implements OnInit {
 
-  //Inclure la propriété, déclaré dans app pour les valeurs du mock-forfait
+  //Inclure la propriété, déclaré dans app pour les valeursdes forfaits
   @Input() proprietesForfait: Forfait;
  
   //Propriété pour les infos inscrites dans le formulaire de recherche
