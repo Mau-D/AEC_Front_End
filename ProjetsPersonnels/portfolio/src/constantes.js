@@ -55,6 +55,17 @@ export const LOGOS = [
     alt: "Angular et TypeScript",
     title: "Angular et TypeScript",
   },
+  {
+    src:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png",
+    alt: "VueJS et VueCLI",
+    title: "VueJS + VueCLI",
+  },
+  {
+    src: "https://miro.medium.com/max/1000/1*ilC2Aqp5sZd1wi0CopD1Hw.png",
+    alt: "Flutter",
+    title: "Flutter",
+  },
 ];
 //Variables pour téléverser les détails des formations
 export const FORMATIONS = [
@@ -109,6 +120,37 @@ export const FORMATIONS = [
       "Opérations CRUD",
       "Hooks",
       "PWA",
+      "JSON",
+    ],
+  },
+  {
+    id: 6,
+    nomCours: "Techniques de programmation Web 3",
+    nombreHeures: "90 heures",
+    methodes: [
+      "Architecture MVC",
+      "Langage TypeScript",
+      "Composants Angular",
+      "Directives Angular",
+      "Programmation orienté-objet",
+      "Angular Material, composants natifs",
+      "Mock API",
+      "Services et Http Client",
+      "Initiation à Flutter",
+    ],
+  },
+  {
+    id: 7,
+    nomCours: "Intégration d'interface utilisateur",
+    nombreHeures: "60 heures",
+    methodes: [
+      "Notions de bases de VueJS",
+      "VueCLI",
+      "Propriétés, directives, filtres, etc.",
+      "Vue-router",
+      "Mixin, plugin, directive personnalisée",
+      "Documentation de code",
+      "Test unitaire",
     ],
   },
 ];
@@ -216,6 +258,44 @@ export const PROJETS = [
     detailsProjet:
       "Ce projet, en sujet libre, est un site qui comporte les exigences d'une PWA. L'intégration est fait en SASS et comporte des animations de librairies JavaScript. Une API web est utilisé avec le service ''https://crudcrud.com/'', car des formulaires d'ajout et d'édition sont accessibles par un bouton ou de lien sur les titres. Ce projet est programmé avec des composants utilisant soit des classes ou des hooks.",
   },
+  {
+    id: 6,
+    techno: "vue",
+    titre: "Évaluation",
+    sousTitre: "Examen de technique d'interface utilisateur",
+    description: "Évaluation pour les notions de base de VueJS",
+    date: "Janvier 2021",
+    liengithub: "https://github.com/Mau-D/1017examen2maudharvey",
+    lienWeb: "https://mau-d.github.io/1017examen2maudharvey/dist/",
+    imagePrincipale: require("./img/examenVue.jpg"),
+    carousel: [
+      require("./img/examenVue_1.jpg"),
+      require("./img/examenVue_2.jpg"),
+      require("./img/examenVue_3.jpg"),
+    ],
+    detailsProjet:
+      "Évaluation pour l'initiation aux notions de base de VueJS. Celle-ci est une simple application conçu avec VueCLI, il y a l'utilisation de composantes et de vue-router pour la navigation. L'affichage du pied de page se fait avec une directive personnalisée et un filtre de traduction (fr/en) est appliqué pour afficher les libellés des champs du formulaire de contact.",
+  },
+  {
+    id: 7,
+    techno: "angular",
+    titre: "Voyages Aventure",
+    sousTitre: "Application pour la gestion de forfaits voyages",
+    description: "Projet Angular TS",
+    date: "Mars 2021",
+    liengithub:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/Programmation3/app-voyages-MaudHarvey",
+    lienWeb:
+      "https://mau-d.github.io/AEC_Front_End/Programmation3/app-voyages-MaudHarvey/dist/",
+    imagePrincipale: require("./img/angular.jpg"),
+    carousel: [
+      require("./img/angular_1.jpg"),
+      require("./img/angular_2.jpg"),
+      require("./img/angular_3.jpg"),
+    ],
+    detailsProjet:
+      "Cette conception est une application Angular en lien avec des forfaits voyages. À la page d'accueil, on retrouve les forfaits vedettes sous forme de card suivi de tous les forfaits sous forme de liste. L'utilisateur peut trier les forfaits avec un formulaire de recherche qui se trouve à gauche dans un sidenav. Le nombre d'étoiles, la durée et l'application d'un rabais sont dynamiques. Un panneau d'administration est disponible affichant le tableau de tous les forfaits, l'utilisateur peut gérer les forfaits, pour ajouter, supprimer ou modifier un forfait. Dans cette page, deux liens affichent des graphiques affichant des statistiques de réservations provenant d'une autre API. Toutes les informations proviennent d'une API fournit par l'enseignant.",
+  },
 ];
 //Variables pour téléverser les autres projets
 export const AUTRES = [
@@ -298,5 +378,15 @@ export const AUTRES = [
       "https://github.com/Mau-D/AEC_Front_End/tree/master/Programmation2/bottindeclients",
     lienWeb:
       "https://mau-d.github.io/AEC_Front_End/Programmation2/bottindeclients/build/",
+  },
+  {
+    id: 9,
+    techno: "vue",
+    image: require("./img/surfSpirit.jpg"),
+    titre: "SurfSpirit",
+    lien:
+      "https://github.com/Mau-D/AEC_Front_End/tree/master/InterfaceUtilisateur/surfSpirit_pratique1",
+    lienWeb:
+      "https://mau-d.github.io/AEC_Front_End/InterfaceUtilisateur/first-app-vue/dist/",
   },
 ];

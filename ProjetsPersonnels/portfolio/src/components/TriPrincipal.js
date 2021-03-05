@@ -14,6 +14,7 @@ function TriPrincipal(props) {
             sousTitre={PROJETS[i].sousTitre}
             date={PROJETS[i].date}
             lien={PROJETS[i].liengithub}
+            lienWeb={PROJETS[i].lienWeb}
             description={PROJETS[i].description}
             image={PROJETS[i].imagePrincipale}
             carousel1={PROJETS[i].carousel[0]}

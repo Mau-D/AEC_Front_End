@@ -9,7 +9,14 @@ function AutreProjet(props) {
 
   return (
     <>
-      <Col xs={12} sm={6} lg={3} className="mb-3 text-center p-0" id="autres">
+      <Col
+        xs={12}
+        sm={8}
+        md={6}
+        lg={3}
+        className="mb-3 text-center p-0"
+        id="autres"
+      >
         <Flip bottom>
           <Card
             className="apropos mt-3 p-2 autre"

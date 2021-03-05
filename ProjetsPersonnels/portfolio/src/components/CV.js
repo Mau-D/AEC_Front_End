@@ -8,7 +8,7 @@ function CV() {
       <Row className="mt-5 text-center">
         <Col>
           <a
-            href="../../public/files/CV_MaudHarvey.pdf"
+            href="./files/CV_MaudHarvey.pdf"
             target="_blank"
             download="CV_MaudHarvey.pdf"
           >

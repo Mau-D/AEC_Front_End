@@ -5,9 +5,11 @@ import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 ReactDOM.render(
-  <Router basename="/AEC_Front_End/ProjetsPersonnels/portfolio/build">
+  <Router>
+    <ScrollToTop />
     <App />
   </Router>,
   document.getElementById("root")

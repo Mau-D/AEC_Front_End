@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav, Image } from "react-bootstrap";
 import { IMAGES } from "../constantes";
@@ -7,16 +7,22 @@ import { GrLinkedin } from "react-icons/gr";
 
 function Header() {
   const activeStyle = { color: "#FEAE4B" };
+  const [expanded, setExpanded] = useState(false);
   return (
     <>
-      <Navbar className="fixed-top mb-5" expand="md">
+      <Navbar expanded={expanded} className="fixed-top mb-5" expand="md">
         <Navbar.Brand>
           <Image src={IMAGES.logo} />
         </Navbar.Brand>
-        <Navbar.Toggle className="mr-5" aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle
+          onClick={() => setExpanded(expanded ? false : "expanded")}
+          className="mr-5"
+          aria-controls="responsive-navbar-nav"
+        />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto text-center px-3">
             <NavLink
+              onClick={() => setExpanded(false)}
               exact
               to="/"
               activeStyle={activeStyle}
@@ -26,6 +32,7 @@ function Header() {
             </NavLink>
 
             <NavLink
+              onClick={() => setExpanded(false)}
               to="/apropos"
               activeStyle={activeStyle}
               className="p-2 my-4"
@@ -33,6 +40,7 @@ function Header() {
               À propos
             </NavLink>
             <NavLink
+              onClick={() => setExpanded(false)}
               to="/projets"
               activeStyle={activeStyle}
               className="p-2 my-4"
@@ -40,6 +48,7 @@ function Header() {
               Projets
             </NavLink>
             <NavLink
+              onClick={() => setExpanded(false)}
               to="/contact"
               activeStyle={activeStyle}
               className="p-2 my-4"
@@ -49,7 +58,7 @@ function Header() {
           </Nav>
           <Nav className="ml-auto text-center">
             <a
-              href="https://github.com/Mau-D/AEC_Front_End"
+              href="https://github.com/Mau-D"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-5 mr-sm-5 my-3 p-0"

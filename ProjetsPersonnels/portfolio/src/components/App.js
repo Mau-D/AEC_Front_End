@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import Apropos from "./APropos";
 import Contact from "./Contact";
 import { Container } from "react-bootstrap";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Redirect, Route, Switch, useLocation } from "react-router-dom";
 import "../styles/principal.sass";
 import IntroProjet from "./IntroProjet";
 
@@ -22,10 +22,12 @@ function App() {
           <Switch>
             {/*Accueil est la première page*/}
             <Route path="/" exact component={Accueil} />
+            {/*Version onepage*/}
             <Route path="/onepage" component={OnePager} />
             <Route path="/apropos" component={Apropos} />
             <Route path="/projets" component={IntroProjet} />
             <Route path="/contact" component={Contact} />
+            <Redirect to="/" />
           </Switch>
         </Container>
 

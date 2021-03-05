@@ -7,6 +7,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { AnimationHover } from "./AnimationHover";
 //Animations react-reveal
 import Rotate from "react-reveal/Rotate";
+import "../styles/principal.sass";
 
 function Accueil() {
   let location = useLocation(); /*variable de la page où je me trouve */
@@ -37,14 +38,14 @@ function Accueil() {
                 </Col>
               </Row>
             </Row>
-            {location.pathname !== "/onepage/" && (
+            {location.pathname !== "/onepage" && (
               <Row className="mt-1">
                 {/*Lien vers la version une seule page*/}
                 <Col xs={{ span: 11, offset: 1 }} lg={8}>
                   <h5>
                     Vous préférez "scroller", allez directement à la version
                   </h5>
-                  <Link to={"onepage/"}>
+                  <Link to={"/onepage"}>
                     <h2>One Page</h2>
                   </Link>
                 </Col>
@@ -71,7 +72,7 @@ function Accueil() {
           </Rotate>
         </Col>
       </Row>
-      {location.pathname !== "/onepage/" && (
+      {location.pathname !== "/onepage" && (
         <Row className="p-5 text-center" id="cardLien">
           <Col xs={12} lg={4}>
             <Rotate top left>
@@ -83,7 +84,7 @@ function Accueil() {
                   className="p-2"
                 />
                 <Card.Body className="p-0">
-                  <Link to={"apropos/"}>
+                  <Link to={"/apropos"}>
                     <Card.Title className="m-0">
                       <span className="font-medium">À propos</span>
                     </Card.Title>
@@ -104,7 +105,7 @@ function Accueil() {
                   className="pb-0 p-2 p-md-2 "
                 />
                 <Card.Body className="p-0">
-                  <Link to={"projets/"}>
+                  <Link to={"/projets"}>
                     <Card.Title className="m-0 font-medium">
                       <span className="font-medium">Projets</span>
                     </Card.Title>
@@ -121,7 +122,7 @@ function Accueil() {
               <Card className="contact mt-5 p-2">
                 <Card.Img variant="top" src={IMAGES.contact} className="p-2" />
                 <Card.Body className="pt-0">
-                  <Link to={"contact/"}>
+                  <Link to={"/contact"}>
                     <Card.Title className="m-0">
                       <span className="font-medium">Contact</span>
                     </Card.Title>

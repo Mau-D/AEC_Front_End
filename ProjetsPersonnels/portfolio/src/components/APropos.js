@@ -29,8 +29,10 @@ function APropos() {
           <Col xs={12}>
             <div className="tableauTexte p-1 p-sm-5 m-sm-5 font-medium">
               <p>
-                Allo! je suis nouvellement arrivée dans la région du Saguenay,
-                je possède un diplôme en technologie physique avec quinze ans
+                Allo! je suis nouvellement arrivée dans la région du Saguenay et
+                actuellement en formation pour l'obtention d'une attestation
+                d'études collégiales en développement WEB Front-End. Je possède
+                un diplôme collégial en technologie physique avec quinze ans
                 d’expérience comme technicienne. Tout au long de mon parcours,
                 j’ai été reconnue pour être une personne qui s’implique dans son
                 milieu et qui recherche toujours de nouvelles idées.

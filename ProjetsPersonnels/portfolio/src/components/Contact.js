@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Row, Col, Container } from "react-bootstrap";
 import { GrLinkedin } from "react-icons/gr";
+import "../styles/contact.sass";
 
 import CV from "./CV";
 
@@ -29,7 +30,7 @@ function Contact() {
               <a href="tel:+1-819-523-3737">(819) 523-3737</a>
             </h2>
             <a
-              href="https://www.linkedin.com/in/maud-harvey-70569159"
+              href="https://www.linkedin.com/in/maud-harvey-70569159/"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-5 mr-sm-5 my-4"

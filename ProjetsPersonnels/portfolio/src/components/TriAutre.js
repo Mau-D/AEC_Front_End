@@ -15,6 +15,7 @@ function TriAutre(props) {
             image={AUTRES[i].image}
             titre={AUTRES[i].titre}
             lien={AUTRES[i].lien}
+            lienWeb={AUTRES[i].lienWeb}
           />
         ) : null
       )}

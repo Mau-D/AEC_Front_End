@@ -34,6 +34,8 @@ $bg-contact: '../img/ampoule.jpg'
   background-color: black    
   background-size: cover
   background-repeat: no-repeat
+  background-position: center
+
   
 
 /*Couleur de texte*/
@@ -59,12 +61,16 @@ $fontSizes: ("small": 1.1, "medium": 1.8, "large": 2.5)
 @each $grandeur, $valeur in $fontSizes
   .font-#{$grandeur}
     font-size: $valeur + rem
+
+
+/*Hauteur des éléments*/
+
 /*************/
 
 
 #banniere
   background-image: url($bg-img) 
-  background-color: #3E3E40
+  background-color: white
   @include bkgcover
   border: 20px solid #3E3E40;
   height: 90%
@@ -90,16 +96,6 @@ h1, h2
   .card-title
     @include families($family: "styleTitre")
 
-/*Boutons dans contact*/
-.buttoncontact
-  .open
-    background-image: url($bg-open)
-    background-size: cover
-    background-position: center
-    background-repeat: no-repeat
-    height: 16vh
-    width: 25vw
-    box-shadow: 3px 3px 3px #62B6C0
 
 
 
@@ -123,12 +119,6 @@ h1, h2
   
   
 /*************************************************/
-/*Rotation*/
-
-
-
- 
-    
 
 /*Card avec effet polaroid*/
 .card
@@ -176,7 +166,7 @@ h1, h2
 
 
 .ticket
-  height: 24rem
+  height: 23rem
   width: 100%
   background: black
   display: flex

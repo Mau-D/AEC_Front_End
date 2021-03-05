@@ -65,6 +65,20 @@ function IntroProjet() {
           >
             React
           </Button>
+          <Button
+            type="button"
+            onClick={() => handleClick("vue")}
+            className="mx-2 mb-2"
+          >
+            VueJS
+          </Button>
+          <Button
+            type="button"
+            onClick={() => handleClick("angular")}
+            className="mx-2 mb-2"
+          >
+            Angular
+          </Button>
         </Col>
       </Row>
       {/* Si l'état de tri, lors du clic d'une techno, composant TriProjet sinon composant Projets */}
