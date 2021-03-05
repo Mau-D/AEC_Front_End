@@ -8,14 +8,9 @@ import { Forfait } from './forfait';
 export class RechercheDepartPipe implements PipeTransform {
 
  transform(forfaits: Forfait[], departForfait: any): Forfait[] {   
-    console.log('recherche depart' + departForfait)
-     
     let today: any = new Date();
     let formDepart: Date = (new Date(departForfait));
-    
-      console.log('aujour' + today);
-      console.log('formDepart' + formDepart);
-      
+
       if(!forfaits)
         return forfaits;
         //Date supérieure à aujourd'hui, afficher les forfaits avec une date supérieure

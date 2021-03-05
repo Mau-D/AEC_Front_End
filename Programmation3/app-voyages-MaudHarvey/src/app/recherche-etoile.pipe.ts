@@ -6,7 +6,6 @@ import { Forfait } from './forfait';
 })
 export class RechercheEtoilePipe implements PipeTransform {
 transform(forfaits: Forfait[], etoile: number): Forfait[] {   
-    console.log('recherche etoile' + etoile)
     //Si le nombre d'étoiles n'est pas sélectionné
       if(!forfaits || etoile == 0)
         return forfaits;

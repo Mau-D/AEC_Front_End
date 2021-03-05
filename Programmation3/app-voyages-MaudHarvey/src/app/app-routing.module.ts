@@ -11,8 +11,7 @@ import { ChartPieComponent } from './chart-pie/chart-pie.component';
 
 const routes: Routes = [
   //Définir les chemins pour accéder au composant ici
-  //exemple:{ path: 'produits', component: ListeProduitsComponent }, 
-  //exemple redirection { path: '', redirectTo: '/produits', pathMatch: 'full' }
+  
   { path: '', component: AccueilComponent },
   { path: 'apropos', component: AproposComponent },
   { path: 'administration', component: AdministrationComponent },
@@ -25,7 +24,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy',  useHash: false,
+  anchorScrolling: 'enabled', onSameUrlNavigation: 'reload' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

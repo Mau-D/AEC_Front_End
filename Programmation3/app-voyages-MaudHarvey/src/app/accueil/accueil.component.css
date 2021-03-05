@@ -8,10 +8,10 @@
   display: flex;
   flex-direction: row;
   background-color: #d4c4b7;
-  height: 100%;
 }
 .mat-drawer-content {
   padding-right: 5%;
+  height: 100%;
 }
 .mat-grid-list {
   min-height: 100%;
@@ -21,6 +21,7 @@
 .mat-drawer-container {
   background-color: #d4c4b7;
   width: auto;
+  height: 100%;
 }
 /*div des card pour le mini-forfait et les grid-list des forfaits complets*/
 .child-css {
@@ -46,12 +47,12 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  height: 100%;
 }
 
 /*Section contenant le bouton de recherche donnant accès au contenu secondaire du sidenav*/
 /*élément d-flex de la section contenuPage*/
 #sectionRecherche {
+  padding-left: 2%;
   align-self: auto;
   width: 5%;
   background-color: #d4c4b7;
@@ -75,6 +76,12 @@
   font-size: 3rem;
   color: grey;
   text-shadow: #fb8b69 0.1em 0.1em 0.1em;
+}
+.boutonFermer i {
+  font-size: 3rem;
+  color: grey;
+  text-shadow: #fb8b69 0.1em 0.1em 0.1em;
+  transform: rotateY(180deg);
 }
 
 /*.criteres {
@@ -108,7 +115,6 @@
   font-family: "Oi", cursive;
   font-size: 2.5rem;
   margin: 1%;
-  height: 100%;
   line-height: 1.5;
   text-shadow: grey 0.1em 0.1em 0.1em;
 }

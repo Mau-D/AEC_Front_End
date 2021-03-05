@@ -41,12 +41,6 @@ export class TableForfaitsComponent implements OnInit {
     this.voyagesService.getVoyages()
         .subscribe(resultat => this.forfaits = resultat);
   }
-  //Le void définit une fonction sans return en TS
-  //Fonction pour sélectionner l'élément
-  //onSelect(forfait: Forfait): void {
-    //this.selectedForfait = forfait;
-    //console.log('je suis dans le onSelect')
-  //}
 
   //Fonction pour supprimer l'élément
    onDelete(forfait: Forfait): void {
@@ -88,6 +82,5 @@ export class TableForfaitsComponent implements OnInit {
             .subscribe(() => this.selectedForfait = null);
       }
     });
-    console.log(this.selectedForfait)
   }
 }

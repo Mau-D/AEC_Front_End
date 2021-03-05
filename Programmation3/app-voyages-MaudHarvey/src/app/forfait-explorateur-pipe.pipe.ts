@@ -5,7 +5,7 @@ import { Forfait } from './forfait';
   name: 'forfaitExplorateurPipe'
 })
 export class ForfaitExplorateurPipePipe implements PipeTransform {
-
+//Tri les forfaits qui n'ont pas une destination tout sud, donc explorateur
  transform(forfaits: Forfait[]): Forfait[] {   
      if(!forfaits)
         return forfaits;

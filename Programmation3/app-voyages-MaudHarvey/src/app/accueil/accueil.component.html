@@ -1,10 +1,5 @@
 <!-- Composant accueil, contenant les forfaits vedettes et la liste des forfaits sous forme de gridList -->
 
-
-
-        
-   
-
 <!-- Contenu de la page, 100% de la largeur, contenant la section recherche et page -->
 <div class="contenuPage"  id="hautDePage">
     <div id="sectionRecherche">
@@ -15,11 +10,11 @@
             </button>
         </div>
     </div>
-    <!-- Pour la section pour le bouton de recherche -->
     <div class="sectionPage">
         <mat-drawer-container>
+            <!-- Pour la section pour le formulaire de recherche -->
             <mat-drawer #sidenav mode="side" autosize>
-                <button mat-button (click)="sidenav.toggle()">Fermer <i class="material-icons">double_arrow</i></button>
+                <button mat-button (click)="sidenav.toggle()" class="boutonFermer"><i class="material-icons">double_arrow</i></button>
                 <app-formulaire-recherche [(formulaire)]="formulaire"></app-formulaire-recherche>
             </mat-drawer>
             <mat-drawer-content>
@@ -39,14 +34,29 @@
                         </mat-grid-tile>
                     </mat-grid-list>
                 </div>
-                <div class="criteres">
-                    <h3>Critères de recherche</h3>
-                    <p>Date de Départ: {{formulaire.dateDepart | date : 'fullDate' : 'UTC-0' : 'fr'}}</p>
-                    <p>Durée: {{formulaire.duree}}</p>
-                    <p>Nombre d'étoiles : {{formulaire.nbrEtoiles}}</p>
-                    <p>Caractéristiques de l'hôtel: <span *ngFor="let item of formulaire.caracHotel">{{item}}, </span></p>
-                </div>
-                <a href="#hautDePage" class="lienHaut">
+                <!-- Accordéon pour afficher les critères de recherche -->
+                <mat-accordion>
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-description>
+                                Vos critères de recherche
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <div class="criteres">
+                            <p>Date de Départ: {{formulaire.dateDepart | date : 'fullDate' : 'UTC-0' : 'fr'}}</p>
+                            <p *ngIf="formulaire.duree != 0; else elseDuree">Durée: {{formulaire.duree}}</p>
+                            <ng-template #elseDuree>
+                                <p>Durée : Peu importe</p>
+                            </ng-template>
+                            <p *ngIf="formulaire.nbrEtoiles != 0; else elseEtoile">Nombre d'étoiles : {{formulaire.nbrEtoiles}}</p>
+                            <ng-template  #elseEtoile>
+                                <p>Nombre d'étoiles : Peu importe</p>
+                            </ng-template>
+                            <p>Caractéristiques de l'hôtel: <span *ngFor="let item of formulaire.caracHotel">{{item}}, </span></p>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+                <a routerLink="" fragment="hautDePage" class="lienHaut">
                     <span class="material-icons">
                         arrow_circle_up
                     </span>
@@ -55,28 +65,19 @@
                     <h1 class="titre">Tous nos forfaits</h1>
                 </div>
               <div class="espaceGrand">
-                <!-- Afficher tous les forfaits avec toutes le informations séparés d'un diviseur, les forfaits complets sont placés sous les forfaits vedettes -->
-                <mat-grid-list cols="9" rowHeight="7rem" >
-                    <mat-list>
-                        <mat-list-item *ngFor="let item of forfaits | rechercheDuree :formulaire.duree| rechercheDepart :formulaire.dateDepart | rechercheEtoile :formulaire.nbrEtoiles">
-                            <mat-grid-tile [colspan]="9" [rowspan]="9">
-                                <app-forfait-complet class="child-css" [proprietesForfait]=item
-                                    [formulaire]="formulaire" [date1]=item.dateDepartD [date2]=item.dateRetourD></app-forfait-complet>
-                                <mat-divider></mat-divider><!-- Placer à l'intérieur du grid-tile -->
-                            </mat-grid-tile>
-                        </mat-list-item>
-                    </mat-list>
-                </mat-grid-list>
-            </div>
+                    <!-- Afficher tous les forfaits avec toutes le informations séparés d'un diviseur, les forfaits complets sont placés sous les forfaits vedettes -->
+                    <mat-grid-list cols="1" rowHeight="60rem" >
+                        <mat-grid-tile *ngFor="let item of forfaits | rechercheDuree :formulaire.duree| rechercheDepart :formulaire.dateDepart | rechercheEtoile :formulaire.nbrEtoiles | rechercheCaracteristiques :formulaire.caracHotel">
+                            <app-forfait-complet class="child-css" [proprietesForfait]=item
+                                [formulaire]="formulaire" [date1]=item.dateDepartD [date2]=item.dateRetourD></app-forfait-complet>
+                            <mat-divider></mat-divider><!-- Placer à l'intérieur du grid-tile -->
+                        </mat-grid-tile>    
+                    </mat-grid-list>
+                </div>
             </mat-drawer-content>
         </mat-drawer-container>
     </div>
 </div>
-<!-- Affichage pour travailler sur le formulaire de gestion des forfaits
-  <div>
-    <app-formulaire-forfait></app-formulaire-forfait>
-  </div>-->
-<!--  -->
 
 
-<!-- Propriété: proprietesForfait, renvoie toutes les informations du mock-forfaits.ts -->
+<!-- Propriété: proprietesForfait, renvoie toutes les informations de l'API -->

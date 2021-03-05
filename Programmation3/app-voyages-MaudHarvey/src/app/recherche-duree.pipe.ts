@@ -11,11 +11,9 @@ export class RechercheDureePipe implements PipeTransform {
     var depart: any = new Date(depart);
     var retour: any = new Date(retour);
     var diff: any = Math.floor((retour - depart) / (1000 * 60 * 60 * 24));
-    console.log(diff);
     return diff;
   }
    transform(forfaits: Forfait[], dureeForfait: number): Forfait[] {   
-    console.log('recherche duree' + dureeForfait)
       if(!forfaits || dureeForfait == 0)
         return forfaits;
       else

@@ -69,8 +69,6 @@ export class ChartPieComponent implements OnInit  {
       this.reservationsDestinationTableau.push(asie);
       this.reservationsDestinationTableau.push(europe);
       this.reservationsDestinationTableau.push(grandnord);
-
-    console.log(this.reservationsDestinationTableau);
   }
  //Fonction qui récupère les données de l'API
  //Le code est modifié pour permettre l'attente des de la réponse de l'API avant de continuer les autres lignes de code en dessous

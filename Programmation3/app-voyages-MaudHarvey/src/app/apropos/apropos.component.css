@@ -7,6 +7,10 @@
   height: 100%;
   min-height: 70vh;
 }
+.sousTitre h5 {
+  font-size: 1.8rem;
+  font-family: "Prata", serif;
+}
 .box {
   bottom: 20vh;
   padding: 5%;

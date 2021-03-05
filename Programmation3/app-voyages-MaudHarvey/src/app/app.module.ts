@@ -38,6 +38,7 @@ import { ForfaitExplorateurPipePipe } from './forfait-explorateur-pipe.pipe';
 import { RechercheEtoilePipe } from './recherche-etoile.pipe';
 import { RechercheDepartPipe } from './recherche-depart.pipe';
 import { RechercheDureePipe } from './recherche-duree.pipe';
+import { RechercheCaracteristiquesPipe } from './recherche-caracteristiques.pipe';
 
 
 
@@ -71,6 +72,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 
@@ -99,6 +102,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     RechercheEtoilePipe,
     RechercheDepartPipe,
     RechercheDureePipe,
+    RechercheCaracteristiquesPipe,
     
   ],
   
@@ -128,7 +132,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     HttpClientModule,
     MatTableModule,
     MatDialogModule,
-    ChartsModule
+    ChartsModule,
+    MatExpansionModule
   ],
   //Calendrier en français
   providers: [ {provide: MAT_DATE_LOCALE, useValue: 'fr-CA'}, VoyagesService],

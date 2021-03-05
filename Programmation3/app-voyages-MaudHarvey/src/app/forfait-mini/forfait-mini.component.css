@@ -31,7 +31,7 @@ h4 {
   background: linear-gradient(rgba(255, 255, 255), rgba(158, 182, 158));
 }
 .buttonCollapse button {
-  background-color: rgba(158, 182, 158);
+  background-color: rgba(158, 182, 158, 0);
   border: none;
 }
 .buttonCollapse span {

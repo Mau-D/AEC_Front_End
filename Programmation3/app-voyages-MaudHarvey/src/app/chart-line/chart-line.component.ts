@@ -38,24 +38,19 @@ export class ChartLineComponent implements OnInit {
   public lineChartPlugins = [];
 //Fonction pour le calcul de réservations par date, enté ensuite dans les tableaux pour le graphiques
   calculReservationsTable() {
-  
-   console.log('fonction date vs reservations');  
-   let tableauRes = this.reservations;
+    let tableauRes = this.reservations;
     let tabJanvier: Array<number> = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     let tabDecembre: Array<number> = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     tableauRes.forEach(element => {
       let dateForfait: Date = new Date(element.dateReservation);
-   
-     
-     for(let i:number=0; i<31;i++){
+      for(let i:number=0; i<31;i++){
        //Janvier getMonth=0
-       if( dateForfait.getMonth() === 0){
-         if(dateForfait.getDate() === i+1){
-           tabJanvier[i]++
-          this.janvier[i]=tabJanvier[i]
-          console.log('janvier' + i)
-         }
-       }
+        if( dateForfait.getMonth() === 0){
+          if(dateForfait.getDate() === i+1){
+            tabJanvier[i]++
+            this.janvier[i]=tabJanvier[i]
+          }
+        }
        //Décembre getMonth=11
        else if( dateForfait.getMonth() === 11){
          if(dateForfait.getDate() === i+1){
@@ -63,15 +58,8 @@ export class ChartLineComponent implements OnInit {
           this.decembre[i]=tabDecembre[i]
          }
        }
-      
      }
-    
-   
     });
-   
-      console.log("tableau Janvier" + tabJanvier);
-      console.log("tableau Décembre" + tabDecembre);
-     
   };
 
     ngOnInit(): void {
@@ -90,5 +78,4 @@ export class ChartLineComponent implements OnInit {
         .subscribe((resultat) => {this.reservations = resultat;
      this.calculReservationsTable();});
   }
-  
 }

@@ -1,11 +1,10 @@
-<!-- Formulaire pour ajouter des forfaits -->
+<!-- Formulaire pour faire un tri des forfaits par critères de recherche -->
 <form class="gridRecherche">
     <mat-grid-list cols="1" rowHeight="6rem">
         <!-- Titre -->
         <mat-grid-tile >
             <h1>Formulaire de recherche de forfait</h1>
         </mat-grid-tile>
-       
         <mat-grid-tile>
         <!-- Datepicker pour la date de départ, avec validation, avec validation du required, min à la date d'aujourd'hui -->
             <mat-form-field class="example-half-width example-padding" appearance="fill">
@@ -42,7 +41,7 @@
             <div>
                 <mat-label>Nombre d'étoiles</mat-label>
                 <div>
-                    <mat-slider name="nbrEtoiles" [ngModel]="nbrEtoiles" (ngModelChange)="changeNbrEtoiles($event)" min="0" max="5" step="1" thumbLabel tickInterval="1" value="0"></mat-slider><br>
+                    <mat-slider name="nbrEtoiles" [ngModel]="nbrEtoiles" (ngModelChange)="changeNbrEtoiles($event)" min="0" max="5" step="1" thumbLabel tickInterval="1" value="0"></mat-slider>
                     <h6>Pour afficher tous les nombres d'étoiles, sélectionner 0</h6>
                 </div>
             </div>
@@ -54,10 +53,9 @@
         </mat-grid-tile>
         <mat-grid-tile [rowspan]="4">
             <form class="sectionCheck"  >
-                <mat-checkbox class="checkCaract" name="caracHotel" *ngFor="let item of caracHotel" value={{item}} [ngModel]="caracteristiques" (ngModelChange)="changeCaracteristiques($event, item)">{{item}} </mat-checkbox>
+                <mat-checkbox class="checkCaract" name="caracHotel" *ngFor="let item of caracHotel" value={{item}} [ngModel]="caracteristiques" (change)="changeCaracteristiques(item)">{{item}} </mat-checkbox>
             </form>
         </mat-grid-tile>
-
     </mat-grid-list>
 </form>
 

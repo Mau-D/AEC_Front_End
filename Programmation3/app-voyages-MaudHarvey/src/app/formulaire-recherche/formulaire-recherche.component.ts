@@ -38,14 +38,15 @@ export class FormulaireRechercheComponent implements OnInit {
 
   ngOnInit() {
     //Initialiser la valeur du nombre d'étoiles
-  this.formulaire.nbrEtoiles = 0;
-   
+    this.formulaire.dateDepart = new Date;
+    this.formulaire.duree = 0;
+    this.formulaire.nbrEtoiles = 0;
+    this.formulaire.caracHotel = [];
   }
  
   //Pour la date de départ
   changeDateDepart(nouvelleValeur) {
       
-
     let nouveauFormulaire : Formulaire =  {dateDepart: nouvelleValeur, 
                                             duree : this.formulaire.duree, 
                                             nbrEtoiles:this.formulaire.nbrEtoiles,
@@ -74,28 +75,23 @@ export class FormulaireRechercheComponent implements OnInit {
     this.formulaire = nouveauFormulaire;
     this.formulaireChange.emit(nouveauFormulaire);
   }
-  tableauCarac: Array<string> = [];
+  tableauCarac: string[] = [];
+ 
   //Pour les caractéristiques de l'hotel
-    changeCaracteristiques(e, valeur) {
-      console.log('valeur:' + valeur + 'état: ' + e)
-      if(e){
+    changeCaracteristiques(valeur) {
+       const index: number =  this.tableauCarac.indexOf(valeur);
+      if(index == -1){
          this.tableauCarac.push(valeur);
       }
-      else if(!e){
-        const index: number =  this.tableauCarac.indexOf(valeur);
-        if (index !== -1) {
+      else{
           this.tableauCarac.splice(index, 1);
-        }   
       }
-      
-      console.log(this.tableauCarac)
-     let nouveauFormulaire : Formulaire =  {dateDepart: this.formulaire.dateDepart, 
+       let nouveauFormulaire : Formulaire =  {dateDepart: this.formulaire.dateDepart, 
                                             duree : this.formulaire.duree, 
                                             nbrEtoiles:this.formulaire.nbrEtoiles,
                                             caracHotel:this.tableauCarac,
                                           };
-    this.formulaire = nouveauFormulaire;
-    this.formulaireChange.emit(nouveauFormulaire);
+      this.formulaire = nouveauFormulaire;
+      this.formulaireChange.emit(nouveauFormulaire);
     }
-      
 }
