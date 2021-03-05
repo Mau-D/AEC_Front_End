@@ -1,7 +1,7 @@
 //Pour l'API crudcrud
 export const API =
-  "https://crudcrud.com/api/68a112a1d5f249dc9741114ff68a7c8a/roadtrips/";
-
+  "https://crudcrud.com/api/afe90c39ad2a4869b00c5e6f48a75e3d/roadtrips/";
+//valide jusqu'au 4 avril
 //Pour les différentes régions du Qc
 export const regions = [
   "Bas-Saint-Laurent",
